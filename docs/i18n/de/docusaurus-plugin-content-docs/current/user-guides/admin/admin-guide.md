@@ -492,6 +492,6 @@ Neben der PV Quote für Mieter, stellen wir auch die komplette Verwaltung der Pr
 
 Alle Funktionen aus Endkundenperspektive finden Sie hier:
 
-[KMU/B2B Guide](https://www.notion.so/KMU-B2B-Guide-13e7537d200e809480efe846d974309a?pvs=21)
+[Anleitung für Zählerfreunde Privatkunden](../private/private.md)
 
 Das war die Vorstellung und Erklärung unserer Lösung. Falls Sie Fragen haben, dann können Sie jederzeit sehr gerne auf uns zukommen und wir helfen Ihnen weiter!

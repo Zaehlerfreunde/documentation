@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'https://cdn.zaehlerfreunde.com/logos/favicon.ico',
 
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true, 
   },
 
   url: 'https://docs.zaehlerfreunde.de',
@@ -75,7 +75,6 @@ const config: Config = {
   themes: ["docusaurus-theme-openapi-docs"],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg', 
     navbar: {
       title: 'Dokumentation',
       logo: {
@@ -85,11 +84,7 @@ const config: Config = {
       },
       items: [
         {
-          type: 'localeDropdown',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/zaehlerfreunde/your-repo-name', 
+          href: 'https://github.com/Zaehlerfreunde/documentation/', 
           label: 'GitHub',
           position: 'right',
         },
@@ -108,28 +103,11 @@ const config: Config = {
           ],
         },
         {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
           title: 'More',
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/zaehlerfreunde/your-repo-name', 
+              href: 'https://github.com/Zaehlerfreunde/documentation/', 
             },
           ],
         },
