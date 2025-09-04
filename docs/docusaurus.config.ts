@@ -64,9 +64,9 @@ const config: Config = {
           petstore: { 
             specPath: "./static/api/openapi.yaml", 
             outputDir: "docs/rpcapi", 
-            sidebarOptions: {
-              groupPathsBy: "tag", 
-            },
+              sidebarOptions: {
+                groupPathsBy: "tag", 
+              },
           } satisfies OpenApiPlugin.Options,
         }
       },
@@ -75,7 +75,7 @@ const config: Config = {
   themes: ["docusaurus-theme-openapi-docs"],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg', // It's a good idea to create a social card for your project
+    image: 'img/docusaurus-social-card.jpg', 
     navbar: {
       title: 'Dokumentation',
       logo: {
@@ -89,7 +89,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/zaehlerfreunde/your-repo-name', // Update this link
+          href: 'https://github.com/zaehlerfreunde/your-repo-name', 
           label: 'GitHub',
           position: 'right',
         },
