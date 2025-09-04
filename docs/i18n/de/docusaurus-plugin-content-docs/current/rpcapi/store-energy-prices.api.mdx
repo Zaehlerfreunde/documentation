@@ -1,0 +1,71 @@
+---
+id: store-energy-prices
+title: "Stores Energy Prices."
+description: "Stores Energy Prices."
+sidebar_label: "Stores Energy Prices."
+hide_title: true
+hide_table_of_contents: true
+api: eJylVc1uG0cMfpXBnFJA2l27ySE61Q0UwEkbG5GCADF8GO1S2ql3Z6YcbmRF0Nv0TfpiJWdXlmTVpwCCMMvhz0fyI2erI5QdWtroyd1WL8Ag4FVHNX/e7+5Hmswq8llPHeBqM75FW0LUfOEDoCHr3XWlJzqSR+h1BpWRRvi7g0i/+4qdb3UFsUQbxIQNZmKgIFmokExUF6FSS4+q9JFUaZqya1KIqNaWausU1aACy1ipHSJYBAZA2MFIl94ROJJoJoTGlsk6/ytKyK2OZQ2tkRNtAjAIg2g27McStFHkB4d3+rtpbPUevQRK57nnU4Iq+QeUCpCFZHhQPniPhNat2EbQGkalK0MwJtsCC+HRtKERvcvi8vW4eDu+eDO/KCaF/L6xwmm9xLda1+CUjX29VIqpXnnXbFTtO4yKm5eKOFKtdR1xSY2rFHfYu6q/9a0lguoXvTsk9XOIL15C/MWRbXrIQ38Z+c9i7st/QOy6dgF4gth3iwbO0EyPmKaYSdMOff7n11rv2CtZSnkdEZjlO7lCiIEJ2Hf5sijOmXzzMfn4H3pHNUTtRyJjUC1Q7WVgAlNc6GRk1HTeD8I47GcnAn4HjGkoO2xEJRgk1tIylfuhnQmje2zHo/tUnpooiLekxt+9Ekv6w/t90T58nackZFI+H8Z2uu/43QnDX2LsE6FeIsjQvUJSsG6ZqCdp9jW7yIqs0IdufPv3n7oBXCJ0rgJ1dXt91lWW8U4wpOCRC8oFf2YDrgreOpLdwsxO++MmgBO7X7NCxQClXQ57QkIDtvFmOePqJ6SpgHGS53FtVivAzPo86eS63zamTNvGmfYcsYxMa6w070FUH+i3HwaOFLIyLZe+v/tI6/U6O1fLhfy80ICpeBTwKhhurbpMdTv3Y9J15nGVD7Yx/+P63fTTbDpmm6ymtkl9Fza2xh15fonAJ/V/4hnBI+W8mK0TnAnIduD2nT7lNre+Fu7zxXa7MBG+YLPbiZhph/IM3QuT0JpFYt49O6zBVExboeEDsIp+1y/68VzCJ+J1aZ8/X/pCtKeRu72ZzYX6w3vU+kps0KzlJeH/idbyrKUHJz0GItvqxrhVZ1ai2/uUgpnTOXs2Vwnp/o1xmyOEnHLSmPsHcJz2aEiI5JvhsvP/AAFpk0w=
+sidebar_class_name: "post api-method"
+info_path: docs/rpcapi/zahlerfreunde-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Stores Energy Prices."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/energy-prices"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Stores Energy Prices.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Store energy prices used for cost calculations within the platform","required":true,"content":{"application/json":{"schema":{"type":"array","items":{"required":["validFrom","validTo","price"],"properties":{"validFrom":{"type":"string","format":"date-time","example":"2024-09-15T10:00:00Z","description":"From when is price valid (only hours are used, minutes and seconds are omitted)"},"validTo":{"type":"string","format":"date-time","example":"2024-09-15T11:00:00Z","description":"Until when prices is valid (only hours are used, minutes and seconds are omitted)"},"price":{"type":"number","format":"double","description":"Energy price in Euro/MWh"}},"title":"EnergyPrice"}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"}}}
+>
+  
+</StatusCodes>
+
+
+      

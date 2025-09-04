@@ -1,0 +1,75 @@
+---
+id: add-update-external-user-contract
+title: "Adds or updates a new or existing user contract for a certain parter."
+description: "Adds or updates a new or existing user contract for a certain parter."
+sidebar_label: "Adds or updates a new or existing user contract for a certain parter."
+hide_title: true
+hide_table_of_contents: true
+api: eJytVt1u2zYUfhWCVwngWG7atYNhBMuyDMhW1MHiYMC6XtDSsc1GojSSqp0Zepu9yV5s36GkSI5SoxfLhUMefufw/HznUHvpKC6t9o9y+nEvl6Qs2cvSb7D9VH0aSa/WDmt5lRtvVeydhDAvyCqvc3OTyKlUSXJfJMrT9c6TNSq9d2RbvBzJhApLMc4B9rakkbT0V0nO/5gnuHYPgIutLtggzM3K9OJPI/A3S/XFbHkRN6Zuklm0vJiKdi90IvKVeMxLK+LS+TwjK2YRlA7UKVM6rTVP5uESlZ6KIBVw3ZJz32Kmgb7XhuaGansrbZ0XKURswW+oM9BaPnHeEnmhTCJMmS3Jnh61vdjmtW3UJYfOceO080ok5BGLe8FujLo2OcPqa2aGekXu/FWeNFHyDklPvurH0EBIzAeVHeTJYD/I9FA3VX1V3n2rJpnkJ9BsUOuFzsA2lRXi5LrI4424N3ontGly7E7Z9nZDpo6upRfMtaHNokBKWVNX247KjCbjmcaqKFIdh76IPjvm8l66eAOm8co/FgR258vPFLqiM/RRdgzHwVPusG5zgeUh/w4FIA0EXGP8a4vHjVpYblWvybELvWs6h8BPbdbQ253lNiErp6+qkQztcRR1XvVdPYZ8XfUCOQZ8Uw3CPAb/rhok4Rj8bdWk6BjoXdVL4DHg95ykmm89nAYZ1jhGanKbKV+L3r6RFeBe+5RBL47JqmIIYily4+pynU8mw+k4/zXYOhReJglmmBVlGMNOKGFoywLaaefhuShxV8dsOAdMDGYodEGhLBwaw+mM/Cbnkc4pYCopfghkFD8N/xHeC/uFrAvPRWlTPmYDBlHze9E+J3dM/DqO/qPylKmN9wVbCzDsaxAk9eLnNn2//L4IAXND/dY9G9c7tHNKz1ndFaohcCfocbUTdrTsZM8Z+OJJIFt3UvOq23cU6nnUsmWCcLRZBbZyKusavhpPxhPZseSPf//ZpGRXlkqD0Xt5eyMHZb+9wcRSmFQ7XIi6P9PBjUUO/jmUn0nA021ekGG91+OJcAXFetWMLL6abObmqztUWMdtkdw0itxWrUHrsc6jgIlkPfiYuAjC1Bk8vL1XgweGPvgf/lbUA4zjPAOo5lB703a7HQ9hkeQRAp/QGr0LLwsF+ojzkLehHRWOx7ldR42ui97fXF1/uLs+g85447M0cIurlSnTt/w/NdRBvZ647/FsR0UKKMcVHN83vda9BeFDa8N9COF+v1SO7m1aVSxGG1j+YMPyi7JaLZkx+F6DAqkwntCcD8SUvKrfp7MFX83wtGQXBm8V9+5T+9/O7xbcis33WVYz2aotv1v4nUrJH4GsHTo8yPboJrMu1ZqxtU1Orjrs+2d9HjxtjpR57HmIkANikT+QQdijJiDPe7gL4/8B89SuuQ==
+sidebar_class_name: "post api-method"
+info_path: docs/rpcapi/zahlerfreunde-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Adds or updates a new or existing user contract for a certain parter."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/contracts"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+:::caution deprecated
+
+This endpoint has been deprecated and may be replaced or removed in future versions of the API.
+
+:::
+
+Adds or updates a new or existing user contract for a certain parter.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"<ul>\n    <li><b>contractId</b>: contract id of your customer </li>\n    <li><b>email</b>: (Optional) email address of your customer </li>\n    <li><b>addressLineOne</b>: first line of the customer address (street and number)</li>\n    <li><b>addressLineTwo</b>: second line of the customer address (exta details)</li>\n    <li><b>city</b>: city of the customer address</li>\n    <li><b>postCode</b>: post code of the customer address</li>\n    <li><b>firstName</b>: first name of your customer</li>\n    <li><b>lastName</b>: last name of your customer</li>\n    <li><b>endDate</b>: (Optional) Timestamp (Epoch Unix in seconds) of when the contract ends</li>\n</ul>\n","required":true,"content":{"application/json":{"schema":{"type":"object","required":["contractId","firstName","lastName","addressLineOne","addressLineTwo","city","postCode"],"properties":{"contractId":{"type":"string","x-order":1},"email":{"type":"string","x-order":2},"firstName":{"type":"string","x-order":3},"lastName":{"type":"string","x-order":4},"addressLineOne":{"type":"string","x-order":5},"addressLineTwo":{"type":"string","x-order":6},"city":{"type":"string","x-order":7},"postCode":{"type":"string","x-order":8},"endDate":{"type":"integer","format":"int64"}},"title":"ExternalUserContract"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"}}}
+>
+  
+</StatusCodes>
+
+
+      

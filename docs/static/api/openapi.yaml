@@ -1,0 +1,1435 @@
+openapi: "3.0.1"
+info:
+    version: 1.0.0
+    title: Zählerfreunde API
+    description: API that exposes Zählerfreunde endpoints using the OpenAPI 3.0 specification
+    termsOfService: https://swagger.io/terms/
+    contact:
+        name: Zählerfreunde
+        email: kontakt@zaehlerfreunde.com
+        url: https://www.zaehlerfreunde.com/
+    license:
+        name: Apache 2.0
+        url: https://www.apache.org/licenses/LICENSE-2.0.html
+
+servers:
+    - url: /partner
+
+paths:
+    /auth/token:
+        post:
+            summary: Creates an API token which is needed to call the API endpoints.
+            tags:
+                - Auth
+            operationId: createApiToken
+            requestBody:
+                description: |
+                    <b>Client ID</b> and <b>Client Secret</b> should be generated from the API section in the [Zählerfreunde admin portal](https://www.zaehlerfreunde.de/admin/api).
+
+                    <img src="https://cdn.zaehlerfreunde.com/documentation/create_api_token_sc.png" width=35% />
+
+                    <img src="https://cdn.zaehlerfreunde.com/documentation/create_api_token_sc_1.png" width=35% />
+
+                    If you dont have admin access to the Zählerfreunde admin portal please send an email to [kontakt@zaehlerfreunde.com](mailto:kontakt@zaehlerfreunde.com).
+
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NewApiToken"
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/ApiToken"
+    /spaces:
+        get:
+            security:
+                - bearerAuth: []
+            summary: Returns all partner spaces.
+            tags:
+                - Spaces
+            operationId: getSpaces
+            parameters:
+                - in: query
+                  name: page
+                  schema:
+                      type: integer
+                      format: int32
+                      minimum: 0
+                      default: 0
+                - in: query
+                  name: pageSize
+                  schema:
+                      type: integer
+                      format: int32
+                      minimum: 1
+                      default: 100
+            responses:
+                "200":
+                    description: the partner spaces with pagination
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Spaces"
+        post:
+            security:
+                - bearerAuth: []
+            summary: Creates a new space and returns the created space ID.
+            tags:
+                - Spaces
+            operationId: createSpace
+            requestBody:
+                description: |
+                    <ul>
+                      <li>the <b>category</b> can be : HOTEL, RESTAURANT, HOUSEHOLD, OFFICE, PV_SYSTEM, COMMERCIAL, BIOGAS, RETAIL, SINGLE_FAMILY_HOME, PRODUCTION, FLAT, WIND_ENERGY, DOCTORS_OFFICE</li>
+                      <li>the <b>parentSpaceId</b> id of the parent space if the space is a sub-space (optional)</li>
+                    </ul>
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NewSpace"
+            responses:
+                "200":
+                    description: the created space ID
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/SpaceId"
+    /spaces/{spaceId}:
+        delete:
+            security:
+                - bearerAuth: []
+            summary: Delete a space by ID. The devices connected to the space are also deleted.
+            tags:
+                - Spaces
+            operationId: deleteSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            responses:
+                "200":
+                    description: OK
+    /spaces/{spaceId}/invites:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Invites a user to view a space. This allows the user to view all device data associated with the space.
+            tags:
+                - Spaces
+            operationId: inviteUserToSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NewSpaceInvite"
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/SpaceInviteLink"
+    /spaces/{spaceId}/users/{userId}:
+        delete:
+            security:
+                - bearerAuth: []
+            summary: Removes a user from the space. This means he can no longer view space data.
+            tags:
+                - Spaces
+            operationId: removeUserFromSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                - in: path
+                  name: userId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            responses:
+                "200":
+                    description: OK
+    /spaces/{spaceId}/users:
+        get:
+            security:
+                - bearerAuth: []
+            summary: Returns all users in a space.
+            tags:
+                - Users
+            operationId: getUsersInSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                - in: query
+                  name: page
+                  schema:
+                      type: integer
+                      format: int32
+                      minimum: 0
+                      default: 0
+                - in: query
+                  name: pageSize
+                  schema:
+                      type: integer
+                      format: int32
+                      minimum: 1
+                      default: 100
+            responses:
+                "200":
+                    description: the partner spaces with pagination
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Users"
+        delete:
+            security:
+                - bearerAuth: []
+            summary: Removes all users from the space. This means that no one can view the space data anymore.
+            tags:
+                - Spaces
+            operationId: removeAllUsersFromSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            responses:
+                "200":
+                    description: the space ID of which all the users were removed.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/SpaceId"
+    /spaces/{spaceId}/devices:
+        get:
+            security:
+                - bearerAuth: []
+            summary: Returns all devices in a space.
+            tags:
+                - Devices
+            operationId: getDevicesInSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                  required: true
+                - in: query
+                  name: page
+                  schema:
+                      type: integer
+                      format: int32
+                      minimum: 0
+                      default: 0
+                - in: query
+                  name: pageSize
+                  schema:
+                      type: integer
+                      format: int32
+                      minimum: 1
+                      default: 100
+            responses:
+                "200":
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/Devices"
+        post:
+            security:
+                - bearerAuth: []
+            summary: Adds a new external device to a Space.
+            tags:
+                - Devices
+            operationId: registerExternalDevice
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            requestBody:
+                description: |
+                    An external device is a device in an external system (external to our API).
+                    An external device is used when an integration of an external system with our API is required.
+
+                    <ul>
+                        <li>The <b>externalDeviceId</b> is the id of the device in the external system.Readings can be sent later using the <b>/devices/readings</b> enpdoint with the <b>externalDeviceId</b>.</li>
+                        <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING </li>
+                        <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER </li>
+                        <li>The <b>isMainDevice</b> if device the main device of the space</li>
+                        <li>The <b>conversionFactor</b> is used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR </li>
+                        <li>The <b>conversionFactorAlreadyApplied</b> is used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR </li>
+                    </ul>
+
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NewExternalDevice"
+            responses:
+                "200":
+                    description: the registered device id
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/DeviceId"
+    /devices/readings:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Stores Meter Readings for one or more devices.
+            tags:
+                - Devices
+            operationId: storeReadings
+            requestBody:
+                description: |
+                    The <b>deviceId</b> Or <b>externalDeviceId</b> should be used along side the <b>readings</b> property for this endpoint to be succesfull.
+                    <ul>
+                     <li><b>deviceId</b> is a uuid of the device that is generated by our API after registering a device with a specific provider (i.e Bluemetering)</li>
+                     <li><b>externalDeviceId</b> is an id of an external device in an external system to our API.</li>
+                    </ul>
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: array
+                            items:
+                                $ref: "#/components/schemas/NewDeviceReading"
+                        example:
+                            - deviceId: "21b08022-7682-3c0a-b285-96f03ac65b22"
+                              externalDeviceId: "123456789ABCD"
+                              readings:
+                                  - obisCode: "1.8.0"
+                                    timestamp: 1714635961
+                                    value: 10.5
+
+            responses:
+                "200":
+                    description: OK
+    /devices/{deviceId}:
+        delete:
+            security:
+                - bearerAuth: []
+            summary: Deletes a specific device.
+            tags:
+                - Devices
+            operationId: deleteDevice
+            parameters:
+                - in: path
+                  name: deviceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            responses:
+                "200":
+                    description: OK
+    /devices/{deviceId}/readings:
+        get:
+            security:
+                - bearerAuth: []
+            summary: Returns readings of a device.
+            tags:
+                - Devices
+            operationId: getReadingsByDevice
+            parameters:
+                - in: path
+                  name: deviceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                  description: |
+                      <span><b>deviceId</b> is a uuid of the device that is generated by our API after registering a device with a specific provider.</span>
+                - in: query
+                  name: startTime
+                  schema:
+                      type: string
+                      format: date-time
+                      example: 2024-09-15T10:00:00Z
+                  required: true
+                  description: the start time of a specific time frame
+                - in: query
+                  name: endTime
+                  schema:
+                      type: string
+                      format: date-time
+                      example: 2024-09-16T10:00:00Z
+                  required: true
+                  description: the end time of a specific time frame
+                - in: query
+                  name: resolution
+                  schema:
+                      type: string
+                      enum:
+                          - 15_MIN
+                          - 1_HOUR
+                          - 1_DAY
+                  required: true
+                  description: |
+                      <span><b>resolution</b> reflects how often the readings are recorded, such as every 15 minutes, every hour, or every day. </span>
+                - in: query
+                  name: measurement
+                  schema:
+                      type: string
+                      enum:
+                          - POWER
+                          - ENERGY
+                          - METER_READING
+                  required: true
+                  description: |
+                      <span><b>measurement</b> reflects the type of readings returned.</span>
+                      <ul>
+                        <li><b>POWER</b> tells you how fast a certain medium (i.e electricity) is being used or produced at a given moment.</li>
+                        <li><b>ENERGY</b> is the total amount of a certain medium (i.e electricity) used over a time frame.</li>
+                        <li><b>METER_READING</b> is the total amount of a certain medium (i.e electricity) used since the device installation.</li>
+                      </ul>
+            responses:
+                "200":
+                    description: |
+                        <span>List of the readings of a device.The <b>Direction</b> of a reading can contain two values:</span>
+                        <ul>
+                        <li><b>IN</b> means it is a consumption reading</li>
+                        <li><b>OUT</b> means it is a ingestion/production reading</li>
+                        </ul>
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/DeviceReading"
+
+    /spaces/{spaceId}/devices/{deviceId}:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Add a specific device to a space
+            tags:
+                - Spaces
+            operationId: addDeviceToSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                - in: path
+                  name: deviceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            requestBody:
+                required: false
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                isMainDevice:
+                                    type: boolean
+                                    default: false
+                                    description: If the device is the main device in the space
+                                excludedFromCost:
+                                    type: boolean
+                                    default: false
+                                    description: If the device should be excluded from cost calculations
+        delete:
+            security:
+                - bearerAuth: []
+            summary: Removes a specific device from a space.
+            tags:
+                - Spaces
+            operationId: removeDeviceFromSpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                - in: path
+                  name: deviceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+    /spaces/{spaceId}/readings:
+        get:
+            security:
+                - bearerAuth: []
+            summary: Returns meter readings of a space.
+            tags:
+                - Spaces
+            operationId: getReadingsBySpace
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+                  description: |
+                      <span><b>spaceId</b> is a uuid of the space with a main device.The readings of a space are the readings of the main device of the space.</span>
+                - in: query
+                  name: startTime
+                  schema:
+                      type: string
+                      format: date-time
+                      example: 2024-09-15T10:00:00Z
+                  required: true
+                  description: the start time of a specific time frame
+                - in: query
+                  name: endTime
+                  schema:
+                      type: string
+                      format: date-time
+                      example: 2024-09-16T10:00:00Z
+                  required: true
+                  description: the end time of a specific time frame
+                - in: query
+                  name: resolution
+                  schema:
+                      type: string
+                      enum:
+                          - 15_MIN
+                          - 1_HOUR
+                          - 1_DAY
+                  required: true
+                  description: |
+                      <span><b>resolution</b> reflects how often the readings are recorded, such as every 15 minutes, every hour, or every day. </span>
+                - in: query
+                  name: measurement
+                  schema:
+                      type: string
+                      enum:
+                          - POWER
+                          - ENERGY
+                          - METER_READING
+                  required: true
+                  description: |
+                      <span><b>measurement</b> reflects the type of readings returned.</span>
+                      <ul>
+                        <li><b>POWER</b> tells you how fast a certain medium (i.e electricity) is being used or produced at a given moment.</li>
+                        <li><b>ENERGY</b> is the total amount of a certain medium (i.e electricity) used over a time frame.</li>
+                        <li><b>METER_READING</b> is the total amount of a certain medium (i.e electricity) used since the device installation.</li>
+                      </ul>
+                - in: query
+                  name: medium
+                  schema:
+                      type: string
+                      enum:
+                          - ELECTRICITY
+                          - GAS
+                          - WATER
+                          - HEATING
+                      default: ELECTRICITY
+                  required: true
+                  description: |
+                  <li>The <b>medium</b> can be: ELECTRICITY,GAS,WATER,HEATING </li>
+
+            responses:
+                "200":
+                    description: |
+                        <span>List of the readings of a space.The <b>Direction</b> of a reading can contain two values:</span>
+                        <ul>
+                        <li><b>IN</b> means it is a consumption reading</li>
+                        <li><b>OUT</b> means it is a ingestion/production reading</li>
+                        </ul>
+                    content:
+                        application/json:
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/DeviceReading"
+
+    # device providers integration endpoints
+    /spaces/{spaceId}/devices/inexogy:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Adds a new inexogy device to a space
+            tags:
+                - Devices
+            operationId: registerInexogyDevice
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            requestBody:
+                description: |
+                    <ul>
+                      <li>The <b>serialNumer</b> is the serial number of the inexogy meter.</li>
+                        <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING</li>
+                        <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER, RLM_METER </li>
+                        <li>The <b>isMainDevice</b> if device the main device of the space</li>
+                        <li>The <b>conversionFactor</b> is used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR</li>
+                        <li>The <b>conversionFactorAlreadyApplied</b> is used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR</li>
+                    </ul>
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NewInexogyDevice"
+            responses:
+                "200":
+                    description: the registered device id
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/DeviceId"
+    /spaces/{spaceId}/devices/bluemetering:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Adds a new bluemetering device to a Space.
+            tags:
+                - Devices
+            operationId: registerBluemeteringDevice
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            requestBody:
+                description: |
+                    <ul>
+                        <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING</li>
+                        <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER </li>
+                        <li>The <b>isMainDevice</b> if device the main device of the space</li>
+                        <li>The <b>bluemeteringApiKey</b> is required to access the Bluemetering API.</li>
+                        <li>The <b>meteringLocationId</b> is the meter's metering location ID (MELO).</li>
+                        <li>The <b>conversionFactor</b> is used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR </li>
+                        <li>The <b>conversionFactorAlreadyApplied</b> is used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR </li>
+                    </ul>
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NewBluemeteringDevice"
+            responses:
+                "200":
+                    description: the registered device id
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/DeviceId"
+    /spaces/{spaceId}/devices/nonSmartMeter:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Adds a new NonSmartMeter to a Space.
+            tags:
+                - Devices
+            operationId: registerNonSmartMeter
+            parameters:
+                - in: path
+                  name: spaceId
+                  schema:
+                      type: string
+                      format: uuid
+                  required: true
+            requestBody:
+                description: |
+                    <ul>
+                        <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING </li>
+                        <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER </li>
+                        <li>The <b>isMainDevice</b> if device the main device of the space</li>
+                        <li>The <b>consumptionReadingValue</b> and the <b>ingestionReadingValue</b> can be used together if the non smart meter is bidirectional</li>
+                        <li>The <b>readingUnit</b> can be:  KILO_WATT_HOUR, WATT, CUBIC_METRE, KILO_GRAMM, LITERS_PER_MINUTE, KILO_GRAMM_CO2, EURO, EURO_PER_KILO_WATT_HOUR, PERCENT, CENT_PER_KWH, KILO_WATT</li>
+                        <li>The <b>isReadingUpdate</b> is set to true when an update of a previously store reading is required</li>
+                    </ul>
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/NewNonSmartMeter"
+            responses:
+                "200":
+                    description: the registered device id
+                    content:
+                        application/json:
+                            schema:
+                                $ref: "#/components/schemas/DeviceId"
+    /contracts:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Adds or updates a new or existing user contract for a certain parter.
+            tags:
+                - Contracts
+            operationId: addUpdateExternalUserContract
+            deprecated: true
+            requestBody:
+                description: |
+                    <ul>
+                        <li><b>contractId</b>: contract id of your customer </li>
+                        <li><b>email</b>: (Optional) email address of your customer </li>
+                        <li><b>addressLineOne</b>: first line of the customer address (street and number)</li>
+                        <li><b>addressLineTwo</b>: second line of the customer address (exta details)</li>
+                        <li><b>city</b>: city of the customer address</li>
+                        <li><b>postCode</b>: post code of the customer address</li>
+                        <li><b>firstName</b>: first name of your customer</li>
+                        <li><b>lastName</b>: last name of your customer</li>
+                        <li><b>endDate</b>: (Optional) Timestamp (Epoch Unix in seconds) of when the contract ends</li>
+                    </ul>
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/ExternalUserContract"
+            responses:
+                "200":
+                    description: OK
+    /energy-prices:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Stores Energy Prices.
+            tags:
+                - Energy-Prices
+            operationId: storeEnergyPrices
+            requestBody:
+                description: Store energy prices used for cost calculations within the platform
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: array
+                            items:
+                                $ref: "#/components/schemas/EnergyPrice"
+            responses:
+                "200":
+                    description: OK
+
+    /customers:
+        post:
+            security:
+                - bearerAuth: []
+            summary: Creates a new or updates an existing customer
+            tags:
+                - Customers
+            operationId: addUpdateCustomer
+            requestBody:
+                description: Customer details
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/Customer"
+            responses:
+                "200":
+                    description: OK
+
+components:
+    securitySchemes:
+        bearerAuth: # arbitrary name for the security scheme
+            type: http
+            scheme: bearer
+            bearerFormat: JWT
+    schemas:
+        NewApiToken:
+            required:
+                - clientId
+                - clientSecret
+            properties:
+                clientId:
+                    type: string
+                    description: unique client id
+                clientSecret:
+                    type: string
+                    description: unique client secret
+
+        ApiToken:
+            properties:
+                accessToken:
+                    type: string
+
+        NewSpace:
+            required:
+                - name
+                - addressLineOne
+                - postcode
+                - city
+                - category
+            properties:
+                name:
+                    type: string
+                    description: space name
+                addressLineOne:
+                    type: string
+                    description: main address of space
+                addressLineTwo:
+                    type: string
+                    description: additional address of space (optional)
+                postcode:
+                    type: string
+                    description: postcode of space
+                city:
+                    type: string
+                    description: city of space
+                category:
+                    type: string
+                    enum:
+                        - HOTEL
+                        - RESTAURANT
+                        - HOUSEHOLD
+                        - OFFICE
+                        - PV_SYSTEM
+                        - COMMERCIAL
+                        - BIOGAS
+                        - RETAIL
+                        - SINGLE_FAMILY_HOME
+                        - PRODUCTION
+                        - FLAT
+                        - WIND_ENERGY
+                        - DOCTORS_OFFICE
+                parentSpaceId:
+                    type: string
+                    description: id of the parent space if the space is a sub-space (optional)
+                isParticipatingInLttProject:
+                    type: boolean
+                    description: Specifies whether this space is part of the landlord to tenant project of its parent spcae. Just relevant if it has a parent space.
+
+        SpaceId:
+            properties:
+                spaceId:
+                    type: string
+
+        NewInexogyDevice:
+            allOf:
+                - $ref: "#/components/schemas/NewDevice"
+                - type: object
+                  required:
+                      - serialNumber
+                  properties:
+                      serialNumber:
+                          type: string
+                      conversionFactor:
+                          type: number
+                          format: double
+                          default: 1.00
+                      conversionFactorAlreadyApplied:
+                          type: boolean
+                          default: true
+
+        NewSpaceInvite:
+            required:
+                - sendInviteEmail
+                - userEmail
+            properties:
+                sendInviteEmail:
+                    type: boolean
+                userEmail:
+                    type: string
+
+        SpaceInviteLink:
+            properties:
+                inviteLink:
+                    type: string
+
+        Spaces:
+            required:
+                - spaces
+                - totalNumPages
+            properties:
+                spaces:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/Space"
+                totalNumPages:
+                    type: integer
+                    format: int32
+
+        Space:
+            required:
+                - id
+                - name
+                - addressLineOne
+                - postcode
+                - city
+                - ownerUserId
+                - category
+                - categoryIcon
+                - associatedUsersId
+                - country
+                - isParticipatingInLttProject
+            properties:
+                id:
+                    type: string
+                    x-order: 1
+                name:
+                    type: string
+                    x-order: 2
+                addressLineOne:
+                    type: string
+                    x-order: 3
+                addressLineTwo:
+                    type: string
+                    x-order: 4
+                postcode:
+                    type: string
+                    x-order: 5
+                city:
+                    type: string
+                    x-order: 6
+                ownerUserId:
+                    type: string
+                    x-order: 7
+                category:
+                    type: string
+                    x-order: 9
+                categoryIcon:
+                    type: string
+                    x-order: 10
+                associatedUsersId:
+                    type: array
+                    x-order: 11
+                    items:
+                        type: string
+                country:
+                    type: string
+                    x-order: 12
+                parentSpaceId:
+                    type: string
+                    x-order: 13
+                isParticipatingInLttProject:
+                    type: boolean
+                    x-order: 14
+
+        DeviceId:
+            properties:
+                deviceId:
+                    type: string
+
+        DeviceReading:
+            required:
+                - deviceId
+                - timeStamp
+                - measurement
+                - value
+                - unit
+                - label
+                - deviceType
+                - deviceProvider
+                - medium
+                - direction
+            properties:
+                deviceId:
+                    type: string
+                timeStamp:
+                    type: string
+                measurement:
+                    type: string
+                    enum:
+                        - POWER
+                        - ENERGY
+                        - METER_READING
+                value:
+                    type: number
+                    format: double
+                unit:
+                    type: string
+                label:
+                    type: string
+                deviceType:
+                    type: string
+                deviceProvider:
+                    type: string
+                medium:
+                    type: string
+                direction:
+                    type: string
+                    enum:
+                        - IN
+                        - OUT
+        NewDeviceReading:
+            required:
+                - readings
+            properties:
+                deviceId:
+                    type: string
+                externalDeviceId:
+                    type: string
+                readings:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/NewReading"
+
+        NewReading:
+            required:
+                - obisCode
+                - timestamp
+                - value
+            properties:
+                obisCode:
+                    type: string
+                timestamp:
+                    type: integer
+                    format: int64
+                value:
+                    type: number
+                    format: double
+
+        Devices:
+            required:
+                - devices
+                - totalNumPages
+            properties:
+                devices:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/Device"
+                totalNumPages:
+                    type: integer
+                    format: int32
+
+        Device:
+            required:
+                - id
+                - name
+                - status
+                - deviceType
+                - isMainDevice
+                - createdAt
+                - medium
+                - imageUrl
+                - ownerUserId
+                - deviceType
+                - deviceTypeDescription
+                - deviceTypeImageUrl
+                - deviceTypeIcon
+                - provider
+                - providerName
+                - providerDescription
+                - providerLogoUrl
+                - metaData
+                - latestReadingTime
+                - firstReadingTime
+            properties:
+                id:
+                    type: string
+                    x-order: 1
+                name:
+                    type: string
+                    x-order: 2
+                status:
+                    type: string
+                    x-order: 3
+                    enum:
+                        - CONNECTED
+                        - CONNECTING
+                        - FAILED
+                latestReadingTime:
+                    type: string
+                    x-order: 4
+                firstReadingTime:
+                    type: string
+                    x-order: 5
+                provider:
+                    type: string
+                    enum:
+                        - BLUEMETERING
+                        - DISCOVERGY
+                        - SMARTME
+                        - BSED
+                        - EASEE
+                        - SHELLY
+                        - POWERFOX
+                        - METERGRID
+                        - WATTLINE
+                        - ZAEHLERHELDEN
+                        - MSCONS
+                        - IMOVIS
+                        - IMPORTED
+                        - NON_SMART_METER_PROVIDER
+                        - GO_E
+                        - MYSTROM
+                        - VIESSMANN
+                        - TSUN
+                        - EXTERNAL
+                        - EDA
+                        - AUXILIUS
+                        - TIBBER
+                        - OCPP
+                        - BIT_SHAKE
+                        - LOBARO
+                        - SOLAREDGE
+                    x-order: 6
+                providerName:
+                    type: string
+                    x-order: 7
+                providerDescription:
+                    type: string
+                    x-order: 8
+                providerLogoUrl:
+                    type: string
+                    x-order: 9
+                providerInstructionsPath:
+                    type: string
+                    x-order: 10
+                deviceType:
+                    type: string
+                    x-order: 11
+                deviceTypeDescription:
+                    type: string
+                    x-order: 12
+                deviceTypeImageUrl:
+                    type: string
+                    x-order: 13
+                deviceTypeIcon:
+                    type: string
+                    x-order: 14
+                isMainDeviceAllowed:
+                    type: boolean
+                    x-order: 15
+                isMainDevice:
+                    type: boolean
+                    x-order: 16
+                metaData:
+                    type: array
+                    x-order: 17
+                    items:
+                        $ref: "#/components/schemas/Metadata"
+                createdAt:
+                    type: string
+                    x-order: 18
+                errorMessage:
+                    type: string
+                    x-order: 19
+                medium:
+                    type: string
+                    x-order: 20
+                    enum:
+                        - ELECTRICITY
+                        - GAS
+                        - WATER
+                        - HEATING
+                imageUrl:
+                    type: string
+                    x-order: 21
+                ownerUserId:
+                    type: string
+                    x-order: 22
+                externalDeviceId:
+                    type: string
+                    x-order: 23
+                    deprecated: true
+                externalDeviceIds:
+                    type: array
+                    items:
+                        type: string
+                    x-order: 24
+
+        Users:
+            required:
+                - users
+                - totalNumPages
+            properties:
+                users:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/User"
+                    x-order: 1
+                totalNumPages:
+                    type: integer
+                    format: int32
+                    x-order: 2
+
+        User:
+            required:
+                - id
+                - name
+                - email
+                - partnerId
+                - lastLogin
+                - phoneNumber
+                - createdAt
+                - loginCount
+                - picture
+            properties:
+                id:
+                    type: string
+                    x-order: 1
+                name:
+                    type: string
+                    x-order: 2
+                email:
+                    type: string
+                    x-order: 3
+                partnerId:
+                    type: string
+                    x-order: 4
+                lastLogin:
+                    type: string
+                    x-order: 5
+                phoneNumber:
+                    type: string
+                    x-order: 6
+                createdAt:
+                    type: string
+                    x-order: 7
+                loginCount:
+                    type: number
+                    format: double
+                    x-order: 8
+                picture:
+                    type: string
+                    x-order: 9
+
+        Metadata:
+            required:
+                - label
+                - value
+            properties:
+                label:
+                    type: string
+                value:
+                    type: string
+
+        EnergyPrice:
+            required:
+                - validFrom
+                - validTo
+                - price
+            properties:
+                validFrom:
+                    type: string
+                    format: date-time
+                    example: 2024-09-15T10:00:00Z
+                    description: From when is price valid (only hours are used, minutes and seconds are omitted)
+                validTo:
+                    type: string
+                    format: date-time
+                    example: 2024-09-15T11:00:00Z
+                    description: Until when prices is valid (only hours are used, minutes and seconds are omitted)
+                price:
+                    type: number
+                    format: double
+                    description: Energy price in Euro/MWh
+
+        # Device Registrations models
+
+        NewDevice:
+            type: object
+            required:
+                - deviceName
+                - isMainDevice
+                - deviceType
+                - deviceMedium
+            properties:
+                deviceName:
+                    type: string
+                    x-order: 1
+                isMainDevice:
+                    type: boolean
+                    description: if device the main device of the space
+                    x-order: 2
+                deviceType:
+                    type: string
+                    enum:
+                        - SMART_METER
+                        - OPTICAL_METER_SENSOR
+                        - WALLBOX
+                        - SMART_PLUG
+                        - SMART_RELAY
+                        - VIRTUAL_LANDLORD_TO_TENANT_METER
+                        - ENERGY_METER
+                        - NON_SMART_METER
+                        - HEAT_PUMP
+                        - MICRO_INVERTER
+                    x-order: 3
+                deviceMedium:
+                    type: string
+                    enum:
+                        - ELECTRICITY
+                        - GAS
+                        - WATER
+                        - HEATING
+                    x-order: 4
+
+        NewExternalDevice:
+            allOf:
+                - $ref: "#/components/schemas/NewDevice"
+                - type: object
+                  properties:
+                      externalDeviceId:
+                          type: string
+                          description: can be used for data transmission
+                      meteringLocationId:
+                          type: string
+                      serialNumber:
+                          type: string
+                      conversionFactor:
+                          type: number
+                          format: double
+                          default: 1.00
+                      conversionFactorAlreadyApplied:
+                          type: boolean
+                          default: true
+
+        NewBluemeteringDevice:
+            allOf:
+                - $ref: "#/components/schemas/NewDevice"
+                - type: object
+                  required:
+                      - meteringLocationId
+                      - bluemeteringApiKey
+                  properties:
+                      meteringLocationId:
+                          type: string
+                      bluemeteringApiKey:
+                          type: string
+                      meterPin:
+                          type: string
+                      conversionFactor:
+                          type: number
+                          format: double
+                          default: 1.00
+                      conversionFactorAlreadyApplied:
+                          type: boolean
+                          default: true
+
+        NewNonSmartMeter:
+            allOf:
+                - $ref: "#/components/schemas/NewDevice"
+                - type: object
+                  required:
+                      - readingMeasurementTime
+                      - readingUnit
+                      - consumptionReadingValue
+                  properties:
+                      deviceType:
+                          type: string
+                          enum:
+                              - NON_SMART_METER
+                          default: NON_SMART_METER
+                      isBidirectional:
+                          type: boolean
+                          default: false
+                      readingMeasurementTime:
+                          type: integer
+                          format: int64
+                      readingUnit:
+                          type: string
+                          enum:
+                              - KILO_WATT_HOUR
+                              - WATT
+                              - CUBIC_METRE
+                              - KILO_GRAMM
+                              - LITERS_PER_MINUTE
+                              - KILO_GRAMM_CO2
+                              - EURO
+                              - EURO_PER_KILO_WATT_HOUR
+                              - PERCENT
+                              - CENT_PER_KWH
+                              - KILO_WATT
+                      consumptionReadingValue:
+                          type: number
+                          format: double
+                      ingestionReadingValue:
+                          type: number
+                          format: double
+                      isReadingUpdate:
+                          type: boolean
+                          default: false
+                      serialNumber:
+                          type: string
+
+        ExternalUserContract:
+            type: object
+            required:
+                - contractId
+                - firstName
+                - lastName
+                - addressLineOne
+                - addressLineTwo
+                - city
+                - postCode
+            properties:
+                contractId:
+                    type: string
+                    x-order: 1
+                email:
+                    type: string
+                    x-order: 2
+                firstName:
+                    type: string
+                    x-order: 3
+                lastName:
+                    type: string
+                    x-order: 4
+                addressLineOne:
+                    type: string
+                    x-order: 5
+                addressLineTwo:
+                    type: string
+                    x-order: 6
+                city:
+                    type: string
+                    x-order: 7
+                postCode:
+                    type: string
+                    x-order: 8
+                endDate:
+                    type: integer
+                    format: int64
+
+        Customer:
+            type: object
+            required:
+                - identifier
+                - address_line_one
+                - city
+                - postcode
+            properties:
+                identifier:
+                    type: string
+                    description: Identifier of the customer (e.g. customer or contract number)
+                email:
+                    type: string
+                    description: Email address that an invite is sent to
+                address_line_one:
+                    type: string
+                    description: Street address
+                address_line_two:
+                    type: string
+                    description: Additional address details
+                city:
+                    type: string
+                postcode:
+                    type: string
+                custom_attributes:
+                    type: object
+                    description: Additional customer attributes

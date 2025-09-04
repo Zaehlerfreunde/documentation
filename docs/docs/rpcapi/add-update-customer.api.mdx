@@ -1,0 +1,71 @@
+---
+id: add-update-customer
+title: "Creates a new or updates an existing customer"
+description: "Creates a new or updates an existing customer"
+sidebar_label: "Creates a new or updates an existing customer"
+hide_title: true
+hide_table_of_contents: true
+api: eJyVVVFv2zgM/iuCnjYgs3O9tz6tKzogd4drsXQYcEVRMDaTqLUlTaKbdkH+zf7J/tiRshO78YZiL4ZEkR9J8fusrY5YNMHQsz692eoFQsBw1tCat7e724kmWEVe6/MmkqsxRM1G5zEAGWdnpT7VUJaffQmEex890QG/NhjpgysZeKtLjEUwXkI4YO+nSiQwVez8TUCGo9DgRBfOElqSWPC+MkVKl99HAdjqWKyxBlnRs0eGdIt7LOgF0I02JUOYpUkVcZUBY7yrjMU7Z5FNhbQ90d5FKlyJ0pkP0hsZjAI+AOhTRQrGrjjuZVOzg69yS0VrVMW+zTeYrbJ+64KS9gIUpGxTLzC81buJ5oZM9XqeC3FTXTecB0iBVcY+GkJloopchiIniKOWXwWfU0CkPfoIgzbudYyzsjSyhL7K/Zx33Z2PMHaDKfzssL27OyC2LBpqp3M8+l+Wcbj5QfyOUclQhQM+slHMXLJ3NrZJTqbTMYEv/07xR6wOyBqICpTFjQy5SaKIMh58MpG4l0MpXG6NtHaiH+lcaAiiOp0XB6VNWJzhUVaizSZUcuwhkJVabycH7c5FDm29QwUfrmhN5AUtufG+dWJLu/joQg2sNf3Xl+vUmMjsU6/giyeofYXHiugJ0FG3N4yZ94uzxKj+rGVHv+9JMfD5CRekaGOXiZ1yYe1E/sim2VT3c/7vx/d1hWEZsLElqrOr2Zg1V7NWU/jEuXl4RzFoS++MpaiaKPMUnV96tBL3ZzZV0WPB19P+riQ1hjpeLuc8R1PsRxFP8zxuYLXCkBmXJ59ctz89/ilIExbqccWDm34Q1wd6/w1w4JAVrmanlin7TJvNJhu75SIr/q8iE32Q8MwDk0SdpHsb40A6zlxY5V1szP+ZnV/8O794xzHZmuoqMUgGV4MdIP+uPF7M5cBkwifKfQXGSv2pwG2nnBtdDN+otaiKjdvtAiJ+DtVuJ2YmdZC3jpePEAwshBn81HEAQim0Zqk9oLDwvH2D3l1LanGvGilh9B6JEg9ivrqcX4uwuoevbskbYCNvE39PtZb3U6KTXpNtqyuwqwZW4ttiyiXCSxUfqTZV2h2BfR5UyC0nj2v3gJbbnnQNkey5XAb/H7l7yrM=
+sidebar_class_name: "post api-method"
+info_path: docs/rpcapi/zahlerfreunde-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Creates a new or updates an existing customer"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/customers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Creates a new or updates an existing customer
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"description":"Customer details","required":true,"content":{"application/json":{"schema":{"type":"object","required":["identifier","address_line_one","city","postcode"],"properties":{"identifier":{"type":"string","description":"Identifier of the customer (e.g. customer or contract number)"},"email":{"type":"string","description":"Email address that an invite is sent to"},"address_line_one":{"type":"string","description":"Street address"},"address_line_two":{"type":"string","description":"Additional address details"},"city":{"type":"string"},"postcode":{"type":"string"},"custom_attributes":{"type":"object","description":"Additional customer attributes"}},"title":"Customer"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"OK"}}}
+>
+  
+</StatusCodes>
+
+
+      

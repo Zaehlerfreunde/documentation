@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Nächste",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.User Guides": {
+    "message": "User Guides",
+    "description": "The label for category User Guides in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.Integration Guides": {
+    "message": "Integration Guides",
+    "description": "The label for category Integration Guides in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.category.API Documentation": {
+    "message": "API Dokumentation",
+    "description": "The label for category API Documentation in sidebar docsSidebar"
+  },
+  "sidebar.docsSidebar.doc.Admin Portal Guide": {
+    "message": "Admin Portal Guide",
+    "description": "The label for the doc item Admin Portal Guide in sidebar docsSidebar, linking to the doc user-guides/admin/admin-guide"
+  },
+  "sidebar.docsSidebar.doc.Business Customers": {
+    "message": "Geschäftskunden",
+    "description": "The label for the doc item Business Customers in sidebar docsSidebar, linking to the doc user-guides/business/business"
+  },
+  "sidebar.docsSidebar.doc.Private Customers": {
+    "message": "Privatkunden",
+    "description": "The label for the doc item Private Customers in sidebar docsSidebar, linking to the doc user-guides/private/private"
+  }
+}

@@ -1,0 +1,71 @@
+---
+id: invite-user-to-space
+title: "Invites a user to view a space. This allows the user to view all device data associated with the space."
+description: "Invites a user to view a space. This allows the user to view all device data associated with the space."
+sidebar_label: "Invites a user to view a space. This allows the user to view all device data associated with the space."
+hide_title: true
+hide_table_of_contents: true
+api: eJy9Vc2O2zgMfhVDpy6Q2mn3llOnxRSYRdEpmhQFOpgDx2ZibWxJleh4soHfpm/SFyspOZO/QdHTXmZk6qNIfvzI7FTAsvOatmp2t1MPCB79VUc1f94P9xNFsAp8VnMHJQbFFuvQA2lrbio1U9psNOGXgH5hI0ZNlAMPLRL6EB/VhnEO+M2JMnzBX0GQ7D9RoayxBTXbKdq6eEVemxXfLK1vgdjSdbpSw0R5/N5pjxyVfIeSnFgw0FtbbeWFU8BEldYQGpIrcK7RZUy7+DdYI7ZD6IPjHfNhqptY1HULuuFEOi4unTmk81I/aeZCnjgDH8p4sLZBMJL3wf+iyoGvSVMjpo/YRwLTe3w1xJqDsyakaK+nU/n3x2Wd5po69UGb9e/zOEoigoeUSYWh9NpJKAal+5BBJtVlZLONxp4/Y2fzbFFrvmwa24eMajxDNU1W4UaXmFVAkEEIttRAWGW9pjo6pHeYfRZSbUVpzgaK4hJxqiICQrEbpTQUqb4gmkK/2Yuv842gWZJk0CtRzV7xcyEqcXOs+yduaiK3V2hsaQSxJR3e7/X5z9dFJFAa8PmgyOtHaJ0w+oxMkj6PhPHUiAn3aWnFSUpIZL/Kp/lUHTr07eePukG/9NiZCrOrTzfqvD9sYxqBMnxk3rhRZz6ckLPaUODOcNxI+a1DI35/51OmH0u9HKUlodG34XY5Z2a5bSM5YVYUoYfVCn2ubRExhUpzB2UU6Djvp9EZgmPZa4Gu6c1/gEeAvLStDF7s3T5S3/f5JawQyngGkIfkKOAVq4JLeh15u3wH4nVu/aoYfUPx4ebd9cf59Uv2yWtqm9hTEV0L5ujl/0/5Jx19UiXhIxWuAZ12i49bJQ3FXdqrMgKzw4bdzwUrv5YRYthu9wABv/hmGMTMkvWy//m4Aa/hQVTGs1PpIGceviU0AS8yelpE6sXncYP+lYlYnst0NILZKgnTdPLFxzVuj34QhnuG1ggVD5qkkG7fpUAvF/LGwfti+w2TvcdVWaKj32Lvj3bLp9v5QgZ7/CFpbSU+Hno2yt+YqY2Fx30RbTvVgFl1sBJselMkA6db5GxrxKqe5YKbEhELu0bDjdlTQ/ItxAzDL7Sjqe4=
+sidebar_class_name: "post api-method"
+info_path: docs/rpcapi/zahlerfreunde-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Invites a user to view a space. This allows the user to view all device data associated with the space."}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/spaces/{spaceId}/invites"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Invites a user to view a space. This allows the user to view all device data associated with the space.
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"in":"path","name":"spaceId","schema":{"type":"string","format":"uuid"},"required":true}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":true,"content":{"application/json":{"schema":{"required":["sendInviteEmail","userEmail"],"properties":{"sendInviteEmail":{"type":"boolean"},"userEmail":{"type":"string"}},"title":"NewSpaceInvite"}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"content":{"application/json":{"schema":{"properties":{"inviteLink":{"type":"string"}},"title":"SpaceInviteLink"}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
