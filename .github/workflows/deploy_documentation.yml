@@ -35,11 +35,8 @@ jobs:
                   cd docs
                   npm run build
 
-            - name: Deploy to S3
-              run: aws s3 sync docs/build/ s3://docs.zaehlerfreunde.tld --delete
+            - name: Delete all current files 
+              run: aws s3 rm s3://docs.zaehlerfreunde.tld --recursive
 
-            - name: Invalidate CloudFront
-              run: aws cloudfront create-invalidation --distribution-id TO_FIND_DISTRIBUTION_ID --paths "/*"
-
-            - name: Debug AWS Identity
-              run: aws sts get-caller-identity
+            - name: Upload new files 
+              run: aws s3 cp docs/build s3://docs.zaehlerfreunde.tld --recursive
