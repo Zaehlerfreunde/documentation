@@ -1,7 +1,5 @@
 # Anleitung für Zählerfreunde Geschäftskunden
 
-Owner: Tobias Keussen, Jakob Kungel
-
 Vielen Dank für Ihr Vertrauen in unsere **Geschäftskundenlösung**. Wir arbeiten kontinuierlich daran, das Produkt weiterzuentwickeln. Bei Feedback oder Fragen zögern Sie bitte nicht, sich per Mail an uns zu wenden: [kontakt@zaehlerfreunde.com](mailto:kontakt@zaehlerfreunde.com)!
 
 Mit der Zählerfreunde-Lösung behalten Sie Ihren Verbrauch optimal im Blick. Überwachen Sie z.B. die Stromnutzung Ihrer Kühlgeräte über das Wochenende und stellen Sie sicher, dass keine Produkte beschädigt werden. Sie erhalten sofortige Benachrichtigungen bei untypisch hohem Verbrauch und können Reports in täglicher, wöchentlicher oder monatlicher Frequenz anfordern.

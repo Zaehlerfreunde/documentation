@@ -1,7 +1,3 @@
----
-id: integrations/authorizations
----
-
 # Autorisierungscode-Flow
 
 Sie können den [OAuth Autorisierungscode-Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow) über unseren Authentifizierungsanbieter Auth0 verwenden, um Zugriff auf unsere API zu erhalten.

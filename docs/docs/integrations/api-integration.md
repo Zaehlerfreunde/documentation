@@ -1,7 +1,5 @@
 # Zählerfreunde API Integration
 
-Owner: Jonas Pfab
-
 The Zählerfreunde API enables partners to automatically manage user, space, and device infos in order to onboard new users, manage existing ones, and to add/remove meters and other devices.
 
 You can view the official Swagger documentation here: [https://external.prod.zaehlerfreunde.com/partner/swagger/index.html](https://external.prod.zaehlerfreunde.com/partner/swagger/index.html)
