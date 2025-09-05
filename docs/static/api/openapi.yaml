@@ -76,7 +76,7 @@ paths:
         post:
             security:
                 - bearerAuth: []
-            summary: Creates a new space and returns the created space ID.
+            summary: Creates a new space and returns the created space ID
             tags:
                 - Spaces
             operationId: createSpace

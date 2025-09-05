@@ -418,6 +418,9 @@ Mit dieser Funktion können Endkunden mehrere Zähler/Geräte kombinieren - bitt
 
 Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt über das Admin Dashboard
 
+![Benachrichtigungen1](/img/user-guides/admin/notification1.png)
+![Benachrichtigungen2](/img/user-guides/admin/notification2.png)
+
 ### Sonstiges
 
 Hier können Sie einen Demo Account für ihre Website erstellen und den KI Assistenten einstellen

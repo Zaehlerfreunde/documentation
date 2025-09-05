@@ -1,18 +1,21 @@
 name: Deploy documentation
 on:
-    workflow_dispatch: 
+    workflow_dispatch:
     push:
         branches:
             - main
         paths:
-            - docs/**
+            - "docs/static/api/openapi.yaml"
+            - "docs/**"
+            - ".github/workflows/deploy_documentation.yml"
+
 jobs:
     deploy:
         runs-on: ubuntu-latest
         timeout-minutes: 15
         steps:
             - name: Check out repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Configure AWS Credentials
               uses: aws-actions/configure-aws-credentials@v1-node16
@@ -30,13 +33,17 @@ jobs:
                   cd docs
                   npm ci
 
+            - name: Generate API docs if openapi.yaml changed
+              if: contains(github.event.head_commit.modified, 'docs/static/api/openapi.yaml')
+              run: npx docusaurus gen-api-docs all
+
             - name: Build documentation
               run: |
                   cd docs
                   npm run build
 
-            - name: Delete all current files 
+            - name: Delete all current files
               run: aws s3 rm s3://docs.zaehlerfreunde.tld --recursive
 
-            - name: Upload new files 
+            - name: Upload new files
               run: aws s3 cp docs/build s3://docs.zaehlerfreunde.tld --recursive

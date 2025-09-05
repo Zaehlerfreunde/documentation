@@ -102,13 +102,13 @@ Direkt unter den Stromspartipps siehst du noch einen Shop. Hier sind Produkte ge
 
 Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Logiken.
 
-![Untitled](/img/user-guides/common/Untitled%2013.png)
+![Untitled](/img/user-guides/common/Untitled%2011.png)
 
 Um eine neue Automation hinzuzufügen, klicke einfach auf den entsprechenden Knopf, und es öffnet sich ein Fenster, um die gewünschte Logik einzugeben. In diesem Beispiel wollen wir unser Auto laden, wenn unsere Solaranlage Strom produziert und die Einspeisung positiv ist. Du kannst aber auch alle möglichen Geräte steuern oder Benachrichtigungen senden.
 
-![Untitled](/img/user-guides/common/Untitled%2014.png)
+![Untitled](/img/user-guides/common/Untitled%2012.png)
 
-![Untitled](/img/user-guides/common/Untitled%2015.png)
+![Untitled](/img/user-guides/common/Untitled%2013.png)
 
 Nachdem du die Automation erstellt hast, wird sie angezeigt. Diese kannst du bearbeiten, löschen oder weitere hinzufügen.
 
@@ -151,13 +151,13 @@ Hier siehst du, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am E
 
 ![Untitled](/img/user-guides/common/ea3de318-c51d-4da3-a7ee-893dbefb5b95.png)
 
+![Untitled](/img/user-guides/common/Untitled%2014.png)
+
+![Untitled](/img/user-guides/common/Untitled%2015.png)
+
 ![Untitled](/img/user-guides/common/Untitled%2016.png)
 
 ![Untitled](/img/user-guides/common/Untitled%2017.png)
-
-![Untitled](/img/user-guides/common/Untitled%2018.png)
-
-![Untitled](/img/user-guides/common/Untitled%2019.png)
 
 ## Tarifwechsel
 
