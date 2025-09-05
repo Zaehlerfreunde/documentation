@@ -4,7 +4,7 @@ Hier finden Sie die Erklärung zur Nutzung des Admin-Bereichs.
 
 Den Guide für die Nutzung aus der Sicht der Endkunden finden Sie hier (diesen müssen Sie zur Weiterverwendung bitte im Wording + Screenshots für ihre Zwecke anpassen):
 
-[Privatkunde](../private/private.md)
+[Privatkunde](../private.md)
 
 Hier finden Sie die Erklärung für die Benutzung unserer Lösung, wenn Sie KMU Kunden oder andere B2B Kunden haben.
 
