@@ -44,6 +44,7 @@ jobs:
               working-directory: ./docs
               run: |
                   echo "openapi.yaml has changed, regenerating API docs..."
+                  rm -rf docs/rpcapi
                   npx docusaurus gen-api-docs all
 
             - name: Build documentation
