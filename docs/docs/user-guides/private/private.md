@@ -1,48 +1,48 @@
-# Private Customer
+# Privatkunde
 
-Here you will find the explanation for using the private customer area.
+Hier finden Sie die Erklärung zur Nutzung des Privatkunden-Bereichs. 
 
-Thank you for your trust in our solution. We are continuously working to further develop the product. For feedback or questions, please do not hesitate to contact us via email or the chat function on the website at the bottom right: kontakt@zaehlerfreunde.com!
+Vielen Dank für Ihr Vertrauen in unsere Lösung. Wir arbeiten kontinuierlich daran, das Produkt weiterzuentwickeln. Bei Feedback oder Fragen zögern Sie bitte nicht, sich über Mail oder die Chat-Funktion auf der Webseite unten rechts an uns zu wenden: kontakt@zaehlerfreunde.com!
 
-Here you can find the explanation for using our solution if you are an SME customer:
+Hier finden Sie die Erklärung für die Benutzung unserer Lösung, wenn Sie KMU Kunde sind:
 
-[Guide for Zaehlerfreunde Business Customers](../business/business.md)
+[Anleitung für Zählerfreunde Geschäftskunden](../business/business.md) 
 
-Here is a table of contents for the guide:
+Hier ist ein Inhaltsverzeichnis des Guides:
 
-## Registration
+## Anmeldung
 
-Depending on whether you are a private customer or receive the solution through your municipal utility, the registration process looks slightly different. However, the differences are only in small details.
+Je nachdem, ob du Privatkunde bist oder die Lösung über dein Stadtwerk beziehst, sieht der Anmeldeprozess etwas anders aus. Die Unterschiede sind jedoch nur in kleinen Details zu finden.
 
-In the first step, when you land on our website, we recommend that you accept all cookies so that we can offer you the best experience on our platform.
+Im ersten Schritt, wenn du auf unsere Webseite gelangst, empfehlen wir dir, alle Cookies zu akzeptieren, damit wir dir die beste Erfahrung auf unserer Plattform bieten können.
 
-![Cookie Acceptance](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.38.png)
+![Cookie Akzeptanz](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.38.png)
 
-Then click on "Private Customer" or "Company" and register. For registration, you can also use your Google or Apple account.
+Klicke dann auf "Privatkunde" oder “Unternehmen” und registriere dich. Für die Registrierung kannst du auch deinen Google- oder Apple-Account benutzen. 
 
-![Screenshot 2024-06-28 at 13.46.49.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.49.png)
+![Bildschirmfoto 2024-06-28 um 13.46.49.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.49.png)
 
 ![Untitled](/img/user-guides/common/Untitled.png)
 
-Once that is done, we will ask for your name and your consent to our terms and conditions.
+Sobald das erledigt ist, fragen wir dich nach deinem Namen und bitten um deine Zustimmung zu unseren AGB.
 
 ![Untitled](/img/user-guides/common/Untitled%201.png)
 
-We will then immediately send you an email with a confirmation link. Once you have clicked the link in the email, you can confirm on our platform that you have verified your email address.
+Wir schicken dir dann sofort eine E-Mail mit einem Bestätigungslink zu. Sobald du den Link in der E-Mail geklickt hast, kannst du auf unserer Plattform bestätigen, dass du deine E-Mail-Adresse verifiziert hast.
 
-![Screenshot 2024-06-28 at 13.48.10.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.48.10.png)
+![Bildschirmfoto 2024-06-28 um 13.48.10.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.48.10.png)
 
 ![Untitled](/img/user-guides/common/Untitled%202.png)
 
-## Creating New Properties and Adding Devices
+## Neue Objekte erstellen und Geräte anlegen
 
-After the email has been confirmed, you will land on your personal dashboard. Since no property and therefore no device has been created yet, it still looks a bit empty:
+Nachdem die E-Mail bestätigt wurde, landest du auf deinem persönlichen Dashboard. Da noch kein Objekt und damit auch kein Gerät erstellt wurde, sieht es noch etwas leer aus:
 
 ![Untitled](/img/user-guides/common/Untitled%203.png)
 
-Go to the plus sign next to "Property" in the top left and create a new property. The platform will guide you through the process independently. You can also create multiple properties here and subordinate them hierarchically. An example of this is the visualization of a multi-family house, including the detailed consumption data of the individual apartments. Such logic can be visualized using "grouping".
+Gehe links oben auf das Plus neben "Objekt" und lege ein neues Objekt an. Die Plattform führt dich eigenständig durch den Prozess. Du kannst hier auch mehrere Objekte anlegen und diese hierarchisch unterordnen. Ein Beispiel dafür ist die Visualisierung eines Mehrfamilienhauses, inklusive der aufgefächerten Verbrauchsdaten der einzelnen Wohnungen. Derartige Logiken können mithilfe der „Gruppierung“ visualisiert werden.
 
-After the property has been created, we can add a device:
+Nachdem das Objekt angelegt wurde, können wir ein Gerät anlegen:
 
 ![Untitled](/img/user-guides/common/Untitled%204.png)
 
@@ -50,131 +50,131 @@ After the property has been created, we can add a device:
 
 ![Untitled](/img/user-guides/common/Untitled%206.png)
 
-## Devices
+## Geräte
 
-The "Devices" tab is on the left side, relatively far down.
+Der Reiter “Geräte” befindet sich auf der linken Seite, relativ weit unten. 
 
 ![Untitled](/img/user-guides/common/Untitled%207.png)
 
-Here you have a large selection of devices that you can connect. A list of all supported devices can be found on our homepage.
+Hier hast du eine große Auswahl, welche Geräte du anbinden kannst. Eine Liste aller unterstützten Geräte findest du auf unserer Homepage.
 
 ![2.png](/img/user-guides/common/2.png)
 
-Since meters can measure the electricity demand of the entire house or cover individual areas, we need to know whether the meter you are currently connecting is your main device or not, in order to calculate it correctly with your tariff.
+Da Zähler den Strombedarf des gesamten Hauses messen können oder einzelne Bereiche abdecken können, müssen wir wissen, ob der Zähler, den du gerade anbindest, dein Hauptgerät ist oder nicht, um das korrekt mit deinem Tarif zu verrechnen.
 
 ![Untitled](/img/user-guides/common/Untitled%208.png)
 
-The connection process will then be explained to you step by step. After you have successfully connected a device, your dashboard will slowly begin to fill up.
+Die Anbindung wird dir dann Schritt für Schritt erklärt. Nachdem ein Gerät erfolgreich verbunden hast wird sich dein Dashboard langsam füllen. 
 
-After you have added the main device, you can add more devices and create logic. Once you have created more than 10 devices or sub-properties, they will be counted together and displayed here.
+Nachdem du das Hauptgerät hinzugefügt hast, kannst du weitere Geräte hinzufügen und Logiken erstellen. Sobald du mehr als 10 Geräte oder Sub-Objekte angelegt hast, werden diese zusammengezählt und hier angezeigt.
 
 ![1.png](/img/user-guides/common/1.png)
 
-In the next step, you can (if not already done) enter your tariff details so that we can accurately calculate your costs. You can find this option either directly on the dashboard or in the menu under Management > Property.
+Im nächsten Schritt kannst du (falls nicht schon geschehen) deine Tarifdetails hinterlegen, damit wir dir deine Kosten akkurat berechnen können. Diese Möglichkeit findest du entweder direkt über das Dashboard, oder im Menü unter Verwaltung > Objekt.
 
 ## Dashboard
 
-Your dashboard now shows all the devices you have connected at the top, along with when the last data was transmitted and the real-time power. The upper area of the graph shows your consumption, while the lower area shows the feed-in from your solar system, if you have one. A feed-in tariff of 7 cents/kWh is automatically assumed, but you can adjust this as you wish under "Management" > "Property". Here you can also visualize daily, weekly, monthly, and yearly data. This applies not only to consumption in watts but also to costs and remuneration, CO2 emissions, market prices, and meter readings. You can download this data at any time via CSV export.
+Dein Dashboard zeigt jetzt oben alle Geräte an, die du angebunden hast und wann die letzte Übermittlung von Daten war bzw. die Echtzeit Leistung. Der obere Bereich im Graphen zeigt deinen Verbrauch an, der untere die Einspeisung deiner Solaranlage, falls du eine hast. Es wird automatisch von 7 Cent/kWh Einspeisevergütung ausgegangen, dies kannst du aber auch wieder unter “Verwaltung” > “Objekt” beliebig anpassen. Hier kannst du auch die Tages-, Wochen-, Monats- und Jahresdaten visualisieren lassen. Das gilt nicht nur für den Verbrauch in Watt, sondern auch für Kosten und Vergütung, CO2-Emissionen, die Marktpreise und die Zählerstände. Diese Daten kannst du jederzeit über den CSV-Export herunterladen.
 
 ![Untitled](/img/user-guides/common/Untitled%209.png)
 
-## Meter Readings
+## Messwerte
 
-Of course, you can display the readings not only from the main device but from all devices. Below, you can also see the consumption compared to the previous month and the costs. Here too, you can display individual devices or readings, or the main device.
+Die Messwerte kannst du natürlich nicht nur vom Hauptgerät anzeigen lassen, sondern von allen Geräten. Unten siehst du auch den Verbrauch im Vergleich zum Vormonat und die Kosten. Auch hier kannst du einzelne Geräte oder Messwerte anzeigen lassen oder das Hauptgerät.
 
 ![Untitled](/img/user-guides/common/Untitled%2010.png)
 
-## Recommendations
+## Empfehlungen
 
-You can also set a goal for how much you want to consume. To help you reach this goal, or even achieve better ones, you will be shown tips on how to save electricity.
+Du kannst dir auch ein Ziel setzen, wie viel du verbrauchen möchtest. Damit du dieses Ziel erreichst oder sogar noch bessere Ziele erreichen kannst, werden dir Tipps zum Stromsparen angezeigt.
 
 ![Untitled](/img/user-guides/private/Untitled%2011.png)
 
-## Tips and Shop
+## Tipps und Shop
 
-Based on your information and consumption, you will receive tips tailored specifically to you under "Tips," as well as general electricity-saving advice.
+Basierend auf deinen Angaben und deinem Verbrauch bekommst du unter „Tipps“ individuell auf dich zugeschnittene Hinweise, aber auch allgemeine Stromspartipps.
 
 ![Untitled](/img/user-guides/private/Untitled%2012.png)
 
-Directly below the electricity-saving tips, you will see a shop. Products are listed here with which you can measure and visualize your consumption even better to identify the real energy guzzlers in your household.
+Direkt unter den Stromspartipps siehst du noch einen Shop. Hier sind Produkte gelistet, mit denen du deinen Verbrauch noch besser messen und visualisieren kannst, um die wahren Stromfresser in deinem Haushalt zu identifizieren.
 
-## Smart Control and Logic
+## Smarte Steuerung und Logiken
 
-The topic of "Smart Control" deals with energy management and logic.
+Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Logiken.
+
+![Untitled](/img/user-guides/common/Untitled%2011.png)
+
+Um eine neue Automation hinzuzufügen, klicke einfach auf den entsprechenden Knopf, und es öffnet sich ein Fenster, um die gewünschte Logik einzugeben. In diesem Beispiel wollen wir unser Auto laden, wenn unsere Solaranlage Strom produziert und die Einspeisung positiv ist. Du kannst aber auch alle möglichen Geräte steuern oder Benachrichtigungen senden.
+
+![Untitled](/img/user-guides/common/Untitled%2012.png)
 
 ![Untitled](/img/user-guides/common/Untitled%2013.png)
 
-To add a new automation, simply click the corresponding button, and a window will open for you to enter the desired logic. In this example, we want to charge our car when our solar system is producing power and the feed-in is positive. However, you can also control all sorts of devices or send notifications.
+Nachdem du die Automation erstellt hast, wird sie angezeigt. Diese kannst du bearbeiten, löschen oder weitere hinzufügen.
+
+Bei den Automationen kannst du auch die Möglichkeit auswählen ab einem bestimmten Schwellenwert Geräte an, bzw auszuschalten oder Benachrichtigungen zu schicken. Diesen Schwellenwert kannst du auch in dem Verbrauchsgraphen anzeigen lassen.
+
+![Bildschirmfoto 2024-10-02 um 14.53.47.png](/img/user-guides/private/Bildschirmfoto_2024-10-02_um_14.53.47.png)
+
+![Bildschirmfoto 2024-10-02 um 14.53.26.png](/img/user-guides/private/Bildschirmfoto%202024-10-02%20um%2014.53.26.png)
+
+## Reporting
+
+Um das volle Potenzial der Daten auszuschöpfen, haben wir eine umfassende Reporting-Funktion entwickelt. Diese ermöglicht es dir, individuell festzulegen, welche Daten in welchem Intervall als visualisierte Berichte aufbereitet werden sollen.
+Im Menü auf der linken Seite findest du den Reiter "Reporting". Sobald du diesen öffnest, erhältst du eine Übersicht über alle angelegten Reportings sowie die bereits erhaltenen Berichte.
+
+![Bildschirmfoto 2024-09-03 um 09.05.07.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.07.png)
+
+Um einen neuen Report zu erstellen, klicke auf "Jetzt erstellen". In diesem Bereich kannst du dem Report einen Namen geben, die Metriken auswählen, die ausgewertet werden sollen (wie Verbrauch, Produktion, Kosten, Vergütung und CO2), und festlegen, in welchem Intervall der Bericht erstellt werden soll (täglich, wöchentlich, monatlich oder jährlich).
+
+![Bildschirmfoto 2024-09-03 um 09.05.34.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.34.png)
+
+Nachdem du ein Startdatum ausgewählt und die neue Reporting-Regel gespeichert hast, erhältst du eine Übersicht über den zu erstellenden Bericht sowie den Zeitpunkt, zu dem dieser generiert wird.
+
+![Bildschirmfoto 2024-09-03 um 09.05.54.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.54.png)
+
+![Bildschirmfoto 2024-09-03 um 09.06.02.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.06.02.png)
+
+Hier siehst du noch ein Beispiel, wie der Bericht aussehen könnte.
+
+![Bildschirmfoto 2024-09-03 um 09.08.56.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.08.56.png)
+
+![Bildschirmfoto 2024-09-03 um 09.09.05.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.09.05.png)
+
+## Simulator
+
+Im Simulator kannst du verschiedene Varianten von Mini-Photovoltaikanlagen mit diversen Montagemöglichkeiten durchrechnen.
+
+Die Möglichkeit zur Simulation einer großen PV-Anlage und eines Batteriespeichers wird aktuell noch entwickelt und bald zur Verfügung stehen!
+
+Hier siehst du, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am Ende bekommst du konkrete Vorschläge, wie viel das kosten würde und wie viel du davon profitieren kannst.
+
+![Untitled](/img/user-guides/common/ea3de318-c51d-4da3-a7ee-893dbefb5b95.png)
 
 ![Untitled](/img/user-guides/common/Untitled%2014.png)
 
 ![Untitled](/img/user-guides/common/Untitled%2015.png)
 
-After you have created the automation, it will be displayed. You can edit, delete, or add more.
-
-With automations, you can also choose the option to switch devices on or off or send notifications when a certain threshold is reached. You can also have this threshold displayed in the consumption graph.
-
-![Screenshot 2024-10-02 at 14.53.47.png](/img/user-guides/private/Bildschirmfoto_2024-10-02_um_14.53.47.png)
-
-![Screenshot 2024-10-02 at 14.53.26.png](/img/user-guides/private/Bildschirmfoto%202024-10-02%20um%2014.53.26.png)
-
-## Reporting
-
-To fully utilize the potential of the data, we have developed a comprehensive reporting function. This allows you to individually define which data should be prepared as visualized reports and at what interval.
-In the menu on the left, you will find the "Reporting" tab. Once you open it, you will get an overview of all created reports and the reports you have already received.
-
-![Screenshot 2024-09-03 at 09.05.07.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.07.png)
-
-To create a new report, click "Create now". In this area, you can give the report a name, select the metrics to be evaluated (such as consumption, production, costs, remuneration, and CO2), and define the interval at which the report should be created (daily, weekly, monthly, or yearly).
-
-![Screenshot 2024-09-03 at 09.05.34.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.34.png)
-
-After you have selected a start date and saved the new reporting rule, you will get an overview of the report to be created and the time at which it will be generated.
-
-![Screenshot 2024-09-03 at 09.05.54.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.54.png)
-
-![Screenshot 2024-09-03 at 09.06.02.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.06.02.png)
-
-Here you can see an example of what the report might look like.
-
-![Screenshot 2024-09-03 at 09.08.56.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.08.56.png)
-
-![Screenshot 2024-09-03 at 09.09.05.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.09.05.png)
-
-## Simulator
-
-In the simulator, you can calculate different variants of mini-photovoltaic systems with various mounting options.
-
-The option to simulate a large PV system and a battery storage system is currently under development and will be available soon!
-
-Here you can see, for example, how to simulate a balcony power plant. At the end, you will get concrete suggestions on how much it would cost and how much you can profit from it.
-
-![Untitled](/img/user-guides/common/ea3de318-c51d-4da3-a7ee-893dbefb5b95.png)
-
 ![Untitled](/img/user-guides/common/Untitled%2016.png)
 
 ![Untitled](/img/user-guides/common/Untitled%2017.png)
 
-![Untitled](/img/user-guides/common/Untitled%2018.png)
+## Tarifwechsel
 
-![Untitled](/img/user-guides/common/Untitled%2019.png)
-
-## Tariff Change
-
-Here, we constantly look for better and cheaper tariffs based on your consumption. If we find one for you, we will display it there.
+Hier schauen wir ständig, basierend auf deinem Verbrauch, nach besseren und günstigeren Tarifen. Wenn wir einen für dich gefunden haben, werden wir ihn dir dort anzeigen.
 
 ![Untitled](/img/user-guides/common/8fd384e8-f8d5-480b-b1c2-7b091ada1b48.png)
 
 ![Untitled](/img/user-guides/common/Untitled%2018.png)
 
-## Management
+## Verwaltung
 
-Under the "Verwaltung" tab, information about your property is listed. Here you can see general information as well as information about your tariff. Additionally, you can view all connected devices and invoices here, so you can find and access everything conveniently in one place.
+Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. Hier siehst du allgemeine Infos sowie Informationen zu deinem Tarif. Zusätzlich kannst du hier alle verbundenen Geräte und Rechnungen einsehen, damit du alles komfortabel an einem Ort findest und darauf zugreifen kannst.
 
 ![Untitled](/img/user-guides/common/Untitled%2019.png)
 
 ![Untitled](/img/user-guides/private/Untitled%2022.png)
 
-In our premium membership, you can add other users to the same property under "Users". This allows you, for example, to invite your entire family to view the same household.
+In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer zum selben Objekt hinzufügen. Dies dient dazu, dass du zum Beispiel deine gesamte Familie einladen kannst den selben Haushalt einzusehen.
 
-We wish you a lot of fun with our platform! If you have any questions or if something isn't working as you imagine, feel free to write to us anytime via the chat or at support@zaehlerfreunde.com, and we will find a solution for you.
+Wir wünschen dir viel Spaß mit unserer Plattform! Falls du Fragen hast oder etwas nicht so klappt, wie du es dir vorstellst, schreibe uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für dich.

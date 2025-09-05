@@ -24,12 +24,8 @@ const config: Config = {
 
   i18n: {
     defaultLocale: 'de',
-    locales: ['de', 'en'],
+    locales: ['de'],
     localeConfigs: {
-      en: {
-        label: 'English',
-        htmlLang: 'en-GB',
-      },
       de: {
         label: 'Deutsch',
         htmlLang: 'de-DE',
@@ -45,7 +41,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           docItemComponent: "@theme/ApiItem",
-          editUrl: 'https://github.com/zaehlerfreunde/your-repo-name/tree/main/',
+          editUrl: 'https://github.com/zaehlerfreunde/documentation/tree/main/docs/',
         },
         theme: {
           customCss: './src/css/custom.css',

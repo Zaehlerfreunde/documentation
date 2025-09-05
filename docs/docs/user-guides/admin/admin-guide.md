@@ -1,496 +1,500 @@
 # Admin Portal Guide
 
-Here you will find the explanation for using the admin area.
+Hier finden Sie die Erklärung zur Nutzung des Admin-Bereichs.
 
-The guide for use from the end customer's perspective can be found here (you will need to adapt the wording + screenshots for your purposes for further use):
+Den Guide für die Nutzung aus der Sicht der Endkunden finden Sie hier (diesen müssen Sie zur Weiterverwendung bitte im Wording + Screenshots für ihre Zwecke anpassen):
 
-[Private Customer](../private/private.md)
+[Privatkunde](../private/private.md)
 
-Here you will find the explanation for using our solution if you have SME customers or other B2B customers.
+Hier finden Sie die Erklärung für die Benutzung unserer Lösung, wenn Sie KMU Kunden oder andere B2B Kunden haben.
 
-[Instructions for Zählerfreunde Business Customers](../business/business.md)
+[Anleitung für Zählerfreunde Geschäftskunden](../business/business.md)
 
-**Table of Contents:**
+**Verzeichnis:**
 
-# 🔷 **1. Introduction**
+# 🔷 **1. Einführung**
 
-### 🎯 **Purpose of the Admin Portal**
+### 🎯 **Zweck des Admin-Portals**
 
-Welcome to the Admin Portal. This portal is your central management platform for all submetering, visualization, and billing processes. As an administrator, it allows you to:
+Willkommen im Admin-Portal. Dieses Portal ist Ihre zentrale Verwaltungsplattform für alle Submetering-, Visualisierungs- und Abrechnungsprozesse. Es ermöglicht Ihnen als Administrator:
 
--   Efficiently manage your end customers
--   Centrally organize meter readings and metering points
--   Create and manage tariffs
--   Control user roles
--   Set up your white-label branding
--   Process support requests in a structured manner
+-   Ihre Endkunden effizient zu verwalten
+-   Zählerstände und Messstellen zentral zu organisieren
+-   Tarife anzulegen und zu verwalten
+-   Benutzerrollen zu steuern
+-   Ihr White-Label Branding einzustellen
+-   Supportanfragen strukturiert zu bearbeiten
 
-This guide will walk you through all functions step by step, so you can operate your system completely independently.
+Diese Anleitung führt Sie Schritt für Schritt durch alle Funktionen, sodass Sie Ihr System vollständig eigenständig bedienen können.
 
 # 🔷 **2. Dashboard & Navigation**
 
-### 🖥️ **2.1 Dashboard Overview**
+### 🖥️ **2.1 Dashboard Überblick**
 
-After registration/login, the dashboard page opens, as it does for all users. If you then click on the letter in the top right, the user menu opens. As an employee, you have the option to click on "Admin Area." Please let us know which employees should receive admin access. Alternatively, you can access your admin URL: "yourcompany.[admin.zaehlerfreunde.de](http://admin.zaehlerfreunde.de/)"
+Nach der Registrierung/Anmeldung, öffnet sich die Seite mit dem Dashboard, wie bei allen Nutzern. Wenn Sie dann oben rechts auf den Buchstaben klicken, öffnet sich das Benutzermenü. Als Mitarbeiter haben Sie die Möglichkeit, auf „Admin Bereich“ zu klicken. Bitte teilen Sie uns dazu mit, welche Mitarbeiter einen Admin-Zugang erhalten sollen. Alternativ können Sie Ihre Admin URL aufrufen: “ihrunternehmen.[admin.zaehlerfreunde.de](http://admin.zaehlerfreunde.de/)”
 
-![Screenshot 2025-07-09 at 15.25.38.png](/img/user-guides/admin/Bildschirmfoto_2025-07-09_um_15.25.38.png)
+![Bildschirmfoto 2025-07-09 um 15.25.38.png](/img/user-guides/admin/Bildschirmfoto_2025-07-09_um_15.25.38.png)
 
 ### 🗂️ **2.2 Navigation**
 
-The left sidebar is your main navigation. It contains:
+Die linke Seitenleiste ist Ihre Hauptnavigation. Sie enthält:
 
--   **Customer Management:** Manage all end customers/properties at a glance.
--   **Devices/Metering Points:** All installed meters and sensors including their status at a glance.
--   **Tariffs:** Define prices and billing logic.
--   **User Management:** Manage employee access and rights.
--   **Subscriptions:** Create your own subscriptions.
--   **Settings:** White-label branding, default texts, system configuration.
+-   **Kundenverwaltung:** Alle Endkunden/Objekte auf einen Blick verwalten.
+-   **Geräte/Zählpunkte:** Alle installierten Zähler und Sensoren inkl Status auf einen Blick.
+-   **Tarife:** Preise und Abrechnungslogiken festlegen.
+-   **Benutzerverwaltung:** Mitarbeiterzugänge und Rechte verwalten.
+-   **ABOs:** Eigene Abos erstellen
+-   **Einstellungen:** White-Label Branding, Standardtexte, Systemkonfiguration.
 -   **Support**
 
-# 🔷 **3. General**
+# 🔷 **3. Allgemein**
 
-### 👥 **3.1 Customer Overview**
+### 👥 **3.1 Kundenübersicht**
 
-**Purpose:** Here you create new end customers, manage their master data, and assign them metering points and tariffs. Each customer should have at least **one assigned metering point and tariff**.
+**Zweck:** Hier legen Sie neue Endkunden an, verwalten ihre Stammdaten und ordnen ihnen Zählpunkte sowie Tarife zu. Jeder Kunde sollte mindestens **einen zugeordneten Zählpunkt und Tarif** haben.
 
-### 📝 **3.2 Customer Details -** Users
+### 📝 **3.2 Kundendetails -** Nutzer
 
--   List of all registered users with the timestamp of their last login and the number of logins.
--   End customers can register themselves or be created semi-manually by you through uploads. Alternatively, a fully automated API connection and creation of customer accounts is possible. You do not have to add all end customers individually. This function is particularly useful at the beginning for testing purposes to ensure a slow and secure transition. This allows the platform to be tested initially with a small, selected group of customers.
--   When a user is clicked, the registered properties of the end user and the connected devices are visible.
+-   Auflistung aller registrierten Nutzer mit Zeitstempel der letzten Anmeldung und Anzahl der Anmeldungen.
+-   Die Endkunden können sich selbst registrieren oder halb manuell durch Uploads von Ihnen angelegt werden. Alternativ ist auch eine vollautomatisierte API-Anbindung und Erstellung der Kunden-Accounts möglich. Sie müssen nicht alle Endkunden einzeln hinzufügen. Diese Funktion bietet sich besonders am Anfang für Testzwecke an, um einen langsamen und sicheren Übergang sicherzustellen. Dies ermöglicht es, die Plattform zunächst mit einem kleinen, ausgewählten Kreis an Kunden zu testen.
+-   Wenn auf einen Nutzer geklickt wird, sind die angemeldeten Objekte des Endnutzers und die angebundenen Geräte sichtbar.
 
-## 🏢 3.3 Properties
+## 🏢3.3 Objekte
 
-### 🎯 **Purpose of the "Properties" Function**
+### 🎯 **Zweck der Funktion „Objekte“**
 
-In **Properties**, you manage **real estate, buildings, or units** to which metering points (meters) are assigned. This serves to structurally map your real building and meter structure in the system.
+In **Objekte** verwalten Sie **Liegenschaften, Gebäude oder Einheiten**, denen Zählpunkte (Zähler) zugeordnet werden. Dies dient der strukturierten Abbildung Ihrer realen Gebäude- und Zählerstruktur im System.
 
-**💡 Why is this important?**
+**💡 Warum ist das wichtig?**
 
--   Overview of all locations and units of your end customers.
--   Clear assignment of meters to buildings, apartments, or commercial units.
--   Basis for billing and consumption reports per property or unit.
+-   Übersicht aller Standorte und Einheiten Ihrer Endkunden.
+-   Klare Zuordnung von Zählern zu Gebäuden, Wohnungen oder Gewerbeeinheiten.
+-   Grundlage für Abrechnungen und Verbrauchsberichte pro Objekt oder Einheit.
 
 ---
 
-## 👁️‍🗨️ **3.3.1 Properties Overview**
+## 👁️‍🗨️ **3.3.1 Objekte Übersicht**
 
-Under **Properties**, you will find a table with:
+Unter **Objekte** finden Sie eine Tabelle mit:
 
--   **Property Name:** e.g., "Musterstraße 12" or "Wohnanlage Nordpark".
--   **Address:** Street, Postal Code, City.
--   **Number of Metering Points:** How many meters are assigned to this property.
--   **Actions:** View, Edit, Delete.
+-   **Objektname:** z.B. „Musterstraße 12“ oder „Wohnanlage Nordpark“.
+-   **Adresse:** Straße, PLZ, Ort.
+-   **Anzahl Zählpunkte:** Wie viele Zähler diesem Objekt zugeordnet sind.
+-   **Aktionen:** Anzeigen, Bearbeiten, Löschen.
 
-![Screenshot 2025-07-09 at 15.38.52.png](/img/user-guides/admin/Bildschirmfoto_2025-07-09_um_15.38.52.png)
+![Bildschirmfoto 2025-07-09 um 15.38.52.png](/img/user-guides/admin/Bildschirmfoto_2025-07-09_um_15.38.52.png)
 
--   New properties can be created via the plus symbol, and people can then be invited directly to this property. This is particularly helpful if several people in the same household want access to the same property and do not want to set everything up twice.
--   Hierarchies: Whether it's a region with multiple properties with multiple tenants or single-family homes/small and medium-sized enterprises. With the hierarchical structure, you can configure buildings as desired in the admin dashboard, subordinate them, and distribute viewing rights.
--   When clicking on the property, additional information becomes visible, such as users and devices. Here you can also send invitations and see which tariff is connected or assign one.
+-   Über das Plus-Symbol können neue Objekte angelegt werden und anschließend direkt Personen zu diesem Objekt eingeladen werden. Das ist besonders hilfreich, wenn mehrere Personen im gleichen Haushalt Zugang zu demselben Objekt haben möchten und nicht alles doppelt einrichten wollen.
+-   Hierarchien: Egal ob eine Region mit mehreren Liegenschaften mit mehreren Mietern oder Einfamilienhäuser/kleine mittelständische Unternehmen. Mit der hierarchischen Struktur kann man Gebäude beliebig im Admin-Dashboard konfigurieren, unterordnen und Einsichtsrechte verteilen.
+-   Beim Klicken auf das Objekt werden zusätzliche Informationen sichtbar, wie Nutzer und Geräte. Hier kann man auch Einladungen versenden und einsehen, welcher Tarif angebunden ist bzw. diesen hinterlegen.
 
-![Screenshot 2024-08-05 at 14.50.20.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.50.20.png)
+![Bildschirmfoto 2024-08-05 um 14.50.20.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.50.20.png)
 
--   For business customers and tariff structures linked to the respective voltage level, this can be stored for correct cost calculation (see "Tariffs").
-    ![Screenshot 2025-05-14 at 14.55.02.png](/img/user-guides/admin/Bildschirmfoto_2025-05-14_um_14.55.02.png)
+-   Für Geschäftskunden und Tarifstrukturen die an die jeweilige Spannungsebene geknüpft sind, lässt sich diese für die korrekte Kostenberechnung (siehe “Tarife”) hinterlegen.
+    ![Bildschirmfoto 2025-05-14 um 14.55.02.png](/img/user-guides/admin/Bildschirmfoto_2025-05-14_um_14.55.02.png)
 
-## **🏠 3.3.2 _“What happens when a tenant changes?”:_**
+## **🏠 3.3.2 _“Was passiert bei einem Mieterwechsel?”:_**
 
--   You have the option to release devices for specific time windows: By clicking on the clock symbol, you can set from when the tenant, for example, should no longer have access to the meter data. The same meter can now be assigned to a new property with a new start date. This prevents old tenants from being able to see the consumption of subsequent tenants.
+-   Sie haben die Möglichkeit Geräte für bestimmte Zeitfenster freizugeben: Durch das Klicken auf das Uhr Symbol, lässt sich einstellen ab wann der Mieter zum Beispiel keine Einsicht mehr auf die Zählerdaten haben darf. Der Gleiche Zähler kann nun mit einem neuen Startdatum einem neuen Objekt zugeordnet werden. So wird verhindert dass alte Mieter den Verbrauch von Folgemietern einsehen können.
 
-![Screenshot 2025-07-03 at 19.11.59.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_19.11.59.png)
+![Bildschirmfoto 2025-07-03 um 19.11.59.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_19.11.59.png)
 
 ## 🏢 **3.3.3 Best Practices**
 
-✔️ Create **all buildings or units as properties** before assigning metering points.
+✔️ Legen Sie **alle Gebäude oder Einheiten als Objekte an**, bevor Sie Zählpunkte zuordnen.
 
-✔️ Use clear and consistent property names (e.g., "Musterstraße 12, Apartment 3rd floor left").
+✔️ Verwenden Sie klare und konsistente Objektnamen (z.B. „Musterstraße 12, Wohnung 3.OG links“).
 
-✔️ Regularly check if all metering points are correctly assigned.
+✔️ Prüfen Sie regelmäßig, ob alle Zählpunkte korrekt zugeordnet sind.
 
-### 🔌 3.4 Devices
+### 🔌 3.4 Geräte
 
--   List of all connected devices.
--   Status of the devices (connected or not connected)
--   Possibility to add devices to individual properties.
+-   Auflistung aller angebundener Geräte.
+-   Status der Geräte (verbunden oder nicht verbunden)
+-   Möglichkeit Geräte einzelnen Objekten hinzuzufügen.
 
-Also: If you create devices automatically via our API, individual IDs can be stored. This serves for uniform identification of your devices.
+Außerdem: Wenn Sie Geräte automatisiert über unsere API anlegen, können individuelle IDs hinterlegt werden. Dies dient zur einheitlichen Identifizierung Ihrer Geräte
 
-![Screenshot 2025-04-24 at 16.25.22.png](/img/user-guides/admin/Bildschirmfoto_2025-04-24_um_16.25.22.png)
+![Bildschirmfoto 2025-04-24 um 16.25.22.png](/img/user-guides/admin/Bildschirmfoto_2025-04-24_um_16.25.22.png)
 
-## 🏷️ **3.4 Tariffs/Contracts**
+## 🏷️ **3.4 Tarife/Verträge**
 
-### 🎯 **Purpose of the "Tariffs" Function**
+### 🎯 **Zweck der Funktion „Tarife“**
 
-In Tariffs, you manage the legal relationships of your end customers. Each contract contains information on tariffs and price components. These can be created individually or via API and assigned globally.
-
----
-
-### 👁️‍🗨️ **3.4.1 Contracts Overview**
-
-The overview shows you:
-
--   **Contract Number or Name**
--   **Customer:** Which end customer the contract is assigned to.
--   **Tariff:** Which tariff is stored in the contract.
-
-![Screenshot 2025-02-16 at 13.49.25.png](/img/user-guides/admin/Bildschirmfoto_2025-02-16_um_13.49.25.png)
+In Tarife verwalten Sie die rechtlichen Beziehungen Ihrer Endkunden. Jeder Vertrag enthält Informationen zu Tarifen und Preisbestandteilen. Diese können individuell oder über API angelegt werden und global zugeordnet werden.
 
 ---
 
-### 🔧 **Functions in the Contracts Overview**
+### 👁️‍🗨️ **3.4.1 Verträge Übersicht**
 
-✅ **Create a New Contract**
+Die Übersicht zeigt Ihnen:
 
-1.  Click on **"Create New Contract"**.
-2.  Select the customer from the list.
-3.  Select the tariff to be assigned to the contract.
-4.  Set the contract term (start date, optional end date).
-5.  Enter further contract details (e.g., contract number, internal notes).
-6.  Save.
+-   **Vertragsnummer oder Name**
+-   **Kunde:** Welchem Endkunden der Vertrag zugeordnet ist.
+-   **Tarif:** Welcher Tarif im Vertrag hinterlegt ist.
 
----
-
-✅ **Edit an Existing Contract**
-
--   Click on a contract → _"Edit"_.
--   Make changes (e.g., tariff change, term extension).
--   Save.
+![Bildschirmfoto 2025-02-16 um 13.49.25.png](/img/user-guides/admin/Bildschirmfoto_2025-02-16_um_13.49.25.png)
 
 ---
 
-✅ **Delete a Contract**
+### 🔧 **Funktionen in der Verträge Übersicht**
 
--   Click on _"🗑️"_ next to the contract.
--   Confirm the cancellation in the pop-up.
+✅ **Neuen Vertrag anlegen**
+
+1. Klick auf **„Neuen Vertrag anlegen“**.
+2. Auswahl des Kunden aus der Liste.
+3. Tarif auswählen, der dem Vertrag zugeordnet wird.
+4. Vertragslaufzeit festlegen (Startdatum, optional Enddatum).
+5. Weitere Vertragsdetails eingeben (z.B. Vertragsnummer, interne Notizen).
+6. Speichern.
 
 ---
 
-### 📄 **3.4.2 Contract Details**
+✅ **Bestehenden Vertrag bearbeiten**
 
-In the detail view, you can see:
+-   Klick auf Vertrag → _„Bearbeiten“_.
+-   Änderungen vornehmen (z.B. Tarifwechsel, Laufzeitverlängerung).
+-   Speichern.
 
--   **All contract data** (name, number, term, status).
--   **Tariff details:** Prices, validity.
--   **Linked metering points:** Which meters are assigned to this contract.
+---
 
-With this function, tariff products can be configured and created. Taxes and various other price components can be calculated together.
+✅ **Vertrag Löschen**
 
--   Tariffs can be created globally with flexible components and assigned to customer groups based on contracts.
--   Grid fees are automatically assigned and calculated.
+-   Klick auf _„🗑️“_ neben dem Vertrag.
+-   Bestätigung der Kündigung im Pop-up.
 
-![Screenshot 2025-02-16 at 13.50.53.png](/img/user-guides/admin/Bildschirmfoto_2025-02-16_um_13.50.53.png)
+---
 
-### ✉️ **3.5 Invitations (End Users)**
+### 📄 **3.4.2 Vertragsdetails**
 
--   Here you can send invitations to specific people via email. This is particularly helpful if you want to test our platform at the beginning and introduce it slowly. You can invite selected customers to register, try out the platform, and provide feedback.
--   Once you are 100% satisfied, all end customers can easily register via a link. The registration can be linked on your website or sent via email to all customers, or it can be done automatically via our API connection.
+In der Detailansicht sehen Sie:
 
-### 👁️‍🗨️ **3.5.1 Invitations Overview**
+-   **Alle Vertragsdaten** (Name, Nummer, Laufzeit, Status).
+-   **Tarifdetails:** Preise, Gültigkeit.
+-   **Verknüpfte Zählpunkte:** Welche Zähler diesem Vertrag zugeordnet sind.
 
-In the **Invitations Overview**, you can see all previously sent invitations to end customers with:
+Mit dieser Funktion können Tarifprodukte konfiguriert und angelegt werden. Steuern und verschiedene weitere Preiskomponenten können miteinander verrechnet werden.
 
--   **Email address** of the invited end customer
--   **Status:** pending (invitation not yet accepted) or activated
--   **Sent on:** Date of the invitation
--   **Actions:** Resend or delete invitation
+-   Tarife können mit flexiblen Bestandteilen global angelegt werden und Kundengruppen anhand von Verträgen zugeordnet werden.
+-   Netzentgelte werden automatisch zugeordnet und verrechnet.
 
-**_FAQ: How do I manually create a property + device and invite a user to it?_**
+![Bildschirmfoto 2025-02-16 um 13.50.53.png](/img/user-guides/admin/Bildschirmfoto_2025-02-16_um_13.50.53.png)
 
-**Attention – Important Note on Property Assignment**
+### ✉️ **3.5 Einladungen (Endnutzer)**
 
-Properties are automatically assigned to the user who creates them. If a user's account is deleted, all properties assigned to this user will also be irrevocably deleted. Please be particularly aware of this when managing employee accounts: if an employee creates properties and later leaves the company, their account must not be deleted to avoid the loss of the associated properties.
+-   Hier können Sie Einladungen an bestimmte Personen per E-Mail verschicken. Das ist besonders hilfreich, wenn Sie unsere Plattform am Anfang testen und langsam einführen möchten. Sie können ausgewählte Kunden einladen, sich zu registrieren, die Plattform auszuprobieren und Feedback zu geben.
+-   Sobald Sie zu 100% zufrieden sind, können sich alle Endkunden ganz einfach über einen Link registrieren. Die Anmeldung kann auf Ihrer Webseite verlinkt oder per E-Mail an alle Kunden gesendet werden, bzw. automatisiert über unsere API-Anbindung erfolgen.
 
-**Step 1:** In the admin portal, click on "Properties" and then on the "+" symbol. Then enter the details for the building. In the next step, subordinate properties can be added to this property (please ensure beforehand that the corresponding sub-properties **have already been created, e.g., several apartments in one building**).
+### 👁️‍🗨️ **3.5.1 Einladungen Übersicht**
 
-![Screenshot 2024-08-05 at 14.52.58.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.52.58.png)
+In der **Einladungen Übersicht** sehen Sie alle bisher versendeten Einladungen an Endkunden mit:
 
-**Step 2:** Click on the building you just created and add a device and, if applicable, a tariff to the building:
+-   **E-Mail Adresse** des eingeladenen Endkunden
+-   **Status:** ausstehend (Einladung noch nicht angenommen) oder aktiviert
+-   **Versendet am:** Datum der Einladung
+-   **Aktionen:** Einladung erneut senden oder löschen
 
-![Screenshot 2024-08-05 at 14.56.06.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.56.06.png)
+**_FAQ: Wie erstelle ich manuell ein Objekt + Gerät und lade einen Nutzer dazu ein?_**
 
-(Theoretically, an invitation can be sent directly (Step 3), but the end user must then add their devices themselves via the user dashboard, the same applies to the tariff details)
+**Achtung – Wichtiger Hinweis zur Objektzuordnung**
 
-![Screenshot 2024-08-05 at 14.59.51.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.59.51.png)
+Objekte werden automatisch dem Nutzer zugeordnet, der sie erstellt hat. Wenn der Account eines Nutzers gelöscht wird, werden auch alle diesem Nutzer zugeordneten Objekte unwiderruflich mitgelöscht. Beachten Sie dies insbesondere bei der Verwaltung von Mitarbeiter-Accounts: Sollte ein Mitarbeiter Objekte erstellen und später das Unternehmen verlassen, darf sein Account nicht gelöscht werden, um den Verlust der zugehörigen Objekte zu vermeiden.
 
-![Screenshot 2024-08-05 at 15.07.54.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_15.07.54.png)
+**Schritt 1:** Klicken Sie im Admin-Portal auf “Objekte” und anschließend auf das “+” Symbol. Geben Sie anschließend die Details zum Gebäude an. Im nächsten Schritt lassen sich untergeordnete Objekte diesem Objekt hinzufügen (bitte stellen Sie davor sicher, dass die entsprechenden Unterobjekte **bereits erstellt sind, zb. mehrere Wohnungen in einem Gebäude)**
 
-**Step 3:** Under the "Invitations" tab, select the "Plus" symbol. Enter the end user's email address and define the access role. You can choose between the following roles:
+![Bildschirmfoto 2024-08-05 um 14.52.58.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.52.58.png)
 
--   User: Receives all normal rights of an end user (can change and add new buildings, devices, and info).
--   View Access: Receives access to all consumption displays etc., but cannot adjust or add anything themselves.
--   Aggregated View: Shows monthly views but no live data (e.g., for janitors/facility managers).
--   Owner: Can do everything the "User" role can do and can add more users to their property, as well as delete the property.
-    ![Screenshot 2024-08-05 at 15.25.39.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_15.25.39.png)
+**Schritt 2:** Klicken Sie auf das Gebäude das Sie gerade neu erstellt haben und fügen Sie dem Gebäude ein Gerät und ggf. einen Tarif hinzu:
 
-## 🔑 **3.5.2 Process from the Customer's Perspective**
+![Bildschirmfoto 2024-08-05 um 14.56.06.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.56.06.png)
 
-1.  The customer receives an **email with the subject "Invitation to your customer portal"**.
-2.  Clicks on the **activation link** in the email.
-3.  Sets a **personal password**.
-4.  Login to the customer portal is now possible.
+(Theoretisch kann auch schon direkt eine Einladung verschickt werden (Schritt 3), allerdings muss der Endnutzer seine Geräte dann selbst über das User-Dashboard hinzufügen, selbes gilt für die Tarifdetails)
 
-# 🔷 4**. Management**
+![Bildschirmfoto 2024-08-05 um 14.59.51.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_14.59.51.png)
+
+![Bildschirmfoto 2024-08-05 um 15.07.54.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_15.07.54.png)
+
+**Schritt 3:** Unter dem Reiter “Einladungen” das “Plus”-Symbol auswählen. E-Mail Adresse des Endnutzers angeben und Zugriffsrolle definieren, hierbei kann zwischen folgenden Rollen ausgesucht werden:
+
+-   Nutzer: Erhält alle normalen Rechte eines Endnutzers (Gebäude, Geräte und Infos können geändert und neu hinzugefügt werden)
+-   Ansichtszugriff: Erhält Zugriff auf alle Vebrauchsanzeigen und Co. kann aber selbst nichts mehr verstellen oder neu hinzufügen.
+-   Aggregierte Sicht: Zeigt Monatsansichten aber keine live-Daten (Z.b. für Hausmeister/Facility Manager)
+-   Inhaber: Darf alles was die “Nutzer” Rolle darf und kann seinem/ihrem Objekt weitere Nutzer hinzufügen, genauso wie das Objekt wieder löschen
+    ![Bildschirmfoto 2024-08-05 um 15.25.39.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_15.25.39.png)
+
+## 🔑 **3.5.2 Ablauf aus Kundensicht**
+
+1. Kunde erhält **eine E-Mail mit dem Betreff „Einladung zu Ihrem Kundenportal“**.
+2. Klick auf den **Aktivierungslink** in der E-Mail.
+3. Vergabe eines **persönlichen Passworts**.
+4. Login im Kundenportal ist ab sofort möglich.
+
+# 🔷 4**. Verwaltung**
 
 ### 4.1 Admins
 
--   List of all employees with admin rights.
--   Possibility to add more employees as admins. These employees will then have the right to access the admin area and can see and edit all the functions described here.
--   ATTENTION! Please be careful not to accidentally add customers or other unauthorized persons here.
-    ![Screenshot 2025-07-09 at 16.11.23.png](/img/user-guides/admin/Bildschirmfoto_2025-07-09_um_16.11.23.png)
+-   Auflistung aller Mitarbeiter mit Admin-Rechten
+-   Möglichkeit weitere Mitarbeiter als Admin hinzuzufügen. Diese Mitarbeiter haben dann das Recht auf den Admin-Bereich zuzugreifen und können alle hier beschriebenen Funktionen sehen und bearbeiten.
+-   ACHTUNG! Bitte passen Sie auf, dass hier nicht aus Versehen Kunden hinzugefügt werden oder andere unbefugte Personen.
+    ![Bildschirmfoto 2025-07-09 um 16.11.23.png](/img/user-guides/admin/Bildschirmfoto_2025-07-09_um_16.11.23.png)
 
-### 4.2 Access Roles
+### 4.2 Zugriffsrollen
 
--   At this point in the admin portal, you can create any number of roles to which certain rights are assigned regarding how users can access properties. In the following example, you can create a new role, e.g., "Janitor," to grant users with this role only data viewing rights. Multiple selections are possible.
+-   An dieser Stelle im Admin-Portal, können Sie beliebige Rollen erstellen, denen gewisse Rechte zugeordnet werden wie Nutzer auf Objekte zugreifen können. In folgendem Beispiel kann man eine neue Rolle zb “Hausmeister” erstellen um Nutzer mit dieser Rolle lediglich Dateneinsichtsrechte zu gewähren. Eine Mehrfach Auswahl ist möglich.
 
-![Screenshot 2025-05-14 at 14.31.25.png](/img/user-guides/admin/Bildschirmfoto_2025-05-14_um_14.31.25.png)
+![Bildschirmfoto 2025-05-14 um 14.31.25.png](/img/user-guides/admin/Bildschirmfoto_2025-05-14_um_14.31.25.png)
 
--   Further roles with different permissions can be created for your individual use case.
+-   Es können weitere Rollen mit unterschiedlichen Berechtigungen für Ihren individuellen Anwendnungsfall zusammengestellt werden
 
 ### 4.3 API
 
-Our API can be used for many purposes. Primarily, it serves to save costs in the long run by eliminating the need for normal market communication (MSCONS/AS4) and forwarding data more quickly. Via this API, new properties and meters can be added fully automatically, and users can be created automatically. Bilateral synchronization between our system and your ERP/CRM systems is possible through this. The exact instructions for the API can be found here:
+Unsere API kann für viele Zwecke genutzt werden. Primär dient sie dazu, langfristig Kosten zu sparen, indem auf die normale Marktkommunikation (MSCONS/AS4) verzichtet wird und die Daten schneller weitergeleitet werden. Über diese API können neue Objekte und Zähler vollautomatisch hinzugefügt sowie Nutzer automatisch angelegt werden. Bilaterale Synchronisierung zwischen unserem System und Ihrem ERP/CRM Systemen ist hierdurch möglich. Bilateral kann hier Die genaue Anleitung für die API finden Sie hier:
 
 [Zählerfreunde API Integration](../../integrations/api-integration.md)
 
-### 4.4 Subscription
+### 4.4 Abo
 
-Under this menu item, you can create various subscription models for your end customers as you wish. This allows the scope of functions to be restricted for desired subscriptions.
+Unter diesem Menüpunkt können Sie ganz nach Wunsch verschiedene Abo-Modelle für Ihre Endkunden anlegen. Dadurch kann für gewünschte Abos der Funktionsumfang eingeschränkt werden.
 
-![Screenshot 2025-08-20 at 17.12.16.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.12.16.png)
+![Bildschirmfoto 2025-08-20 um 17.12.16.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.12.16.png)
 
-**Step 1:** Create and price the desired scope of the subscription.
+**Schritt 1:** Gewünschten Umfang des Abo’s anlegen und bepreisen.
 
-**Step 2:** Under "Payment Method," you can choose between 3 fields. Select "Stripe" to connect our or your Stripe account (please contact us for assistance). "Invoice": With this selection, you must issue the invoices to the customer yourself. "External Order Process": With this selection, you can provide a link where your customers can find an order process provided by you.
+**Schritt 2:** Unter “Zahlungsart” können Sie zwischen 3 Feldern auswählen. “Stripe” auswählen um unseren oder Ihren Stripe Account zu verbinden (bitte kontaktieren Sie uns für Hilfestellung). “Rechnung” : Bei dieser Auswahl müssen Sie selbst die Rechnungen dem Kunden ausstellen. “Externer Bestellprozess”: Bei dieser Auswahl können Sie einen Link hinterlegen über welchen Ihre Kunden eine von Ihnen bereitgestellte Bestellstrecke finden können
 
-**Step 3:** Select the functions that should be made available to your end customers within the subscription.
+**Schritt 3:** Wählen Sie die Funktionen aus, die Ihren Endkunden innerhalb des Abos bereitgestellt werden sollen.
 
-Via the "Users" tab in the admin menu, you can then also manually assign a subscription to your users.
+Über den Reiter “Nutzer” im Admin Menü, können Sie Ihren Nutzern anschließend auch manuell ein Abo zuordnen.
 
-![Screenshot 2025-08-20 at 17.12.46.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.12.46.png)
+![Bildschirmfoto 2025-08-20 um 17.12.46.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.12.46.png)
 
-New and existing customers will then see the selection options in the following view (of course, in your design):
+Neukunden und Endkunden erhalten dann die Auswahloptionen in folgender Ansicht (natürlich in Ihrem Design):
 
-![Screenshot 2025-08-20 at 17.14.12.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.14.12.png)
+![Bildschirmfoto 2025-08-20 um 17.14.12.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.14.12.png)
 
-# ⚙️ 5. Settings
+# ⚙️ 5. Einstellungen
 
--   ATTENTION: Please note that all adjustments have a direct effect on all users and are visible.
+-   ACHTUNG: Bitte beachten Sie, dass alle Anpassungen sich direkt auf alle Nutzer auswirken und sichtbar sind.
 
-In the settings, individual functions can be turned on or off. This modularity allows us to provide you with all available functions while giving you the ability to make adjustments quickly and easily yourself. Additionally, you can define which devices your customers can add.
+In den Einstellungen können einzelne Funktionen ein- oder ausgeschaltet werden. Diese Modularität ermöglicht es uns, Ihnen alle verfügbaren Funktionen zur Verfügung zu stellen und Ihnen gleichzeitig die Möglichkeit zu geben, Anpassungen schnell und einfach selbst vorzunehmen. Zusätzlich können Sie definieren, welche Geräte Ihre Kunden hinzufügen können.
 
-![Screenshot 2025-08-20 at 17.25.25.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.25.25.png)
+![Bildschirmfoto 2025-08-20 um 17.25.25.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.25.25.png)
 
-## 5.1 Functions
+## 5.1 Funktionen
 
-### **Security:**
+### **Sicherheit:**
 
--   "Invitation Required":
+-   “Einladung Erforderlich”:
 
-For testing purposes, you can use this function to prohibit general registration of end users. This allows you to invite a few test customers in a targeted manner before you launch your solution publicly. A customer will accordingly need an invitation email for a successful registration.
+Für Testzwecke kann man über diese Funktion die allgemeine Registrierung von Endnutzern verbieten. Dadurch lassen sich gezielt ein paar Testkunden einladen, bevor Sie ihre Lösung öffentlich schalten. Ein Kunde benötigt dementsprechend eine Einladungsemail für eine erfolgreiche Registrierung.
 
--   "Allow Invitation Request"
+-   “Einladungsanfrage erlauben”
 
-By activating this function, a user who was not previously invited but still comes across the app can request an invitation, which you can then accept or decline.
+Durch Aktivierung dieser Funktion, kann ein Nutzer der nicht zuvor eingeladen wurde aber dennoch auf die App stößt, eine Einladungsanfrage stellen, die Sie anschließend annehmen oder ablehnen können.
 
 ### **Dashboard:**
 
--   "Overview":
+-   “Übersicht”:
 
-Activate and deactivate the aggregated monthly widgets in the end customer dashboard:
+Aktivieren und deaktivieren der aggregierten Monatswidgets im Endkundendashboard:
 
-![Screenshot 2024-08-05 at 16.05.17.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.05.17.png)
+![Bildschirmfoto 2024-08-05 um 16.05.17.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.05.17.png)
 
--   "Current Device Status":
+-   “Aktueller Gerätestatus”:
 
-Activate and deactivate the device performance in the end customer dashboard.
+Aktivieren und deaktivieren der Geräteleistungen im Endkundendashboard
 
-![Screenshot 2024-08-05 at 16.05.42.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.05.42.png)
+![Bildschirmfoto 2024-08-05 um 16.05.42.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.05.42.png)
 
--   "Support Chatbox:"
+-   “Support Chatbox:”
 
-Via the support chat function, your customers can communicate with us and have specific questions answered. Here we rely on personal answers and not on an AI.
+Über die Support-Chat-Funktion können Ihre Kunden mit uns kommunizieren und spezifische Fragen beantworten lassen. Hier setzen wir auf persönliche Antworten und nicht auf eine KI.
 
-![Screenshot 2025-08-20 at 17.30.38.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.30.38.png)
+![Bildschirmfoto 2025-08-20 um 17.30.38.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.30.38.png)
 
--   "Day-Ahead Prices":
+-   “Day-Ahead Preise”:
 
-Activate and deactivate the stock market price view regardless of the type of electricity tariff (otherwise, the stock market price is only displayed to customers with a dynamic tariff product).
+Aktivieren und deaktivieren der Börsenpreisansicht unabhängig von Art des Stromtarifs (ansonsten wird der Börsenpreis ausschließlich Kunden mit dynamischem Tarifprodukt angezeigt)
 
-![Screenshot 2025-08-22 at 16.55.18.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_16.55.18.png)
+![Bildschirmfoto 2025-08-22 um 16.55.18.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_16.55.18.png)
 
--   "Market Premium for Plants":
+-   “Marktprämie für Anlagen”:
 
-By connecting various interfaces, we have succeeded in developing a function with a unique selling proposition! With the real-time market premium, plant operators can view their market premium continuously (not just at the end of the month as before). This increases planning certainty and liquidity management (add-on module).
+Durch die Anbindung verschiedener Schnittstellen, ist es uns gelungen eine Funktion mit Alleinstellungsmerkmal zu entwickeln! Durch die Marktprämie in Echtzeit können Anlagenbetreiber ihre Marktprämie laufend einsehen (nicht wie bisher nur am Ende des Monats). Das erhöht die Planbarkeit und das Liquiditätsmanagement (Zusatzmodul).
 
-![Screenshot 2025-08-22 at 16.59.31.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_16.59.31.png)
+![Bildschirmfoto 2025-08-22 um 16.59.31.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_16.59.31.png)
 
-### **Functionalities:**
+### **Funktionalitäten:**
 
-![Screenshot 2025-08-22 at 17.05.57.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.05.57.png)
+![Bildschirmfoto 2025-08-22 um 17.05.57.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.05.57.png)
 
--   "Simulator":
+-   “Simulator”:
 
-With the **Simulator**, end customers can have suggestions calculated as to whether a solar system or a balcony power plant is worthwhile, when it will pay for itself, and have offers displayed. Here, too, you have the opportunity to earn affiliate commissions if your end customers buy a PV system via this function.
+Mit dem **Simulator** können Endkunden Vorschläge errechnen lassen, ob sich eine Solaranlage oder ein Balkonkraftwerk lohnt, wann es sich amortisiert und Angebote anzeigen lassen. Auch hier haben Sie die Möglichkeit, Affiliate-Kommissionen zu verdienen, wenn Ihre Endkunden über diese Funktion eine PV-Anlage kaufen.
 
--   "Tips":
+-   “Tipps”:
 
-Under "**Tips**," electricity-saving tips are displayed. These can either be your own recommendations or ours, linked to products that can earn you potential affiliate commissions.
+Unter „**Tipps**“ werden Stromspartipps angezeigt. Diese können entweder Ihre eigenen Empfehlungen oder unsere sein, die mit Produkten verlinkt sind und Ihnen potenzielle Affiliate-Kommissionen einbringen.
 
--   "Document Vault":
+-   “Dokumententresor”:
 
-Conveniently provide invoices for download to customers via API or mail procedures, or store contract documents.
+Bequem über API oder Mail-Verfahren Rechnungen den Kunden zum Download bereitstellen oder Vertragsunterlagen ablegen.
 
--   "Shop":
+-   “Shop”:
 
-In the **Shop**, we offer products with which one can measure even more data and better visualize the household. If you make this accessible to your end customers, you have another opportunity to collect affiliate commissions. We can also gladly list your own products there.
+Im **Shop** bieten wir Produkte an, mit denen man noch mehr Daten messen und den Haushalt besser visualisieren kann. Wenn Sie diesen für Ihre Endkunden zugänglich machen, haben Sie eine weitere Möglichkeit, Affiliate-Kommissionen zu kassieren. Wir können auch gerne Ihre eigenen Produkte dort einstellen.
 
--   "Property Comparison":
+-   “Objektvergleich”:
 
-Particularly relevant to meet the requirements of the HKVO (Heating Costs Ordinance). Here, the consumption of individual subordinate apartments/properties is compared with the other apartments/properties of the parent building.
+Besonders relevant um Anforderungen der HKVO abzudecken. Hier werden Verbräuche einzelner untergeordneter Wohnungen/Objekte mit den anderen Wohnungen/Objekten des Elterngebäudes verglichen.
 
-![Screenshot 2024-08-05 at 16.12.03.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.12.03.png)
+![Bildschirmfoto 2024-08-05 um 16.12.03.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.12.03.png)
 
--   **"**Automations/Smart Control":
+-   **“**Automationen/Smarte Steuerung”:
 
-This function will become the centerpiece of our solution in the future; it allows your end customers to benefit from PV surplus charging, price signal-optimized charging, and alarms/notifications. You, in turn, can develop your own business model from this (add-on module). Further down in the admin dashboard on the same page, you can select the rules your end users are allowed to access.
+Diese Funktion wird zukünftig zum Herzstück unserer Lösung, sie erlaubt ihren Endkunden von PV-Überschussladen, Preissignal optimiertes Laden und Alarmen/Benachrichtigungen zu profitieren. Sie können wiederum ein eigenes Geschäftsmodell daraus entwickeln (Zusatzmodul). Weiter unten im Admin Dashboard auf der Selben Seite, können Sie die Regeln auf die Ihre Endnutzer Zugriff haben dürfen auswählen.
 
-![Screenshot 2025-08-22 at 17.09.43.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.09.43.png)
+![Bildschirmfoto 2025-08-22 um 17.09.43.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.09.43.png)
 
-User Dashboard View:
+Nutzer Dashboard-Ansicht:
 
-![Screenshot 2025-08-22 at 17.10.58.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.10.58.png)
+![Bildschirmfoto 2025-08-22 um 17.10.58.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.10.58.png)
 
--   "Reporting"
+-   “Reporting”
 
-Activates the automatic reporting function for all end users.
+Aktiviert die automatische Reportingfunktion für alle Endnutzer
 
--   "Property Creation"
+-   “Objekterstellung”
 
-Are end users allowed to create additional properties independently? If so, activate this function.
+Dürfen Endnutzer weitere Objekte eigenständig erstellen? Wenn ja, aktivieren Sie diese Funktion
 
--   "AI Assistant:"
+-   “KI Assistent:”
 
-You can create an "agent" (under the admin menu item "Miscellaneous" in settings) that either simply provides assistance or actively intervenes in the HEMS.
+Sie können einen "Agenten" erstellen (unter dem Admin Menüpunkt “Sonstiges” bei Einstellungen) der entweder einfach nur Hilfestellung leistet oder aktiv ins HEMS eingreift.
 
-Customers can use the assistant to:
--   Execute actions directly
--   Receive information about consumption, etc.
--   Activate rules in the HEMS
+Kunden können den Assistenten nutzen um
 
-In the medium term, it should be possible to manage everything related to HEMS through very simple prompts via the AI, e.g.: "my car needs to be full by 9 am tomorrow, please use PV surplus if possible, otherwise grid power"... etc.
+-   Aktionen direkt auszuführen
+-   Informationen zu Verbrauch und Co. zu erhalten
+-   Regeln im HEMS zu aktivieren
 
-![Screenshot 2025-08-22 at 17.17.13.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.17.13.png)
+Mittelfristig soll man über die KI alles im HEMS-Bezug auch durch ganz einfache Prompts managen können, z.B.: "mein Auto muss morgen um 9 Uhr voll sein, bitte nutze PV überschuss wenn möglich, sonst netzbezug"... etc.
 
-End User View:
+![Bildschirmfoto 2025-08-22 um 17.17.13.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.17.13.png)
 
-![Screenshot 2025-08-22 at 17.18.54.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.18.54.png)
+Endnutzer Ansicht:
 
--   "Energy Flow Diagram"
+![Bildschirmfoto 2025-08-22 um 17.18.54.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.18.54.png)
 
-Activate this graphic for your customers:
+-   “Energieflussdiagramm”
 
-![Screenshot 2025-08-22 at 17.20.54.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.20.54.png)
+Aktivieren Sie diese Grafik für Ihre Kunden:
 
-### **Tariffs**
+![Bildschirmfoto 2025-08-22 um 17.20.54.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.20.54.png)
 
-Under these settings, you can specify what types of categories and tariffs the end user is allowed to add.
+### **Tarife**
 
-### **Device Connections**
+Unter diesen Einstellungen lässt sich festhalten was für Sparten und Tarife der Endnutzer hinzufügen darf.
 
-Here you can set which devices your users are allowed to add and integrate themselves.
+### **Geräteverbindungen**
 
--   **Virtual Sum Meters (currently only activatable by Zählerfreunde):**
+Hier können Sie einstellen welche Geräte ihre Nutzer selbst hinzufügen und integrieren dürfen.
 
-With this function, end customers can combine several meters/devices - please contact us to activate the function (add-on module).
+-   **Virtuelle Summenzähler (aktuell nur durch Zählerfreunde aktivierbar):**
 
-## Display
+Mit dieser Funktion können Endkunden mehrere Zähler/Geräte kombinieren - bitte kontaktieren Sie uns für die Freischaltung der Funktion (Zusatzmodul).
 
-![Screenshot 2025-08-22 at 17.24.17.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.24.17.png)
+## Darstellung
 
--   Dark Mode is available but must be activated first. In Dark Mode, the normal white background becomes dark gray and the black font becomes white.
-    -   If you want to activate Dark Mode, you must add a logo below that will be displayed when an end user chooses to use Dark Mode.
--   You can easily replace your logo with the URL of your current logo. If you want to make fine adjustments like size changes, you can set the width (in pixels) next to it.
--   Here you can make adjustments to the corporate colors.
--   ATTENTION: Please note that all adjustments directly affect all users within this client and are visible.
+![Bildschirmfoto 2025-08-22 um 17.24.17.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.24.17.png)
 
-### Notifications
+-   Dark Mode ist verfügbar, muss jedoch zuerst aktiviert werden. Im Dark Mode wird der normale weiße Hintergrund dunkelgrau und die schwarze Schrift weiß.
+    -   Wenn Sie den Dark Mode aktivieren möchten, müssen Sie unten ein Logo hinzufügen, das angezeigt wird, wenn sich ein Endkunde für die Nutzung des Dark Modes entscheidet.
+-   Sie können Ihr Logo einfach durch die URL Ihres aktuellen Logos ersetzen. Wenn Sie Feineinstellungen wie Größenanpassungen vornehmen möchten, können Sie nebenstehend die Breite (in Pixeln) einstellen.
+-   Hier können Sie die Anpassungen an die Unternehmensfarben vornehmen.
+-   ACHTUNG: Bitte beachten Sie, dass alle Anpassungen sich direkt auf alle Nutzer innerhalb diesen Mandanten auswirken und sichtbar sind.
 
-Send invitation reminders or other notifications directly via the admin dashboard.
+### Benachrichtigungen
 
-### Miscellaneous
+Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt über das Admin Dashboard
 
-Here you can create a demo account for your website and configure the AI assistant.
+![Benachrichtigungen1](/img/user-guides/admin/notification1.png)
+![Benachrichtigungen2](/img/user-guides/admin/notification2.png)
 
-![Screenshot 2025-08-22 at 17.30.18.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.30.38.png)
+### Sonstiges
 
--   **Onboarding for New Customers**
-    -   We have developed a **click path including a tariff calculator and contract conclusion path** for you. You can book this add-on module to transfer new customers to your ERP system and to support tenant electricity projects with an individual application path.
+Hier können Sie einen Demo Account für ihre Website erstellen und den KI Assistenten einstellen
 
-![Screenshot 2025-09-01 at 15.47.55.png](/img/user-guides/admin/Bildschirmfoto_2025-09-01_um_15.47.55.png)
+![Bildschirmfoto 2025-08-22 um 17.30.18.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.30.38.png)
 
-![Screenshot 2025-09-01 at 15.49.37.png](/img/user-guides/admin/Bildschirmfoto_2025-09-01_um_15.49.37.png)
+-   **Onboarding für Neukunden**
+    -   Wir haben eine **Klickstrecke inklusive Tarifrechner und Vertragsabschlusstrecke** für Sie entwickelt. Dieses Zusatzmodul können Sie hinzubuchen, um Neukunden in Ihr ERP System zu übertragen und um Projekte im Bereich Mieterstrom mit einer individuellen Antragsstrecke zu untermalen.
 
-![Screenshot 2025-09-01 at 15.48.13.png](/img/user-guides/admin/Bildschirmfoto_2025-09-01_um_15.48.13.png)
+![Bildschirmfoto 2025-09-01 um 15.47.55.png](/img/user-guides/admin/Bildschirmfoto_2025-09-01_um_15.47.55.png)
 
-# 👩‍💻 Data Management
+![Bildschirmfoto 2025-09-01 um 15.49.37.png](/img/user-guides/admin/Bildschirmfoto_2025-09-01_um_15.49.37.png)
 
-![Screenshot 2025-08-22 at 17.27.39.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.27.39.png)
+![Bildschirmfoto 2025-09-01 um 15.48.13.png](/img/user-guides/admin/Bildschirmfoto_2025-09-01_um_15.48.13.png)
 
-### Data Import
+# 👩‍💻 Datenverwaltung
 
--   Overview of data import options, including service providers such as metergrid, BlueMetering, and metiundo, as well as via CSV import.
--   The advantage here is that all existing customer files can be easily imported and integrated into the platform.
--   Adding historical consumption data: There is no additional work for you or the end customer, and existing data can continue to be used without being lost.
+![Bildschirmfoto 2025-08-22 um 17.27.39.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.27.39.png)
 
-### Data Export
+### Datenimport
 
-All data can, of course, also be exported as an XAP file. This helps in normalizing the data and is important for further applications that use the data (e.g., ESG software).
+-   Übersicht über Datenimport-Möglichkeiten, einschließlich Dienstleister wie metergrid, BlueMetering und metiundo, sowie über CSV-Import.
+-   Der Vorteil hierbei ist, dass alle bestehenden Kundendateien problemlos importiert und in die Plattform integriert werden können.
+-   Hinzufügen historischer Verbrauchsdaten: Weder für Sie noch für den Endkunden entsteht dabei zusätzliche Arbeit und bestehende Daten können weiterhin verwendet werden, ohne verloren zu gehen.
 
-### Data Forwarding
+### Datenexport
 
-Data forwarding is ideal for normalizing all data (smart meters as well as IoT devices) and continuously forwarding it to third parties, such as billing service providers. Via data forwarding, the data can also be fed into forecasting tools to optimize the electricity purchasing strategy.
+Alle Daten können natürlich auch als XAP-Datei exportiert werden. Das hilft beim Normalisieren der Daten und ist für weitere Anwendungen wichtig, die die Daten verwerten (z.B. ESG Software).
 
-The technical setup of the forwarding is explained step-by-step when you click on the green "Set up forwarding" button. Other formats can be added individually upon request.
+### Datenweiterleitung
 
-![Screenshot 2024-08-05 at 16.31.59.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.31.59.png)
+Die Datenweiterleitung ist ideal, um alle Daten (Smart-Meter sowie IoT-Geräte) zu normalisieren und kontinuierlich an Dritte, wie Abrechnungsdienstleister, weiterzuleiten. Über die Datenweiterleitung können die Daten auch in Prognose-Tools eingespeist werden, um die Strom-Einkaufsstrategie zu optimieren.
 
-## **Additional Settings:**
+Die technische Einrichtung der Weiterleitung wird Schritt für Schritt erklärt, wenn Sie auf den grünen Button "Weiterleitung einrichten" klicken. Weitere Formate können auf Wunsch individuell hinzugefügt werden
 
-### **Sub-Clients**
+![Bildschirmfoto 2024-08-05 um 16.31.59.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.31.59.png)
 
-Allows the creation of sub-clients who receive their own admin access and can make design settings for their end users. (White-label within the white-label solution). You can, in turn, build your own business case from this (add-on module).
+## **Zusätzliche Einstellungen:**
 
-![Screenshot 2025-07-03 at 18.49.02.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.49.02.png)
+### **Sub-Mandanten**
 
-After a new client has been added, either you or the new client themselves can create an individual URL, which then represents an independent solution separate from the parent client.
+Erlaubt das Anlegen von Sub-Mandanten die ihren eigenen Admin-Zugang erhalten und Design-Einstellungen für ihre Endnutzer vornehmen können. (White-Label innerhalb der White-Label Lösung). Sie können daraus wiederum einen eigenen Business-Case bauen (Zusatzmodul).
 
-**Step 1:** Select the client for which you want to create a new subdomain from the menu on the left.
+![Bildschirmfoto 2025-07-03 um 18.49.02.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.49.02.png)
 
-**Step 2:** Define the subdomain in the way explained on the page, copy the URL, and you're ready to go. Important: If you want to try out the new subdomain, make sure that you are logged out yourself and that a "Login page has been created".
+Nachdem ein neuer Mandant hinzugefügt wurde, können entweder Sie oder der neue Mandant selbst eine individuelle URL erstellen, welche dann losgelöst von dem übergeordneten Mandanten eine eigenständige Lösung darstellt.
 
-![Screenshot 2025-07-03 at 18.48.46.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.48.46.png)
+**Schritt 1:** Wählen Sie links im Menüfeld den Mandanten aus, für den Sie eine neue Subdomain erstellen möchten.
 
-**Step 3:** Create Login Page: Here you define what the registration or login area for the sub-client should look like.
+**Schritt 2:** Definieren Sie die Subdomain in der Art wie es Ihnen auf der Seite erklärt wird, kopieren Sie die URL und schon kanns losgehen. Wichtig: Wenn Sie die neue Subdomain ausprobieren möchten, stellen Sie sicher, dass Sie selbst ausgelogged sind und dass eine “Login Seite erstellt wurde”
 
-![Screenshot 2025-07-03 at 18.55.28.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.55.28.png)
+![Bildschirmfoto 2025-07-03 um 18.48.46.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.48.46.png)
 
-**Step 4:** Just as with your own client, all settings and the overall appearance can also be configured for the sub-client.
+**Schritt 3:** Login-Seite erstellen: Hier wird definiert wie der Registrierungsbereich bzw. Anmeldebereich für den Submandanten aussehen soll.
 
--   "Support Mail": Here you can store your own support email, which will be displayed to your end users under "FAQ".
--   Under "FAQ" (end customer dashboard), your end customers will find answers to the most common questions. You are welcome to let us know if we should replace these with your own FAQs.
+![Bildschirmfoto 2025-07-03 um 18.55.28.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.55.28.png)
 
-**Please contact us if you are interested in any "add-on modules"; we will be happy to send you an offer.**
+**Schritt 4:** Wie beim eigenen Mandanten lassen sich alle Einstellungen und die Gesamtdarstellung auch für den Submandanten konfigurieren.
 
-### Tenant Electricity
+-   “Support-Mail”: Hier können Sie ihre eigene Support-Mail hinterlegen, welche Ihren Endnutzern unter “FAQ” angezeigt wird.
+-   Bei „FAQ“ (Endkunden Dashboard) finden Ihre Endkunden Antworten auf die häufigsten Fragen. Sie können uns gerne mitteilen wenn wir diese durch Ihre eigenen FAQ ersetzen sollen.
 
-You can easily create properties and add existing apartments/meters. You can also directly store corresponding tariffs. For this, select the type (mixed-price tariff or two-price tariff) and enter the corresponding details. The tariffs will now be used for the entire project and calculated with the corresponding meters. **Feel free to contact us, and we will support you in setting up the projects.**
+**Bitte kontaktieren Sie uns wenn sie an etwaigen “Zusatzmodulen” interessiert sind, wir schicken Ihnen hierfür gerne ein Angebot.**
 
-In addition to the PV quota for tenants, we also provide the complete management of the projects for the owner and build the interface to the desired billing system.
+### Mieterstrom
+
+Sie können bequem Liegschaften anlegen und bestehende Wohnungen/Zähler hinzufügen. Außerdem können Sie direkt entsprechende Tarife hinterlegen. Wählen Sie hierfür die Art aus (Mischpreistarif oder Zweipreistarif) und geben Sie die entsprechenden Details an. Die Tarife werden nun für das Gesamte Projekt herangezogen und mit den entsprechenden Zählern verrechnet. **Sprechen Sie uns gerne an und wir unterstützen beim Anlegen der Projekte**
+
+Neben der PV Quote für Mieter, stellen wir auch die komplette Verwaltung der Projekte für den Eigentümer zur Verfügung und bauen die Schnittestelle zum gewünschten Abrechnungssystem auf.
 
 ---
 
-All functions from the end customer's perspective can be found here:
+Alle Funktionen aus Endkundenperspektive finden Sie hier:
 
-[SME/B2B Guide](https://www.notion.so/KMU-B2B-Guide-13e7537d200e809480efe846d974309a?pvs=21)
+[Anleitung für Zählerfreunde Privatkunden](../private/private.md)
 
-That was the presentation and explanation of our solution. If you have any questions, you are very welcome to contact us at any time, and we will help you
+Das war die Vorstellung und Erklärung unserer Lösung. Falls Sie Fragen haben, dann können Sie jederzeit sehr gerne auf uns zukommen und wir helfen Ihnen weiter!

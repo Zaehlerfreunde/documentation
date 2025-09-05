@@ -1,46 +1,46 @@
-# Guide for Zählerfreunde Business Customers
+# Anleitung für Zählerfreunde Geschäftskunden
 
-Thank you for your trust in our **business customer solution**. We are continuously working to further develop the product. For feedback or questions, please do not hesitate to contact us by email: [kontakt@zaehlerfreunde.com](mailto:kontakt@zaehlerfreunde.com)!
+Vielen Dank für Ihr Vertrauen in unsere **Geschäftskundenlösung**. Wir arbeiten kontinuierlich daran, das Produkt weiterzuentwickeln. Bei Feedback oder Fragen zögern Sie bitte nicht, sich per Mail an uns zu wenden: [kontakt@zaehlerfreunde.com](mailto:kontakt@zaehlerfreunde.com)!
 
-With the Zählerfreunde solution, you can keep an optimal eye on your consumption. For example, monitor the electricity usage of your cooling units over the weekend and ensure that no products are damaged. You will receive immediate notifications for unusually high consumption and can request reports on a daily, weekly, or monthly basis.
+Mit der Zählerfreunde-Lösung behalten Sie Ihren Verbrauch optimal im Blick. Überwachen Sie z.B. die Stromnutzung Ihrer Kühlgeräte über das Wochenende und stellen Sie sicher, dass keine Produkte beschädigt werden. Sie erhalten sofortige Benachrichtigungen bei untypisch hohem Verbrauch und können Reports in täglicher, wöchentlicher oder monatlicher Frequenz anfordern.
 
-Particularly interesting are the comprehensive **government subsidies**, as our solution is officially recognized by BaFa as [**eligible energy management software**](https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul3_Energiemanagementsysteme/ems_liste_foerderfaehige_software.html). We assist in the implementation, maintenance, and improvement of an energy management system according to DIN EN ISO 50001. You can find more information about possible subsidies here: https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BMWi/energieeffizienz-u-prozesswaerme-zuschuss-3.html
+Besonders interessant sind auch die umfassenden **staatlichen Zuschüsse**, da unsere Lösung offiziell von der BaFa als [**förderfähige Energiemanagementsoftware**](https://www.bafa.de/DE/Energie/Energieeffizienz/Energieeffizienz_und_Prozesswaerme/Modul3_Energiemanagementsysteme/ems_liste_foerderfaehige_software.html) anerkannt wird. Wir helfen bei der Implementierung, Aufrechterhaltung und Verbesserung eines Energiemanagementsystems gemäß DIN EN ISO 50001. Hier finden Sie mehr Informationen zu möglichen Zuschüssen: https://www.foerderdatenbank.de/FDB/Content/DE/Foerderprogramm/Bund/BMWi/energieeffizienz-u-prozesswaerme-zuschuss-3.html
 
-Discover the versatile possibilities of our software and learn more about it!
+Entdecken Sie die vielseitigen Möglichkeiten unserer Software und erfahren Sie mehr darüber!
 
-## Table of Contents
+## Inhaltsverzeichnis
 
-## Registration
+## Anmeldung
 
-In the first step, we recommend that you accept all cookies on our website so that we can offer you the best experience on our platform.
+Im ersten Schritt, empfehlen wir Ihnen auf unserer Webseite, alle Cookies zu akzeptieren, damit wir Ihnen die beste Erfahrung auf unserer Plattform bieten können.
 
-![Screenshot 2024-06-28 at 13.46.38.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.38.png)
+![Bildschirmfoto 2024-06-28 um 13.46.38.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.38.png)
 
-Then click on "Company" and register. You can also use your Google or Apple account for registration.
+Klicken Sie dann auf oder “Unternehmen” und registrieren Sie sich. Für die Registrierung können Sie auch deinen Google- oder Apple-Account benutzen.
 
-![Screenshot 2024-06-28 at 13.46.49.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.49.png)
+![Bildschirmfoto 2024-06-28 um 13.46.49.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.49.png)
 
 ![Untitled](/img/user-guides/common/Untitled.png)
 
-Once that is done, we will ask for your name or the company name and for your consent to our Terms and Conditions.
+Sobald das erledigt ist, fragen wir Sie nach Ihre, Namen oder dem Namen des Unternehmens und bitten Sie um die Zustimmung zu unseren AGB.
 
 ![Untitled](/img/user-guides/common/Untitled%201.png)
 
-We will then immediately send you an email with a confirmation link. Once you have clicked the link in the email, you can confirm on our platform that you have verified your email address.
+Wir schicken Ihnen dann sofort eine E-Mail mit einem Bestätigungslink zu. Sobald Sie auf den Link in der E-Mail geklickt hast, können Sie auf unserer Plattform bestätigen, dass Sie ihre E-Mail-Adresse verifiziert haben.
 
-![Screenshot 2024-06-28 at 13.48.10.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.48.10.png)
+![Bildschirmfoto 2024-06-28 um 13.48.10.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.48.10.png)
 
 ![Untitled](/img/user-guides/common/Untitled%202.png)
 
-## Creating New Properties and Adding Devices
+## Neue Objekte erstellen und Geräte anlegen
 
-After the email has been confirmed, you will land on your personal dashboard. Since no property and therefore no device has been created yet, it still looks a bit empty:
+Nachdem die E-Mail bestätigt wurde, landen Sie auf Ihrem persönlichen Dashboard. Da noch kein Objekt und damit auch kein Gerät erstellt wurde, sieht es noch etwas leer aus:
 
 ![Untitled](/img/user-guides/common/Untitled%203.png)
 
-Go to the plus sign next to "Property" in the top left and create a new property. The platform will guide you through the process independently. You can also create multiple properties here and subordinate them hierarchically. An example of this is the visualization of a multi-family house, including the detailed consumption data of the individual apartments. Another example would be a production site, an office, and a retail space. Such logic can be visualized using "grouping".
+Gehen Sie links oben auf das Plus neben "Objekt" und legen ein neues Objekt an. Die Plattform führt Sie eigenständig durch den Prozess. Sie können hier auch mehrere Objekte anlegen und diese hierarchisch unterordnen. Ein Beispiel dafür ist die Visualisierung eines Mehrfamilienhauses, inklusive der aufgefächerten Verbrauchsdaten der einzelnen Wohnungen. Ein anderes Beispiel wäre eine Produktionsstätte, ein Büro und eine Verkaufsfläche. Derartige Logiken können mithilfe der „Gruppierung“ visualisiert werden.
 
-After the property has been created, you can add a device:
+Nachdem das Objekt angelegt wurde, können Sie ein Gerät anlegen:
 
 ![Untitled](/img/user-guides/common/Untitled%204.png)
 
@@ -48,108 +48,108 @@ After the property has been created, you can add a device:
 
 ![Untitled](/img/user-guides/common/Untitled%206.png)
 
-## Devices
+## Geräte
 
-The "Devices" tab is on the left side, relatively far down.
+Der Reiter “Geräte” befindet sich auf der linken Seite, relativ weit unten.
 
 ![Untitled](/img/user-guides/common/Untitled%207.png)
 
-Here you have a large selection of devices that you can connect. A list of all supported devices can be found on our homepage.
+Hier haben Sie eine große Auswahl, welche Geräte Sie anbinden können. Eine Liste aller unterstützten Geräte finden Sie auf unserer Homepage.
 
 ![2.png](/img/user-guides/common/2.png)
 
-Since meters can measure the electricity demand of the entire building or cover individual areas, we need to know whether the meter you are currently connecting is your main device or not, in order to calculate it correctly with your tariff.
+Da Zähler den Strombedarf des gesamten Hauses messen können oder einzelne Bereiche abdecken können, müssen wir wissen, ob der Zähler, den Sie gerade anbinden, Ihr Hauptgerät ist oder nicht, um das korrekt mit Ihrem Tarif zu verrechnen.
 
 ![Untitled](/img/user-guides/common/Untitled%208.png)
 
-The connection process will then be explained to you step by step. After you have successfully connected a device, your dashboard will slowly begin to fill up.
+Die Anbindung wird Ihnen dann Schritt für Schritt erklärt. Nachdem Sie ein Gerät erfolgreich verbunden haben wird sich Ihr Dashboard langsam füllen.
 
-Already have a smart metering system (smart electricity meter) installed? We will take care of collecting the data from your metering point operator: To do this, please provide your metering location ID and metering point operator (you can find this on your electricity bill).
+Bereits ein intelligentes Messsystem (intelligenter Stromzähler) installiert? Wir kümmern uns um die Datenabholung Ihres Messstellenbetreibers: Bitte geben Sie dazu ihre Messlokationsnummer und Messstellenbetreiber an (finden Sie auf ihrer Stromrechnung).
 
-![Screenshot 2025-02-16 at 14.01.08.png](/img/user-guides/business/Bildschirmfoto_2025-02-16_um_14.01.08.png)
+![Bildschirmfoto 2025-02-16 um 14.01.08.png](/img/user-guides/business/Bildschirmfoto_2025-02-16_um_14.01.08.png)
 
-After you have added the main device, you can add more devices and create logic. Once you have created more than 10 devices or sub-properties, they will be summarized and displayed here.
+Nachdem Sie das Hauptgerät hinzugefügt haben, können Sie weitere Geräte hinzufügen und Logiken erstellen. Sobald Sie mehr als 10 Geräte oder Sub-Objekte angelegt haben, werden diese zusammengefasst und hier angezeigt.
 
 ![1.png](/img/user-guides/common/1.png)
 
-In the next step, you can (if not already done) enter your tariff details so that we can accurately calculate your costs. You can find this option either directly on the dashboard or in the menu under Management > Property.
+Im nächsten Schritt können Sie (falls nicht schon geschehen) Ihre Tarifdetails hinterlegen, damit wir Ihre Kosten akkurat berechnen können. Diese Möglichkeit finden Sie entweder direkt über das Dashboard, oder im Menü unter Verwaltung > Objekt.
 
 ## Dashboard
 
-Your dashboard now shows all the devices you have connected in the upper area, along with when the last data was transmitted and the real-time power. The upper area of the graph shows your consumption, while the lower area shows the feed-in from your solar system, if you have one. A feed-in tariff of 7 cents/kWh is automatically assumed, but you can adjust this as you wish under "Management" > "Property". Here you can also visualize daily, weekly, monthly, and yearly data. This applies not only to consumption in watts but also to costs and remuneration, CO2 emissions, market prices, and meter readings. You can download this data at any time via CSV export.
+Ihr Dashboard zeigt im oberen Bereich alle Geräte an, die Sie angebunden haben und wann die letzte Übermittlung von Daten war bzw. die Echtzeit Leistung. Der obere Bereich im Graphen zeigt Ihren Verbrauch an, der untere die Einspeisung Ihrer Solaranlage, falls Sie eine haben. Es wird automatisch von 7 Cent/kWh Einspeisevergütung ausgegangen, dies können Sie aber auch wieder unter “Verwaltung” > “Objekt” beliebig anpassen. Hier können Sie auch die Tages-, Wochen-, Monats- und Jahresdaten visualisieren lassen. Das gilt nicht nur für den Verbrauch in Watt, sondern auch für Kosten und Vergütung, CO2-Emissionen, die Marktpreise und die Zählerstände. Diese Daten können Sie jederzeit über den CSV-Export herunterladen.
 
 ![Untitled](/img/user-guides/common/Untitled%209.png)
 
-## Readings
+## Messwerte
 
-Of course, you can display the readings not only from the main device but from all devices. Below, you can also see the consumption compared to the previous month and the costs. Here too, you can display individual devices or readings, or the main device.
+Die Messwerte können Sie natürlich nicht nur vom Hauptgerät anzeigen lassen, sondern von allen Geräten. Unten sehen Sie auch den Verbrauch im Vergleich zum Vormonat und die Kosten. Auch hier können Sie einzelne Geräte oder Messwerte anzeigen lassen oder das Hauptgerät.
 
 ![Untitled](/img/user-guides/common/Untitled%2010.png)
 
-## Energy Management Key Figures
+## Energiewirtschaftliche Kennzahlen
 
-On the dashboard, below the graph, you have the option to select and display additional energy management key figures. However, some of these key figures first require the input of additional data, such as tariff details and reference values for costs, remuneration, and CO2 emissions. Market prices are only displayed if a dynamic tariff is stored.
+Im Dashboard haben Sie die Möglichkeit, unterhalb des Graphen weitere energiewirtschaftliche Kennzahlen auszuwählen und anzuzeigen. Einige dieser Kennzahlen erfordern jedoch zunächst die Eingabe zusätzlicher Daten, wie beispielsweise Tarifdetails sowie Bezugswerte für Kosten, Vergütung und CO2-Emissionen. Die Marktpreise werden nur angezeigt, wenn ein dynamischer Tarif hinterlegt ist.
 
 ![s.001.png](/img/user-guides/business/s.001.png)
 
-## Reference Values
+## Bezugswerte
 
-You must first activate reference values for your own properties for them to be displayed. Under the 'Property' item, you can click on 'Reference Values' to set the reference and benchmark values for your property. This allows, for example, the energy consumption and costs per square meter or per employee to be clearly displayed on the dashboard. This function also facilitates the comparison of different locations.
+Bezugswerte müssen Sie für Ihre eigenen Objekte erst aktivieren, damit diese angezeigt werden. Unter dem Punkt 'Objekt' können Sie auf 'Bezugswerte' klicken, um die Bezug- und Referenzwerte für Ihr Objekt festzulegen. So lassen sich beispielsweise der Energieverbrauch sowie die Kosten pro Quadratmeter oder pro Mitarbeiter übersichtlich im Dashboard darstellen. Diese Funktion erleichtert zudem den Vergleich verschiedener Standorte.
 
-![Screenshot 2025-01-27 at 14.57.22.png](/img/user-guides/business/Bildschirmfoto_2025-01-27_um_14.57.22.png)
+![Bildschirmfoto 2025-01-27 um 14.57.22.png](/img/user-guides/business/Bildschirmfoto_2025-01-27_um_14.57.22.png)
 
-## Load Duration Curve
+## Leistungsdauerlinie
 
-A load duration curve represents the duration (in hours) during which a certain power level (in kW) is exceeded. The curve shows how long a device or a consumer operates at different power levels within a specific period. It is often used for analyzing the load profile in the energy industry to optimize the efficiency and utilization of plants.
+Eine Leistungsdauerlinie stellt die Dauer (in Stunden) dar, während der eine bestimmte Leistung (in kW) überschritten wird. Die Kurve zeigt, wie lange ein Gerät oder ein Verbraucher innerhalb eines bestimmten Zeitraums auf verschiedenen Leistungsniveaus betrieben wird. Sie wird häufig zur Analyse des Lastprofils in der Energiewirtschaft genutzt, um die Effizienz und Auslastung von Anlagen zu optimieren.
 
-For companies with an annual consumption of over 100,000 kWh, peak shaving is of particular importance, as the maximum power affects the grid costs.
+Für Unternehmen mit eine Jahresverbrauch von über 100 000kWh ist eine Spitzenglättung von besonderer Bedeutung, da die maximale Leistung die Netzkosten beeinflusst.
 
 ![Screenhots.001.png](/img/user-guides/business/Screenhots.001.png)
 
-## Smart Control and Logic
+## Smarte Steuerung und Logiken
 
-The topic of "Smart Control" deals with energy management and logic.
+Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Logiken.
 
 ![Untitled](/img/user-guides/common/Untitled%2011.png)
 
-To add a new automation, simply click the corresponding button, and a window will open for you to enter the desired logic. In this example, we want to charge our car when our solar system is producing power and the feed-in is positive. However, you can also control all sorts of devices or send notifications.
+Um eine neue Automation hinzuzufügen, klicken Sie einfach auf den entsprechenden Knopf, und es öffnet sich ein Fenster, um die gewünschte Logik einzugeben. In diesem Beispiel wollen wir unser Auto laden, wenn unsere Solaranlage Strom produziert und die Einspeisung positiv ist. Sie können aber auch alle möglichen Geräte steuern oder Benachrichtigungen senden.
 
 ![Untitled](/img/user-guides/common/Untitled%2012.png)
 
 ![Untitled](/img/user-guides/common/Untitled%2013.png)
 
-After you have created the automation, it will be displayed. You can edit, delete, or add more.
+Nachdem Sie die Automation erstellt haben, wird sie angezeigt. Diese können Sie bearbeiten, löschen oder weitere hinzufügen.
 
 ## Reporting
 
-To fully utilize the potential of the data, we have developed a comprehensive reporting function. This allows you to individually define which data should be prepared as visualized reports and at what interval.
-In the menu on the left, you will find the "Reporting" tab. Once you open it, you will get an overview of all created reports and the reports you have already received.
+Um das volle Potenzial der Daten auszuschöpfen, haben wir eine umfassende Reporting-Funktion entwickelt. Diese ermöglicht es Ihnen, individuell festzulegen, welche Daten in welchem Intervall als visualisierte Berichte aufbereitet werden sollen.
+Im Menü auf der linken Seite finden Sie den Reiter "Reporting". Sobald Sie diesen öffnen, erhalten Sie eine Übersicht über alle angelegten Reportings sowie die bereits erhaltenen Berichte.
 
-![Screenshot 2024-09-03 at 09.05.07.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.07.png)
+![Bildschirmfoto 2024-09-03 um 09.05.07.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.07.png)
 
-To create a new report, click "Create now". In this area, you can give the report a name, select the metrics to be evaluated (such as consumption, production, costs, remuneration, and CO2), and define the interval at which the report should be created (daily, weekly, monthly, or yearly).
+Um einen neuen Report zu erstellen, klicken Sie auf "Jetzt erstellen". In diesem Bereich können Sie dem Report einen Namen geben, die Metriken auswählen, die ausgewertet werden sollen (wie Verbrauch, Produktion, Kosten, Vergütung und CO2), und festlegen, in welchem Intervall der Bericht erstellt werden soll (täglich, wöchentlich, monatlich oder jährlich).
 
-![Screenshot 2024-09-03 at 09.05.34.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.34.png)
+![Bildschirmfoto 2024-09-03 um 09.05.34.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.34.png)
 
-After you have selected a start date and saved the new reporting rule, you will get an overview of the report to be created and the time at which it will be generated.
+Nachdem Sie ein Startdatum ausgewählt und die neue Reporting-Regel gespeichert haben, erhalten Sie eine Übersicht über den zu erstellenden Bericht sowie den Zeitpunkt, zu dem dieser generiert wird.
 
-![Screenshot 2024-09-03 at 09.05.54.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.54.png)
+![Bildschirmfoto 2024-09-03 um 09.05.54.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.54.png)
 
-![Screenshot 2024-09-03 at 09.06.02.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.06.02.png)
+![Bildschirmfoto 2024-09-03 um 09.06.02.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.06.02.png)
 
-Here you can see an example of what the report might look like.
+Hier sehen Sie noch ein Beispiel, wie der Bericht aussehen könnte.
 
-![Screenshot 2024-09-03 at 09.08.56.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.08.56.png)
+![Bildschirmfoto 2024-09-03 um 09.08.56.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.08.56.png)
 
-![Screenshot 2024-09-03 at 09.09.05.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.09.05.png)
+![Bildschirmfoto 2024-09-03 um 09.09.05.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.09.05.png)
 
 ## Simulator
 
-In the simulator, you can calculate different variants of mini-photovoltaic systems with various mounting options. This is particularly interesting for companies that own smaller office buildings or additional employee apartments or similar properties.
+Im Simulator können Sie verschiedene Varianten von Mini-Photovoltaikanlagen mit diversen Montagemöglichkeiten durchrechnen. Das ist besonders interessant für Unternehmen, die kleinere Bürogebäude oder zusätzliche Mitarbeiterwohnungen oder Ähnliches besitzen.
 
-The option to simulate a large PV system and a battery storage system is currently under development and will be available soon!
+Die Möglichkeit zur Simulation einer großen PV-Anlage und eines Batteriespeichers wird aktuell noch entwickelt und bald zur Verfügung stehen!
 
-Here you can see, for example, how to simulate a balcony power plant. At the end, you will get concrete suggestions on how much it would cost and how much you can profit from it.
+Hier sehen Sie, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am Ende bekommen Sie konkrete Vorschläge, wie viel das kosten würde und wie viel Sie davon profitieren können.
 
 ![Untitled](/img/user-guides/common/ea3de318-c51d-4da3-a7ee-893dbefb5b95.png)
 
@@ -161,9 +161,9 @@ Here you can see, for example, how to simulate a balcony power plant. At the end
 
 ![Untitled](/img/user-guides/common/Untitled%2017.png)
 
-## Tariff Change
+## Tarifwechsel
 
-Here, we constantly look for better and cheaper tariffs based on your consumption. If we find one for you, we will display it there.
+Hier schauen wir ständig, basierend auf Ihrem Verbrauch, nach besseren und günstigeren Tarifen. Wenn wir einen für Sie gefunden haben, zeigen wir diesen dort an.
 
 ![Untitled](/img/user-guides/common/8fd384e8-f8d5-480b-b1c2-7b091ada1b48.png)
 
@@ -171,45 +171,45 @@ Here, we constantly look for better and cheaper tariffs based on your consumptio
 
 ## Shop
 
-Directly below the tariff change, you will see a shop. Products are listed here with which you can measure and visualize your consumption even better to identify the real energy guzzlers in your company.
+Direkt unter dem Tarifwechsel sehen Sie noch einen Shop. Hier sind Produkte gelistet, mit denen Sie ihren Verbrauch noch besser messen und visualisieren können, um die wahren Stromfresser in ihrem Unternehmen zu identifizieren.
 
-## Management
+## Verwaltung
 
-Under the "Management" tab, information about your property is listed. Here you can see general information as well as information about your tariff. Additionally, you can view all connected devices and invoices here, so you can find and access everything conveniently in one place.
+Unter dem Reiter „Verwaltung“ sind Informationen zu Ihren Objekt gelistet. Hier sehen Sie allgemeine Infos sowie Informationen zu ihrem Tarif. Zusätzlich können Sie hier alle verbundenen Geräte einsehen und die Rechnungen, damit Sie alles komfortabel an einem Ort haben und darauf zugreifen können.
 
 ![Untitled](/img/user-guides/common/Untitled%2019.png)
 
-**Virtual Sum Meters:**
+**Virtuelle Summenzähler:**
 
-With this function, you can combine several meters/devices - this is particularly useful for summarizing multiple values that are important for internal analysis or reporting.
+Mit dieser Funktion können Sie mehrere Zähler/Geräte kombinieren - das bietet sich besonders für die Zusammenfassung mehrerer Werte an, die für die interne Analyse oder den Report von Bedeutung sind.
 
-## Data Import
+## Datenimport
 
--   Overview of data import options, including service providers such as metergrid, BlueMetering, and metiundo, as well as via CSV import.
--   The advantage here is that all existing customer files can be easily imported and integrated into the platform.
--   Adding historical consumption data: There is no additional work for you or the end customer, and existing data can continue to be used without being lost.
-    ![Screenshot 2024-08-05 at 15.45.08.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_15.45.08.png)
+-   Übersicht über Datenimport-Möglichkeiten, einschließlich Dienstleister wie metergrid, BlueMetering und metiundo, sowie über CSV-Import.
+-   Der Vorteil hierbei ist, dass alle bestehenden Kundendateien problemlos importiert und in die Plattform integriert werden können.
+-   Hinzufügen historischer Verbrauchsdaten: Weder für Sie noch für den Endkunden entsteht dabei zusätzliche Arbeit und bestehende Daten können weiterhin verwendet werden, ohne verloren zu gehen.
+    ![Bildschirmfoto 2024-08-05 um 15.45.08.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_15.45.08.png)
 
-## Data Export
+## Datenexport
 
-All data can, of course, also be exported as a XAP file. This helps in normalizing the data and is important for further applications that use the data (e.g., ESG software).
+Alle Daten können natürlich auch als XAP-Datei exportiert werden. Das hilft beim Normalisieren der Daten und ist für weitere Anwendungen wichtig, die die Daten verwerten (z.B. ESG Software).
 
-![Screenshot 2024-08-05 at 15.46.12.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_15.46.12.png)
+![Bildschirmfoto 2024-08-05 um 15.46.12.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_15.46.12.png)
 
-## Data Forwarding
+## Datenweiterleitung
 
-Data forwarding is ideal for normalizing all data (smart meters as well as IoT devices) and continuously forwarding it to third parties, such as billing service providers. Via data forwarding, the data can also be fed into forecasting tools to optimize the electricity purchasing strategy.
+Die Datenweiterleitung ist ideal, um alle Daten (Smart-Meter sowie IoT-Geräte) zu normalisieren und kontinuierlich an Dritte, wie Abrechnungsdienstleister, weiterzuleiten. Über die Datenweiterleitung können die Daten auch in Prognose-Tools eingespeist werden, um die Strom-Einkaufsstrategie zu optimieren.
 
-The technical setup of the forwarding is explained step-by-step when you click on the green "Set up forwarding" button. Other formats can be added individually upon request.
+Die technische Einrichtung der Weiterleitung wird Schritt für Schritt erklärt, wenn Sie auf den grünen Button "Weiterleitung einrichten" klicken. Weitere Formate können auf Wunsch individuell hinzugefügt werden
 
-![Screenshot 2024-08-05 at 16.31.59.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_16.31.59.png)
+![Bildschirmfoto 2024-08-05 um 16.31.59.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_16.31.59.png)
 
 ## API
 
-Our API can be used for many purposes. Primarily, it serves to save costs in the long run by eliminating the need for normal market communication (MSCONS/AS4) and forwarding data more quickly. Via this API, new properties and meters can be added fully automatically, and users can be created automatically. The exact instructions for the API can be found here:
+Unsere API kann für viele Zwecke genutzt werden. Primär dient sie dazu, langfristig Kosten zu sparen, indem auf die normale Marktkommunikation (MSCONS/AS4) verzichtet wird und die Daten schneller weitergeleitet werden. Über diese API können neue Objekte und Zähler vollautomatisch hinzugefügt sowie Nutzer automatisch angelegt werden. Die genaue Anleitung für die API finden Sie hier:
 
 [Zählerfreunde API Integration](../../integrations/api-integration.md)
 
-![Screenshot 2024-08-05 at 16.33.54.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_16.33.54.png)
+![Bildschirmfoto 2024-08-05 um 16.33.54.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_16.33.54.png)
 
-We wish you a lot of fun with our platform! If you have any questions or if something isn't working as you imagine, feel free to write to us anytime via the chat or at support@zaehlerfreunde.com, and we will find a solution for you
+Wir wünschen Ihnen viel Spaß mit unserer Plattform! Falls Sie Fragen haben oder etwas nicht so klappt, wie Sie es sich vorstellen, schreiben Sie uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für Sie!

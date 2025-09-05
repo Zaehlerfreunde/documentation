@@ -3,25 +3,25 @@ sidebar_position: 1
 slug: /
 ---
 
-# Zaehlerfreunde Documentation
+# Zählerfreunde Dokumentation
 
-Welcome to the Zaehlerfreunde platform documentation. Find all the guides and resources you need to develop with our platform.
+Willkommen bei der Dokumentation der Zählerfreunde-Plattform. Hier finden Sie alle Anleitungen und Ressourcen, die Sie für die Entwicklung mit unserer Plattform benötigen.
 
-## What you'll find here
+## Was Sie hier finden
 
--   **Getting Started** - Quick setup guides for new users
--   **API Reference** - Complete API documentation for developers
--   **Integration Guides** - Step-by-step integration tutorials
--   **User Guides** - Platform usage documentation
+-   **Erste Schritte** - Kurzanleitungen für neue Benutzer
+-   **API-Referenz** - Vollständige API-Dokumentation für Entwickler
+-   **Integrationsanleitungen** - Schritt-für-Schritt-Anleitungen zur Integration
+-   **Benutzerhandbücher** - Dokumentation zur Nutzung der Plattform
 
-## For Users
+## Für Benutzer
 
-Learn how to use the Zaehlerfreunde platform effectively with our comprehensive user guides and tutorials.
+Lernen Sie mit unseren umfassenden Benutzerhandbüchern und Anleitungen, wie Sie die Zählerfreunde-Plattform effektiv nutzen.
 
-## For Partners & Developers
+## Für Partner & Entwickler
 
-Access our complete API documentation and integration guides to build powerful applications on top of our platform.
+Greifen Sie auf unsere vollständige API-Dokumentation und Integrationsanleitungen zu, um leistungsstarke Anwendungen auf unserer Plattform zu erstellen.
 
 ## Support
 
-Need help? Contact our support team or check our FAQ section for quick answers to common questions.
+Benötigen Sie Hilfe? Kontaktieren Sie unser Support-Team oder lesen Sie unsere FAQ für schnelle Antworten auf häufig gestellte Fragen.```

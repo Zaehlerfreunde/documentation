@@ -1,20 +1,20 @@
-# Zählerfreunde API Integration
+# Zählerfreunde API-Integration
 
-The Zählerfreunde API enables partners to automatically manage user, space, and device infos in order to onboard new users, manage existing ones, and to add/remove meters and other devices.
+Die Zählerfreunde-API ermöglicht es Partnern, Benutzer-, Raum- und Geräteinformationen automatisch zu verwalten, um neue Benutzer aufzunehmen, bestehende zu verwalten und Zähler sowie andere Geräte hinzuzufügen oder zu entfernen.
 
-You can view the official Swagger documentation here: [https://external.prod.zaehlerfreunde.com/partner/swagger/index.html](https://external.prod.zaehlerfreunde.com/partner/swagger/index.html)
+Die offizielle Swagger-Dokumentation können Sie hier einsehen: [https://external.prod.zaehlerfreunde.com/partner/swagger/index.html](https://external.prod.zaehlerfreunde.com/partner/swagger/index.html)
 
-The following guide gives an overview of the standard process when onboarding new users. The steps, can however, be easily modified in order to fit your existing processes/tools. The steps to onboard a new user are the following.
+Die folgende Anleitung gibt einen Überblick über den Standardprozess beim Onboarding neuer Benutzer. Die Schritte können jedoch leicht angepasst werden, um sie an Ihre bestehenden Prozesse/Tools anzupassen. Die Schritte zum Onboarding eines neuen Benutzers sind die folgenden.
 
-### Aquire authentication token
+### Authentifizierungstoken erwerben
 
-To authenticate API requests we use the [OAuth client credentials flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow). As a first step you need to login to our platform with your admin account (contact us, if you don’t have an admin account yet). You can create the client credentials as shown in the following figure. Please, make sure to store the client secret in a secure place, as you will not be able to see it again.
+Zur Authentifizierung von API-Anfragen verwenden wir den [OAuth Client Credentials Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow). Als ersten Schritt müssen Sie sich mit Ihrem Administratorkonto auf unserer Plattform anmelden (kontaktieren Sie uns, falls Sie noch kein Administratorkonto haben). Sie können die Client-Anmeldeinformationen wie in der folgenden Abbildung gezeigt erstellen. Bitte stellen Sie sicher, dass Sie das Client-Geheimnis an einem sicheren Ort aufbewahren, da Sie es nicht wieder sehen können.
 
-![Steps to create client credentials in the admin portal](/img/integrations/api-integrations/client_creds.png)
+![Schritte zum Erstellen von Client-Anmeldeinformationen im Admin-Portal](/img/integrations/api-integrations/client_creds.png)
 
-Steps to create client credentials in the admin portal
+Schritte zum Erstellen von Client-Anmeldeinformationen im Admin-Portal
 
-Now, we can create an access token using the `/auth/token` endpoint. The response includes the access token. Use this access token in the `Authorization` header to call the other endpoints of the API. Note that the token is valid for one day. If the token expired you can just create a new one using the same endpoint.
+Jetzt können wir ein Zugriffstoken mit dem Endpunkt `/auth/token` erstellen. Die Antwort enthält das Zugriffstoken. Verwenden Sie dieses Zugriffstoken im `Authorization`-Header, um die anderen Endpunkte der API aufzurufen. Beachten Sie, dass das Token einen Tag lang gültig ist. Wenn das Token abgelaufen ist, können Sie einfach ein neues mit demselben Endpunkt erstellen.
 
 ```jsx
 curl -X 'POST' \
@@ -27,9 +27,9 @@ curl -X 'POST' \
 }'
 ```
 
-### Creating a new space
+### Einen neuen Space erstellen
 
-Spaces are the central entity through which users have access to their meter. They usually correspond to a house, flat, or MeLo/MaLo. A space can be created with the following request. It will return a space ID which can be used to add devices to it and to invite users.
+Spaces sind die zentrale Einheit, über die Benutzer auf ihre Zähler zugreifen. Sie entsprechen in der Regel einem Haus, einer Wohnung oder einer MeLo/MaLo. Ein Space kann mit der folgenden Anfrage erstellt werden. Sie gibt eine Space-ID zurück, die verwendet werden kann, um Geräte hinzuzufügen und Benutzer einzuladen.
 
 ```jsx
 curl -X 'POST' \
@@ -47,11 +47,11 @@ curl -X 'POST' \
 }'
 ```
 
-### Adding a new meter
+### Einen neuen Zähler hinzufügen
 
-When adding a meter there are multiple options available based on how the data transferred. We differentiate between external devices were data is pushed to our API and other devices where we continuously fetch the data from another API. For the latter option MSCONS can also be used to transfer data. For those devices we will need to discuss the required development steps to support your API as a data source.
+Beim Hinzufügen eines Zählers gibt es mehrere Optionen, je nachdem, wie die Daten übertragen werden. Wir unterscheiden zwischen externen Geräten, bei denen Daten an unsere API gesendet werden, und anderen Geräten, bei denen wir die Daten kontinuierlich von einer anderen API abrufen. Für die letztere Option kann auch MSCONS zur Datenübertragung verwendet werden. Für diese Geräte müssen wir die erforderlichen Entwicklungsschritte besprechen, um Ihre API als Datenquelle zu unterstützen.
 
-If you want to push the meter readings to our API you can use the following request to add a device to a space.
+Wenn Sie die Zählerstände an unsere API senden möchten, können Sie die folgende Anfrage verwenden, um ein Gerät zu einem Space hinzuzufügen.
 
 ```jsx
 curl -X 'POST' \
@@ -67,7 +67,7 @@ curl -X 'POST' \
 }'
 ```
 
-In order to send data you can then call the following endpoint. You can either provider your external device ID or the device ID returned after creation.
+Um Daten zu senden, können Sie dann den folgenden Endpunkt aufrufen. Sie können entweder Ihre externe Geräte-ID oder die nach der Erstellung zurückgegebene Geräte-ID angeben.
 
 ```jsx
 curl -X 'POST' \
@@ -88,9 +88,9 @@ curl -X 'POST' \
 ]'
 ```
 
-### Inviting a user
+### Einen Benutzer einladen
 
-To make sure that users have access to a space you can create an invite for it. This invite will allow a user to access a specific space. Note that he still needs to sign up separately e.g. using SSO. To create an invite send the following request. The request will return the invite link. Either we send the email directly to the user if `sendInviteEmail` is true. Otherwise you can also send the link to the user separately.
+Um sicherzustellen, dass Benutzer Zugriff auf einen Space haben, können Sie eine Einladung dafür erstellen. Diese Einladung ermöglicht es einem Benutzer, auf einen bestimmten Space zuzugreifen. Beachten Sie, dass er sich separat anmelden muss, z.B. über SSO. Um eine Einladung zu erstellen, senden Sie die folgende Anfrage. Die Anfrage gibt den Einladungslink zurück. Entweder senden wir die E-Mail direkt an den Benutzer, wenn `sendInviteEmail` auf true gesetzt ist. Andernfalls können Sie den Link auch separat an den Benutzer senden.
 
 ```jsx
 curl -X 'POST' \

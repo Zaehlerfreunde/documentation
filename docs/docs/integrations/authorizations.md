@@ -1,25 +1,25 @@
-# Authorization Code Flow
+# Autorisierungscode-Flow
 
-You can use the [OAuth authorization code flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow) through our authentication provider Auth0 to get access to our API.
+Sie können den [OAuth Autorisierungscode-Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow) über unseren Authentifizierungsanbieter Auth0 verwenden, um Zugriff auf unsere API zu erhalten.
 
-### Prerequisites
+### Voraussetzungen
 
-1. Your redirect URL is registered with us (reach out to [support@zaehlerfreunde.com](mailto:support@zaehlerfreunde.com))
-2. We have provided you with a client ID
+1. Ihre Weiterleitungs-URL ist bei uns registriert (wenden Sie sich an [support@zaehlerfreunde.com](mailto:support@zaehlerfreunde.com))
+2. Wir haben Ihnen eine Client-ID zur Verfügung gestellt
 
-### Step 1: Forward user to authorization URL
+### Schritt 1: Benutzer zur Autorisierungs-URL weiterleiten
 
-Replace the `client_id` and `redirect_uri` parameters and forward the user to the authorization URL for him to provide access to his account.
+Ersetzen Sie die Parameter `client_id` und `redirect_uri` und leiten Sie den Benutzer zur Autorisierungs-URL weiter, damit er Zugriff auf sein Konto gewähren kann.
 
 ```jsx
 https://auth.prod.zaehlerfreunde.com/authorize?response_type=code&client_id={client_id}&redirect_uri={your_redirect_url}&scope=openid profile email offline_access&audience=https://api.prod.zaehlerfreunde.com
 ```
 
-On successful authentication the user will be redirected to the URL you provided with a `code` query parameter that you can use to obtain an access token.
+Bei erfolgreicher Authentifizierung wird der Benutzer zu der von Ihnen angegebenen URL mit einem `code`-Abfrageparameter weitergeleitet, den Sie verwenden können, um ein Zugriffstoken zu erhalten.
 
-### Step 2: Get access token
+### Schritt 2: Zugriffstoken erhalten
 
-Send a request to the token URL with the code you’ve received in order to get an access and refresh token.
+Senden Sie eine Anfrage an die Token-URL mit dem Code, den Sie erhalten haben, um ein Zugriffs- und ein Aktualisierungstoken zu erhalten.
 
 ```bash
 curl --location 'https://zaehlerfreunde-prod.eu.auth0.com/oauth/token' \
@@ -32,11 +32,11 @@ curl --location 'https://zaehlerfreunde-prod.eu.auth0.com/oauth/token' \
 }'
 ```
 
-The response should contain an access token that you can use to call our [API endpoints](https://external.prod.zaehlerfreunde.com/partner/swagger/index.html). The refresh token can be used to obtain a new access token after it expired.
+Die Antwort sollte ein Zugriffstoken enthalten, mit dem Sie unsere [API-Endpunkte](https://external.prod.zaehlerfreunde.com/partner/swagger/index.html) aufrufen können. Das Aktualisierungstoken kann verwendet werden, um ein neues Zugriffstoken zu erhalten, nachdem es abgelaufen ist.
 
-### Step 3: Refresh token
+### Schritt 3: Token aktualisieren
 
-To get a refresh token send a request to the token endpoint with grant type refresh token
+Um ein Aktualisierungstoken zu erhalten, senden Sie eine Anfrage mit dem Grant-Typ `refresh_token` an den Token-Endpunkt.
 
 ```bash
 curl --location 'https://zaehlerfreunde-prod.eu.auth0.com/oauth/token' \
