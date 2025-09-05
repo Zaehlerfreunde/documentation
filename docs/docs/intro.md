@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /
 ---
 
-# Zählerfreunde Dokumentation
+# Übersicht
 
 Willkommen bei der Dokumentation der Zählerfreunde-Plattform. Hier finden Sie alle Anleitungen und Ressourcen, die Sie für die Entwicklung mit unserer Plattform benötigen.
 

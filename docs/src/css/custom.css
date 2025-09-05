@@ -6,7 +6,65 @@
 
 /* You can override the default Infima variables here. */
 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/static/fonts/poppins/Poppins-Thin.ttf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/static/fonts/poppins/Poppins-Regular.ttf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/static/fonts/poppins/Poppins-Medium.ttf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/static/fonts/poppins/Poppins-SemiBold.ttf) format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/static/fonts/poppins/Poppins-Bold.ttf) format('woff2');
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+.menu__list-item {
+  font-size: 14px;
+}
+
 :root {
+  font-family: 'Poppins', sans-serif;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -269,7 +327,6 @@ html[data-theme="dark"] .header-github-link:before {
 
 .header-medium-link:before {
   content: "\f23a";
-  font-family: "Font Awesome 5 Brands";
   font-size: x-large;
 }
 

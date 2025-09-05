@@ -1,4 +1,4 @@
-# Anleitung für Zählerfreunde Geschäftskunden
+# Geschäftskunden
 
 Vielen Dank für Ihr Vertrauen in unsere **Geschäftskundenlösung**. Wir arbeiten kontinuierlich daran, das Produkt weiterzuentwickeln. Bei Feedback oder Fragen zögern Sie bitte nicht, sich per Mail an uns zu wenden: [kontakt@zaehlerfreunde.com](mailto:kontakt@zaehlerfreunde.com)!
 
