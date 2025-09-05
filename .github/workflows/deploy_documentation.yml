@@ -33,9 +33,18 @@ jobs:
                   cd docs
                   npm ci
 
+            - name: Get all changed files
+              id: changed-files
+              uses: tj-actions/changed-files@v44
+              with:
+                files: docs/static/api/openapi.yaml
+
             - name: Generate API docs if openapi.yaml changed
-              if: contains(github.event.head_commit.modified, 'docs/static/api/openapi.yaml')
-              run: npx docusaurus gen-api-docs all
+              if: steps.changed-files.outputs.any_changed == 'true'
+              working-directory: ./docs
+              run: |
+                  echo "openapi.yaml has changed, regenerating API docs..."
+                  npx docusaurus gen-api-docs all
 
             - name: Build documentation
               run: |

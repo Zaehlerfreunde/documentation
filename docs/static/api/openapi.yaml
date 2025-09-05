@@ -737,7 +737,7 @@ paths:
         post:
             security:
                 - bearerAuth: []
-            summary: Creates a new or updates an existing customer
+            summary: Creates a new or updates an existing customer.
             tags:
                 - Customers
             operationId: addUpdateCustomer
