@@ -6,7 +6,7 @@ Vielen Dank für Ihr Vertrauen in unsere Lösung. Wir arbeiten kontinuierlich da
 
 Hier finden Sie die Erklärung für die Benutzung unserer Lösung, wenn Sie KMU Kunde sind:
 
-[Anleitung für Zählerfreunde Geschäftskunden](../business.md) 
+[Anleitung für Zählerfreunde Geschäftskunden](./business.md) 
 
 Hier ist ein Inhaltsverzeichnis des Guides:
 
