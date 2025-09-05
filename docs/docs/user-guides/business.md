@@ -208,7 +208,7 @@ Die technische Einrichtung der Weiterleitung wird Schritt für Schritt erklärt,
 
 Unsere API kann für viele Zwecke genutzt werden. Primär dient sie dazu, langfristig Kosten zu sparen, indem auf die normale Marktkommunikation (MSCONS/AS4) verzichtet wird und die Daten schneller weitergeleitet werden. Über diese API können neue Objekte und Zähler vollautomatisch hinzugefügt sowie Nutzer automatisch angelegt werden. Die genaue Anleitung für die API finden Sie hier:
 
-[Zählerfreunde API Integration](../../integrations/api-integration.md)
+[Zählerfreunde API Integration](../integrations/api-integration.md)
 
 ![Bildschirmfoto 2024-08-05 um 16.33.54.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_16.33.54.png)
 

@@ -8,7 +8,7 @@ Den Guide für die Nutzung aus der Sicht der Endkunden finden Sie hier (diesen m
 
 Hier finden Sie die Erklärung für die Benutzung unserer Lösung, wenn Sie KMU Kunden oder andere B2B Kunden haben.
 
-[Anleitung für Zählerfreunde Geschäftskunden](../business/business.md)
+[Anleitung für Zählerfreunde Geschäftskunden](../business.md)
 
 **🎯 Zweck des Admin-Portals**
 
