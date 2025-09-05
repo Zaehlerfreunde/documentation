@@ -31,5 +31,3 @@ The API reference is generated from the `openapi.yaml` file. If the OpenAPI spec
 If you have any questions or run into problems, please contact our support team at: **support@zaehlerfreunde.de**
 
 Thank you for helping us improve the Zählerfreunde documentation!
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
