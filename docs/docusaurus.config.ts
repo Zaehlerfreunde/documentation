@@ -78,15 +78,15 @@ const config: Config = {
       title: 'Dokumentation',
       logo: {
         alt: 'Zählerfreunde Logo',
-        src: 'https://cdn.zaehlerfreunde.com/logos/zaehlerfreunde-logo.png',
-        srcDark: 'https://cdn.zaehlerfreunde.com/logos/zaehlerfreunde-logo-white.png',
+        src: 'https://cdn.zaehlerfreunde.com/logos/zaehlerfreunde-icon-small.png',
+        srcDark: 'https://cdn.zaehlerfreunde.com/logos/zaehlerfreunde-icon-small.png',
       },
       items: [
         {
-          href: 'https://github.com/Zaehlerfreunde/documentation/', 
-          label: 'GitHub',
-          position: 'right',
-        },
+          href: 'https://www.zaehlerfreunde.de',
+          label: 'Website',
+          position: 'right'
+        }
       ],
     },
     footer: {
@@ -108,10 +108,22 @@ const config: Config = {
               label: 'GitHub',
               href: 'https://github.com/Zaehlerfreunde/documentation/', 
             },
+            {
+              href: 'https://www.zaehlerfreunde.de',
+              label: 'Website',
+            },
+            {
+              href: 'https://app.zaehlerfreunde.de',
+              label: 'Nutzer-Portal',
+            },
+            {
+              href: 'https://app.admin.zaehlerfreunde.de/',
+              label: 'Admin-Portal',
+            }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Zählerfreunde. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Zählerfreunde`,
     },
     prism: {
       theme: prismThemes.github,
