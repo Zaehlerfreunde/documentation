@@ -280,6 +280,45 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/DeviceId"
+  /spaces/{spaceId}/devices/{deviceId}/details:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Update device details
+      tags:
+        - Devices
+      operationId: updateDeviceDetails
+      parameters:
+        - in: path
+          name: spaceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+        - in: path
+          name: deviceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      requestBody:
+        description: |
+          <ul>
+              <li>The <b>deviceName</b>: the name of the device</li>
+              <li>The <b>isMainDevice</b>: is the device the main device of the space?</li>
+              <li>The <b>grid</b>: does the device measure import/export from the grid?</li>
+              <li>The <b>externalDeviceId</b>: external identifier for the device, useful for data transmission. </li>
+              <li>The <b>meteringLocationId</b>: is the meter's metering location ID (MELO).</li>
+              <li>The <b>serialNumber</b>: serial number of the device </li>
+          </ul>
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DeviceDetails"
+      responses:
+        "200":
+          description: OK
   /devices/readings:
     post:
       security:
@@ -565,7 +604,7 @@ paths:
       requestBody:
         description: |
           <ul>
-            <li>The <b>serialNumer</b> is the serial number of the inexogy meter.</li>
+            <li>The <b>serialNumber</b> is the serial number of the inexogy meter.</li>
               <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING</li>
               <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER, RLM_METER </li>
               <li>The <b>isMainDevice</b> if device the main device of the space</li>
@@ -1255,7 +1294,31 @@ components:
             - WATER
             - HEATING
           x-order: 4
-
+    DeviceDetails:
+        type: object
+        properties:
+            deviceName:
+                type: string
+                x-order: 1
+            isMainDevice:
+                type: boolean
+                escription: Is the device the main device of the space?
+                x-order: 2
+            grid:
+                type: boolean
+                description: Does the device measure import/export from the grid?
+                x-order: 3
+            externalDeviceId:
+                type: string
+                description: External identifier for the device, useful for data transmission.
+                x-order: 4
+            meteringLocationId:
+                type: string
+                description: is the meter's metering location ID (MELO)
+                x-order: 5
+            serialNumber:
+                type: string
+                x-order: 6    
     NewExternalDevice:
       allOf:
         - $ref: "#/components/schemas/NewDevice"
