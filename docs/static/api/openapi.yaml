@@ -302,15 +302,6 @@ paths:
             format: uuid
           required: true
       requestBody:
-        description: |
-          <ul>
-              <li>The <b>deviceName</b>: the name of the device</li>
-              <li>The <b>isMainDevice</b>: is the device the main device of the space?</li>
-              <li>The <b>grid</b>: does the device measure import/export from the grid?</li>
-              <li>The <b>externalDeviceId</b>: external identifier for the device, useful for data transmission. </li>
-              <li>The <b>meteringLocationId</b>: is the meter's metering location ID (MELO).</li>
-              <li>The <b>serialNumber</b>: serial number of the device </li>
-          </ul>
         required: true
         content:
           application/json:
@@ -602,15 +593,6 @@ paths:
             format: uuid
           required: true
       requestBody:
-        description: |
-          <ul>
-            <li>The <b>serialNumber</b> is the serial number of the inexogy meter.</li>
-              <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING</li>
-              <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER, RLM_METER </li>
-              <li>The <b>isMainDevice</b> if device the main device of the space</li>
-              <li>The <b>conversionFactor</b> is used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR</li>
-              <li>The <b>conversionFactorAlreadyApplied</b> is used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR</li>
-          </ul>
         required: true
         content:
           application/json:
@@ -639,16 +621,6 @@ paths:
             format: uuid
           required: true
       requestBody:
-        description: |
-          <ul>
-              <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING</li>
-              <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER </li>
-              <li>The <b>isMainDevice</b> if device the main device of the space</li>
-              <li>The <b>bluemeteringApiKey</b> is required to access the Bluemetering API.</li>
-              <li>The <b>meteringLocationId</b> is the meter's metering location ID (MELO).</li>
-              <li>The <b>conversionFactor</b> is used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR </li>
-              <li>The <b>conversionFactorAlreadyApplied</b> is used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR </li>
-          </ul>
         required: true
         content:
           application/json:
@@ -677,15 +649,6 @@ paths:
             format: uuid
           required: true
       requestBody:
-        description: |
-          <ul>
-              <li>The <b>deviceMedium</b> can be : ELECTRICITY,GAS,WATER,HEATING </li>
-              <li>The <b>deviceType</b> can be : SMART_METER, OPTICAL_METER_SENSOR, WALLBOX, SMART_PLUG, SMART_RELAY, VIRTUAL_LANDLORD_TO_TENANT_METER, ENERGY_METER, NON_SMART_METER, HEAT_PUMP, MICRO_INVERTER </li>
-              <li>The <b>isMainDevice</b> if device the main device of the space</li>
-              <li>The <b>consumptionReadingValue</b> and the <b>ingestionReadingValue</b> can be used together if the non smart meter is bidirectional</li>
-              <li>The <b>readingUnit</b> can be:  KILO_WATT_HOUR, WATT, CUBIC_METRE, KILO_GRAMM, LITERS_PER_MINUTE, KILO_GRAMM_CO2, EURO, EURO_PER_KILO_WATT_HOUR, PERCENT, CENT_PER_KWH, KILO_WATT</li>
-              <li>The <b>isReadingUpdate</b> is set to true when an update of a previously store reading is required</li>
-          </ul>
         required: true
         content:
           application/json:
@@ -854,10 +817,12 @@ components:
               type: string
             conversionFactor:
               type: number
+              description: used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
               format: double
               default: 1.00
             conversionFactorAlreadyApplied:
               type: boolean
+              description: used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
               default: true
 
     NewSpaceInvite:
@@ -1302,7 +1267,7 @@ components:
                 x-order: 1
             isMainDevice:
                 type: boolean
-                escription: Is the device the main device of the space?
+                description: Is the device the main device of the space?
                 x-order: 2
             grid:
                 type: boolean
@@ -1333,10 +1298,12 @@ components:
               type: string
             conversionFactor:
               type: number
+              description: used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
               format: double
               default: 1.00
             conversionFactorAlreadyApplied:
               type: boolean
+              description: used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
               default: true
 
     NewBluemeteringDevice:
@@ -1355,10 +1322,12 @@ components:
               type: string
             conversionFactor:
               type: number
+              description: used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
               format: double
               default: 1.00
             conversionFactorAlreadyApplied:
               type: boolean
+              description: used to indicate if the conversion factor is already applied to the meter readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
               default: true
 
     NewNonSmartMeter:
@@ -1397,12 +1366,14 @@ components:
                 - KILO_WATT
             consumptionReadingValue:
               type: number
+              description: can be used together with 'ingestionReadingValue' if the non smart meter is bidirectional
               format: double
             ingestionReadingValue:
               type: number
               format: double
             isReadingUpdate:
               type: boolean
+              description: is set to true when an update of a previously store reading is required
               default: false
             serialNumber:
               type: string
