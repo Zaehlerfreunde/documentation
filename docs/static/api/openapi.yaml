@@ -1245,11 +1245,17 @@ components:
             - WALLBOX
             - SMART_PLUG
             - SMART_RELAY
-            - VIRTUAL_LANDLORD_TO_TENANT_METER
             - ENERGY_METER
             - NON_SMART_METER
             - HEAT_PUMP
             - MICRO_INVERTER
+            - VIRTUAL_METER
+            - GAS_METER
+            - WATER_METER
+            - HEATING_METER
+            - RLM_METER
+            - SMART_CAR
+            - BATTERY
           x-order: 3
         deviceMedium:
           type: string
@@ -1260,30 +1266,30 @@ components:
             - HEATING
           x-order: 4
     DeviceDetails:
-        type: object
-        properties:
-            deviceName:
-                type: string
-                x-order: 1
-            isMainDevice:
-                type: boolean
-                description: Is the device the main device of the space?
-                x-order: 2
-            grid:
-                type: boolean
-                description: Does the device measure import/export from the grid?
-                x-order: 3
-            externalDeviceId:
-                type: string
-                description: External identifier for the device, useful for data transmission.
-                x-order: 4
-            meteringLocationId:
-                type: string
-                description: is the meter's metering location ID (MELO)
-                x-order: 5
-            serialNumber:
-                type: string
-                x-order: 6    
+      type: object
+      properties:
+        deviceName:
+          type: string
+          x-order: 1
+        isMainDevice:
+          type: boolean
+          description: Is the device the main device of the space?
+          x-order: 2
+        grid:
+          type: boolean
+          description: Does the device measure import/export from the grid?
+          x-order: 3
+        externalDeviceId:
+          type: string
+          description: External identifier for the device, useful for data transmission.
+          x-order: 4
+        meteringLocationId:
+          type: string
+          description: is the meter's metering location ID (MELO)
+          x-order: 5
+        serialNumber:
+          type: string
+          x-order: 6
     NewExternalDevice:
       allOf:
         - $ref: "#/components/schemas/NewDevice"
