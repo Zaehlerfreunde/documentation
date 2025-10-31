@@ -178,3 +178,7 @@ Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. 
 In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer zum selben Objekt hinzufügen. Dies dient dazu, dass du zum Beispiel deine gesamte Familie einladen kannst den selben Haushalt einzusehen.
 
 Wir wünschen dir viel Spaß mit unserer Plattform! Falls du Fragen hast oder etwas nicht so klappt, wie du es dir vorstellst, schreibe uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für dich.
+
+Hier ein Bild:
+
+<img width="1481" height="861" alt="image" src="https://github.com/user-attachments/assets/d1eb119c-ad01-49af-98d6-d5934c654020" />
