@@ -163,7 +163,7 @@ Hier sehen Sie, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am E
 
 ## Shop
 
-Direkt unter dem Tarifwechsel sehen Sie noch einen Shop. Hier sind Produkte gelistet, mit denen Sie ihren Verbrauch noch besser messen und visualisieren können, um die wahren Stromfresser in ihrem Unternehmen zu identifizieren.
+Im Shop sind Produkte gelistet, mit denen Sie ihren Verbrauch noch besser messen und visualisieren können, um die wahren Stromfresser in Ihrem Unternehmen zu identifizieren.
 
 ## Verwaltung
 
