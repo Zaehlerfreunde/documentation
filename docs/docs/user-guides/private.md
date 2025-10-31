@@ -159,14 +159,6 @@ Hier siehst du, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am E
 
 ![Untitled](/img/user-guides/common/Untitled%2017.png)
 
-## Tarifwechsel
-
-Hier schauen wir ständig, basierend auf deinem Verbrauch, nach besseren und günstigeren Tarifen. Wenn wir einen für dich gefunden haben, werden wir ihn dir dort anzeigen.
-
-![Untitled](/img/user-guides/common/8fd384e8-f8d5-480b-b1c2-7b091ada1b48.png)
-
-![Untitled](/img/user-guides/common/Untitled%2018.png)
-
 ## Verwaltung
 
 Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. Hier siehst du allgemeine Infos sowie Informationen zu deinem Tarif. Zusätzlich kannst du hier alle verbundenen Geräte und Rechnungen einsehen, damit du alles komfortabel an einem Ort findest und darauf zugreifen kannst.
