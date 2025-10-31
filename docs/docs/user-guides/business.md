@@ -161,14 +161,6 @@ Hier sehen Sie, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am E
 
 ![Untitled](/img/user-guides/common/Untitled%2017.png)
 
-## Tarifwechsel
-
-Hier schauen wir ständig, basierend auf Ihrem Verbrauch, nach besseren und günstigeren Tarifen. Wenn wir einen für Sie gefunden haben, zeigen wir diesen dort an.
-
-![Untitled](/img/user-guides/common/8fd384e8-f8d5-480b-b1c2-7b091ada1b48.png)
-
-![Untitled](/img/user-guides/common/Untitled%2018.png)
-
 ## Shop
 
 Direkt unter dem Tarifwechsel sehen Sie noch einen Shop. Hier sind Produkte gelistet, mit denen Sie ihren Verbrauch noch besser messen und visualisieren können, um die wahren Stromfresser in ihrem Unternehmen zu identifizieren.
