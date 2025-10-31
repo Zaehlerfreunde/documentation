@@ -179,6 +179,4 @@ In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer z
 
 Wir wünschen dir viel Spaß mit unserer Plattform! Falls du Fragen hast oder etwas nicht so klappt, wie du es dir vorstellst, schreibe uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für dich.
 
-Hier ein Bild:
 
-<img alt="image" src="https://github.com/user-attachments/assets/d1eb119c-ad01-49af-98d6-d5934c654020" />
