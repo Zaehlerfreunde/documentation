@@ -76,9 +76,9 @@ Im nächsten Schritt können Sie (falls nicht schon geschehen) Ihre Tarifdetails
 
 ## Dashboard
 
-Ihr Dashboard zeigt im oberen Bereich alle Geräte an, die Sie angebunden haben und wann die letzte Übermittlung von Daten war bzw. die Echtzeit Leistung. Der obere Bereich im Graphen zeigt Ihren Verbrauch an, der untere die Einspeisung Ihrer Solaranlage, falls Sie eine haben. Es wird automatisch von 7 Cent/kWh Einspeisevergütung ausgegangen, dies können Sie aber auch wieder unter “Verwaltung” > “Objekt” > “Tarife” beliebig anpassen. Hier können Sie auch die Tages-, Wochen-, Monats- und Jahresdaten visualisieren lassen. Das gilt nicht nur für den Verbrauch in Watt, sondern auch für Kosten und Vergütung, CO2-Emissionen, die Marktpreise und die Zählerstände. Diese Daten können Sie jederzeit über den CSV-Export herunterladen.
+Ihr Dashboard zeigt im oberen Bereich alle Geräte an, die Sie angebunden haben und wann die letzte Übermittlung von Daten war bzw. die Echtzeit Leistung. Der obere Bereich im Graphen zeigt Ihren Verbrauch an, der untere die Einspeisung Ihrer Solaranlage, falls Sie eine haben. Es wird automatisch von 7 Cent/kWh Einspeisevergütung ausgegangen, dies können Sie aber auch wieder unter “Verwaltung” > “Objekt” > “Tarife” beliebig anpassen. Hier können Sie auch die Tages-, Wochen-, Monats- und Jahresdaten visualisieren lassen. Das gilt nicht nur für den Verbrauch in Watt, sondern auch für die Leistungsdauerlinie, die Kosten, die CO2-Emissionen und die Marktpreise. Diese Daten kannst du jederzeit über den CSV-Export herunterladen.
 
-![Untitled](/img/user-guides/common/Untitled%209.png)
+<img alt="image" src="https://github.com/user-attachments/assets/06a93d14-4c92-4efb-86e6-a344b7e673ff" />
 
 ## Messwerte
 
@@ -174,5 +174,6 @@ Unter dem Reiter „Verwaltung“ sind Informationen zu Ihren Objekt gelistet. H
 **Virtuelle Summenzähler:**
 
 Mit dieser Funktion können Sie mehrere Zähler/Geräte kombinieren - das bietet sich besonders für die Zusammenfassung mehrerer Werte an, die für die interne Analyse oder den Report von Bedeutung sind.
+
 
 Wir wünschen Ihnen viel Spaß mit unserer Plattform! Falls Sie Fragen haben oder etwas nicht so klappt, wie Sie es sich vorstellen, schreiben Sie uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für Sie!
