@@ -167,41 +167,12 @@ Im Shop sind Produkte gelistet, mit denen Sie ihren Verbrauch noch besser messen
 
 ## Verwaltung
 
-Unter dem Reiter „Verwaltung“ sind Informationen zu Ihren Objekt gelistet. Hier sehen Sie allgemeine Infos sowie Informationen zu ihrem Tarif. Zusätzlich können Sie hier alle verbundenen Geräte einsehen und die Rechnungen, damit Sie alles komfortabel an einem Ort haben und darauf zugreifen können.
+Unter dem Reiter „Verwaltung“ sind Informationen zu Ihren Objekt gelistet. Hier sehen Sie allgemeine Infos sowie Informationen zu Ihrem Tarif. Zusätzlich können Sie hier alle verbundenen Geräte einsehen und die Rechnungen, damit Sie alles komfortabel an einem Ort haben und darauf zugreifen können.
 
 ![Untitled](/img/user-guides/common/Untitled%2019.png)
 
 **Virtuelle Summenzähler:**
 
 Mit dieser Funktion können Sie mehrere Zähler/Geräte kombinieren - das bietet sich besonders für die Zusammenfassung mehrerer Werte an, die für die interne Analyse oder den Report von Bedeutung sind.
-
-## Datenimport
-
--   Übersicht über Datenimport-Möglichkeiten, einschließlich Dienstleister wie metergrid, BlueMetering und metiundo, sowie über CSV-Import.
--   Der Vorteil hierbei ist, dass alle bestehenden Kundendateien problemlos importiert und in die Plattform integriert werden können.
--   Hinzufügen historischer Verbrauchsdaten: Weder für Sie noch für den Endkunden entsteht dabei zusätzliche Arbeit und bestehende Daten können weiterhin verwendet werden, ohne verloren zu gehen.
-    ![Bildschirmfoto 2024-08-05 um 15.45.08.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_15.45.08.png)
-
-## Datenexport
-
-Alle Daten können natürlich auch als XAP-Datei exportiert werden. Das hilft beim Normalisieren der Daten und ist für weitere Anwendungen wichtig, die die Daten verwerten (z.B. ESG Software).
-
-![Bildschirmfoto 2024-08-05 um 15.46.12.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_15.46.12.png)
-
-## Datenweiterleitung
-
-Die Datenweiterleitung ist ideal, um alle Daten (Smart-Meter sowie IoT-Geräte) zu normalisieren und kontinuierlich an Dritte, wie Abrechnungsdienstleister, weiterzuleiten. Über die Datenweiterleitung können die Daten auch in Prognose-Tools eingespeist werden, um die Strom-Einkaufsstrategie zu optimieren.
-
-Die technische Einrichtung der Weiterleitung wird Schritt für Schritt erklärt, wenn Sie auf den grünen Button "Weiterleitung einrichten" klicken. Weitere Formate können auf Wunsch individuell hinzugefügt werden
-
-![Bildschirmfoto 2024-08-05 um 16.31.59.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_16.31.59.png)
-
-## API
-
-Unsere API kann für viele Zwecke genutzt werden. Primär dient sie dazu, langfristig Kosten zu sparen, indem auf die normale Marktkommunikation (MSCONS/AS4) verzichtet wird und die Daten schneller weitergeleitet werden. Über diese API können neue Objekte und Zähler vollautomatisch hinzugefügt sowie Nutzer automatisch angelegt werden. Die genaue Anleitung für die API finden Sie hier:
-
-[Zählerfreunde API Integration](../integrations/api-integration.md)
-
-![Bildschirmfoto 2024-08-05 um 16.33.54.png](/img/user-guides/business/Bildschirmfoto_2024-08-05_um_16.33.54.png)
 
 Wir wünschen Ihnen viel Spaß mit unserer Plattform! Falls Sie Fragen haben oder etwas nicht so klappt, wie Sie es sich vorstellen, schreiben Sie uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für Sie!
