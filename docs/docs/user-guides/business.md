@@ -76,7 +76,7 @@ Im nächsten Schritt können Sie (falls nicht schon geschehen) Ihre Tarifdetails
 
 ## Dashboard
 
-Ihr Dashboard zeigt im oberen Bereich alle Geräte an, die Sie angebunden haben und wann die letzte Übermittlung von Daten war bzw. die Echtzeit Leistung. Der obere Bereich im Graphen zeigt Ihren Verbrauch an, der untere die Einspeisung Ihrer Solaranlage, falls Sie eine haben. Es wird automatisch von 7 Cent/kWh Einspeisevergütung ausgegangen, dies können Sie aber auch wieder unter “Verwaltung” > “Objekt” beliebig anpassen. Hier können Sie auch die Tages-, Wochen-, Monats- und Jahresdaten visualisieren lassen. Das gilt nicht nur für den Verbrauch in Watt, sondern auch für Kosten und Vergütung, CO2-Emissionen, die Marktpreise und die Zählerstände. Diese Daten können Sie jederzeit über den CSV-Export herunterladen.
+Ihr Dashboard zeigt im oberen Bereich alle Geräte an, die Sie angebunden haben und wann die letzte Übermittlung von Daten war bzw. die Echtzeit Leistung. Der obere Bereich im Graphen zeigt Ihren Verbrauch an, der untere die Einspeisung Ihrer Solaranlage, falls Sie eine haben. Es wird automatisch von 7 Cent/kWh Einspeisevergütung ausgegangen, dies können Sie aber auch wieder unter “Verwaltung” > “Objekt” > “Tarife” beliebig anpassen. Hier können Sie auch die Tages-, Wochen-, Monats- und Jahresdaten visualisieren lassen. Das gilt nicht nur für den Verbrauch in Watt, sondern auch für Kosten und Vergütung, CO2-Emissionen, die Marktpreise und die Zählerstände. Diese Daten können Sie jederzeit über den CSV-Export herunterladen.
 
 ![Untitled](/img/user-guides/common/Untitled%209.png)
 
