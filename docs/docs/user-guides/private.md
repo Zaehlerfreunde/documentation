@@ -181,4 +181,4 @@ Wir wünschen dir viel Spaß mit unserer Plattform! Falls du Fragen hast oder et
 
 Hier ein Bild:
 
-<img width="1481" height="861" alt="image" src="https://github.com/user-attachments/assets/d1eb119c-ad01-49af-98d6-d5934c654020" />
+<img alt="image" src="https://github.com/user-attachments/assets/d1eb119c-ad01-49af-98d6-d5934c654020" />
