@@ -96,6 +96,9 @@ Basierend auf deinen Angaben und deinem Verbrauch bekommst du unter „Tipps“ 
 
 Direkt unter den Stromspartipps siehst du noch einen Shop. Hier sind Produkte gelistet, mit denen du deinen Verbrauch noch besser messen und visualisieren kannst, um die wahren Stromfresser in deinem Haushalt zu identifizieren.
 
+<img alt="image" src="https://github.com/user-attachments/assets/c6acfa23-9b1f-4f65-86db-edc9515ffc7e" />
+
+
 ## Smarte Steuerung und Logiken
 
 Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Logiken.
