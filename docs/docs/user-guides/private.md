@@ -42,13 +42,11 @@ Nachdem die E-Mail bestätigt wurde, landest du auf deinem persönlichen Dashboa
 
 Gehe links oben auf das Plus neben "Objekt" und lege ein neues Objekt an. Die Plattform führt dich eigenständig durch den Prozess. Du kannst hier auch mehrere Objekte anlegen und diese hierarchisch unterordnen. Ein Beispiel dafür ist die Visualisierung eines Mehrfamilienhauses, inklusive der aufgefächerten Verbrauchsdaten der einzelnen Wohnungen. Derartige Logiken können mithilfe der „Gruppierung“ visualisiert werden.
 
-Nachdem das Objekt angelegt wurde, können wir ein Gerät anlegen:
-
 ![Untitled](/img/user-guides/common/Untitled%204.png)
 
 ![Untitled](/img/user-guides/common/Untitled%205.png)
 
-![Untitled](/img/user-guides/common/Untitled%206.png)
+Nachdem das Objekt angelegt wurde, können wir ein Gerät anlegen.
 
 ## Geräte
 
