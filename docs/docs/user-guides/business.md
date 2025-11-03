@@ -8,7 +8,6 @@ Besonders interessant sind auch die umfassenden **staatlichen Zuschüsse**, da u
 
 Entdecken Sie die vielseitigen Möglichkeiten unserer Software und erfahren Sie mehr darüber!
 
-## Inhaltsverzeichnis
 
 ## Anmeldung
 
