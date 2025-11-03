@@ -82,7 +82,7 @@ Ihr Dashboard zeigt im oberen Bereich alle Geräte an, die Sie angebunden haben 
 
 Die Messwerte können Sie natürlich nicht nur vom Hauptgerät anzeigen lassen, sondern von allen Geräten. Unten sehen Sie auch den Verbrauch im Vergleich zum Vormonat und die Kosten. Zudem können verschiedene Geräte verglichen werden.
 
-<img alt="image" src="https://github.com/user-attachments/assets/249fd5e4-2606-4c77-8d03-43b45cf6981d" />
+<img alt="image" src="https://github.com/user-attachments/assets/9950d28c-8ce3-4435-b0c6-c8c3ee6105c3" />
 
 ## Energiewirtschaftliche Kennzahlen
 
@@ -102,7 +102,7 @@ Eine Leistungsdauerlinie stellt die Dauer (in Stunden) dar, während der eine be
 
 Für Unternehmen mit eine Jahresverbrauch von über 100 000kWh ist eine Spitzenglättung von besonderer Bedeutung, da die maximale Leistung die Netzkosten beeinflusst.
 
-![Screenhots.001.png](/img/user-guides/business/Screenhots.001.png)
+<img alt="image" src="https://github.com/user-attachments/assets/3eebd1a2-a90b-48f5-86ee-ca48d92ee769" />
 
 ## Smarte Steuerung und Logiken
 
