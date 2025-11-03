@@ -80,9 +80,9 @@ Ihr Dashboard zeigt im oberen Bereich alle Geräte an, die Sie angebunden haben 
 
 ## Messwerte
 
-Die Messwerte können Sie natürlich nicht nur vom Hauptgerät anzeigen lassen, sondern von allen Geräten. Unten sehen Sie auch den Verbrauch im Vergleich zum Vormonat und die Kosten. Auch hier können Sie einzelne Geräte oder Messwerte anzeigen lassen oder das Hauptgerät.
+Die Messwerte können Sie natürlich nicht nur vom Hauptgerät anzeigen lassen, sondern von allen Geräten. Unten sehen Sie auch den Verbrauch im Vergleich zum Vormonat und die Kosten. Zudem können verschiedene Geräte verglichen werden.
 
-![Untitled](/img/user-guides/common/Untitled%2010.png)
+<img alt="image" src="https://github.com/user-attachments/assets/86694aeb-d337-4a67-a518-726f2464ccd1" />
 
 ## Energiewirtschaftliche Kennzahlen
 
