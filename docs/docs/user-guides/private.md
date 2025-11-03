@@ -173,6 +173,18 @@ Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. 
 
 In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer zum selben Objekt hinzufügen. Dies dient dazu, dass du zum Beispiel deine gesamte Familie einladen kannst den selben Haushalt einzusehen.
 
+## KI Assistent
+
+Der KI Assisent beantwortet dir Fragen und kann sogar entweder aktiv in dein HEMS eingreifen.
+Er kann dir dabei helfen:
+
+-   Aktionen direkt auszuführen
+-   Informationen zu Verbrauch und Co. zu erhalten
+-   Regeln im HEMS zu aktivieren
+
+<img alt="image" src="https://github.com/user-attachments/assets/e52d4a9e-a048-42ca-93b2-422ace050f23" />
+
+
 Wir wünschen dir viel Spaß mit unserer Plattform! Falls du Fragen hast oder etwas nicht so klappt, wie du es dir vorstellst, schreibe uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für dich.
 
 
