@@ -173,5 +173,16 @@ Unter dem Reiter „Verwaltung“ sind Informationen zu Ihren Objekt gelistet. H
 
 Mit dieser Funktion können Sie mehrere Zähler/Geräte kombinieren - das bietet sich besonders für die Zusammenfassung mehrerer Werte an, die für die interne Analyse oder den Report von Bedeutung sind.
 
+## KI Assistent
+
+Der KI Assisent beantwortet Ihnen Fragen und kann sogar aktiv in Ihr HEMS eingreifen.
+Er kann Ihnen dabei helfen:
+
+-   Aktionen direkt auszuführen
+-   Informationen zu Verbrauch und Co. zu erhalten
+-   Regeln im HEMS zu aktivieren
+
+<img alt="image" src="https://github.com/user-attachments/assets/d175ff0b-3faa-4b83-90de-6f5613cd629c" />
+
 
 Wir wünschen Ihnen viel Spaß mit unserer Plattform! Falls Sie Fragen haben oder etwas nicht so klappt, wie Sie es sich vorstellen, schreiben Sie uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für Sie!
