@@ -171,7 +171,6 @@ Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. 
 
 In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer zum selben Objekt hinzufügen. Dies dient dazu, dass du zum Beispiel deine gesamte Familie einladen kannst den selben Haushalt einzusehen.
 
-<p style="font-size:1.4em; font-weight:bold;">Dokumente</p>
 Im Bereich „Dokumente“ findest du alle Unterlagen, die dein Anbieter für dich bereitgestellt hat – zum Beispiel Rechnungen, Verträge oder sonstige Dokumente.
 Diese werden zentral in deinem Konto gespeichert und können jederzeit eingesehen oder heruntergeladen werden.
 
