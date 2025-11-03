@@ -40,13 +40,11 @@ Nachdem die E-Mail bestätigt wurde, landen Sie auf Ihrem persönlichen Dashboar
 
 Gehen Sie links oben auf das Plus neben "Objekt" und legen ein neues Objekt an. Die Plattform führt Sie eigenständig durch den Prozess. Sie können hier auch mehrere Objekte anlegen und diese hierarchisch unterordnen. Ein Beispiel dafür ist die Visualisierung eines Mehrfamilienhauses, inklusive der aufgefächerten Verbrauchsdaten der einzelnen Wohnungen. Ein anderes Beispiel wäre eine Produktionsstätte, ein Büro und eine Verkaufsfläche. Derartige Logiken können mithilfe der „Gruppierung“ visualisiert werden.
 
-Nachdem das Objekt angelegt wurde, können Sie ein Gerät anlegen:
-
 ![Untitled](/img/user-guides/common/Untitled%204.png)
 
 ![Untitled](/img/user-guides/common/Untitled%205.png)
 
-![Untitled](/img/user-guides/common/Untitled%206.png)
+Nachdem das Objekt angelegt wurde, können Sie ein Gerät anlegen.
 
 ## Geräte
 
