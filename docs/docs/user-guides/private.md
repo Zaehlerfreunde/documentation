@@ -66,9 +66,7 @@ Die Anbindung wird dir dann Schritt für Schritt erklärt. Nachdem ein Gerät er
 
 Nachdem du das Hauptgerät hinzugefügt hast, kannst du weitere Geräte hinzufügen und Logiken erstellen. Sobald du mehr als 10 Geräte oder Sub-Objekte angelegt hast, werden diese zusammengezählt und hier angezeigt.
 
-![1.png](/img/user-guides/common/1.png)
-
-Im nächsten Schritt kannst du (falls nicht schon geschehen) deine Tarifdetails hinterlegen, damit wir dir deine Kosten akkurat berechnen können. Diese Möglichkeit findest du entweder direkt über das Dashboard, oder im Menü unter Verwaltung > Objekt.
+Im nächsten Schritt kannst du (falls nicht schon geschehen) deine Tarifdetails hinterlegen, damit wir dir deine Kosten akkurat berechnen können. Diese Möglichkeit findest du entweder direkt über das Dashboard, oder im Menü unter “Verwaltung” > “Objekt” > “Tarife”.
 
 ## Dashboard
 
