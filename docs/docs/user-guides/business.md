@@ -67,9 +67,7 @@ Bereits ein intelligentes Messsystem (intelligenter Stromzähler) installiert? W
 
 Nachdem Sie das Hauptgerät hinzugefügt haben, können Sie weitere Geräte hinzufügen und Logiken erstellen. Sobald Sie mehr als 10 Geräte oder Sub-Objekte angelegt haben, werden diese zusammengefasst und hier angezeigt.
 
-![1.png](/img/user-guides/common/1.png)
-
-Im nächsten Schritt können Sie (falls nicht schon geschehen) Ihre Tarifdetails hinterlegen, damit wir Ihre Kosten akkurat berechnen können. Diese Möglichkeit finden Sie entweder direkt über das Dashboard, oder im Menü unter Verwaltung > Objekt.
+Im nächsten Schritt können Sie (falls nicht schon geschehen) Ihre Tarifdetails hinterlegen, damit wir Ihre Kosten akkurat berechnen können. Diese Möglichkeit finden Sie entweder direkt über das Dashboard, oder im Menü unter “Verwaltung” > “Objekt” > “Tarife”.
 
 ## Dashboard
 
