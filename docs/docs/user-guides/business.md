@@ -16,17 +16,17 @@ Im ersten Schritt, empfehlen wir Ihnen auf unserer Webseite, alle Cookies zu akz
 
 ![Bildschirmfoto 2024-06-28 um 13.46.38.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.38.png)
 
-Klicken Sie dann auf oder “Unternehmen” und registrieren Sie sich. Für die Registrierung können Sie auch deinen Google- oder Apple-Account benutzen.
+Klicken Sie dann auf oder “Unternehmen” und registrieren Sie sich. Für die Registrierung können Sie auch Ihren Google- oder Apple-Account benutzen.
 
 ![Bildschirmfoto 2024-06-28 um 13.46.49.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.49.png)
 
 ![Untitled](/img/user-guides/common/Untitled.png)
 
-Sobald das erledigt ist, fragen wir Sie nach Ihre, Namen oder dem Namen des Unternehmens und bitten Sie um die Zustimmung zu unseren AGB.
+Sobald das erledigt ist, fragen wir Sie nach Ihrem Namen oder dem Namen des Unternehmens und bitten Sie um die Zustimmung zu unseren AGB.
 
 ![Untitled](/img/user-guides/common/Untitled%201.png)
 
-Wir schicken Ihnen dann sofort eine E-Mail mit einem Bestätigungslink zu. Sobald Sie auf den Link in der E-Mail geklickt hast, können Sie auf unserer Plattform bestätigen, dass Sie ihre E-Mail-Adresse verifiziert haben.
+Wir schicken Ihnen dann sofort eine E-Mail mit einem Bestätigungslink zu. Sobald Sie auf den Link in der E-Mail geklicken, können Sie auf unserer Plattform bestätigen, dass Sie ihre E-Mail-Adresse verifiziert haben.
 
 ![Bildschirmfoto 2024-06-28 um 13.48.10.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.48.10.png)
 
