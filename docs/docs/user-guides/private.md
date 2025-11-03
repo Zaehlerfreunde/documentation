@@ -175,7 +175,7 @@ In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer z
 
 ## KI Assistent
 
-Der KI Assisent beantwortet dir Fragen und kann sogar entweder aktiv in dein HEMS eingreifen.
+Der KI Assisent beantwortet dir Fragen und kann sogar aktiv in dein HEMS eingreifen.
 Er kann dir dabei helfen:
 
 -   Aktionen direkt auszuführen
