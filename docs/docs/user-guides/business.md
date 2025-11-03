@@ -106,7 +106,8 @@ Für Unternehmen mit eine Jahresverbrauch von über 100 000kWh ist eine Spitzeng
 Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und automatisierten Abläufen.
 Über diese Funktion können Sie vordefinierte Regeln aktivieren, um Geräte intelligent zu steuern oder Benachrichtigungen zu erhalten.
 
-Die Regeln unterstützen Sie dabei, den Energieverbrauch in Ihrem Unternehmen zu optimieren – zum Beispiel das Lastverschieben in Stunden mit niedrigeren Strompreisen oder durch Benachrichtigungen bei ungewöhnlichen Verbrauchsmustern.
+Die Regeln unterstützen Sie dabei, den Energieverbrauch in Ihrem Unternehmen zu optimieren – zum Beispiel durch das Lastverschieben in Stunden mit niedrigeren Strompreisen oder durch Benachrichtigungen bei ungewöhnlichen Verbrauchsmustern.
+
 Um eine neue Regel zu aktivieren, klicken Sie einfach auf den entsprechenden Knopf. Es öffnet sich ein Fenster mit verschiedenen Kategorien, aus denen Sie die gewünschte Regel auswählen können.
 
 <img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
