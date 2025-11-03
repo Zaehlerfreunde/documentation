@@ -99,18 +99,21 @@ Direkt unter den Stromspartipps siehst du noch einen Shop. Hier sind Produkte ge
 ## Smarte Steuerung und Logiken
 
 Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Logiken.
+Über diese Funktion kannst du Regeln aktivieren, um Geräte intelligent zu steuern oder Benachrichtigungen zu erhalten.
 
-![Untitled](/img/user-guides/common/Untitled%2011.png)
+Die Regeln helfen dir dabei, deinen Energieverbrauch zu optimieren – zum Beispiel durch automatisches Laden des E-Autos in günstigen Stunden oder durch Benachrichtigungen bei ungewöhnlichem Verbrauch.
+Um eine neue Regel zu aktivieren, musst du einfach auf den entsprechenden Knopf klicken. Es öffnet sich ein Fenster mit verschiedenen Kategorien, aus denen du die gewünschte Regel auswählen kannst.
 
-Um eine neue Automation hinzuzufügen, klicke einfach auf den entsprechenden Knopf, und es öffnet sich ein Fenster, um die gewünschte Logik einzugeben. In diesem Beispiel wollen wir unser Auto laden, wenn unsere Solaranlage Strom produziert und die Einspeisung positiv ist. Du kannst aber auch alle möglichen Geräte steuern oder Benachrichtigungen senden.
+<img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
 
-![Untitled](/img/user-guides/common/Untitled%2012.png)
+In diesem Beispiel wird eine Regel aktiviert, die das Laden des E-Autos in den 6 günstigsten Stunden des Tages ermöglicht.
+So wird sichergestellt, dass der Ladevorgang bevorzugt in Zeiten mit niedrigen Strompreisen erfolgt und die Ladezeiten effizient genutzt werden.
 
-![Untitled](/img/user-guides/common/Untitled%2013.png)
+<img alt="image" src="https://github.com/user-attachments/assets/df2bb516-aaaa-4d0d-b6ee-fcf2e9f95b41" />
 
-Nachdem du die Automation erstellt hast, wird sie angezeigt. Diese kannst du bearbeiten, löschen oder weitere hinzufügen.
+Nachdem du die Automation erstellt hast, wird sie angezeigt. Du kannst sie bearbeiten, löschen oder neue Automationen hinzufügen.
 
-Bei den Automationen kannst du auch die Möglichkeit auswählen ab einem bestimmten Schwellenwert Geräte an, bzw auszuschalten oder Benachrichtigungen zu schicken. Diesen Schwellenwert kannst du auch in dem Verbrauchsgraphen anzeigen lassen.
+Bei den Automationen kannst du auch die Möglichkeit auswählen, ab einem bestimmten Schwellenwert Geräte an, bzw auszuschalten oder Benachrichtigungen zu schicken. Diesen Schwellenwert kannst du auch in dem Verbrauchsgraphen anzeigen lassen.
 
 ![Bildschirmfoto 2024-10-02 um 14.53.47.png](/img/user-guides/private/Bildschirmfoto_2024-10-02_um_14.53.47.png)
 
