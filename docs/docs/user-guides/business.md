@@ -103,15 +103,21 @@ Für Unternehmen mit eine Jahresverbrauch von über 100 000kWh ist eine Spitzeng
 
 ## Smarte Steuerung und Logiken
 
-Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Logiken.
+Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und automatisierten Abläufen.
+Über diese Funktion können Sie vordefinierte Regeln aktivieren, um Geräte intelligent zu steuern oder Benachrichtigungen zu erhalten.
 
-![Untitled](/img/user-guides/common/Untitled%2011.png)
+Die Regeln unterstützen Sie dabei, den Energieverbrauch in Ihrem Unternehmen zu optimieren – zum Beispiel das Lastverschieben in Stunden mit niedrigeren Strompreisen oder durch Benachrichtigungen bei ungewöhnlichen Verbrauchsmustern.
+Um eine neue Regel zu aktivieren, klicken Sie einfach auf den entsprechenden Knopf. Es öffnet sich ein Fenster mit verschiedenen Kategorien, aus denen Sie die gewünschte Regel auswählen können.
 
-Um eine neue Automation hinzuzufügen, klicken Sie einfach auf den entsprechenden Knopf, und es öffnet sich ein Fenster, um die gewünschte Logik einzugeben. In diesem Beispiel wollen wir unser Auto laden, wenn unsere Solaranlage Strom produziert und die Einspeisung positiv ist. Sie können aber auch alle möglichen Geräte steuern oder Benachrichtigungen senden.
+<img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
 
-![Untitled](/img/user-guides/common/Untitled%2012.png)
+In diesem Beispiel werden zwei Regeln aktiviert:
+-   Ungewöhnlich hoher Netzbezug – informiert, sobald der Wochenverbrauch eines Objekts > 20 % über dem üblichen Wert liegt.
+-   Anomalie im Netzbezug  – meldet auffällige Verbrauchsmuster (z. B. unerwartete Lastsprünge außerhalb der Betriebszeiten).
 
-![Untitled](/img/user-guides/common/Untitled%2013.png)
+So lassen sich Lastspitzen frühzeitig erkennen, Störungen schneller identifizieren und Ineffizienzen gezielt beheben.
+
+<img alt="image" src="https://github.com/user-attachments/assets/f6c78ef1-24a4-441c-9763-e3358d108a7d" />
 
 Nachdem Sie die Automation erstellt haben, wird sie angezeigt. Diese können Sie bearbeiten, löschen oder weitere hinzufügen.
 
