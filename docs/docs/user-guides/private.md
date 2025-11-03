@@ -165,13 +165,17 @@ Hier siehst du, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am E
 
 ## Verwaltung
 
-Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. Hier siehst du allgemeine Infos sowie Informationen zu deinem Tarif. Zusätzlich kannst du hier alle verbundenen Geräte und Rechnungen einsehen, damit du alles komfortabel an einem Ort findest und darauf zugreifen kannst.
+Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. Hier siehst du allgemeine Infos sowie Informationen zu deinem Tarif. Zusätzlich kannst du hier alle verbundenen Geräte sehen und die Messdaten der Geräte im CVS-Format exportieren.
 
 ![Untitled](/img/user-guides/common/Untitled%2019.png)
 
 ![Untitled](/img/user-guides/private/Untitled%2022.png)
 
 In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer zum selben Objekt hinzufügen. Dies dient dazu, dass du zum Beispiel deine gesamte Familie einladen kannst den selben Haushalt einzusehen.
+
+<p style="font-size:1.4em; font-weight:bold;">Dokumente</p>
+Im Bereich „Dokumente“ findest du alle Unterlagen, die dein Anbieter für dich bereitgestellt hat – zum Beispiel Rechnungen, Verträge oder sonstige Dokumente.
+Diese werden zentral in deinem Konto gespeichert und können jederzeit eingesehen oder heruntergeladen werden.
 
 ## KI Assistent
 
@@ -183,6 +187,7 @@ Er kann dir dabei helfen:
 -   Regeln im HEMS zu aktivieren
 
 <img alt="image" src="https://github.com/user-attachments/assets/e52d4a9e-a048-42ca-93b2-422ace050f23" />
+
 
 
 Wir wünschen dir viel Spaß mit unserer Plattform! Falls du Fragen hast oder etwas nicht so klappt, wie du es dir vorstellst, schreibe uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für dich.
