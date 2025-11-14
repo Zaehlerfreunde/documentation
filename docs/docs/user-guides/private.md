@@ -104,6 +104,7 @@ Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Log
 
 Die Regeln helfen dir dabei, deinen Energieverbrauch zu optimieren – zum Beispiel durch automatisches Laden des E-Autos in günstigen Stunden oder durch Benachrichtigungen bei ungewöhnlichem Verbrauch.
 Um eine neue Regel zu aktivieren, musst du einfach auf den entsprechenden Knopf klicken. Es öffnet sich ein Fenster mit verschiedenen Kategorien, aus denen du die gewünschte Regel auswählen kannst.
+
 Wichtig: Du kannst nur Regeln aktivieren, die zuvor vom Admin freigeschaltet wurden. Wenn eine bestimmte Regel nicht sichtbar ist, wurde sie aktuell noch nicht für dich freigegeben.
 
 <img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
