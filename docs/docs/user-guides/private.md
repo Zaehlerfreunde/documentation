@@ -104,6 +104,7 @@ Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Log
 
 Die Regeln helfen dir dabei, deinen Energieverbrauch zu optimieren – zum Beispiel durch automatisches Laden des E-Autos in günstigen Stunden oder durch Benachrichtigungen bei ungewöhnlichem Verbrauch.
 Um eine neue Regel zu aktivieren, musst du einfach auf den entsprechenden Knopf klicken. Es öffnet sich ein Fenster mit verschiedenen Kategorien, aus denen du die gewünschte Regel auswählen kannst.
+Wichtig: Du kannst nur Regeln aktivieren, die zuvor vom Admin freigeschaltet wurden. Wenn eine bestimmte Regel nicht sichtbar ist, wurde sie aktuell noch nicht für dich freigegeben.
 
 <img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
 
@@ -113,12 +114,6 @@ So wird sichergestellt, dass der Ladevorgang bevorzugt in Zeiten mit niedrigen S
 <img alt="image" src="https://github.com/user-attachments/assets/df2bb516-aaaa-4d0d-b6ee-fcf2e9f95b41" />
 
 Nachdem du die Automation erstellt hast, wird sie angezeigt. Du kannst sie bearbeiten, löschen oder neue Automationen hinzufügen.
-
-Bei den Automationen kannst du auch die Möglichkeit auswählen, ab einem bestimmten Schwellenwert Geräte an, bzw auszuschalten oder Benachrichtigungen zu schicken. Diesen Schwellenwert kannst du auch in dem Verbrauchsgraphen anzeigen lassen.
-
-![Bildschirmfoto 2024-10-02 um 14.53.47.png](/img/user-guides/private/Bildschirmfoto_2024-10-02_um_14.53.47.png)
-
-![Bildschirmfoto 2024-10-02 um 14.53.26.png](/img/user-guides/private/Bildschirmfoto%202024-10-02%20um%2014.53.26.png)
 
 ## Reporting
 
