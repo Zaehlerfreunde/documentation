@@ -148,11 +148,17 @@ Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt üb
 ![Benachrichtigungen1](/img/user-guides/admin/notification1.png)
 ![Benachrichtigungen2](/img/user-guides/admin/notification2.png)
 
+
 ### Sonstiges
 
 Hier können Sie einen Demo-Account für Ihre Website erstellen, den KI-Assistenten konfigurieren, eine Klickstrecke für das Onboarding von Neukunden aktivieren und festlegen, welche Automatisierungsregeln Nutzer verwenden können.
+-   **Demo-Konto erstellen**
+    - Mit dem Demo-Konto können Sie eine eigene Demo-Version der Plattform erstellen und das Portal testen, ohne dass dafür Zugangsdaten erforderlich sind.
 
-![Bildschirmfoto 2025-08-22 um 17.30.18.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.30.38.png)
+      <img alt="image" src="https://github.com/user-attachments/assets/46daf7b7-b087-41e6-8975-7c6de423e762" />
+
+      Sobald Sie das Demo-Konto erstellt haben, können Sie sich über die entsprechenden Links ganz einfach in das Admin-Portal oder das Nutzerportal des Demo-Kontos einloggen
+
 
 -   **Onboarding für Neukunden**
     -   Wir haben eine **Klickstrecke inklusive Tarifrechner und Vertragsabschlusstrecke** für Sie entwickelt. Dieses Zusatzmodul können Sie hinzubuchen, um Neukunden in Ihr ERP System zu übertragen und um Projekte im Bereich Mieterstrom mit einer individuellen Antragsstrecke zu untermalen.
