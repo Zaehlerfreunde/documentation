@@ -150,7 +150,7 @@ Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt üb
 
 ### Sonstiges
 
-Hier können Sie einen Demo Account für ihre Website erstellen und den KI Assistenten einstellen
+Hier können Sie einen Demo-Account für Ihre Website erstellen, den KI-Assistenten konfigurieren, eine Klickstrecke für das Onboarding von Neukunden aktivieren und festlegen, welche Automatisierungsregeln Nutzer verwenden können.
 
 ![Bildschirmfoto 2025-08-22 um 17.30.18.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.30.38.png)
 
