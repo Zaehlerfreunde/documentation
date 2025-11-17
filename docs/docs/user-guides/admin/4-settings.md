@@ -166,8 +166,10 @@ Hier können Sie einen Demo-Account für Ihre Website erstellen, den KI-Assisten
 
 Um eine neue Regel zu aktivieren, klicken Sie auf das "+"-Symbol und wählen die gewünschte Regel aus. Aktivierte Regeln erscheinen anschließend in der Liste und sind für Nutzer unter "Smarte Steuerungen" sichtbar. Wenn Sie eine Regel entfernen möchten, klicken Sie einfach auf das "–"-Symbol neben der jeweiligen Regel.
 
+-   **KI-Assistenten konfigurieren**
+    - Optional können Sie hier den KI-Assistenten anpassen und eine individuelle Ansage hinterlegen. Diese Einstellung ist nicht zwingend notwendig, kann aber genutzt werden, um Tonfall oder Hinweise für Ihre Nutzer zu personalisieren.  
 
-
+<img alt="image" src="https://github.com/user-attachments/assets/557c6c9f-d206-49b2-bfac-1f71c0907740" />
 
 -   **Onboarding für Neukunden**
     -   Wir haben eine **Klickstrecke inklusive Tarifrechner und Vertragsabschlusstrecke** für Sie entwickelt. Dieses Zusatzmodul können Sie hinzubuchen, um Neukunden in Ihr ERP System zu übertragen und um Projekte im Bereich Mieterstrom mit einer individuellen Antragsstrecke zu untermalen.
