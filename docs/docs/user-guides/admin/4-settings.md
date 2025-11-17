@@ -47,7 +47,7 @@ Aktivieren und deaktivieren der Börsenpreisansicht unabhängig von Art des Stro
 
 -   “Marktprämie für Anlagen”:
 
-Durch die Anbindung verschiedener Schnittstellen, ist es uns gelungen eine Funktion mit Alleinstellungsmerkmal zu entwickeln! Durch die Marktprämie in Echtzeit können Anlagenbetreiber ihre Marktprämie laufend einsehen (nicht wie bisher nur am Ende des Monats). Das erhöht die Planbarkeit und das Liquiditätsmanagement (Zusatzmodul).
+Durch die Anbindung verschiedener Schnittstellen, ist es uns gelungen eine Funktion mit Alleinstellungsmerkmal zu entwickeln! Durch die Marktprämie in Echtzeit können Anlagenbetreiber ihre Marktprämie laufend einsehen (nicht wie bisher nur am Ende des Monats). Das erhöht die Planbarkeit und das Liquiditätsmanagement. (Zusatzmodul)
 
 ![Bildschirmfoto 2025-08-22 um 16.59.31.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_16.59.31.png)
 
@@ -57,7 +57,7 @@ Durch die Anbindung verschiedener Schnittstellen, ist es uns gelungen eine Funkt
 
 -   “Simulator”:
 
-Mit dem **Simulator** können Endkunden Vorschläge errechnen lassen, ob sich eine Solaranlage oder ein Balkonkraftwerk lohnt, wann es sich amortisiert und Angebote anzeigen lassen. Auch hier haben Sie die Möglichkeit, Affiliate-Kommissionen zu verdienen, wenn Ihre Endkunden über diese Funktion eine PV-Anlage kaufen.
+Mit dem **Simulator** können Endkunden Vorschläge errechnen lassen, ob sich eine Solaranlage oder ein Balkonkraftwerk lohnt, wann es sich amortisiert und Angebote anzeigen lassen. Auch hier haben Sie die Möglichkeit, Affiliate-Kommissionen zu verdienen, wenn Ihre Endkunden über diese Funktion eine PV-Anlage kaufen. 
 
 -   “Tipps”:
 
@@ -65,11 +65,11 @@ Unter „**Tipps**“ werden Stromspartipps angezeigt. Diese können entweder Ih
 
 -   “Dokumententresor”:
 
-Bequem über API oder Mail-Verfahren Rechnungen den Kunden zum Download bereitstellen oder Vertragsunterlagen ablegen.
+Bequem über API oder Mail-Verfahren Rechnungen den Kunden zum Download bereitstellen oder Vertragsunterlagen ablegen. (Zusatzmodul)
 
 -   “Shop”:
 
-Im **Shop** bieten wir Produkte an, mit denen man noch mehr Daten messen und den Haushalt besser visualisieren kann. Wenn Sie diesen für Ihre Endkunden zugänglich machen, haben Sie eine weitere Möglichkeit, Affiliate-Kommissionen zu kassieren. Wir können auch gerne Ihre eigenen Produkte dort einstellen.
+Im **Shop** bieten wir Produkte an, mit denen man noch mehr Daten messen und den Haushalt besser visualisieren kann. Wenn Sie diesen für Ihre Endkunden zugänglich machen, haben Sie eine weitere Möglichkeit, Affiliate-Kommissionen zu kassieren. Wir können auch gerne Ihre eigenen Produkte dort einstellen. (Zusatzmodul)
 
 -   “Objektvergleich”:
 
@@ -105,7 +105,7 @@ Kunden können den Assistenten nutzen um
 -   Informationen zu Verbrauch und Co. zu erhalten
 -   Regeln im HEMS zu aktivieren
 
-Mittelfristig soll man über die KI alles im HEMS-Bezug auch durch ganz einfache Prompts managen können, z.B.: "mein Auto muss morgen um 9 Uhr voll sein, bitte nutze PV überschuss wenn möglich, sonst netzbezug"... etc.
+Mittelfristig soll man über die KI alles im HEMS-Bezug auch durch ganz einfache Prompts managen können, z.B.: "mein Auto muss morgen um 9 Uhr voll sein, bitte nutze PV überschuss wenn möglich, sonst netzbezug"... etc. (Zusatzmodul)
 
 ![Bildschirmfoto 2025-08-22 um 17.17.13.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.17.13.png)
 
