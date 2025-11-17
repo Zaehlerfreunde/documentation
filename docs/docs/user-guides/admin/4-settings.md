@@ -204,7 +204,7 @@ Die technische Einrichtung der Weiterleitung wird Schritt für Schritt erklärt,
 
 ## Zusätzliche Einstellungen
 
-### Sub-Mandanten
+### Sub-Mandanten und Loginseite
 
 Erlaubt das Anlegen von Sub-Mandanten die ihren eigenen Admin-Zugang erhalten und Design-Einstellungen für ihre Endnutzer vornehmen können. (White-Label innerhalb der White-Label Lösung). Sie können daraus wiederum einen eigenen Business-Case bauen (Zusatzmodul).
 
