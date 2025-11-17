@@ -141,7 +141,7 @@ Mit dieser Funktion können Endkunden mehrere Zähler/Geräte kombinieren - bitt
 -   Hier können Sie die Anpassungen an die Unternehmensfarben vornehmen.
 -   ACHTUNG: Bitte beachten Sie, dass alle Anpassungen sich direkt auf alle Nutzer innerhalb diesen Mandanten auswirken und sichtbar sind.
 
-### Benachrichtigungen
+## Benachrichtigungen
 
 Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt über das Admin Dashboard
 
@@ -149,7 +149,7 @@ Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt üb
 ![Benachrichtigungen2](/img/user-guides/admin/notification2.png)
 
 
-### Sonstiges
+## Sonstiges
 
 Hier können Sie einen Demo-Account für Ihre Website erstellen, den KI-Assistenten konfigurieren, eine Klickstrecke für das Onboarding von Neukunden aktivieren und festlegen, welche Automatisierungsregeln Nutzer verwenden können.
 -   **Demo-Konto erstellen**
