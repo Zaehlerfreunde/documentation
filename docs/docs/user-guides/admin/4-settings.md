@@ -123,13 +123,13 @@ Aktivieren Sie diese Grafik für Ihre Kunden:
 
 Unter diesen Einstellungen lässt sich festhalten was für Sparten und Tarife der Endnutzer hinzufügen darf.
 
-### Geräteverbindungen
+## Anbindungen
 
-Hier können Sie einstellen welche Geräte ihre Nutzer selbst hinzufügen und integrieren dürfen.
+Unter Anbindungen können Sie festlegen, welche Geräte von Ihren Nutzern hinzugefügt und integriert werden dürfen. Um den Zugriff auf weitere Geräte zu ermöglichen, können Sie diese über das "+"-Symbol aktivieren. Bereits aktivierte Geräte, die nicht mehr genutzt werden sollen, können Sie über das "–"-Symbol wieder entfernen.
 
--   **Virtuelle Summenzähler (aktuell nur durch Zählerfreunde aktivierbar):**
+<img alt="image" src="https://github.com/user-attachments/assets/a630d4a0-a7c3-47fd-a8f8-e9f31ef46496" />
 
-Mit dieser Funktion können Endkunden mehrere Zähler/Geräte kombinieren - bitte kontaktieren Sie uns für die Freischaltung der Funktion (Zusatzmodul).
+- Wichtig: Virtuelle Summenzähler, welche es Endkunden erlauben mehrere Zähler/Geräte zu kombinieren, sind als Zusatzmodul verfügbar - bitte kontaktieren Sie uns für die Freischaltung der Funktion
 
 ## Darstellung
 
