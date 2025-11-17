@@ -159,6 +159,15 @@ Hier können Sie einen Demo-Account für Ihre Website erstellen, den KI-Assisten
 
       Sobald Sie das Demo-Konto erstellt haben, können Sie sich über die entsprechenden Links ganz einfach in das Admin-Portal oder das Nutzerportal des Demo-Kontos einloggen
 
+-   **Automatisierungsregeln aktivieren**
+    -   Damit Ihre Nutzer Automatisierungen verwenden können, müssen diese zunächst von Ihnen aktiviert werden. So legen Sie ganz einfach fest, welche Regeln Ihre Nutzer sehen und nutzen dürfen.
+ 
+<img alt="image" src="https://github.com/user-attachments/assets/79b45488-d92a-49c3-99aa-4ac9da45c77b" />
+
+Um eine neue Regel zu aktivieren, klicken Sie auf das "+"-Symbol und wählen die gewünschte Regel aus. Aktivierte Regeln erscheinen anschließend in der Liste und sind für Nutzer unter "Smarte Steuerungen" sichtbar. Wenn Sie eine Regel entfernen möchten, klicken Sie einfach auf das "–"-Symbol neben der jeweiligen Regel.
+
+
+
 
 -   **Onboarding für Neukunden**
     -   Wir haben eine **Klickstrecke inklusive Tarifrechner und Vertragsabschlusstrecke** für Sie entwickelt. Dieses Zusatzmodul können Sie hinzubuchen, um Neukunden in Ihr ERP System zu übertragen und um Projekte im Bereich Mieterstrom mit einer individuellen Antragsstrecke zu untermalen.
