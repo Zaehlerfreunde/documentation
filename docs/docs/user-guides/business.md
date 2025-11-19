@@ -110,6 +110,8 @@ Die Regeln unterstützen Sie dabei, den Energieverbrauch in Ihrem Unternehmen zu
 
 Um eine neue Regel zu aktivieren, klicken Sie einfach auf den entsprechenden Knopf. Es öffnet sich ein Fenster mit verschiedenen Kategorien, aus denen Sie die gewünschte Regel auswählen können.
 
+Wichtig: Sie können nur Regeln aktivieren, die zuvor vom Admin freigeschaltet wurden. Wenn eine bestimmte Regel nicht sichtbar ist, wurde sie aktuell noch nicht für sie freigegeben.
+
 <img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
 
 In diesem Beispiel werden zwei Regeln aktiviert:
