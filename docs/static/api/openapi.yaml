@@ -721,7 +721,27 @@ paths:
         - Customers
       operationId: addUpdateCustomer
       requestBody:
-        description: Customer details
+        description: |
+          Creates or updates a customer record.
+          - If the customer does not exist, a new customer is created.
+          - If the customer exists, the record is updated with provided fields.
+          On creation the endpoint also:
+          - Creates a dedicated space for the customer.
+          - Creates a device for the customer if device-identifying attributes are provided.
+
+          Device creation:
+          - To create a device, include either "melo" or "malo" inside the custom attributes map.
+            Example: custom_attributes: { "melo": "MELO_VALUE" } or { "malo": "MALO_VALUE" }
+          - If neither "melo" nor "malo" is present, no device will be created.
+
+          Tariff:
+          - The customer's tariff can be set via custom attributes.
+            Example: custom_attributes: { "tariff": "basic" }
+
+          Notes:
+          - The endpoint is idempotent for the same customer identifier; repeated calls update the existing customer.
+          - Validate custom attributes before calling to ensure required device attributes (melo/malo) are present when a device is expected.
+          - Provide standard customer details (e.g., identifier, name, contact) in the request body alongside custom_attributes.
         required: true
         content:
           application/json:
@@ -963,6 +983,7 @@ components:
           type: string
         externalDeviceId:
           type: string
+          description: External device ID can be set when creating the device. This can be any ID your system uses. Could be e.g. the MeLo or MaLo of the meter.
         readings:
           type: array
           items:
@@ -1449,4 +1470,9 @@ components:
           type: string
         custom_attributes:
           type: object
-          description: Additional customer attributes
+          description: |
+            Additional customer attributes.
+
+            Pass either melo or malo values to create an external device with the external device id set to the melo/malo.
+
+            In order to map a tariff to the space of the customer, set the tariff attribute to the internal name of the tariff (can be set in the admin portal)
