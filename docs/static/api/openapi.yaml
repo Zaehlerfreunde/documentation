@@ -134,6 +134,22 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/SpaceInviteLink"
+  /access-roles:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get access roles
+      description: Returns all available access roles that can be assigned to users when inviting them to a space.
+      tags:
+        - Spaces
+      operationId: getAccessRoles
+      responses:
+        "200":
+          description: List of available access roles
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessRoles"
   /spaces/{spaceId}/users/{userId}:
     delete:
       security:
@@ -854,11 +870,40 @@ components:
           type: boolean
         userEmail:
           type: string
-
+        accessRoleId:
+          type: string
+          description: |
+            The ID of the access role to assign to the invited user.
+            Use the `/access-roles` endpoint to get a list of available access roles and their IDs.
+            If not specified, the default access role will be assigned.
     SpaceInviteLink:
       properties:
         inviteLink:
           type: string
+
+    AccessRoles:
+      required:
+        - accessRoles
+      properties:
+        accessRoles:
+          type: array
+          items:
+            $ref: "#/components/schemas/AccessRole"
+
+    AccessRole:
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the access role
+        name:
+          type: string
+          description: Display name of the access role
+        description:
+          type: string
+          description: Description of the permissions granted by this role
 
     Spaces:
       required:
@@ -1256,8 +1301,23 @@ components:
           x-order: 1
         isMainDevice:
           type: boolean
-          description: if device the main device of the space
+          description: |
+            If true, this device is set as the main device of the space.
+            The main device's readings are used for:
+            - Space-level energy consumption/production calculations
+            - Cost calculations (unless excludedFromCost is true)
+            - Dashboard overview statistics
           x-order: 2
+        excludedFromCost:
+          type: boolean
+          default: false
+          description: |
+            If true, this device's readings will be excluded from cost calculations.
+            This is useful for:
+            - Sub-meters that would cause double-counting
+            - Devices used only for monitoring purposes
+            - Production devices where costs are tracked separately
+          x-order: 3
         deviceType:
           type: string
           enum:
@@ -1277,7 +1337,7 @@ components:
             - RLM_METER
             - SMART_CAR
             - BATTERY
-          x-order: 3
+          x-order: 4
         deviceMedium:
           type: string
           enum:
@@ -1285,7 +1345,7 @@ components:
             - GAS
             - WATER
             - HEATING
-          x-order: 4
+          x-order: 5
     DeviceDetails:
       type: object
       properties:
