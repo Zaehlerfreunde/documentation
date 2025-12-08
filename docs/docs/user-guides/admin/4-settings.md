@@ -116,8 +116,13 @@ Endnutzer Ansicht:
 -   “Energieflussdiagramm”
 
 Aktivieren Sie diese Grafik für Ihre Kunden:
+Beispiel Einfamiienhaus:
+<img alt="image" src="https://github.com/user-attachments/assets/d5ce7dc4-a7fd-4a31-ac5d-825a749e725e" />
 
-![Bildschirmfoto 2025-08-22 um 17.20.54.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.20.54.png)
+Beispiel Mieterstromprojekt: 
+<img alt="image" src="https://github.com/user-attachments/assets/204feb21-11f9-4081-bae5-b9edd09782f5" />
+
+
 
 ### Tarife
 
