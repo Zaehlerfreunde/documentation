@@ -1,14 +1,13 @@
 # Privatkunde
 
-Hier finden Sie die Erklärung zur Nutzung des Privatkunden-Bereichs. 
+Hier findest du die Erklärung zur Nutzung des Privatkunden-Bereichs. 
 
-Vielen Dank für Ihr Vertrauen in unsere Lösung. Wir arbeiten kontinuierlich daran, das Produkt weiterzuentwickeln. Bei Feedback oder Fragen zögern Sie bitte nicht, sich über Mail oder die Chat-Funktion auf der Webseite unten rechts an uns zu wenden: kontakt@zaehlerfreunde.com!
+Vielen Dank für dein Vertrauen in unsere Lösung. Wir arbeiten kontinuierlich daran, das Produkt weiterzuentwickeln. Wenn du Feedback oder Fragen hast, erreichst du uns jederzeit per E-Mail oder über die Chat-Funktion unten rechts auf unserer Webseite: kontakt@zaehlerfreunde.com!
 
-Hier finden Sie die Erklärung für die Benutzung unserer Lösung, wenn Sie KMU Kunde sind:
+Den Guide für Geschäftskunden findest du hier:
 
 [Anleitung für Zählerfreunde Geschäftskunden](./business.md) 
 
-Hier ist ein Inhaltsverzeichnis des Guides:
 
 ## Anmeldung
 
