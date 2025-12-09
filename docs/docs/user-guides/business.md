@@ -11,7 +11,7 @@ Entdecken Sie die vielseitigen Möglichkeiten unserer Software und erfahren Sie 
 
 ## Anmeldung
 
-Im ersten Schritt, empfehlen wir Ihnen auf unserer Webseite, alle Cookies zu akzeptieren, damit wir Ihnen die beste Erfahrung auf unserer Plattform bieten können.
+Im ersten Schritt empfehlen wir Ihnen, auf unserer Webseite alle Cookies zu akzeptieren, um eine optimale Nutzungserfahrung sicherzustellen.
 
 ![Bildschirmfoto 2024-06-28 um 13.46.38.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.38.png)
 
