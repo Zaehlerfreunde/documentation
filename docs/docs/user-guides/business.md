@@ -171,7 +171,7 @@ Im Shop sind Produkte gelistet, mit denen Sie ihren Verbrauch noch besser messen
 
 ## Verwaltung
 
-Unter dem Reiter „Verwaltung“ sind Informationen zu Ihren Objekt gelistet. Hier sehen Sie allgemeine Infos sowie Informationen zu Ihrem Tarif. Zusätzlich können Sie hier alle verbundenen Geräte einsehen und die Rechnungen, damit Sie alles komfortabel an einem Ort haben und darauf zugreifen können.
+Unter dem Reiter „Verwaltung“ sind Informationen zu Ihrem Objekt gelistet. Hier sehen Sie allgemeine Infos sowie Informationen zu Ihrem Tarif. Zusätzlich können Sie hier alle verbundenen Geräte einsehen und die Rechnungen, damit Sie alles komfortabel an einem Ort haben und darauf zugreifen können.
 
 ![Untitled](/img/user-guides/common/Untitled%2019.png)
 
