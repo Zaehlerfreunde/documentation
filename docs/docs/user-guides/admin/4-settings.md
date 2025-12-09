@@ -77,7 +77,7 @@ Besonders relevant um Anforderungen der HKVO abzudecken. Hier werden Verbräuche
 
 ![Bildschirmfoto 2024-08-05 um 16.12.03.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.12.03.png)
 
--   **“**Automationen/Smarte Steuerung”:
+-   “Automationen/Smarte Steuerung”:
 
 Diese Funktion wird zukünftig zum Herzstück unserer Lösung, sie erlaubt ihren Endkunden von PV-Überschussladen, Preissignal optimiertes Laden und Alarmen/Benachrichtigungen zu profitieren. Sie können wiederum ein eigenes Geschäftsmodell daraus entwickeln (Zusatzmodul). Weiter unten im Admin Dashboard auf der Selben Seite, können Sie die Regeln auf die Ihre Endnutzer Zugriff haben dürfen auswählen.
 
