@@ -142,11 +142,11 @@ Hier siehst du noch ein Beispiel, wie der Bericht aussehen könnte.
 
 ## Simulator
 
-Im Simulator kannst du verschiedene Varianten von Mini-Photovoltaikanlagen mit diversen Montagemöglichkeiten durchrechnen.
+Im Simulator kannst du verschiedene Varianten von Mini-Photovoltaikanlagen mit unterschiedlichen Montagemöglichkeiten durchrechnen.
 
-Die Möglichkeit zur Simulation einer großen PV-Anlage und eines Batteriespeichers wird aktuell noch entwickelt und bald zur Verfügung stehen!
+Die Simulation von größeren PV-Anlagen sowie Batteriespeichern befindet sich derzeit in Entwicklung und wird bald verfügbar sein.
 
-Hier siehst du, wie man beispielsweise ein Balkonkraftwerk simulieren kann. Am Ende bekommst du konkrete Vorschläge, wie viel das kosten würde und wie viel du davon profitieren kannst.
+Hier siehst du, wie du beispielsweise ein Balkonkraftwerk simulieren kannst. Am Ende erhältst du konkrete Vorschläge zu den erwarteten Kosten und dem möglichen Nutzen für dich.
 
 ![Untitled](/img/user-guides/common/ea3de318-c51d-4da3-a7ee-893dbefb5b95.png)
 
