@@ -173,7 +173,7 @@ Diese werden zentral in deinem Konto gespeichert und können jederzeit eingesehe
 
 ## KI Assistent
 
-Der KI Assisent beantwortet dir Fragen und kann sogar aktiv in dein HEMS eingreifen.
+Der KI Assistent beantwortet dir Fragen und kann sogar aktiv in dein HEMS eingreifen.
 Er kann dir dabei helfen:
 
 -   Aktionen direkt auszuführen
