@@ -1,6 +1,6 @@
 # Dashboard & Navigation
 
-Nach der Registrierung/Anmeldung, öffnet sich die Seite mit dem Dashboard, wie bei allen Nutzern. Wenn Sie dann oben rechts auf den Buchstaben klicken, öffnet sich das Benutzermenü. Als Mitarbeiter haben Sie die Möglichkeit, auf „Admin Bereich“ zu klicken. Bitte teilen Sie uns dazu mit, welche Mitarbeiter einen Admin-Zugang erhalten sollen. Alternativ können Sie Ihre Admin URL aufrufen: “ihrunternehmen.[admin.zaehlerfreunde.de](http://admin.zaehlerfreunde.de/)”
+Nach der Registrierung/Anmeldung öffnet sich zunächst das Dashboard – genau wie bei Ihren Nutzern. Wenn Sie anschließend oben rechts auf den Buchstaben klicken, öffnet sich das Benutzermenü. Dort haben Sie als Mitarbeiter die Möglichkeit, auf „Admin Bereich“ zu klicken. Bitte teilen Sie uns mit, welche Mitarbeiter einen Admin-Zugang erhalten sollen. Alternativ können Sie Ihre Admin-URL direkt aufrufen: “ihrunternehmen.[admin.zaehlerfreunde.de](http://admin.zaehlerfreunde.de/)”
 
 ![Bildschirmfoto 2025-07-09 um 15.25.38.png](/img/user-guides/admin/Bildschirmfoto_2025-07-09_um_15.25.38.png)
 
