@@ -61,7 +61,7 @@ Da Zähler den Strombedarf des gesamten Hauses messen können oder einzelne Bere
 
 ![Untitled](/img/user-guides/common/Untitled%208.png)
 
-Die Anbindung wird dir dann Schritt für Schritt erklärt. Nachdem ein Gerät erfolgreich verbunden hast wird sich dein Dashboard langsam füllen. 
+Die Anbindung wird dir anschließend Schritt für Schritt erklärt. Sobald du ein Gerät erfolgreich verbunden hast, füllt sich dein Dashboard nach und nach mit Daten.
 
 Nachdem du das Hauptgerät hinzugefügt hast, kannst du weitere Geräte hinzufügen und Logiken erstellen. Sobald du mehr als 10 Geräte oder Sub-Objekte angelegt hast, werden diese zusammengezählt und hier angezeigt.
 
