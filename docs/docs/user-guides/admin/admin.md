@@ -2,7 +2,7 @@
 
 Hier finden Sie die Erklärung zur Nutzung des Admin-Bereichs.
 
-Den Guide für die Nutzung aus der Sicht der Endkunden finden Sie hier (diesen müssen Sie zur Weiterverwendung bitte im Wording + Screenshots für ihre Zwecke anpassen):
+Den Guide für die Nutzung aus der Sicht der Endkunden finden Sie hier (diesen können Sie zur Weiterverwendung im Wording + Screenshots für ihre Zwecke anpassen):
 
 [Privatkunde](../private.md)
 
