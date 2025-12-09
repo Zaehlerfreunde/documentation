@@ -24,4 +24,4 @@ Greifen Sie auf unsere vollständige API-Dokumentation und Integrationsanleitung
 
 ## Support
 
-Benötigen Sie Hilfe? Kontaktieren Sie unser Support-Team oder lesen Sie unsere FAQ für schnelle Antworten auf häufig gestellte Fragen.```
+Benötigen Sie Hilfe? Kontaktieren Sie unser Support-Team oder lesen Sie unsere FAQ für schnelle Antworten auf häufig gestellte Fragen.
