@@ -1,6 +1,6 @@
-# Autorisierungscode-Flow
+# API Anbindung für Drittanbieter
 
-Sie können den [OAuth Autorisierungscode-Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow) über unseren Authentifizierungsanbieter Auth0 verwenden, um Zugriff auf unsere API zu erhalten.
+Sie können den [OAuth Autorisierungscode-Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow/call-your-api-using-the-authorization-code-flow) über unseren Authentifizierungsanbieter Auth0 verwenden, um Zugriff auf unsere API zu erhalten. Die ist für Drittanbieter welche Ihren Kunden Zugriff auf unsere Gerätedaten ermöglichen wollen. 
 
 ### Voraussetzungen
 
