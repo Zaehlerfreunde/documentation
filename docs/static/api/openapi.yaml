@@ -741,9 +741,67 @@ paths:
           Creates or updates a customer record.
           - If the customer does not exist, a new customer is created.
           - If the customer exists, the record is updated with provided fields.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewCustomer"
+      responses:
+        "200":
+          description: OK
+
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get customers
+      tags:
+        - Customers
+      operationId: getCustomers
+      parameters:
+        - in: query
+          name: page
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            default: 0
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+            format: int32
+            minimum: 1
+            default: 100
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Customers"
+
+  /customers/{customerId}/contracts:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Create customer contract
+      tags:
+        - Customers
+      operationId: addCustomerContract
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+          required: true
+          description: The customer id can either be the external id or just the id of the customer.
+      requestBody:
+        description: |
+          Creates a new customer contract. If the contract already exists, it is updated.
+
           On creation the endpoint also:
-          - Creates a dedicated space for the customer.
-          - Creates a device for the customer if device-identifying attributes are provided.
+          - Creates a dedicated space for the contract.
+          - Creates a device for the contract if device-identifying attributes are provided.
 
           Device creation:
           - To create a device, include either "melo" or "malo" inside the custom attributes map.
@@ -751,18 +809,13 @@ paths:
           - If neither "melo" nor "malo" is present, no device will be created.
 
           Tariff:
-          - The customer's tariff can be set via custom attributes.
+          - The contract's tariff can be set via custom attributes.
             Example: custom_attributes: { "tariff": "basic" }
-
-          Notes:
-          - The endpoint is idempotent for the same customer identifier; repeated calls update the existing customer.
-          - Validate custom attributes before calling to ensure required device attributes (melo/malo) are present when a device is expected.
-          - Provide standard customer details (e.g., identifier, name, contact) in the request body alongside custom_attributes.
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Customer"
+              $ref: "#/components/schemas/CustomerContract"
       responses:
         "200":
           description: OK
@@ -1504,20 +1557,89 @@ components:
           type: integer
           format: int64
 
+    Customers:
+      required:
+        - customers
+        - totalNumPages
+      properties:
+        customers:
+          type: array
+          items:
+            $ref: "#/components/schemas/Customer"
+        totalNumPages:
+          type: integer
+          format: int32
+
     Customer:
       type: object
       required:
-        - identifier
+        - id
+        - external_id
+      properties:
+        id:
+          type: string
+          description: Our internal ID of customer
+        external_id:
+          type: string
+          description: Unique identifier of the customer in your system (e.g. customer number)
+        email:
+          type: string
+          description: Email address that an invite is sent to
+        name:
+          type: string
+          description: Name of the customer
+
+    NewCustomer:
+      type: object
+      properties:
+        external_id:
+          type: string
+          description: Unique identifier of the customer in your system (e.g. customer number)
+        email:
+          type: string
+          description: Email address that an invite is sent to
+        name:
+          type: string
+          description: Name of the customer
+        identifier:
+          type: string
+          description: Identifier of the customer (e.g. customer or contract number)
+          deprecated: true
+        address_line_one:
+          type: string
+          description: Street address
+          deprecated: true
+        address_line_two:
+          type: string
+          description: Additional address details
+          deprecated: true
+        city:
+          type: string
+          deprecated: true
+        postcode:
+          type: string
+          deprecated: true
+        custom_attributes:
+          type: object
+          deprecated: true
+          description: |
+            Additional customer attributes.
+
+            Pass either melo or malo values to create an external device with the external device id set to the melo/malo.
+
+            In order to map a tariff to the space of the customer, set the tariff attribute to the internal name of the tariff (can be set in the admin portal)
+
+    CustomerContract:
+      type: object
+      required:
+        - external_id
         - address_line_one
         - city
         - postcode
       properties:
-        identifier:
+        external_id:
           type: string
-          description: Identifier of the customer (e.g. customer or contract number)
-        email:
-          type: string
-          description: Email address that an invite is sent to
+          description: Unique identifier of the contract in your system (e.g. contract number)
         address_line_one:
           type: string
           description: Street address
@@ -1530,6 +1652,7 @@ components:
           type: string
         custom_attributes:
           type: object
+          deprecated: true
           description: |
             Additional customer attributes.
 
