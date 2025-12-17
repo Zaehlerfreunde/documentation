@@ -20,7 +20,7 @@
 
 Unsere API kann für viele Zwecke genutzt werden. Primär dient sie dazu, langfristig Kosten zu sparen, indem auf die normale Marktkommunikation (MSCONS/AS4) verzichtet wird und die Daten schneller weitergeleitet werden. Über diese API können neue Objekte und Zähler vollautomatisch hinzugefügt sowie Nutzer automatisch angelegt werden. Bilaterale Synchronisierung zwischen unserem System und Ihrem ERP/CRM Systemen ist hierdurch möglich. Die genaue Anleitung für die API finden Sie hier:
 
-[Zählerfreunde API Integration](../../integrations/white-label.md)
+[Zählerfreunde API Integration](../../integrations/white-label/white-label.md)
 
 ## Abo
 
