@@ -75,6 +75,7 @@
 | tibber | tibber pulse | Cloud API | ❌ | ✅ (Verbrauchsdaten) | – |
 | IOmeter | IOmeter | Cloud API | ❌ | ✅ (Verbrauchsdaten) | – |
 | Bitshake | Bitshake | Cloud API | ❌ | ✅ (Verbrauchsdaten) | – |
+| XEE Technology | Xeeny | Lobaro | ❌ | ✅ (Verbrauchs- und Einspeisedaten) | – |
 | Fronius Smart-Meter | Alle | Cloud API | ❌ | ✅ (Verbrauchs- und Einspeisedaten) | – |
 
 ---
