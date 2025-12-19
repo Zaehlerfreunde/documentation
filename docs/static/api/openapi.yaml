@@ -1628,7 +1628,6 @@ components:
             Pass either melo or malo values to create an external device with the external device id set to the melo/malo.
 
             In order to map a tariff to the space of the customer, set the tariff attribute to the internal name of the tariff (can be set in the admin portal)
-
     CustomerContract:
       type: object
       required:
