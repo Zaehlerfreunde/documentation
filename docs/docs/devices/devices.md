@@ -42,7 +42,7 @@
 | --- | --- | --- | --- | --- | --- |
 | Viessmann | alle API-kompatiblen Modelle | Cloud API | ✅ | (noch nicht) | – |
 | Fronius  | Alle | Cloud API | - | (noch nicht) | – |
-| Alle  | Alle | SG-Ready | - | ✅ | – |
+| Alle  | Alle | SG-Ready | ✅ | ✅ | – |
 
 ---
 
