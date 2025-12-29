@@ -40,8 +40,9 @@
 
 | **Hersteller** | **Produkt(e)** | **Verbindung** | **Steuerbar** | **HEMS-Integration** | **Kommentar** |
 | --- | --- | --- | --- | --- | --- |
-| Viessmann | alle API-kompatiblen Modelle | Cloud API | ✅ | ❌ (noch nicht) | – |
-| Fronius  | Alle | Cloud API | ❌ | ❌ (noch nicht) | – |
+| Viessmann | alle API-kompatiblen Modelle | Cloud API | ✅ | (noch nicht) | – |
+| Fronius  | Alle | Cloud API | - | (noch nicht) | – |
+| Alle  | Alle | SG-Ready | - | ✅ | – |
 
 ---
 
@@ -51,19 +52,19 @@
 
 | **Hersteller** | **Produkt(e)** | **Verbindung** | **Steuerbar** | **HEMS-Integration** | **Kommentar** |
 | --- | --- | --- | --- | --- | --- |
-| Alle | Alle | ESA/EDA, wMSB, Direkt API | ❌ | ✅ (Verbrauchsdaten) | – |
+| Alle | Alle | ESA/EDA, wMSB, Direkt API | - | ✅ (Verbrauchsdaten) | – |
 
 **Schweiz:**
 
 | Hersteller | Produkt(e) | Verbindung | Steuerbar | HEMS-Integration | Kommentar |
 | --- | --- | --- | --- | --- | --- |
-| Smart-Me | Alle | API | ❌ | ✅ (Verbrauchsdaten) | – |
+| Smart-Me | Alle | API | - | ✅ (Verbrauchsdaten) | – |
 
 **Virtuelle Zähler:**
 
 | Hersteller | Produkt(e) | Verbindung | Steuerbar | HEMS-Integration | Kommentar |
 | --- | --- | --- | --- | --- | --- |
-| – | Virtual Sum Meter | Eigenes System | ❌ | ✅ (Verbrauchsdaten) | – |
+| – | Virtual Sum Meter | Eigenes System | - | ✅ (Verbrauchsdaten) | – |
 
 ---
 
@@ -92,9 +93,9 @@
 
 | Hersteller | Produkt(e) | Verbindung | Steuerbar | HEMS-Integration | Kommentar |
 | --- | --- | --- | --- | --- | --- |
-| TSUN | – | Cloud API | ❌ | ✅ (Produktionsdaten) | – |
-| Solaredge | – | Cloud API | ❌ | ✅ (Produktionsdaten) | – |
-| Fronius | Fronius | Cloud API | ❌ | ✅ (Produktionsdaten) | – |
+| TSUN | – | Cloud API | - | ✅ (Produktionsdaten) | – |
+| Solaredge | – | Cloud API | - | ✅ (Produktionsdaten) | – |
+| Fronius | Fronius | Cloud API | - | ✅ (Produktionsdaten) | – |
 
 ---
 
@@ -102,8 +103,8 @@
 
 | Hersteller | Produkt(e) | Verbindung | Steuerbar | HEMS-Integration | Kommentar |
 | --- | --- | --- | --- | --- | --- |
-| meteocontrol | – | Cloud API | ❌ | ✅ (Einspeisedaten) | – |
-| lobaro | Kompatible lobaro-Gateways | Cloud API | ❌ | ✅ (Verbrauchsdaten) | Viele Industrieanwendungen |
+| meteocontrol | – | Cloud API | - | ✅ (Einspeisedaten) | – |
+| lobaro | Kompatible lobaro-Gateways | Cloud API | - | ✅ (Verbrauchsdaten) | Viele Industrieanwendungen |
 
 ---
 
