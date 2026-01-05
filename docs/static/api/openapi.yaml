@@ -140,9 +140,9 @@ paths:
         - bearerAuth: []
       summary: Get access roles
       description: Returns all available access roles that can be assigned to users when inviting them to a space.
+      operationId: getAccessRoles
       tags:
         - Spaces
-      operationId: getAccessRoles
       responses:
         "200":
           description: List of available access roles
@@ -150,6 +150,68 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/AccessRoles"
+    post:
+      security:
+        - bearerAuth: []
+      summary: Create access role
+      operationId: createAccessRole
+      tags:
+        - Spaces
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccessRole"
+      responses:
+        "200":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AccessRoleId"
+
+  /access-roles/{accessRoleId}:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update access role
+      operationId: updateAccessRole
+      tags:
+        - Spaces
+      parameters:
+        - name: accessRoleId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccessRole"
+      responses:
+        "200":
+          description: OK
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete access role
+      operationId: deleteAccessRole
+      tags:
+        - Spaces
+      parameters:
+        - name: accessRoleId
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: OK
   /spaces/{spaceId}/users/{userId}:
     delete:
       security:
@@ -822,10 +884,11 @@ paths:
 
 components:
   securitySchemes:
-    bearerAuth: # arbitrary name for the security scheme
+    bearerAuth:
       type: http
       scheme: bearer
       bearerFormat: JWT
+
   schemas:
     NewApiToken:
       required:
@@ -934,6 +997,36 @@ components:
         inviteLink:
           type: string
 
+    AccessPermissionId:
+      type: string
+      description: Permission identifier
+      enum:
+        - VIEW
+        - VIEW_DATA_FULL
+        - DELETE
+        - ADD_USERS
+        - REMOVE_USERS
+        - INVITE_USERS_TO_CHILD_SPACE
+        - VIEW_CHILD_SPACE_DATA
+        - EDIT_LAYOUT
+        - VIEW_CHILD_SPACE_DATA_LTT_PARTICIPANTS_ONLY
+        - EDIT_REPORT
+        - EDIT_RULES
+        - EDIT_TARIFFS
+        - EDIT_DEVICES
+        - EDIT_SPACE_DETAILS
+        - RUN_SIMULATION
+        - CONTROL_DEVICES
+
+    AccessRoleId:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string
+          format: uuid
+
     AccessRoles:
       required:
         - accessRoles
@@ -944,12 +1037,14 @@ components:
             $ref: "#/components/schemas/AccessRole"
 
     AccessRole:
+      type: object
       required:
-        - id
         - name
+        - permissionIds
       properties:
         id:
           type: string
+          format: uuid
           description: Unique identifier of the access role
         name:
           type: string
@@ -957,6 +1052,10 @@ components:
         description:
           type: string
           description: Description of the permissions granted by this role
+        permissionIds:
+          type: array
+          items:
+            $ref: "#/components/schemas/AccessPermissionId"
 
     Spaces:
       required:
