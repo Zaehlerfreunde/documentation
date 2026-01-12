@@ -109,7 +109,7 @@ Die Übersicht zeigt Ihnen:
 
 ---
 
-✅ **Vertrag Löschen**
+✅ **Vertrag löschen**
 
 -   Klick auf _„🗑️“_ neben dem Vertrag.
 -   Bestätigung der Kündigung im Pop-up.
@@ -130,6 +130,57 @@ Mit dieser Funktion können Tarifprodukte konfiguriert und angelegt werden. Steu
 -   Netzentgelte werden automatisch zugeordnet und verrechnet.
 
 ![Bildschirmfoto 2025-02-16 um 13.50.53.png](/img/user-guides/admin/Bildschirmfoto_2025-02-16_um_13.50.53.png)
+
+## Kunden
+**🎯 Zweck der Funktion „Kunden“**
+
+Die Funktion „Kunden“ dient als zentrale Klammer und verbindet die Bereiche Objekte, Verträge, Geräte und Nutzer miteinander.
+Ihre Kunden werden hier unter einer externen Kunden-ID geführt. Es empfiehlt sich, hierfür dieselbe Kunden-ID zu verwenden, die auch in Ihrem ERP-System genutzt wird.
+
+Auf diese Weise können alle relevanten Informationen zu einem Kunden an einer zentralen Stelle gebündelt und über die Suchfunktion schnell und übersichtlich gefunden werden.
+
+---
+
+### Funktionen 
+
+✅ **Neuen Kunden anlegen**
+
+1. Klicken Sie auf **„Neuen Kunden anlegen“**
+2. Eingabe der externen Kunden-ID (Empfehlung: ID aus dem ERP-System übernehmen)
+3. Eingabe des Kundennamens
+4. Eingabe der E-Mail-Adresse des Kunden (optional)
+   → Über diese Funktion wird dem Kunden automatisch eine Einladung für die Plattform gesendet.
+5. Auswahl des ERP-Systems (optional)
+   → Wir arbeiten ständig an der Integration neuer ERP-Systemen. Sollte das von Ihnen genutzte ERP-System bereits in der Liste vorhanden sein, können die Stammdaten Ihrer Kunden automatisiert übernommen werden. 
+6. Kunden anlegen
+
+<img alt="image" src="https://github.com/user-attachments/assets/70f48713-ab6d-4071-8866-610f3c1a3063" />
+
+---
+
+✅ **Kunden löschen**
+
+-   Klick auf _„🗑️“_ neben dem Kunden.
+-   Bestätigung der Kündigung im Pop-up.
+
+---
+
+✅ **Externe Kunden-ID anpassen**
+-    In diesem Bereich können Sie festlegen, welche Bezeichnung als externe Kunden-ID verwendet wird (z. B. Kundennummer aus dem ERP-System). 
+-    Die externe Kunden-ID dient der eindeutigen Identifikation von Kunden und ermöglicht es, alle zugehörigen Informationen zentral zu bündeln und über die Suchfunktion schnell wiederzufinden.
+-    Die Einstellung beeinflusst ausschließlich die Bezeichnung der ID, nicht die zugrunde liegende Funktionalität.
+
+---
+
+**Verbindung mit Objekten und Nutzern**
+
+-    Durch das Anklicken des Kunden können Sie einsehen, welchen Objekten und welchen Nutzern der Kunde zugeordnet wurde.
+-    Sie können hier über einen Klick auf das "+" -Symbol neue Objekte oder Nutzer mit dem Kunden verbinden.
+
+<img alt="image" src="https://github.com/user-attachments/assets/50f379e7-68df-4ec1-99fe-2831fd14a5e2" />
+
+Durch das Anklicken eines dem Kunden zugeordneten Objektes oder Nutzers sehen Sie alle dazugehörigen Daten. Unter dem Objekt sehen Sie beispielsweise die verbundenen Geräte und die zugehörigen Tarife.
+<img alt="image" src="https://github.com/user-attachments/assets/824d6f1e-5940-49fa-ac62-1dbd8b875c76" />
 
 ## Einladungen (Endnutzer)
 
