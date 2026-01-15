@@ -882,6 +882,41 @@ paths:
         "200":
           description: OK
 
+  /customers/{customerId}/contracts/{contractId}/documents:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Upload document for customer contract
+      tags:
+        - Customers
+      operationId: uploadDocument
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+          required: true
+          description: The customer id can either be the external id or just the id of the customer.
+        - in: path
+          name: contractId
+          schema:
+            type: string
+          required: true
+          description: The contract id can either be the external id or just the id of the contract.
+      requestBody:
+        description: |
+          Uploads a PDF document for a customer contract.
+
+          The document will be visible in the user portal for the corresponding contract.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PdfDocument"
+      responses:
+        "200":
+          description: OK
+
 components:
   securitySchemes:
     bearerAuth:
@@ -1200,6 +1235,13 @@ components:
         value:
           type: number
           format: double
+        status:
+          type: string
+          description: Status of the reading. By default readings will are assumed to be real.
+          enum:
+            - REAL
+            - PRELIMINARY
+            - SUBSTITUTE
 
     Devices:
       required:
@@ -1748,6 +1790,11 @@ components:
           type: string
         postcode:
           type: string
+        start_date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          description: Start date of the contract. Users will only see data from this day on forward. Existing contracts for the given meter will stop saying data from this day on.
         custom_attributes:
           type: object
           description: |
@@ -1756,3 +1803,16 @@ components:
             Pass either melo or malo values to create an external device with the external device id set to the melo/malo.
 
             In order to map a tariff to the space of the customer, set the tariff attribute to the internal name of the tariff (can be set in the admin portal)
+
+    PdfDocument:
+      type: object
+      required:
+        - file_name
+        - content
+      properties:
+        file_name:
+          type: string
+          description: Name of the file
+        content:
+          type: string
+          description: Base64 encoded PDF file
