@@ -811,6 +811,10 @@ paths:
       responses:
         "200":
           description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AddCustomerResponse"
 
     get:
       security:
@@ -881,6 +885,10 @@ paths:
       responses:
         "200":
           description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AddCustomerContractResponse"
 
   /customers/{customerId}/contracts/{contractId}/documents:
     post:
@@ -1816,3 +1824,21 @@ components:
         content:
           type: string
           description: Base64 encoded PDF file
+
+    AddCustomerResponse:
+      type: object
+      required:
+        - customer_id
+      properties:
+        customer_id:
+          type: string
+          description: The ID of the customer.
+
+    AddCustomerContractResponse:
+      type: object
+      required:
+        - contract_id
+      properties:
+        contract_id:
+          type: string
+          description: The ID of the contract.
