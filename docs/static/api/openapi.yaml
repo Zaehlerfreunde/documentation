@@ -1237,6 +1237,32 @@ components:
       properties:
         obisCode:
           type: string
+          description: |
+            <span> Accepted Obis Codes: </span>
+            <span><b>Electricity</b></span>
+            <ul>
+              <li>1-1:1.8.0 oder 1.8.0 : Zählerstand Wirkenergie Bezug kWh</li>
+              <li>1-1:1.9.0 oder 1.9.0 : Energiemenge Wirkenergie Bezug kWh</li>
+              <li>1-1:1.29.0 oder 1.29.0 : Lastprofil Wirkenergie Bezug kWh</li>
+              <li>1-1:2.8.0 oder 2.8.0 : Zählerstand Wirkenergie Abgabe kWh</li>
+              <li>1-1:2.9.0 oder 2.9.0 : Energiemenge Wirkenergie Abgabe kWh</li>
+              <li>1-1:2.29.0 oder 2.29.0 : Lastprofil Wirkenergie Abgabe kWh</li>
+              <li>1-1:2.9.0 G.03 oder 2.9.0 G.03 : Eigendeckung aus EEG kWh</li>
+              <li>1-1:1.9.0 P.01 oder 1.9.0 P.01 : Restnetzbezug kWh</li>
+              <li>1-1:2.9.0 P.01 oder 2.9.0 P.01 : Restüberschuss kWh</li>
+            </ul>
+            <span><b>Heat</b></span>
+            <ul>
+            <li>6-1:1.0.0 : Wärmeenergie in kWh</li>
+            </ul>
+            <span><b>Gas</b></span>
+            <ul>
+            <li>7-1:3.1.0 : Vorlauf-Zählervolumen absolut m³</li>
+            </ul>
+            <span><b>Water</b></span>
+            <ul>
+            <li>8-1:1.0.0 : Kumuliertes Volumen m³</li>
+            </ul>
         timestamp:
           type: integer
           format: int64
