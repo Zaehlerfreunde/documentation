@@ -1847,9 +1847,18 @@ components:
         file_name:
           type: string
           description: Name of the file
+          example: Invoice.pdf
         content:
           type: string
           description: Base64 encoded PDF file
+        date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          description: Document date
+        invoice_number:
+          type: string
+          description: If the document is an invoice you can optionally add an invoice number
 
     AddCustomerResponse:
       type: object
