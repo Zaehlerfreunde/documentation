@@ -134,7 +134,7 @@ Unter Anbindungen können Sie festlegen, welche Geräte von Ihren Nutzern hinzug
 
 <img alt="image" src="https://github.com/user-attachments/assets/a630d4a0-a7c3-47fd-a8f8-e9f31ef46496" />
 
-- Wichtig: Virtuelle Summenzähler, mit denen Endkunden mehrere Zähler oder Geräte kombinieren können, sind als Zusatzmodul verfügbar. Bitte kontaktieren Sie uns, wenn Sie diese Funktion freischalten möchten.
+- **Wichtig:** **Virtuelle Zähler**, mit denen Endkunden mehrere Zähler oder Geräte addieren oder subtrahieren können, sind als **Zusatzmodul** verfügbar. Bitte kontaktieren Sie uns, wenn Sie diese Funktion freischalten möchten.
 
 ## Darstellung
 
