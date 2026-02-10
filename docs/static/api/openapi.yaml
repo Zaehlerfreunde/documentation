@@ -411,6 +411,8 @@ paths:
                   - obisCode: "1.8.0"
                     timestamp: 1714635961
                     value: 10.5
+                    status: "REAL"
+                    meteringInterval: 900
 
       responses:
         "200":
@@ -1276,6 +1278,10 @@ components:
             - REAL
             - PRELIMINARY
             - SUBSTITUTE
+        meteringInterval:
+          type: integer
+          format: int32
+          description: The metering interval in seconds. This is the time interval between readings. If not provided, 900s (15mins) will be used.
 
     Devices:
       required:
