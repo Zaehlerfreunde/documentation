@@ -88,6 +88,35 @@ paths:
               schema:
                 $ref: "#/components/schemas/SpaceId"
   /spaces/{spaceId}:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update space
+      description: Updates space details (name, address, category, parentSpaceId)
+      tags:
+        - Spaces
+      operationId: updateSpace
+      parameters:
+        - in: path
+          name: spaceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateSpace"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SpaceId"
+
     delete:
       security:
         - bearerAuth: []
@@ -1883,3 +1912,26 @@ components:
         contract_id:
           type: string
           description: The ID of the contract.
+
+    UpdateSpace:
+      type: object
+      description: Fields to update on a space. Only provided fields are updated
+      properties:
+        name:
+          type: string
+        addressLineOne:
+          type: string
+        addressLineTwo:
+          type: string
+          nullable: true
+        postcode:
+          type: string
+        city:
+          type: string
+        category:
+          type: string
+          description: Space category (enum values follow backend Space.Category)
+        parentSpaceId:
+          type: string
+          nullable: true
+          description: Set to a UUID to assign a parent space
