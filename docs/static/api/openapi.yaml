@@ -1278,7 +1278,7 @@ components:
               <li>1-1:2.8.0 oder 2.8.0 : Zählerstand Wirkenergie Abgabe kWh</li>
               <li>1-1:2.9.0 oder 2.9.0 : Energiemenge Wirkenergie Abgabe kWh</li>
               <li>1-1:2.29.0 oder 2.29.0 : Lastprofil Wirkenergie Abgabe kWh</li>
-              <li>1-1:2.9.0 G.03 oder 2.9.0 G.03 : Eigenverbrauch aus EEG kWh</li>
+              <li>1-1:2.9.0 G.03 oder 2.9.0 G.03 : Eigenverbrauch in EEG kWh</li>
               <li>1-1:1.9.0 P.01 oder 1.9.0 P.01 : Restnetzbezug kWh</li>
               <li>1-1:2.9.0 P.01 oder 2.9.0 P.01 : Restüberschuss kWh</li>
             </ul>
