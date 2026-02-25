@@ -28,14 +28,14 @@
 
 ---
 
-## 🚗 Smartcar kompatible Fahrzeugmarken (Deutschland / Europa)
+## 🚙 Elektrische Fahrzeuge
 
 | **Hersteller** | **Produkte** | **Verbindung** | **Steuerbar** | **HEMS-Integration** | **Kommentar** |
 | --- | --- | --- | --- | --- | --- |
 | Alfa Romeo | Diverse Modelle* | Cloud API Smartcar | ✅ | ✅ | – |
 | Audi | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
 | BMW | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
-| BYD | Diverse Modelle* | Cloud API | ✅ | ✅ | inkl. chinesischer Marke |
+| BYD | Diverse Modelle* | Cloud API | ✅ | ✅ | - |
 | Citroën | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
 | Cupra | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
 | Dacia | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
