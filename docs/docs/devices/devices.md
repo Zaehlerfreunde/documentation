@@ -28,11 +28,39 @@
 
 ---
 
-## 🚙 Elektrofahrzeuge (EVs)
+## 🚗 Smartcar kompatible Fahrzeugmarken (Deutschland / Europa)
 
-| **Hersteller** | **Produkt(e)** | **Verbindung** | **Steuerbar** | **HEMS-Integration** | **Kommentar** |
+| **Hersteller** | **Produkte** | **Verbindung** | **Steuerbar** | **HEMS-Integration** | **Kommentar** |
 | --- | --- | --- | --- | --- | --- |
-| Diverse (außer chinesische Marken) | Diverse Modelle | Cloud API “Smart-Car” | ✅ | ✅ | – |
+| Alfa Romeo | Diverse Modelle* | Cloud API Smartcar | ✅ | ✅ | – |
+| Audi | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| BMW | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| BYD | Diverse Modelle* | Cloud API | ✅ | ✅ | inkl. chinesischer Marke |
+| Citroën | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Cupra | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Dacia | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| DS Auto | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Fiat | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Ford | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Hyundai | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Jaguar | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Jeep | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Kia | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Land Rover | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Mazda | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Mercedes-Benz | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| MINI | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Nissan | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Opel | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Peugeot | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Polestar | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Porsche | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Renault | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Škoda | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Tesla | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Vauxhall | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Volkswagen | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
+| Volvo | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
 
 ---
 
