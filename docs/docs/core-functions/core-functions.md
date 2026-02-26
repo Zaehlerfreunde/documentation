@@ -3,9 +3,13 @@
 Die Zählerfreunde White-Label Lösung ermöglicht Energieversorgern, Stadtwerken und Messstellenbetreibern:
 
 💰 **Neue, wiederkehrende Umsätze** durch frei definierbare Abo-Modelle (inkl. HEMS & Smart Services)
+
 🔒 **Stärkere Kundenbindung** durch IoT-Integration, Automationen und tägliche Nutzungsrelevanz
+
 🛍 **Direkten Vertrieb** über integrierten Shop, Simulator und Tarifrechner
+
 🏢 **Abdeckung aller Kundensegmente** (Privat, Gewerbe, Quartiere, Mieterstrom)
+
 🎨 **100 % White-Label & Markenhoheit** ohne eigene Entwicklungsressourcen
 
 Die Software ist nicht nur ein gesetzeskonformes Visualisierungstool für Smart-Meter und dynamische Tarife – sie ist Digitalisierungs-, Monetarisierungs- und Vertriebsplattform in einem.
