@@ -21,7 +21,7 @@ sie ist Digitalisierungs-, Monetarisierungs- und Vertriebsplattform in einem.
 | **Alle Zählertypen (analog, digital, RLM)** | Keine technische Hürde | 100 % Portfolio digitalisierbar | Kein separates Gewerbeportal nötig |
 | **Mehrere Gebäude & Geräte** | Übersicht über Immobilien / Standorte | Ideal für Immobilienwirtschaft & Gewerbe | B2B-fähig |
 | **Hierarchien & Einsichtsrechte** | Klare Rollenverteilung | Mandanten- & Gewerbefähig | Struktur für größere Organisationen |
-| **Virtueller Summenzähler **| Aggregierte Verbrauchssicht | Perfekt für Quartiere & Mieterstrom | Neue Geschäftsmodelle möglich |
+| **Virtueller Summenzähler**| Aggregierte Verbrauchssicht | Perfekt für Quartiere & Mieterstrom | Neue Geschäftsmodelle möglich |
 | **Submandantenfähigkeit** | — | Multi-Tenant fähig | Skalierbar für andere Marken oder neue Produkte (zb Weiterverkauf der Gesamtösung) |
 | **Cloud-to-Cloud HEMS** (Smart Charging, PV-Überschuss, preisorientiertes Laden) | Automatische Kostenoptimierung | Neues Premium-Produkt im Portfolio | Wiederkehrende Abo-Umsätze |
 | **§14a Steuersignal Umsetzung** | Rechtssichere Steuerbarkeit | Zukunftssicher im SM-Rollout | Gesetzeskonform |
