@@ -93,13 +93,35 @@ Bezugswerte müssen Sie für Ihre eigenen Objekte erst aktivieren, damit diese a
 
 ![Bildschirmfoto 2025-01-27 um 14.57.22.png](/img/user-guides/business/Bildschirmfoto_2025-01-27_um_14.57.22.png)
 
-## Leistungsdauerlinie
+## Leistungsdauerlinie & Spitzenlast
 
 Eine Leistungsdauerlinie stellt die Dauer (in Stunden) dar, während der eine bestimmte Leistung (in kW) überschritten wird. Die Kurve zeigt, wie lange ein Gerät oder ein Verbraucher innerhalb eines bestimmten Zeitraums auf verschiedenen Leistungsniveaus betrieben wird. Sie wird häufig zur Analyse des Lastprofils in der Energiewirtschaft genutzt, um die Effizienz und Auslastung von Anlagen zu optimieren.
 
 Für Unternehmen mit eine Jahresverbrauch von über 100 000kWh ist eine Spitzenglättung von besonderer Bedeutung, da die maximale Leistung die Netzkosten beeinflusst.
 
 <img alt="image" src="https://github.com/user-attachments/assets/3eebd1a2-a90b-48f5-86ee-ca48d92ee769" />
+
+
+
+**Spitzenlast**
+
+Die Ansicht zeigt die Spitzenlast (Peak Load) - also die höchste gleichzeitig abgenommene elektrische Leistung im Tagesverlauf.
+Für Geschäftskunden besonders wichtig, weil:
+
+- Netzentgelte oft leistungspreisbasiert sind
+- Die höchste 15-Minuten-Leistung im Monat/Jahr abrechnungsrelevant sein kann
+
+Mögliche Hebel:
+
+- Lastverschiebung (z. B. große Verbraucher zeitlich staffeln)
+- Peak-Shaving
+- Batterie-Puffer
+- PV-Eigenverbrauchsoptimierung (Mittagsspitze passt gut zu PV-Erzeugung)
+
+<img width="1134" height="736" alt="Bildschirmfoto 2026-02-27 um 17 51 11" src="https://github.com/user-attachments/assets/57123d2c-d817-4a94-95ba-aec4eca4a54e" />
+
+
+
 
 ## Smarte Steuerung und Logiken
 
