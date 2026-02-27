@@ -106,6 +106,7 @@
 | Bitshake | Bitshake | Cloud API | ❌ | ✅ (Verbrauchsdaten) | – |
 | XEE Technology | Xeeny | Lobaro | ❌ | ✅ (Verbrauchs- und Einspeisedaten) | – |
 | Fronius Smart-Meter | Alle | Cloud API | ❌ | ✅ (Verbrauchs- und Einspeisedaten) | – |
+| SMA Smart-Meter | Alle | Cloud API | ❌ | ✅ (Verbrauchs- und Einspeisedaten) | – |
 
 ---
 
@@ -124,6 +125,7 @@
 | TSUN | – | Cloud API | - | ✅ (Produktionsdaten) | – |
 | Solaredge | – | Cloud API | - | ✅ (Produktionsdaten) | – |
 | Fronius | Fronius | Cloud API | - | ✅ (Produktionsdaten) | – |
+| SMA | Diverse | Cloud API | - | ✅ (Produktionsdaten) | – |
 
 ---
 
@@ -157,3 +159,4 @@
 | Hersteller | Produkt(e) | Verbindung | Steuerbar | HEMS-Integration | Kommentar |
 | --- | --- | --- | --- | --- | --- |
 | Fronius | Diverse | Cloud API | ❌ | ❌ | – |
+| SMA | Diverse | Cloud API | ❌ | ❌ | – |
