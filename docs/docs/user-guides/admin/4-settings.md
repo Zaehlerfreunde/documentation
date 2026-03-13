@@ -5,7 +5,7 @@
 
 In den Einstellungen können einzelne Funktionen ein- oder ausgeschaltet werden. Diese Modularität ermöglicht es uns, Ihnen alle verfügbaren Funktionen zur Verfügung zu stellen und Ihnen gleichzeitig die Möglichkeit zu geben, Anpassungen schnell und einfach selbst vorzunehmen. Zusätzlich können Sie definieren, welche Geräte Ihre Kunden hinzufügen können.
 
-![Bildschirmfoto 2025-08-20 um 17.25.25.png](/img/user-guides/admin/Bildschirmfoto_2025-08-20_um_17.25.25.png)
+<img alt="image" src="https://github.com/user-attachments/assets/dce854ad-8057-4754-9fc9-ea70b8582966" />
 
 ## Funktionen
 
