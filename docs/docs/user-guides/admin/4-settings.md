@@ -19,6 +19,10 @@ Für Testzwecke kann man über diese Funktion die allgemeine Registrierung von E
 
 Durch Aktivierung dieser Funktion, kann ein Nutzer der nicht zuvor eingeladen wurde aber dennoch auf die App stößt, eine Einladungsanfrage stellen, die Sie anschließend annehmen oder ablehnen können.
 
+-   “Nutzer per Kunden-ID verbinden”
+
+Durch Aktivierung dieser Funktion können Nutzer bei der Registrierung ihre externe Kunden-ID angeben und werden automatisch mit dem zugehörigen Objekt verknüpft.
+
 ### Dashboard
 
 -   “Übersicht”:
