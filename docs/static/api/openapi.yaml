@@ -1864,6 +1864,16 @@ components:
           format: date
           example: "2026-01-15"
           description: Start date of the contract. Users will only see data from this day on forward. Existing contracts for the given meter will stop saying data from this day on.
+        medium:
+          type: string
+          enum:
+            - ELECTRICITY
+            - GAS
+            - WATER
+            - HEATING
+          default: ELECTRICITY
+          description: Medium (Sparte) of the contract
+
         custom_attributes:
           type: object
           description: |
