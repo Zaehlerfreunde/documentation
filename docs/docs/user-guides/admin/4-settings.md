@@ -25,17 +25,19 @@ Durch Aktivierung dieser Funktion können Nutzer bei der Registrierung ihre exte
 
 ### Dashboard
 
--   “Übersicht”:
+-   “Geräte-Infos”:
 
-Aktivieren und deaktivieren der aggregierten Monatswidgets im Endkundendashboard:
+Zeigt gerätespezifische Informationen wie Zählernummer und Marktlokationsnummer an.
 
-![Bildschirmfoto 2024-08-05 um 16.05.17.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.05.17.png)
+<img alt="image" src="https://github.com/user-attachments/assets/d99e8d6a-11c2-4b5a-87b0-370a39e474f2" />
 
 -   “Aktueller Gerätestatus”:
 
-Aktivieren und deaktivieren der Geräteleistungen im Endkundendashboard
+Aktivieren und deaktivieren der Geräteleistungen im Endkundendashboard. 
 
-![Bildschirmfoto 2024-08-05 um 16.05.42.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.05.42.png)
+Hinweis: Diese Übersicht kann durch einen Klick auf „Alte Ansicht“ aktiviert werden. Andernfalls wird das Energieflussdiagramm angezeigt
+
+<img alt="image" src="https://github.com/user-attachments/assets/bcfedda5-4cba-4816-854d-7522942631af" />
 
 -   “Support Chatbox:”
 
