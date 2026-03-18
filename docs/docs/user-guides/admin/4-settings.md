@@ -57,6 +57,12 @@ Durch die Anbindung verschiedener Schnittstellen, ist es uns gelungen eine Funkt
 
 ![Bildschirmfoto 2025-08-22 um 16.59.31.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_16.59.31.png)
 
+-   “Kennzahlen”:
+
+  Durch die Aktivierung der Kennzahlen werden Kacheln erstellt, die die Werte für Bezug, Einspeisung und Kosten übersichtlich darstellen. Der Vergleich mit dem     Vortag wird dabei automatisch angezeigt, zusätzlich können die jeweiligen Durchschnittswerte eingeblendet werden. Über „Kennzahlen anpassen“ kann festgelegt      werden, welche Kennzahlen angezeigt werden.
+
+  <img alt="image" src="https://github.com/user-attachments/assets/7a1b6337-a96b-4d08-b2c8-942c9214a81a" />
+
 ### Funktionalitäten
 
 ![Bildschirmfoto 2025-08-22 um 17.05.57.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.05.57.png)
