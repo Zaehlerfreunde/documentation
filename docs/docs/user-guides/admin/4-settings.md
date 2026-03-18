@@ -65,7 +65,7 @@ Durch die Anbindung verschiedener Schnittstellen, ist es uns gelungen eine Funkt
 
 ### Funktionalitäten
 
-![Bildschirmfoto 2025-08-22 um 17.05.57.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.05.57.png)
+<img alt="image" src="https://github.com/user-attachments/assets/4cd13310-0d61-480a-b087-7c93737f1d79" />
 
 -   “Simulator”:
 
@@ -73,7 +73,7 @@ Mit dem **Simulator** können Endkunden Vorschläge errechnen lassen, ob sich ei
 
 -   “Tipps”:
 
-Unter „**Tipps**“ werden Stromspartipps angezeigt. Diese können entweder Ihre eigenen Empfehlungen oder unsere sein, die mit Produkten verlinkt sind und Ihnen potenzielle Affiliate-Kommissionen einbringen.
+Unter „Tipps“ werden Stromspartipps angezeigt. Diese können entweder eigene Empfehlungen oder von uns bereitgestellte Tipps sein, die mit Produkten verlinkt sind und potenzielle Affiliate-Provisionen ermöglichen. Eigene Tipps können über „Konfigurieren“ erstellt werden.
 
 -   “Dokumententresor”:
 
