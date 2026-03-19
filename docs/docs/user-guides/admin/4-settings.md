@@ -73,7 +73,7 @@ Mit dem **Simulator** können Endkunden Vorschläge errechnen lassen, ob sich ei
 
 -   “Tipps”:
 
-Unter „Tipps“ werden Stromspartipps angezeigt. Diese können entweder eigene Empfehlungen oder von uns bereitgestellte Tipps sein, die mit Produkten verlinkt sind und potenzielle Affiliate-Provisionen ermöglichen. Eigene Tipps können über „Konfigurieren“ erstellt werden.
+Unter „Tipps“ werden Stromspartipps angezeigt. Diese können entweder eigene Empfehlungen oder von uns bereitgestellte Tipps sein, die mit Produkten verlinkt sind und potenzielle Affiliate-Provisionen ermöglichen. Eigene Tipps können über „Konfigurieren“ erstellt werden. 
 
 -   “Dokumententresor”:
 
