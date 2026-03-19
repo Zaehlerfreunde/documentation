@@ -144,7 +144,7 @@ Unter diesen Einstellungen lässt sich festhalten was für Sparten und Tarife de
 
 Unter Anbindungen können Sie festlegen, welche Geräte von Ihren Nutzern hinzugefügt und integriert werden dürfen. Um den Zugriff auf weitere Geräte zu ermöglichen, können Sie diese über das "+"-Symbol aktivieren. Bereits aktivierte Geräte, die nicht mehr genutzt werden sollen, können Sie über das "–"-Symbol wieder entfernen.
 
-<img alt="image" src="https://github.com/user-attachments/assets/a630d4a0-a7c3-47fd-a8f8-e9f31ef46496" />
+<img alt="image" src="https://github.com/user-attachments/assets/c42fa77e-491c-470e-bc07-3a78f74c6411" />
 
 - **Wichtig:** **Virtuelle Zähler**, mit denen Endkunden mehrere Zähler oder Geräte addieren oder subtrahieren können, sind als **Zusatzmodul** verfügbar. Bitte kontaktieren Sie uns, wenn Sie diese Funktion freischalten möchten.
 
