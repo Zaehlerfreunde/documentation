@@ -148,15 +148,45 @@ Unter Anbindungen können Sie festlegen, welche Geräte von Ihren Nutzern hinzug
 
 - **Wichtig:** **Virtuelle Zähler**, mit denen Endkunden mehrere Zähler oder Geräte addieren oder subtrahieren können, sind als **Zusatzmodul** verfügbar. Bitte kontaktieren Sie uns, wenn Sie diese Funktion freischalten möchten.
 
-## Darstellung
+## White-Labelling
 
-![Bildschirmfoto 2025-08-22 um 17.24.17.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.24.17.png)
+Der Punkt White-Labelling wird in die Punkte "Darstellung", "Subdomain" und "Login-Page" gegliedert.
+
+### Darstellung
+
+<img alt="Screenshot (179)" src="https://github.com/user-attachments/assets/08d708d4-3de2-408b-bd06-2f803c87bf8b" />
 
 -   Dark Mode ist verfügbar, muss jedoch zuerst aktiviert werden. Im Dark Mode wird der normale weiße Hintergrund dunkelgrau und die schwarze Schrift weiß.
     -   Wenn Sie den Dark Mode aktivieren möchten, müssen Sie unten ein Logo hinzufügen, das angezeigt wird, wenn sich ein Endkunde für die Nutzung des Dark Modes entscheidet.
 -   Sie können Ihr Logo einfach durch die URL Ihres aktuellen Logos ersetzen. Wenn Sie Feineinstellungen wie Größenanpassungen vornehmen möchten, können Sie nebenstehend die Breite (in Pixeln) einstellen.
 -   Hier können Sie die Anpassungen an die Unternehmensfarben vornehmen.
 -   ACHTUNG: Bitte beachten Sie, dass alle Anpassungen sich direkt auf alle Nutzer innerhalb diesen Mandanten auswirken und sichtbar sind.
+
+  
+### Sub-Mandanten und Loginseite
+
+Erlaubt das Anlegen von Sub-Mandanten die ihren eigenen Admin-Zugang erhalten und Design-Einstellungen für ihre Endnutzer vornehmen können. (White-Label innerhalb der White-Label Lösung). Sie können daraus wiederum einen eigenen Business-Case bauen (Zusatzmodul).
+
+![Bildschirmfoto 2025-07-03 um 18.49.02.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.49.02.png)
+
+Nachdem ein neuer Mandant hinzugefügt wurde, können entweder Sie oder der neue Mandant selbst eine individuelle URL erstellen, welche dann losgelöst von dem übergeordneten Mandanten eine eigenständige Lösung darstellt.
+
+**Schritt 1:** Wählen Sie links im Menüfeld den Mandanten aus, für den Sie eine neue Subdomain erstellen möchten.
+
+**Schritt 2:** Definieren Sie die Subdomain in der Art wie es Ihnen auf der Seite erklärt wird, kopieren Sie die URL und schon kanns losgehen. Wichtig: Wenn Sie die neue Subdomain ausprobieren möchten, stellen Sie sicher, dass Sie selbst ausgelogged sind und dass eine “Login Seite erstellt wurde”
+
+![Bildschirmfoto 2025-07-03 um 18.48.46.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.48.46.png)
+
+**Schritt 3:** Login-Seite erstellen: Hier wird definiert wie der Registrierungsbereich bzw. Anmeldebereich für den Submandanten aussehen soll.
+
+![Bildschirmfoto 2025-07-03 um 18.55.28.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.55.28.png)
+
+**Schritt 4:** Wie beim eigenen Mandanten lassen sich alle Einstellungen und die Gesamtdarstellung auch für den Submandanten konfigurieren.
+
+-   “Support-Mail”: Hier können Sie ihre eigene Support-Mail hinterlegen, welche Ihren Endnutzern unter “FAQ” angezeigt wird.
+-   Bei „FAQ“ (Endkunden Dashboard) finden Ihre Endkunden Antworten auf die häufigsten Fragen. Sie können uns gerne mitteilen wenn wir diese durch Ihre eigenen FAQ ersetzen sollen.
+
+**Bitte kontaktieren Sie uns wenn sie an etwaigen “Zusatzmodulen” interessiert sind, wir schicken Ihnen hierfür gerne ein Angebot.**
 
 ## Benachrichtigungen
 
@@ -221,30 +251,6 @@ Die technische Einrichtung der Weiterleitung wird Schritt für Schritt erklärt,
 
 ## Zusätzliche Einstellungen
 
-### Sub-Mandanten und Loginseite
-
-Erlaubt das Anlegen von Sub-Mandanten die ihren eigenen Admin-Zugang erhalten und Design-Einstellungen für ihre Endnutzer vornehmen können. (White-Label innerhalb der White-Label Lösung). Sie können daraus wiederum einen eigenen Business-Case bauen (Zusatzmodul).
-
-![Bildschirmfoto 2025-07-03 um 18.49.02.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.49.02.png)
-
-Nachdem ein neuer Mandant hinzugefügt wurde, können entweder Sie oder der neue Mandant selbst eine individuelle URL erstellen, welche dann losgelöst von dem übergeordneten Mandanten eine eigenständige Lösung darstellt.
-
-**Schritt 1:** Wählen Sie links im Menüfeld den Mandanten aus, für den Sie eine neue Subdomain erstellen möchten.
-
-**Schritt 2:** Definieren Sie die Subdomain in der Art wie es Ihnen auf der Seite erklärt wird, kopieren Sie die URL und schon kanns losgehen. Wichtig: Wenn Sie die neue Subdomain ausprobieren möchten, stellen Sie sicher, dass Sie selbst ausgelogged sind und dass eine “Login Seite erstellt wurde”
-
-![Bildschirmfoto 2025-07-03 um 18.48.46.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.48.46.png)
-
-**Schritt 3:** Login-Seite erstellen: Hier wird definiert wie der Registrierungsbereich bzw. Anmeldebereich für den Submandanten aussehen soll.
-
-![Bildschirmfoto 2025-07-03 um 18.55.28.png](/img/user-guides/admin/Bildschirmfoto_2025-07-03_um_18.55.28.png)
-
-**Schritt 4:** Wie beim eigenen Mandanten lassen sich alle Einstellungen und die Gesamtdarstellung auch für den Submandanten konfigurieren.
-
--   “Support-Mail”: Hier können Sie ihre eigene Support-Mail hinterlegen, welche Ihren Endnutzern unter “FAQ” angezeigt wird.
--   Bei „FAQ“ (Endkunden Dashboard) finden Ihre Endkunden Antworten auf die häufigsten Fragen. Sie können uns gerne mitteilen wenn wir diese durch Ihre eigenen FAQ ersetzen sollen.
-
-**Bitte kontaktieren Sie uns wenn sie an etwaigen “Zusatzmodulen” interessiert sind, wir schicken Ihnen hierfür gerne ein Angebot.**
 
 ### Mieterstrom
 
