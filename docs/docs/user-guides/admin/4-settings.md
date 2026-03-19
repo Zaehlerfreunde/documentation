@@ -194,16 +194,13 @@ Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt üb
 
 <img alt="Screenshot (180)" src="https://github.com/user-attachments/assets/d0e4c0d4-2d32-4b27-873f-bc8bdd652d67" />
 
+## Inhalt
+Hier können Sie personalisierte Tipps erstellen, festlegen, welche Automatisierungsregeln Nutzer verwenden können, rechtliche Informationen hinterlegen und den KI-Assistenten konfigurieren.
 
-## Sonstiges
-
-Hier können Sie einen Demo-Account für Ihre Website erstellen, den KI-Assistenten konfigurieren, eine Klickstrecke für das Onboarding von Neukunden aktivieren und festlegen, welche Automatisierungsregeln Nutzer verwenden können.
--   **Demo-Konto erstellen**
-    - Mit dem Demo-Konto können Sie eine eigene Demo-Version der Plattform erstellen und das Portal testen, ohne dass dafür Zugangsdaten erforderlich sind.
-
-      <img alt="image" src="https://github.com/user-attachments/assets/46daf7b7-b087-41e6-8975-7c6de423e762" />
-
-      Sobald Sie das Demo-Konto erstellt haben, können Sie sich über die entsprechenden Links ganz einfach in das Admin-Portal oder das Nutzerportal des Demo-Kontos einloggen
+-   **Personalisierte Tipps erstellen**
+    - Hier können Sie einstellen, welche Tipps Ihre Nutzer sehen können. Um individualisierte Tipss anzuzeigen, müssen Sie die Option "Benutzerdefinierte Tipps         aktivieren" anklicken. Andernfalls werden Standard-Tipps gezeigt.
+      
+      <img alt="image" src="https://github.com/user-attachments/assets/78bc1223-20e8-44bb-b212-999f172f06d8" />
 
 -   **Automatisierungsregeln aktivieren**
     -   Damit Ihre Nutzer Automatisierungen verwenden können, müssen diese zunächst von Ihnen aktiviert werden. So legen Sie ganz einfach fest, welche Regeln Ihre Nutzer sehen und nutzen dürfen.
@@ -212,10 +209,35 @@ Hier können Sie einen Demo-Account für Ihre Website erstellen, den KI-Assisten
 
 Um eine neue Regel zu aktivieren, klicken Sie auf das "+"-Symbol und wählen die gewünschte Regel aus. Aktivierte Regeln erscheinen anschließend in der Liste und sind für Nutzer unter "Smarte Steuerungen" sichtbar. Wenn Sie eine Regel entfernen möchten, klicken Sie einfach auf das "–"-Symbol neben der jeweiligen Regel.
 
+
+-   **Rechtliches**
+In diesem Bereich können Sie die Links zu Ihren rechtlichen Informationen hinterlegen. Diese werden allen Nutzern im Footer der Anwendung angezeigt.
+
+    -Tragen Sie hierzu die entsprechenden URLs für:
+
+      -Datenschutz
+      -AGB
+      -Impressum
+
+ein und speichern Sie Ihre Angaben.
+
+<img alt="image" src="https://github.com/user-attachments/assets/de023d76-17a1-42b4-a046-ca09ba0a5656" />
+
+
 -   **KI-Assistenten konfigurieren**
     - Optional können Sie hier den KI-Assistenten anpassen und eine individuelle Ansage hinterlegen. Diese Einstellung ist nicht zwingend notwendig, kann aber genutzt werden, um Tonfall oder Hinweise für Ihre Nutzer zu personalisieren.  
 
 <img alt="image" src="https://github.com/user-attachments/assets/557c6c9f-d206-49b2-bfac-1f71c0907740" />
+
+## Sonstiges
+
+Hier können Sie einen Demo-Account für Ihre Website erstellen und eine Klickstrecke für das Onboarding von Neukunden aktivieren.
+-   **Demo-Konto erstellen**
+    - Mit dem Demo-Konto können Sie eine eigene Demo-Version der Plattform erstellen und das Portal testen, ohne dass dafür Zugangsdaten erforderlich sind.
+
+      <img alt="image" src="https://github.com/user-attachments/assets/46daf7b7-b087-41e6-8975-7c6de423e762" />
+
+      Sobald Sie das Demo-Konto erstellt haben, können Sie sich über die entsprechenden Links ganz einfach in das Admin-Portal oder das Nutzerportal des Demo-Kontos einloggen
 
 -   **Onboarding für Neukunden**
     -   Wir haben eine **Klickstrecke inklusive Tarifrechner und Vertragsabschlusstrecke** für Sie entwickelt. Dieses Zusatzmodul können Sie hinzubuchen, um Neukunden in Ihr ERP System zu übertragen und um Projekte im Bereich Mieterstrom mit einer individuellen Antragsstrecke zu untermalen.
