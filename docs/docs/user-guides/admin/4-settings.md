@@ -192,8 +192,7 @@ Nachdem ein neuer Mandant hinzugefügt wurde, können entweder Sie oder der neue
 
 Verschicken Sie Einladungserinnerungen oder andere Benachrichtigungen direkt über das Admin Dashboard
 
-![Benachrichtigungen1](/img/user-guides/admin/notification1.png)
-![Benachrichtigungen2](/img/user-guides/admin/notification2.png)
+<img alt="Screenshot (180)" src="https://github.com/user-attachments/assets/d0e4c0d4-2d32-4b27-873f-bc8bdd652d67" />
 
 
 ## Sonstiges
