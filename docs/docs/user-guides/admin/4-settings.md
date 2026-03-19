@@ -119,7 +119,7 @@ Kunden können den Assistenten nutzen um
 
 Mittelfristig soll man über die KI alles im HEMS-Bezug auch durch ganz einfache Prompts managen können, z.B.: "mein Auto muss morgen um 9 Uhr voll sein, bitte nutze PV überschuss wenn möglich, sonst netzbezug"... etc. (Zusatzmodul)
 
-![Bildschirmfoto 2025-08-22 um 17.17.13.png](/img/user-guides/admin/Bildschirmfoto_2025-08-22_um_17.17.13.png)
+<img alt="image" src="https://github.com/user-attachments/assets/c7e9dbc6-4318-4158-861e-36cf678b1a6a" />
 
 Endnutzer Ansicht:
 
