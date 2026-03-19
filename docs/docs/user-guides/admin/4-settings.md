@@ -134,7 +134,7 @@ Beispiel Einfamiienhaus:
 Beispiel Mieterstromprojekt: 
 <img alt="image" src="https://github.com/user-attachments/assets/204feb21-11f9-4081-bae5-b9edd09782f5" />
 
-
+Hinweis: Das Energieflussdiagramm wird durch einen Klick auf "Neue Ansicht" im Dashboard angezeigt. 
 
 ### Tarife
 
