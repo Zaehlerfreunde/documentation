@@ -231,13 +231,25 @@ ein und speichern Sie Ihre Angaben.
 
 ## Sonstiges
 
-Hier können Sie einen Demo-Account für Ihre Website erstellen und eine Klickstrecke für das Onboarding von Neukunden aktivieren.
+Hier können Sie einen Demo-Account für Ihre Website erstellen, Ankündigungen veröffentlichen und eine Klickstrecke für das Onboarding von Neukunden aktivieren.
 -   **Demo-Konto erstellen**
     - Mit dem Demo-Konto können Sie eine eigene Demo-Version der Plattform erstellen und das Portal testen, ohne dass dafür Zugangsdaten erforderlich sind.
 
       <img alt="image" src="https://github.com/user-attachments/assets/46daf7b7-b087-41e6-8975-7c6de423e762" />
 
       Sobald Sie das Demo-Konto erstellt haben, können Sie sich über die entsprechenden Links ganz einfach in das Admin-Portal oder das Nutzerportal des Demo-Kontos einloggen
+
+-   **Ankündigungen**
+    - Über diese Funktion können Ankündigungen erstellt und zentral verwaltet werden. Diese werden als Banner im Dashboard aller Nutzer angezeigt und eignen sich       insbesondere, um neue Kunden auf wichtige Funktionen, Updates oder erste Schritte hinzuweisen.
+
+      Ansicht im Admin Bereich:
+      
+      <img alt="Screenshot (208)" src="https://github.com/user-attachments/assets/782ed0f8-85a2-46bb-b217-5b0f420715ff" />
+
+      Ansicht im Nutzportal:
+
+      <img alt="image" src="https://github.com/user-attachments/assets/80788fc1-a027-4761-a69d-726540853c8e" />
+
 
 -   **Onboarding für Neukunden**
     -   Wir haben eine **Klickstrecke inklusive Tarifrechner und Vertragsabschlusstrecke** für Sie entwickelt. Dieses Zusatzmodul können Sie hinzubuchen, um Neukunden in Ihr ERP System zu übertragen und um Projekte im Bereich Mieterstrom mit einer individuellen Antragsstrecke zu untermalen.
