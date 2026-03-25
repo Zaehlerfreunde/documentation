@@ -240,7 +240,7 @@ Hier können Sie einen Demo-Account für Ihre Website erstellen, Ankündigungen 
       Sobald Sie das Demo-Konto erstellt haben, können Sie sich über die entsprechenden Links ganz einfach in das Admin-Portal oder das Nutzerportal des Demo-Kontos einloggen
 
 -   **Ankündigungen**
-    - Über diese Funktion können Ankündigungen erstellt und zentral verwaltet werden. Diese werden als Banner im Dashboard aller Nutzer angezeigt und eignen sich       insbesondere, um neue Kunden auf wichtige Funktionen, Updates oder erste Schritte hinzuweisen.
+    - Über diese Funktion können Ankündigungen erstellt und zentral verwaltet werden. Diese werden als Banner im Dashboard aller Nutzer angezeigt und eignen sich       insbesondere, um Kunden auf wichtige Funktionen, Updates oder erste Schritte hinzuweisen.
 
       Ansicht im Admin Bereich:
       
