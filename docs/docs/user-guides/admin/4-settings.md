@@ -282,6 +282,15 @@ Die technische Einrichtung der Weiterleitung wird Schritt für Schritt erklärt,
 
 ![Bildschirmfoto 2024-08-05 um 16.31.59.png](/img/user-guides/admin/Bildschirmfoto_2024-08-05_um_16.31.59.png)
 
+## Plan & Nutzung
+Unter „Plan & Nutzung“ sehen Sie eine Übersicht über die Nutzung der Plattform sowie die monatlichen Kosten.
+
+Es wird angezeigt, wie viele Nutzer, Geräte und Objekte aktuell angelegt sind.
+
+Die monatlichen Kosten setzen sich aus einer festen Grundgebühr sowie variablen Kosten zusammen, die sich nach der Nutzung, beispielsweise der Anzahl der Geräte, richten. Zusatzmodule werden dabei ebenfalls berücksichtigt.
+
+Die gesamten Kosten pro Monat werden im unteren Bereich übersichtlich zusammengefasst.
+
 ## Zusätzliche Einstellungen
 
 
