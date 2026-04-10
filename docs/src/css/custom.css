@@ -65,6 +65,7 @@ h2 {
 
 :root {
   font-family: 'Poppins', sans-serif;
+  --ifm-font-size-base: 14px;
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -72,7 +73,6 @@ h2 {
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --site-primary-hue-saturation: 167 68%;
 }
@@ -361,4 +361,8 @@ div[class^="announcementBar_"] {
 .openapi-tabs__code-item--python.active {
   box-shadow: 0 0 0 3px var(--openapi-code-tab-shadow-color-python);
   border-color: var(--openapi-code-tab-border-color-python);
+}
+
+.menu__link {
+  line-height: unset;
 }
