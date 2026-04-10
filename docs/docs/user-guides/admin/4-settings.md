@@ -140,6 +140,23 @@ Hinweis: Das Energieflussdiagramm wird durch einen Klick auf "Neue Ansicht" im D
 
 Unter diesen Einstellungen lässt sich festhalten was für Sparten und Tarife der Endnutzer hinzufügen darf.
 
+-   “Tarife erstellen”
+
+Einen neuen Tarif erstellen Sie über das grüne Plus in der Tarifübersicht. Anschließend öffnet sich ein Fenster, in dem Sie die wichtigsten Informationen hinterlegen.
+
+Wählen Sie zunächst die Sparte sowie die Art des Tarifs aus. Danach vergeben Sie einen Namen für den Tarif. Optional können Sie zusätzlich einen internen Namen definieren, der nur systemintern verwendet wird und dem Endnutzer nicht angezeigt wird. Abschließend wählen Sie den zugehörigen Lieferanten aus und können bei Bedarf festlegen, ob es sich um einen Ökotarif handelt.
+
+Nach dem Speichern kann der Tarif Objekten zugeordnet und weiter konfiguriert werden.
+
+-   “Tarif bearbeiten”
+  
+Innerhalb eines Tarifs können Sie Preisbestandteile über das grüne Plus hinzufügen. Dabei legen Sie den Namen, die Art des Preises sowie die passende Einheit fest. Über den „Wert“ definieren Sie den konkreten Preisbetrag. Zusätzlich können Sie bestimmen, in welchem Zeitraum der Preis gültig ist.
+
+Bestehende Preisbestandteile können jederzeit angepasst werden. Die Bearbeitungsfunktion öffnen Sie über den grünen Pfeil. Änderungen werden historisch gespeichert, sodass die Entwicklung der Preise jederzeit nachvollziehbar bleibt.
+
+<img alt="image" src="https://github.com/user-attachments/assets/4b226169-7235-4622-ae1e-fac28e43c2ed" />
+
+
 ## Anbindungen
 
 Unter Anbindungen können Sie festlegen, welche Geräte von Ihren Nutzern hinzugefügt und integriert werden dürfen. Um den Zugriff auf weitere Geräte zu ermöglichen, können Sie diese über das "+"-Symbol aktivieren. Bereits aktivierte Geräte, die nicht mehr genutzt werden sollen, können Sie über das "–"-Symbol wieder entfernen.
