@@ -1,4 +1,4 @@
-# White-Label API Anbindung
+# API Anbindung
 
 Die Zählerfreunde-API ermöglicht es Partnern, Benutzer-, Raum- und Geräteinformationen automatisch zu verwalten, um neue Benutzer aufzunehmen, bestehende zu verwalten und Zähler sowie andere Geräte hinzuzufügen oder zu entfernen.
 
