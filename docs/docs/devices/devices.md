@@ -140,7 +140,7 @@
 
 ## 🏠 Smart-Meter
 
-### Deutschland (iMsys)
+### Germany & Austria (iMsys)
 
 | **Hersteller** | **Produkt(e)** | **Verbindung** | **Steuerbar** | **HEMS-Integration** | **Kommentar** |
 | --- | --- | --- | --- | --- | --- |
