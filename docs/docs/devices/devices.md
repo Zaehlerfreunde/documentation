@@ -24,11 +24,11 @@
 | Alle | OCPP 1.6 kompatible Modelle | OCPP | ✅ | ✅ | – |
 | EASEE | EASEE Wallbox | Cloud API | ✅ | ✅ | – |
 | Fronius | Alle | Cloud API | ❌ | ❌ | – |
-| Zaptec | Alle | Cloud API (Enode) | ✅ | ✅ | – |
-| ChargePoint | Alle | Cloud API (Enode) | ✅ | ✅ | – |
-| Enel X | Alle | Cloud API (Enode) | ✅ | ✅ | – |
-| Garo | Alle | Cloud API (Enode) | ✅ | ✅ | – |
-| myenergi | Alle | Cloud API (Enode) | ✅ | ✅ | – |
+| Zaptec | Alle | Cloud API  | ✅ | ✅ | – |
+| ChargePoint | Alle | Cloud API  | ✅ | ✅ | – |
+| Enel X | Alle | Cloud API  | ✅ | ✅ | – |
+| Garo | Alle | Cloud API  | ✅ | ✅ | – |
+| myenergi | Alle | Cloud API  | ✅ | ✅ | – |
 
 ---
 
@@ -65,21 +65,21 @@
 | Vauxhall | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
 | Volkswagen | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
 | Volvo | Diverse Modelle* | Cloud API | ✅ | ✅ | – |
-| Acura | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Cadillac | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Chevrolet | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Chrysler | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Dodge | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| GMC | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Honda | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Lexus | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Lucid | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Rivian | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Subaru | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Toyota | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| XPENG | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| NIO | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
-| Ram | Diverse Modelle* | Cloud API (Enode) | ✅ | ✅ | – |
+| Acura | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Cadillac | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Chevrolet | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Chrysler | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Dodge | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| GMC | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Honda | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Lexus | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Lucid | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Rivian | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Subaru | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Toyota | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| XPENG | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| NIO | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
+| Ram | Diverse Modelle* | Cloud API  | ✅ | ✅ | – |
 
 ---
 
@@ -90,22 +90,22 @@
 | Viessmann | alle API-kompatiblen Modelle | Cloud API | ✅ | (noch nicht) | – |
 | Fronius | Alle | Cloud API | - | (noch nicht) | – |
 | Alle | Alle | SG-Ready | ✅ | ✅ | – |
-| Daikin | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Bosch | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Mitsubishi | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| NIBE | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Panasonic | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Toshiba | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
+| Daikin | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Bosch | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Mitsubishi | Alle | Cloud API  | ⚠️ | ✅ | – |
+| NIBE | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Panasonic | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Toshiba | Alle | Cloud API  | ⚠️ | ✅ | – |
 
 ---
 
-## 🌡️ Thermostate & Klima (neu)
+## 🌡️ Thermostate & Klima 
 
 | Hersteller | Produkt(e) | Verbindung | Steuerbar | HEMS-Integration | Kommentar |
 | --- | --- | --- | --- | --- | --- |
-| Tado | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Netatmo | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Sensibo | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
+| Tado | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Netatmo | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Sensibo | Alle | Cloud API  | ⚠️ | ✅ | – |
 
 ---
 
@@ -117,12 +117,12 @@
 | Solaredge | – | Cloud API | - | ✅ | – |
 | Fronius | Fronius | Cloud API | - | ✅ | – |
 | SMA | Diverse | Cloud API | - | ✅ | – |
-| Huawei | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| GoodWe | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Growatt | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Sungrow | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Hoymiles | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| Enphase | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
+| Huawei | Alle | Cloud API  | ⚠️ | ✅ | – |
+| GoodWe | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Growatt | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Sungrow | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Hoymiles | Alle | Cloud API  | ⚠️ | ✅ | – |
+| Enphase | Alle | Cloud API  | ⚠️ | ✅ | – |
 
 ---
 
@@ -132,9 +132,9 @@
 | --- | --- | --- | --- | --- | --- |
 | Fronius | Diverse | Cloud API | ❌ | ❌ | – |
 | SMA | Diverse | Cloud API | ❌ | ❌ | – |
-| Tesla Powerwall | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| GivEnergy | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
-| FoxESS | Alle | Cloud API (Enode) | ⚠️ | ✅ | – |
+| Tesla Powerwall | Alle | Cloud API  | ⚠️ | ✅ | – |
+| GivEnergy | Alle | Cloud API  | ⚠️ | ✅ | – |
+| FoxESS | Alle | Cloud API  | ⚠️ | ✅ | – |
 
 ---
 
