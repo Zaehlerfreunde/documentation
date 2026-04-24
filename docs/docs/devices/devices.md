@@ -199,11 +199,12 @@
 
 ---
 
-## 📡 Sensoren
+## 📡 Sensoren und Plattformen
 
 | Hersteller | Produkt(e) | Verbindung | Steuerbar | HEMS-Integration | Kommentar |
 | --- | --- | --- | --- | --- | --- |
-| The Things Network | Diverse | LoRaWAN | ❌ | ❌ | – |
+| The Things Network | Diverse | LoRaWAN | ❌ | ✅ | – |
+| Zenner IoT | Diverse Smart-Meter, IoT Geräte und Sensoren | Diverse | ❌ | ✅ | – |
 
 
 ⚠️ = Steuerung ist eingeschränkt oder abhängig von:
