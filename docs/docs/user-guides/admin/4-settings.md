@@ -163,7 +163,19 @@ Unter Anbindungen können Sie festlegen, welche Geräte von Ihren Nutzern hinzug
 
 <img alt="image" src="https://github.com/user-attachments/assets/c42fa77e-491c-470e-bc07-3a78f74c6411" />
 
-- **Wichtig:** **Virtuelle Zähler**, mit denen Endkunden mehrere Zähler oder Geräte addieren oder subtrahieren können, sind als **Zusatzmodul** verfügbar. Bitte kontaktieren Sie uns, wenn Sie diese Funktion freischalten möchten.
+- **Wichtig:** **Virtuelle Zähler**, mit denen Endkunden mehrere Zähler oder Geräte miteinander kombinieren können, sind als **Zusatzmodul** verfügbar. Bitte kontaktieren Sie uns, wenn Sie diese Funktion freischalten möchten.
+
+Ein virtueller Summenzähler ermöglicht es, mehrere Geräte logisch zu einem neuen Zähler zusammenzufassen. Die Werte werden dabei nicht neu gemessen, sondern auf Basis bestehender Geräte berechnet.
+
+Es gibt zwei Möglichkeiten:
+
+Beim Summiergerät werden die Werte ausgewählter Geräte einfach addiert. Diese Variante eignet sich für einfache Anwendungsfälle, bei denen mehrere Verbräuche oder Erzeugungen zusammengeführt werden sollen.
+
+<img alt="Screenshot (242)" src="https://github.com/user-attachments/assets/7926ae64-d76b-4354-be90-4b817b4fff70" />
+
+Für komplexere Berechnungen steht der Formel-Generator zur Verfügung. Hier können neben der Addition auch Subtraktion, Multiplikation und Division verwendet werden. Dabei lassen sich nicht nur mehrere Geräte miteinander verknüpfen, sondern auch Faktoren einbauen, zum Beispiel zur anteiligen Berechnung einzelner Verbräuche.
+
+<img alt="Screenshot (244)" src="https://github.com/user-attachments/assets/edbf64f4-58c5-4f1f-b19f-aa17fb969a70" />
 
 ## White-Labelling
 
