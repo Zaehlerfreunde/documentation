@@ -1376,7 +1376,6 @@ components:
             - BSED
             - EASEE
             - SHELLY
-            - POWERFOX
             - METERGRID
             - WATTLINE
             - ZAEHLERHELDEN
