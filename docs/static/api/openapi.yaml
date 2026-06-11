@@ -1667,6 +1667,8 @@ components:
               type: string
             bluemeteringApiKey:
               type: string
+            meterNumber:
+              type: string
             meterPin:
               type: string
             conversionFactor:
