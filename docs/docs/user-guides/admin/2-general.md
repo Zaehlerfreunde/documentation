@@ -1,5 +1,26 @@
 # Allgemein
 
+## Dashboard
+
+Das Dashboard dient als zentrale Übersichts- und Navigationsfläche im Admin Portal. Es zeigt auf einen Blick die wichtigsten Kennzahlen und unterstützt dabei, offene Einrichtungsschritte schnell zu finden.
+
+Im oberen Bereich sehen Sie eine Übersicht über die Anzahl der Nutzer, Objekte, Geräte und Kunden. Durch einen Klick auf die jeweilige Kachel gelangen Sie direkt zum entsprechenden Bereich im Admin Portal.
+
+Unterhalb der Kennzahlen befindet sich der Bereich "Offene To Dos". Hier werden zentrale Einrichtungsschritte angezeigt, die für die Nutzung der Plattform relevant sind.
+
+Ein Klick auf die einzelnen To Dos führt Sie direkt zu den passenden Bereichen:
+
+- Messwerte: Verweist auf die Liste der unterstützten Geräte im Nutzerguide.
+- Stammdaten: Verweist auf die entsprechende Erklärung im Nutzerguide.
+- Nutzer einladen: Öffnet den Bereich, in dem neue Nutzer eingeladen werden können.
+- Branding: Führt zu den Einstellungen, in denen das Erscheinungsbild der Plattform angepasst werden kann.
+- AGBs und Datenschutz: Führt zum Bereich Rechtliches. Dort müssen die URLs für Datenschutzerklärung, Impressum und AGB hinterlegt werden.
+
+Sobald ein To Do erledigt wurde, wird dies im Dashboard entsprechend angezeigt. So behalten Sie den Überblick darüber, welche Einrichtungsschritte bereits abgeschlossen sind und welche noch offen sind.
+
+<img alt="image" src="https://github.com/user-attachments/assets/6ace2c81-74d4-45be-9ee2-1648d220c63c" />
+
+
 ## Kundenübersicht
 
 **Zweck:** Hier legen Sie neue Endkunden an, verwalten ihre Stammdaten und ordnen ihnen Zählpunkte sowie Tarife zu. Jeder Kunde sollte mindestens **einen zugeordneten Zählpunkt und Tarif** haben.
