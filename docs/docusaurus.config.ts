@@ -9,6 +9,10 @@ const config: Config = {
   tagline: 'Alle technischen Dokumente, Anleitungen und API-Referenzen an einem Ort.',
   favicon: 'https://cdn.zaehlerfreunde.com/logos/favicon.ico',
 
+  markdown: {
+    mermaid: true
+  },
+
   future: {
     v4: true, 
   },
@@ -68,7 +72,7 @@ const config: Config = {
       },
     ]
   ],
-  themes: ["docusaurus-theme-openapi-docs"],
+  themes: ["docusaurus-theme-openapi-docs", "@docusaurus/theme-mermaid"],
 
   themeConfig: {
     stylesheets: [
