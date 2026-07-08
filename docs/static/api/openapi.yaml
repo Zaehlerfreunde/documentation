@@ -956,6 +956,308 @@ paths:
         "200":
           description: OK
 
+  /tariffs:
+    post:
+      security:
+        - bearerAuth: [ ]
+      summary: Add tariff
+      tags:
+        - Tariffs
+      operationId: addTariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewTariff"
+      responses:
+        "200":
+          description: ID of created tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffId"
+
+  /tariffs/{tariffId}:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get tariff
+      tags:
+        - Tariffs
+      operationId: getTariff
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update tariff
+      tags:
+        - Tariffs
+      operationId: updateTariff
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTariff"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete tariff
+      tags:
+        - Tariffs
+      operationId: deleteTariff
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      responses:
+        "200":
+          description: OK
+
+  /tariffs/{tariffId}/price-components:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Add tariff price component
+      tags:
+        - Tariffs
+      operationId: addTariffPriceComponent
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewTariffPriceComponent"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+
+  /tariffs/{tariffId}/price-components/{priceComponentId}:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update tariff price component
+      tags:
+        - Tariffs
+      operationId: updateTariffPriceComponent
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: priceComponentId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the price component
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTariffPriceComponent"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete tariff price component
+      tags:
+        - Tariffs
+      operationId: deleteTariffPriceComponent
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: priceComponentId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the price component
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+
+  /tariffs/{tariffId}/contracts:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get tariff contracts
+      tags:
+        - Tariffs
+      operationId: getTariffContracts
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: query
+          name: page
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            default: 0
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+            format: int32
+            minimum: 1
+            default: 100
+      responses:
+        "200":
+          description: Tariff contracts with pagination
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffContracts"
+    post:
+      security:
+        - bearerAuth: []
+      summary: Add tariff contract
+      tags:
+        - Tariffs
+      operationId: addTariffContract
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewTariffContract"
+      responses:
+        "200":
+          description: ID of created contract
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffContractId"
+
+  /tariffs/{tariffId}/contracts/{contractId}:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update tariff contract
+      tags:
+        - Tariffs
+      operationId: updateTariffContract
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: contractId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the contract
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTariffContract"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete tariff contract
+      tags:
+        - Tariffs
+      operationId: deleteTariffContract
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: contractId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the contract
+      responses:
+        "200":
+          description: OK
+
 components:
   securitySchemes:
     bearerAuth:
@@ -1946,3 +2248,377 @@ components:
           type: string
           nullable: true
           description: Set to a UUID to assign a parent space
+
+    Tariff:
+      type: object
+      required:
+        - id
+        - ownerUserId
+        - partnerId
+        - name
+        - supplier
+        - medium
+        - priceComponents
+        - isGreen
+        - direction
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the tariff
+        ownerUserId:
+          type: string
+          description: ID of the user that owns the tariff
+        partnerId:
+          type: string
+          description: ID of the partner that owns the tariff
+        name:
+          type: string
+          description: Display name of the tariff
+        supplier:
+          type: string
+          description: Energy, gas, water, or heating supplier
+        medium:
+          $ref: "#/components/schemas/TariffMedium"
+        priceComponents:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffPriceComponent"
+        isGreen:
+          type: boolean
+          description: Whether the tariff is marked as green energy
+        contract:
+          $ref: "#/components/schemas/TariffContract"
+        internalName:
+          type: string
+          nullable: true
+          description: Internal name of the tariff, used for mapping tariffs to spaces via custom attributes
+        direction:
+          $ref: "#/components/schemas/TariffDirection"
+        accountingPeriod:
+          $ref: "#/components/schemas/TariffAccountingPeriod"
+        accountingPeriodDescription:
+          type: string
+          nullable: true
+          description: Description of the accounting period for landlord-to-tenant tariffs
+        estimatedYearlyConsumption:
+          type: number
+          format: double
+          nullable: true
+          description: Estimated yearly consumption for landlord-to-tenant tariffs
+
+    TariffMedium:
+      type: string
+      description: Medium of the tariff
+      enum:
+        - ELECTRICITY
+        - GAS
+        - WATER
+        - HEATING
+        - STATE_OF_CHARGE
+        - TEMPERATURE
+
+    TariffDirection:
+      type: string
+      description: IN means consumption, OUT means ingestion or production.
+      enum:
+        - IN
+        - OUT
+
+    TariffAccountingPeriod:
+      type: string
+      nullable: true
+      enum:
+        - QUARTER_HOURLY
+        - MONTHLY
+
+    TariffPriceComponent:
+      type: object
+      required:
+        - id
+        - name
+        - unit
+        - unitDescription
+        - type
+        - prices
+        - isDynamic
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        unit:
+          $ref: "#/components/schemas/TariffPriceComponentUnit"
+        unitDescription:
+          type: string
+        type:
+          $ref: "#/components/schemas/TariffPriceComponentType"
+        prices:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffPrice"
+        isDynamic:
+          type: boolean
+
+    TariffPrice:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string
+        value:
+          type: number
+          format: double
+          nullable: true
+        startDate:
+          type: string
+          nullable: true
+        endDate:
+          type: string
+          nullable: true
+        isCurrent:
+          type: boolean
+          nullable: true
+
+    NewTariffPrice:
+      type: object
+      properties:
+        value:
+          type: number
+          format: double
+          nullable: true
+        start_date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          nullable: true
+        end_date:
+          type: string
+          format: date
+          example: "2026-01-31"
+          nullable: true
+
+    NewTariffPriceComponent:
+      type: object
+      required:
+        - name
+        - unit
+        - type
+        - prices
+      properties:
+        name:
+          type: string
+        unit:
+          $ref: "#/components/schemas/TariffPriceComponentUnit"
+        type:
+          $ref: "#/components/schemas/TariffPriceComponentType"
+        prices:
+          type: array
+          items:
+            $ref: "#/components/schemas/NewTariffPrice"
+
+    UpdateTariffPriceComponent:
+      type: object
+      properties:
+        name:
+          type: string
+        unit:
+          $ref: "#/components/schemas/TariffPriceComponentUnit"
+        type:
+          $ref: "#/components/schemas/TariffPriceComponentType"
+        prices:
+          type: array
+          items:
+            $ref: "#/components/schemas/NewTariffPrice"
+
+    TariffPriceComponentUnit:
+      type: string
+      enum:
+        - CENT_PER_KILO_WATT_HOUR
+        - EURO_PER_MONTH
+        - EURO_PER_YEAR
+        - KG_CO2_PER_KILO_WATT_HOUR
+        - EURO_PER_CUBIC_METER
+        - PERCENT
+
+    TariffPriceComponentType:
+      type: string
+      enum:
+        - STATIC_PRICE
+        - EPEX_SPOT_PRICE
+        - CO2_EMISSIONS
+        - MAX_PRICE
+        - MIN_PRICE
+        - RESIDUAL_PRICE
+        - SOLAR_PRICE
+        - GRID_COST
+        - TAXES
+        - NET_EPEX_SPOT_PRICE
+
+    TariffContract:
+        type: object
+        nullable: true
+        required:
+          - id
+          - spaceId
+          - tariffId
+          - isActive
+        properties:
+          id:
+            type: string
+          spaceId:
+            type: string
+          tariffId:
+            type: string
+          startDate:
+            type: string
+            nullable: true
+          earliestCancelDate:
+            type: string
+            nullable: true
+          customerId:
+            type: string
+            nullable: true
+          spaceName:
+            type: string
+            nullable: true
+          spaceAddress:
+            type: string
+            nullable: true
+          isActive:
+            type: boolean
+
+    TariffContracts:
+      type: object
+      required:
+        - contracts
+        - totalNumPages
+      properties:
+        contracts:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffContract"
+        totalNumPages:
+          type: integer
+          format: int32
+
+    TariffContractId:
+      type: object
+      required:
+        - contractId
+      properties:
+        contractId:
+          type: string
+          description: Unique identifier of the contract
+
+    NewTariffContract:
+      type: object
+      required:
+        - spaceId
+      properties:
+        spaceId:
+          type: string
+          description: Unique identifier of the space
+        start_date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          nullable: true
+        earliest_cancel_date:
+          type: string
+          format: date
+          example: "2026-01-31"
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+
+    UpdateTariffContract:
+      type: object
+      required:
+        - spaceId
+      properties:
+        spaceId:
+          type: string
+          description: Unique identifier of the space
+        start_date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          nullable: true
+        earliest_cancel_date:
+          type: string
+          format: date
+          example: "2026-01-31"
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+
+
+    TariffId:
+      type: object
+      required:
+        - tariffId
+      properties:
+        tariffId:
+          type: string
+          description: Unique identifier of the tariff
+
+    NewTariff:
+      type: object
+      required:
+        - name
+        - supplier
+        - medium
+        - isGreen
+        - direction
+      properties:
+        name:
+          type: string
+          description: Display name of the tariff
+        supplier:
+          type: string
+          description: Energy, gas, water, or heating supplier
+        medium:
+          $ref: "#/components/schemas/TariffMedium"
+        isGreen:
+          type: boolean
+          description: Whether the tariff is marked as green energy
+        internalName:
+          type: string
+          nullable: true
+          description: Internal name of the tariff, used for mapping tariffs to spaces via custom attributes
+        direction:
+          $ref: "#/components/schemas/TariffDirection"
+        accountingPeriod:
+          $ref: "#/components/schemas/TariffAccountingPeriod"
+        estimatedYearlyConsumption:
+          type: number
+          format: double
+          nullable: true
+          description: Estimated yearly consumption for landlord-to-tenant tariffs
+
+    UpdateTariff:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Display name of the tariff
+        supplier:
+          type: string
+          description: Energy, gas, water, or heating supplier
+        isGreen:
+          type: boolean
+          description: Whether the tariff is marked as green energy
+        internalName:
+          type: string
+          nullable: true
+          description: Internal name of the tariff, used for mapping tariffs to spaces via custom attributes
+        accountingPeriod:
+          $ref: "#/components/schemas/TariffAccountingPeriod"
+        estimatedYearlyConsumption:
+          type: number
+          format: double
+          nullable: true
+          description: Estimated yearly consumption for landlord-to-tenant tariffs
