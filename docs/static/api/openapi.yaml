@@ -2476,6 +2476,9 @@ components:
           earliestCancelDate:
             type: string
             nullable: true
+          endDate:
+            type: string
+            nullable: true
           customerId:
             type: string
             nullable: true
@@ -2529,6 +2532,11 @@ components:
           format: date
           example: "2026-01-31"
           nullable: true
+        end_date:
+          type: string
+          format: date
+          example: "2026-12-31"
+          nullable: true
         customerId:
           type: string
           nullable: true
@@ -2550,6 +2558,11 @@ components:
           type: string
           format: date
           example: "2026-01-31"
+          nullable: true
+        end_date:
+          type: string
+          format: date
+          example: "2026-12-31"
           nullable: true
         customerId:
           type: string
