@@ -742,6 +742,34 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/DeviceId"
+  /spaces/{spaceId}/devices/esa:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Create ESA device
+      tags:
+        - Devices
+      operationId: registerEsaDevice
+      parameters:
+        - in: path
+          name: spaceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewEsaDevice"
+      responses:
+        "200":
+          description: the registered device id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeviceId"
   /spaces/{spaceId}/devices/nonSmartMeter:
     post:
       security:
@@ -1973,6 +2001,45 @@ components:
               type: string
             meterPin:
               type: string
+            conversionFactor:
+              type: number
+              description: used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
+              format: double
+              default: 1.00
+            applyConversionFactor:
+              type: boolean
+              description: Whether conversion factor should be applied to readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
+              default: false
+
+    NewEsaDevice:
+      allOf:
+        - $ref: "#/components/schemas/NewDevice"
+        - type: object
+          required:
+            - bdewCode
+            - customerName
+            - declarationOfConsent
+            - sendInviteOnSuccessTo
+          properties:
+            melo:
+              type: string
+              description: Measurement location id (MeLo)
+            malo:
+              type: string
+              description: Market location id (MaLo)
+            bdewCode:
+              type: string
+              description: BDEW code / MP-ID of the metering operator
+            customerName:
+              type: string
+              description: Customer name used in ESA declaration emails
+            declarationOfConsent:
+              type: string
+              description: Base64 encoded PDF file            
+            sendInviteOnSuccessTo:
+              type: string
+              format: email
+              description: Email address that should be invited once the ESA process is completed successfully
             conversionFactor:
               type: number
               description: used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
