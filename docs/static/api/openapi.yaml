@@ -949,6 +949,29 @@ paths:
               schema:
                 $ref: "#/components/schemas/AddCustomerContractResponse"
 
+  /customers/{customerId}/support-contact:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get assigned support contact
+      tags:
+        - Customers
+      operationId: getCustomerSupportContact
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+          required: true
+          description: The customer id can either be the external id or just the id of the customer.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SupportContact"
+
   /customers/{customerId}/contracts/{contractId}/documents:
     post:
       security:
@@ -2168,6 +2191,25 @@ components:
         name:
           type: string
           description: Name of the customer
+
+    SupportContact:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Internal ID of the support contact
+        full_name:
+          type: string
+          description: Full name of the support contact
+        email:
+          type: string
+          description: Email address of the support contact
+        phone:
+          type: string
+          description: Phone number of the support contact
+        picture_url:
+          type: string
+          description: URL of the support contact's profile picture
 
     NewCustomer:
       type: object
