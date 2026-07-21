@@ -8,7 +8,7 @@ Die Domain der Web-App kann ganz einfach über das Admin-Portal auf eine Zähler
 
 Falls Sie die Web-App über Ihre eigene Domain zur Verfügung stellen möchten, müssen Sie Ihre eigene Subdomain konfigurieren.
 
-## Eigen Subdomain verwenden
+## Eigene Subdomain verwenden
 
 Damit Sie eine Subdomain Ihres Unternehmens verwenden können, muss diese auf unsere Web-App zeigen. Hierfür benötigen Sie Zugrifff auf die DNS-Einstellungen ihrer Domain (z.B. IONOS, oder AWS Route 53).
 
