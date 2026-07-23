@@ -46,4 +46,4 @@ Die Software ist nicht nur ein gesetzeskonformes Visualisierungstool für Smart-
 | **Dokumententresor** | Alle Verträge zentral | Digitaler Self-Service → reduzierte Supportaufwände |
 | **Support-Chat & FAQ-Anpassung** | Schnelle Hilfe | Serviceeffizienz → geringere Betriebskosten |
 | **Admin-Portal & CI White-Label** | — | Volle Markenhoheit & Konfigurierbarkeit → Plattform ohne Eigenentwicklung |
-| **[Dynamischer Tarifrechner]([url](https://stromoptimierer.zaehlerfreunde.de/))** |Ersparnisberechnung durch dyn. Tarife| Landingpage I-Frame zur Neukundengewinnung |
+| **Dynamischer Tarifrechner: https://stromoptimierer.zaehlerfreunde.de/** |Ersparnisberechnung durch dyn. Tarife| Landingpage I-Frame zur Neukundengewinnung |
