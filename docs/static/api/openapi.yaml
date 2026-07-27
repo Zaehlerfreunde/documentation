@@ -798,36 +798,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/DeviceId"
-  /contracts:
-    post:
-      security:
-        - bearerAuth: []
-      summary: Upsert contract
-      tags:
-        - Contracts
-      operationId: addUpdateExternalUserContract
-      deprecated: true
-      requestBody:
-        description: |
-          <ul>
-              <li><b>contractId</b>: contract id of your customer </li>
-              <li><b>email</b>: (Optional) email address of your customer </li>
-              <li><b>addressLineOne</b>: first line of the customer address (street and number)</li>
-              <li><b>addressLineTwo</b>: second line of the customer address (exta details)</li>
-              <li><b>city</b>: city of the customer address</li>
-              <li><b>postCode</b>: post code of the customer address</li>
-              <li><b>firstName</b>: first name of your customer</li>
-              <li><b>lastName</b>: last name of your customer</li>
-              <li><b>endDate</b>: (Optional) Timestamp (Epoch Unix in seconds) of when the contract ends</li>
-          </ul>
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/ExternalUserContract"
-      responses:
-        "200":
-          description: OK
   /energy-prices:
     post:
       security:
@@ -1309,6 +1279,174 @@ paths:
         "200":
           description: OK
 
+  /tenants/{tenantId}/credentials:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Generate api credentials for the tenant
+      description: |
+        This endpoint allows you to generate a clientId and clientSecret for the tenant.
+      tags:
+        - Tenants
+      operationId: createCredentials
+      parameters:
+        - in: path
+          name: tenantId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tenant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CredentialsName"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Credentials"
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get api credentials of the tenant
+      description: |
+        This endpoint allows you to get all the api credentials of the tenant.
+      parameters:
+        - in: path
+          name: tenantId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tenant
+      tags:
+        - Tenants
+      operationId: getCredentials
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GetCredentials"
+  /tenants/{tenantId}/credentials/{credentialsId}:
+    delete:
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: tenantId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tenant
+        - in: path
+          name: credentialsId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      summary: Delete credentials of a tenant
+      description: |
+        This endpoint allows you to delete a clientId and clientSecret for a tenant.
+      tags:
+        - Tenants
+      operationId: deleteCredentials
+      responses:
+        "200":
+          description: OK
+  /tenants:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get tenants
+      tags:
+        - Tenants
+      operationId: getTenants
+      responses:
+        "200":
+          description: Tenants
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Tenant"
+    post:
+      security:
+        - bearerAuth: []
+      summary: Create tenant
+      tags:
+        - Tenants
+      operationId: createTenant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewTenant"
+      responses:
+        "200":
+          description: OK 
+  /tenants/current:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get current tenant
+      tags:
+        - Tenants
+      operationId: getCurrentTenant
+      responses:
+        "200":
+          description: Current tenant
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TenantInfo"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete current tenant
+      tags:
+        - Tenants
+      operationId: deleteCurrentTenant
+      responses:
+        "200":
+          description: OK
+  /tenants/current/subdomain:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get current tenant subdomain
+      tags:
+        - Tenants
+      operationId: getCurrentTenantSubdomain
+      responses:
+        "200":
+          description: Current tenant subdomain
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TenantSubdomain"
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update current tenant subdomain
+      tags:
+        - Tenants
+      operationId: updateCurrentTenantSubdomain
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTenantSubdomain"
+      responses:
+        "200":
+          description: OK
 components:
   securitySchemes:
     bearerAuth:
@@ -2120,46 +2258,6 @@ components:
               default: false
             serialNumber:
               type: string
-
-    ExternalUserContract:
-      type: object
-      required:
-        - contractId
-        - firstName
-        - lastName
-        - addressLineOne
-        - addressLineTwo
-        - city
-        - postCode
-      properties:
-        contractId:
-          type: string
-          x-order: 1
-        email:
-          type: string
-          x-order: 2
-        firstName:
-          type: string
-          x-order: 3
-        lastName:
-          type: string
-          x-order: 4
-        addressLineOne:
-          type: string
-          x-order: 5
-        addressLineTwo:
-          type: string
-          x-order: 6
-        city:
-          type: string
-          x-order: 7
-        postCode:
-          type: string
-          x-order: 8
-        endDate:
-          type: integer
-          format: int64
-
     Customers:
       required:
         - customers
@@ -2744,3 +2842,148 @@ components:
           format: double
           nullable: true
           description: Estimated yearly consumption for landlord-to-tenant tariffs
+
+    CurrentTenant:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+          description: Unique identifier of a tenant
+        name:
+          type: string
+          description: Name of the tenant
+    Tenant:
+      type: object
+      required:
+        - id
+        - name
+        - subTenants
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the tenant
+        name:
+          type: string
+          description: Name of the tenant
+        subTenants:
+          type: array
+          description: List of sub-tenants under this tenant
+          items:
+            $ref: "#/components/schemas/Tenant"
+
+    TenantInfo:
+        type: object
+        required:
+          - id
+          - name
+          - legalName
+          - logoUrl
+        properties:
+          id:
+            type: string
+            description: Unique identifier of the tenant
+          name:
+            type: string
+            description: Name of the tenant
+          legalName:
+            type: string
+            description: Legal name of the tenant
+          logoUrl:
+            type: string
+            description: URL of the tenant's logo
+
+    NewTenant:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the tenant
+        name:
+          type: string
+          description: Name of the tenant
+    Credentials:
+      type: object
+      required:
+        - clientId
+        - clientSecret
+      properties:
+        clientId:
+          type: string
+          description: Client ID for authentication
+        clientSecret:
+          type: string
+          description: Client secret for authentication
+    CredentialsName:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Name of the credentials
+    GetCredentials:
+      type: object
+      required:
+        - id
+        - name
+        - clientId
+        - ownerUserId
+        - ownerUsername
+      properties:
+        id:
+          type: string
+          description: Id of the credentials
+        name:
+          type: string
+          description: Name of the credentials
+        clientId:
+          type: string
+          description: Client ID for authentication
+        ownerUserId:
+          type: string
+          description: User ID of the owner of the credentials
+        ownerUsername:
+          type: string
+          description: Username of the owner of the credentials
+    TenantSubdomain:
+      type: object
+      required:
+        - subdomain
+        - status
+        - details
+        - tenantId
+        - userPortalDomain
+        - adminPortalDomain
+      properties:
+        subdomain:
+          type: string
+          description: Subdomain of the tenant
+        status:
+          type: string
+          description: Status of the tenant subdomain
+        details:
+          type: string
+          description: Additional details about the tenant subdomain status
+        tenantId:
+          type: string
+          description: Unique identifier of the tenant associated with the subdomain
+        userPortalDomain:
+          type: string
+          description: Domain for the user portal associated with the tenant subdomain
+        adminPortalDomain:
+          type: string
+          description: Domain for the admin portal associated with the tenant subdomain
+    UpdateTenantSubdomain:
+      type: object
+      required:
+        - subdomain
+      properties:
+        subdomain:
+          type: string
+          description: New subdomain for the tenant
