@@ -1279,23 +1279,23 @@ paths:
         "200":
           description: OK
 
-  /tenants/{tenantId}/credentials:
+  /partners/{partnerId}/credentials:
     post:
       security:
         - bearerAuth: []
-      summary: Generate api credentials for the tenant
+      summary: Generate api credentials for the partner
       description: |
-        This endpoint allows you to generate a clientId and clientSecret for the tenant.
+        This endpoint allows you to generate a clientId and clientSecret for the partner.
       tags:
-        - Tenants
+        - Partners
       operationId: createCredentials
       parameters:
         - in: path
-          name: tenantId
+          name: partnerId
           schema:
             type: string
           required: true
-          description: Unique identifier of the tenant
+          description: Unique identifier of the partner
       requestBody:
         required: true
         content:
@@ -1311,18 +1311,18 @@ paths:
     get:
       security:
         - bearerAuth: []
-      summary: Get api credentials of the tenant
+      summary: Get api credentials of the partner
       description: |
-        This endpoint allows you to get all the api credentials of the tenant.
+        This endpoint allows you to get all the api credentials of the partner.
       parameters:
         - in: path
-          name: tenantId
+          name: partnerId
           schema:
             type: string
           required: true
-          description: Unique identifier of the tenant
+          description: Unique identifier of the partner
       tags:
-        - Tenants
+        - Partners
       operationId: getCredentials
       responses:
         "200":
@@ -1332,118 +1332,124 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/GetCredentials"
-  /tenants/{tenantId}/credentials/{credentialsId}:
+  /partners/{partnerId}/credentials/{credentialsId}:
     delete:
       security:
         - bearerAuth: []
       parameters:
         - in: path
-          name: tenantId
+          name: partnerId
           schema:
             type: string
           required: true
-          description: Unique identifier of the tenant
+          description: Unique identifier of the partner
         - in: path
           name: credentialsId
           schema:
             type: string
             format: uuid
           required: true
-      summary: Delete credentials of a tenant
+      summary: Delete credentials of a partner
       description: |
-        This endpoint allows you to delete a clientId and clientSecret for a tenant.
+        This endpoint allows you to delete a clientId and clientSecret for a partner.
       tags:
-        - Tenants
+        - Partners
       operationId: deleteCredentials
       responses:
         "200":
           description: OK
-  /tenants:
+  /partners:
     get:
       security:
         - bearerAuth: []
-      summary: Get tenants
+      summary: Get partners
       tags:
-        - Tenants
-      operationId: getTenants
+        - Partners
+      operationId: getPartners
       responses:
         "200":
-          description: Tenants
+          description: Partners
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/Tenant"
+                  $ref: "#/components/schemas/Partner"
     post:
       security:
         - bearerAuth: []
-      summary: Create tenant
+      summary: Create partner
       tags:
-        - Tenants
-      operationId: createTenant
+        - Partners
+      operationId: createPartner
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/NewTenant"
+              $ref: "#/components/schemas/NewPartner"
       responses:
         "200":
           description: OK 
-  /tenants/current:
+  /partners/current:
     get:
       security:
         - bearerAuth: []
-      summary: Get current tenant
+      summary: Get current partner
       tags:
-        - Tenants
-      operationId: getCurrentTenant
+        - Partners
+      operationId: getCurrentPartner
       responses:
         "200":
-          description: Current tenant
+          description: Current partner
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TenantInfo"
+                $ref: "#/components/schemas/PartnerInfo"
     delete:
       security:
         - bearerAuth: []
-      summary: Delete current tenant
+      summary: Delete current partner
+      description: |
+        The current partner can only be deleted if the following requirements are met:
+         - The partner has 20 or less spaces.
+         - The partner has 20 or less devices.
+         - The partner has 20 or less users.
+         - The partner has no child partners.
       tags:
-        - Tenants
-      operationId: deleteCurrentTenant
+        - Partners
+      operationId: deleteCurrentPartner
       responses:
         "200":
           description: OK
-  /tenants/current/subdomain:
+  /partners/current/subdomain:
     get:
       security:
         - bearerAuth: []
-      summary: Get current tenant subdomain
+      summary: Get current partner subdomain
       tags:
-        - Tenants
-      operationId: getCurrentTenantSubdomain
+        - Partners
+      operationId: getCurrentPartnerSubdomain
       responses:
         "200":
-          description: Current tenant subdomain
+          description: Current partner subdomain
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TenantSubdomain"
+                $ref: "#/components/schemas/PartnerSubdomain"
     put:
       security:
         - bearerAuth: []
-      summary: Update current tenant subdomain
+      summary: Update current partner subdomain
       tags:
-        - Tenants
-      operationId: updateCurrentTenantSubdomain
+        - Partners
+      operationId: updateCurrentPartnerSubdomain
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/UpdateTenantSubdomain"
+              $ref: "#/components/schemas/UpdatePartnerSubdomain"
       responses:
         "200":
           description: OK
@@ -1516,7 +1522,7 @@ components:
           description: id of the parent space if the space is a sub-space (optional)
         isParticipatingInLttProject:
           type: boolean
-          description: Specifies whether this space is part of the landlord to tenant project of its parent spcae. Just relevant if it has a parent space.
+          description: Specifies whether this space is part of the landlord to partner project of its parent space. Just relevant if it has a parent space.
 
     SpaceId:
       properties:
@@ -2506,12 +2512,12 @@ components:
         accountingPeriodDescription:
           type: string
           nullable: true
-          description: Description of the accounting period for landlord-to-tenant tariffs
+          description: Description of the accounting period for landlord-to-partner tariffs
         estimatedYearlyConsumption:
           type: number
           format: double
           nullable: true
-          description: Estimated yearly consumption for landlord-to-tenant tariffs
+          description: Estimated yearly consumption for landlord-to-partner tariffs
 
     TariffMedium:
       type: string
@@ -2817,7 +2823,7 @@ components:
           type: number
           format: double
           nullable: true
-          description: Estimated yearly consumption for landlord-to-tenant tariffs
+          description: Estimated yearly consumption for landlord-to-partner tariffs
 
     UpdateTariff:
       type: object
@@ -2841,9 +2847,9 @@ components:
           type: number
           format: double
           nullable: true
-          description: Estimated yearly consumption for landlord-to-tenant tariffs
+          description: Estimated yearly consumption for landlord-to-partner tariffs
 
-    CurrentTenant:
+    CurrentPartner:
       type: object
       required:
         - id
@@ -2851,30 +2857,30 @@ components:
       properties:
         id:
           type: string
-          description: Unique identifier of a tenant
+          description: Unique identifier of a partner
         name:
           type: string
-          description: Name of the tenant
-    Tenant:
+          description: Name of the partner
+    Partner:
       type: object
       required:
         - id
         - name
-        - subTenants
+        - subPartners
       properties:
         id:
           type: string
-          description: Unique identifier of the tenant
+          description: Unique identifier of the partner
         name:
           type: string
-          description: Name of the tenant
-        subTenants:
+          description: Name of the partner
+        subPartners:
           type: array
-          description: List of sub-tenants under this tenant
+          description: List of sub-partners under this partner
           items:
-            $ref: "#/components/schemas/Tenant"
+            $ref: "#/components/schemas/Partner"
 
-    TenantInfo:
+    PartnerInfo:
         type: object
         required:
           - id
@@ -2884,18 +2890,18 @@ components:
         properties:
           id:
             type: string
-            description: Unique identifier of the tenant
+            description: Unique identifier of the partner
           name:
             type: string
-            description: Name of the tenant
+            description: Name of the partner
           legalName:
             type: string
-            description: Legal name of the tenant
+            description: Legal name of the partner
           logoUrl:
             type: string
-            description: URL of the tenant's logo
+            description: URL of the partner's logo
 
-    NewTenant:
+    NewPartner:
       type: object
       required:
         - id
@@ -2903,10 +2909,10 @@ components:
       properties:
         id:
           type: string
-          description: Unique identifier of the tenant
+          description: Unique identifier of the partner
         name:
           type: string
-          description: Name of the tenant
+          description: Name of the partner
     Credentials:
       type: object
       required:
@@ -2951,39 +2957,39 @@ components:
         ownerUsername:
           type: string
           description: Username of the owner of the credentials
-    TenantSubdomain:
+    PartnerSubdomain:
       type: object
       required:
         - subdomain
         - status
         - details
-        - tenantId
+        - partnerId
         - userPortalDomain
         - adminPortalDomain
       properties:
         subdomain:
           type: string
-          description: Subdomain of the tenant
+          description: Subdomain of the partner
         status:
           type: string
-          description: Status of the tenant subdomain
+          description: Status of the partner subdomain
         details:
           type: string
-          description: Additional details about the tenant subdomain status
-        tenantId:
+          description: Additional details about the partner subdomain status
+        partnerId:
           type: string
-          description: Unique identifier of the tenant associated with the subdomain
+          description: Unique identifier of the partner associated with the subdomain
         userPortalDomain:
           type: string
-          description: Domain for the user portal associated with the tenant subdomain
+          description: Domain for the user portal associated with the partner subdomain
         adminPortalDomain:
           type: string
-          description: Domain for the admin portal associated with the tenant subdomain
-    UpdateTenantSubdomain:
+          description: Domain for the admin portal associated with the partner subdomain
+    UpdatePartnerSubdomain:
       type: object
       required:
         - subdomain
       properties:
         subdomain:
           type: string
-          description: New subdomain for the tenant
+          description: New subdomain for the partner
