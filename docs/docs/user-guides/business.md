@@ -134,7 +134,7 @@ Um eine neue Regel zu aktivieren, klicken Sie einfach auf den entsprechenden Kno
 
 Wichtig: Sie können nur Regeln aktivieren, die zuvor vom Admin freigeschaltet wurden. Wenn eine bestimmte Regel nicht sichtbar ist, wurde sie aktuell noch nicht für sie freigegeben.
 
-<img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
+<img alt="image" src="https://github.com/user-attachments/assets/e3c121e2-03be-426f-9221-0cbb71c12b2a" />
 
 In diesem Beispiel werden zwei Regeln aktiviert:
 -   Ungewöhnlich hoher Netzbezug – informiert, sobald der Wochenverbrauch eines Objekts > 20 % über dem üblichen Wert liegt.
