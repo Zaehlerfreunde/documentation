@@ -1011,7 +1011,7 @@ paths:
   /tariffs:
     post:
       security:
-        - bearerAuth: [ ]
+        - bearerAuth: []
       summary: Add tariff
       tags:
         - Tariffs
@@ -1421,7 +1421,7 @@ paths:
               $ref: "#/components/schemas/NewPartner"
       responses:
         "200":
-          description: OK 
+          description: OK
   /partners/current:
     get:
       security:
@@ -1548,6 +1548,11 @@ components:
             - FLAT
             - WIND_ENERGY
             - DOCTORS_OFFICE
+            - GROUPING
+            - APARTMENT_BUILDING
+            - REGION
+            - ROOM
+            - LANDLORD_TO_TENANT_ELECTRICITY_PROJECT
         parentSpaceId:
           type: string
           description: id of the parent space if the space is a sub-space (optional)
@@ -2233,7 +2238,7 @@ components:
               description: Customer name used in ESA declaration emails
             declarationOfConsent:
               type: string
-              description: Base64 encoded PDF file            
+              description: Base64 encoded PDF file
             sendInviteOnSuccessTo:
               type: string
               format: email
@@ -2717,40 +2722,40 @@ components:
         - NET_EPEX_SPOT_PRICE
 
     TariffContract:
-        type: object
-        nullable: true
-        required:
-          - id
-          - spaceId
-          - tariffId
-          - isActive
-        properties:
-          id:
-            type: string
-          spaceId:
-            type: string
-          tariffId:
-            type: string
-          startDate:
-            type: string
-            nullable: true
-          earliestCancelDate:
-            type: string
-            nullable: true
-          endDate:
-            type: string
-            nullable: true
-          customerId:
-            type: string
-            nullable: true
-          spaceName:
-            type: string
-            nullable: true
-          spaceAddress:
-            type: string
-            nullable: true
-          isActive:
-            type: boolean
+      type: object
+      nullable: true
+      required:
+        - id
+        - spaceId
+        - tariffId
+        - isActive
+      properties:
+        id:
+          type: string
+        spaceId:
+          type: string
+        tariffId:
+          type: string
+        startDate:
+          type: string
+          nullable: true
+        earliestCancelDate:
+          type: string
+          nullable: true
+        endDate:
+          type: string
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+        spaceName:
+          type: string
+          nullable: true
+        spaceAddress:
+          type: string
+          nullable: true
+        isActive:
+          type: boolean
 
     TariffContracts:
       type: object
@@ -2828,7 +2833,6 @@ components:
         customerId:
           type: string
           nullable: true
-
 
     TariffId:
       type: object
@@ -2929,25 +2933,25 @@ components:
             $ref: "#/components/schemas/Partner"
 
     PartnerInfo:
-        type: object
-        required:
-          - id
-          - name
-          - legalName
-          - logoUrl
-        properties:
-          id:
-            type: string
-            description: Unique identifier of the partner
-          name:
-            type: string
-            description: Name of the partner
-          legalName:
-            type: string
-            description: Legal name of the partner
-          logoUrl:
-            type: string
-            description: URL of the partner's logo
+      type: object
+      required:
+        - id
+        - name
+        - legalName
+        - logoUrl
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the partner
+        name:
+          type: string
+          description: Name of the partner
+        legalName:
+          type: string
+          description: Legal name of the partner
+        logoUrl:
+          type: string
+          description: URL of the partner's logo
 
     NewPartner:
       type: object
