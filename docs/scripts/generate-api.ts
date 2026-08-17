@@ -1,9 +1,10 @@
 import { generateFiles } from 'fumadocs-openapi';
 import { createOpenAPI } from 'fumadocs-openapi/server';
 import { mkdir, rm, writeFile } from 'node:fs/promises';
+import { openapiInput } from '../lib/openapi-input';
 
 const openapi = createOpenAPI({
-  input: ['./public/api/openapi.yaml'],
+  input: openapiInput,
 });
 
 function kebabCase(value: string) {
