@@ -1,12 +1,11 @@
 ---
-title: Upsert contract
+title: Update current partner subdomain
 full: true
 _openapi:
   preload:
     - ./public/api/openapi.yaml
-  method: POST
+  method: PUT
   webhook: false
-  deprecated: true
   toc: []
   structuredData:
     headings: []
@@ -22,7 +21,7 @@ export default function Layout(props) {
   return (
     <>
       {props.children}
-      <Comp document="./public/api/openapi.yaml" operations={[{"path":"/contracts","method":"post"}]} showDescription />
+      <Comp document="./public/api/openapi.yaml" operations={[{"path":"/partners/current/subdomain","method":"put"}]} showDescription />
     </>
   );
 }

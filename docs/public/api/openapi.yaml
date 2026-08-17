@@ -742,6 +742,34 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/DeviceId"
+  /spaces/{spaceId}/devices/esa:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Create ESA device
+      tags:
+        - Devices
+      operationId: registerEsaDevice
+      parameters:
+        - in: path
+          name: spaceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewEsaDevice"
+      responses:
+        "200":
+          description: the registered device id
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DeviceId"
   /spaces/{spaceId}/devices/nonSmartMeter:
     post:
       security:
@@ -770,36 +798,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/DeviceId"
-  /contracts:
-    post:
-      security:
-        - bearerAuth: []
-      summary: Upsert contract
-      tags:
-        - Contracts
-      operationId: addUpdateExternalUserContract
-      deprecated: true
-      requestBody:
-        description: |
-          <ul>
-              <li><b>contractId</b>: contract id of your customer </li>
-              <li><b>email</b>: (Optional) email address of your customer </li>
-              <li><b>addressLineOne</b>: first line of the customer address (street and number)</li>
-              <li><b>addressLineTwo</b>: second line of the customer address (exta details)</li>
-              <li><b>city</b>: city of the customer address</li>
-              <li><b>postCode</b>: post code of the customer address</li>
-              <li><b>firstName</b>: first name of your customer</li>
-              <li><b>lastName</b>: last name of your customer</li>
-              <li><b>endDate</b>: (Optional) Timestamp (Epoch Unix in seconds) of when the contract ends</li>
-          </ul>
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/ExternalUserContract"
-      responses:
-        "200":
-          description: OK
   /energy-prices:
     post:
       security:
@@ -921,6 +919,60 @@ paths:
               schema:
                 $ref: "#/components/schemas/AddCustomerContractResponse"
 
+  /customers/{customerId}/contracts/{contractId}/time-window:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Set customer contract device time window
+      tags:
+        - Customers
+      operationId: setCustomerContractTimeWindow
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+          required: true
+          description: The customer id can either be the external id or just the id of the customer.
+        - in: path
+          name: contractId
+          schema:
+            type: string
+          required: true
+          description: The contract id can either be the external id or just the id of the contract.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CustomerContractTimeWindow"
+      responses:
+        "200":
+          description: OK
+
+  /customers/{customerId}/support-contact:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get assigned support contact
+      tags:
+        - Customers
+      operationId: getCustomerSupportContact
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+          required: true
+          description: The customer id can either be the external id or just the id of the customer.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SupportContact"
+
   /customers/{customerId}/contracts/{contractId}/documents:
     post:
       security:
@@ -956,6 +1008,482 @@ paths:
         "200":
           description: OK
 
+  /tariffs:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Add tariff
+      tags:
+        - Tariffs
+      operationId: addTariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewTariff"
+      responses:
+        "200":
+          description: ID of created tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffId"
+
+  /tariffs/{tariffId}:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get tariff
+      tags:
+        - Tariffs
+      operationId: getTariff
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update tariff
+      tags:
+        - Tariffs
+      operationId: updateTariff
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTariff"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete tariff
+      tags:
+        - Tariffs
+      operationId: deleteTariff
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      responses:
+        "200":
+          description: OK
+
+  /tariffs/{tariffId}/price-components:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Add tariff price component
+      tags:
+        - Tariffs
+      operationId: addTariffPriceComponent
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewTariffPriceComponent"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+
+  /tariffs/{tariffId}/price-components/{priceComponentId}:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update tariff price component
+      tags:
+        - Tariffs
+      operationId: updateTariffPriceComponent
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: priceComponentId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the price component
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTariffPriceComponent"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete tariff price component
+      tags:
+        - Tariffs
+      operationId: deleteTariffPriceComponent
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: priceComponentId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the price component
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+
+  /tariffs/{tariffId}/contracts:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get tariff contracts
+      tags:
+        - Tariffs
+      operationId: getTariffContracts
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: query
+          name: page
+          schema:
+            type: integer
+            format: int32
+            minimum: 0
+            default: 0
+        - in: query
+          name: pageSize
+          schema:
+            type: integer
+            format: int32
+            minimum: 1
+            default: 100
+      responses:
+        "200":
+          description: Tariff contracts with pagination
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffContracts"
+    post:
+      security:
+        - bearerAuth: []
+      summary: Add tariff contract
+      tags:
+        - Tariffs
+      operationId: addTariffContract
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewTariffContract"
+      responses:
+        "200":
+          description: ID of created contract
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TariffContractId"
+
+  /tariffs/{tariffId}/contracts/{contractId}:
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update tariff contract
+      tags:
+        - Tariffs
+      operationId: updateTariffContract
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: contractId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the contract
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateTariffContract"
+      responses:
+        "200":
+          description: Updated tariff
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Tariff"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete tariff contract
+      tags:
+        - Tariffs
+      operationId: deleteTariffContract
+      parameters:
+        - in: path
+          name: tariffId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the tariff
+        - in: path
+          name: contractId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the contract
+      responses:
+        "200":
+          description: OK
+
+  /partners/{partnerId}/credentials:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Generate api credentials for the partner
+      description: |
+        This endpoint allows you to generate a clientId and clientSecret for the partner.
+      tags:
+        - Partners
+      operationId: createCredentials
+      parameters:
+        - in: path
+          name: partnerId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the partner
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CredentialsName"
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Credentials"
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get api credentials of the partner
+      description: |
+        This endpoint allows you to get all the api credentials of the partner.
+      parameters:
+        - in: path
+          name: partnerId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the partner
+      tags:
+        - Partners
+      operationId: getCredentials
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/GetCredentials"
+  /partners/{partnerId}/credentials/{credentialsId}:
+    delete:
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: partnerId
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the partner
+        - in: path
+          name: credentialsId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      summary: Delete credentials of a partner
+      description: |
+        This endpoint allows you to delete a clientId and clientSecret for a partner.
+      tags:
+        - Partners
+      operationId: deleteCredentials
+      responses:
+        "200":
+          description: OK
+  /partners:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get partners
+      tags:
+        - Partners
+      operationId: getPartners
+      responses:
+        "200":
+          description: Partners
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Partner"
+    post:
+      security:
+        - bearerAuth: []
+      summary: Create partner
+      tags:
+        - Partners
+      operationId: createPartner
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewPartner"
+      responses:
+        "200":
+          description: OK
+  /partners/current:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get current partner
+      tags:
+        - Partners
+      operationId: getCurrentPartner
+      responses:
+        "200":
+          description: Current partner
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PartnerInfo"
+    delete:
+      security:
+        - bearerAuth: []
+      summary: Delete current partner
+      description: |
+        The current partner can only be deleted if the following requirements are met:
+         - The partner has 20 or less spaces.
+         - The partner has 20 or less devices.
+         - The partner has 20 or less users.
+         - The partner has no child partners.
+      tags:
+        - Partners
+      operationId: deleteCurrentPartner
+      responses:
+        "200":
+          description: OK
+  /partners/current/subdomain:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get current partner subdomain
+      tags:
+        - Partners
+      operationId: getCurrentPartnerSubdomain
+      responses:
+        "200":
+          description: Current partner subdomain
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PartnerSubdomain"
+    put:
+      security:
+        - bearerAuth: []
+      summary: Update current partner subdomain
+      tags:
+        - Partners
+      operationId: updateCurrentPartnerSubdomain
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdatePartnerSubdomain"
+      responses:
+        "200":
+          description: OK
 components:
   securitySchemes:
     bearerAuth:
@@ -1023,12 +1551,17 @@ components:
             - FLAT
             - WIND_ENERGY
             - DOCTORS_OFFICE
+            - GROUPING
+            - APARTMENT_BUILDING
+            - REGION
+            - ROOM
+            - LANDLORD_TO_TENANT_ELECTRICITY_PROJECT
         parentSpaceId:
           type: string
           description: id of the parent space if the space is a sub-space (optional)
         isParticipatingInLttProject:
           type: boolean
-          description: Specifies whether this space is part of the landlord to tenant project of its parent spcae. Just relevant if it has a parent space.
+          description: Specifies whether this space is part of the landlord to partner project of its parent space. Just relevant if it has a parent space.
 
     SpaceId:
       type: object
@@ -1700,6 +2233,45 @@ components:
               description: Whether conversion factor should be applied to readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
               default: false
 
+    NewEsaDevice:
+      allOf:
+        - $ref: "#/components/schemas/NewDevice"
+        - type: object
+          required:
+            - bdewCode
+            - customerName
+            - declarationOfConsent
+            - sendInviteOnSuccessTo
+          properties:
+            melo:
+              type: string
+              description: Measurement location id (MeLo)
+            malo:
+              type: string
+              description: Market location id (MaLo)
+            bdewCode:
+              type: string
+              description: BDEW code / MP-ID of the metering operator
+            customerName:
+              type: string
+              description: Customer name used in ESA declaration emails
+            declarationOfConsent:
+              type: string
+              description: Base64 encoded PDF file
+            sendInviteOnSuccessTo:
+              type: string
+              format: email
+              description: Email address that should be invited once the ESA process is completed successfully
+            conversionFactor:
+              type: number
+              description: used to multiply meter readings to their actual value. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
+              format: double
+              default: 1.00
+            applyConversionFactor:
+              type: boolean
+              description: Whether conversion factor should be applied to readings. Only applicable for devices of type SMART_METER or OPTICAL_METER_SENSOR
+              default: false
+
     NewNonSmartMeter:
       allOf:
         - $ref: "#/components/schemas/NewDevice"
@@ -1747,46 +2319,6 @@ components:
               default: false
             serialNumber:
               type: string
-
-    ExternalUserContract:
-      type: object
-      required:
-        - contractId
-        - firstName
-        - lastName
-        - addressLineOne
-        - addressLineTwo
-        - city
-        - postCode
-      properties:
-        contractId:
-          type: string
-          x-order: 1
-        email:
-          type: string
-          x-order: 2
-        firstName:
-          type: string
-          x-order: 3
-        lastName:
-          type: string
-          x-order: 4
-        addressLineOne:
-          type: string
-          x-order: 5
-        addressLineTwo:
-          type: string
-          x-order: 6
-        city:
-          type: string
-          x-order: 7
-        postCode:
-          type: string
-          x-order: 8
-        endDate:
-          type: integer
-          format: int64
-
     Customers:
       type: object
       required:
@@ -1819,6 +2351,25 @@ components:
         name:
           type: string
           description: Name of the customer
+
+    SupportContact:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Internal ID of the support contact
+        full_name:
+          type: string
+          description: Full name of the support contact
+        email:
+          type: string
+          description: Email address of the support contact
+        phone:
+          type: string
+          description: Phone number of the support contact
+        picture_url:
+          type: string
+          description: URL of the support contact's profile picture
 
     NewCustomer:
       type: object
@@ -1904,6 +2455,23 @@ components:
 
             In order to map a tariff to the space of the customer, set the tariff attribute to the internal name of the tariff (can be set in the admin portal)
 
+    CustomerContractTimeWindow:
+      type: object
+      required:
+        - externalDeviceId
+      properties:
+        externalDeviceId:
+          type: string
+          description: External device id of the customer's device.
+        timeWindowStart:
+          type: integer
+          format: int64
+          description: Start of the time window as Unix timestamp in seconds.
+        timeWindowEnd:
+          type: integer
+          format: int64
+          description: End of the time window as Unix timestamp in seconds.
+
     PdfDocument:
       type: object
       required:
@@ -1966,3 +2534,534 @@ components:
           type: string
           nullable: true
           description: Set to a UUID to assign a parent space
+
+    Tariff:
+      type: object
+      required:
+        - id
+        - ownerUserId
+        - partnerId
+        - name
+        - supplier
+        - medium
+        - priceComponents
+        - isGreen
+        - direction
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the tariff
+        ownerUserId:
+          type: string
+          description: ID of the user that owns the tariff
+        partnerId:
+          type: string
+          description: ID of the partner that owns the tariff
+        name:
+          type: string
+          description: Display name of the tariff
+        supplier:
+          type: string
+          description: Energy, gas, water, or heating supplier
+        medium:
+          $ref: "#/components/schemas/TariffMedium"
+        priceComponents:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffPriceComponent"
+        isGreen:
+          type: boolean
+          description: Whether the tariff is marked as green energy
+        contract:
+          $ref: "#/components/schemas/TariffContract"
+        internalName:
+          type: string
+          nullable: true
+          description: Internal name of the tariff, used for mapping tariffs to spaces via custom attributes
+        direction:
+          $ref: "#/components/schemas/TariffDirection"
+        accountingPeriod:
+          $ref: "#/components/schemas/TariffAccountingPeriod"
+        accountingPeriodDescription:
+          type: string
+          nullable: true
+          description: Description of the accounting period for landlord-to-partner tariffs
+        estimatedYearlyConsumption:
+          type: number
+          format: double
+          nullable: true
+          description: Estimated yearly consumption for landlord-to-partner tariffs
+
+    TariffMedium:
+      type: string
+      description: Medium of the tariff
+      enum:
+        - ELECTRICITY
+        - GAS
+        - WATER
+        - HEATING
+        - STATE_OF_CHARGE
+        - TEMPERATURE
+
+    TariffDirection:
+      type: string
+      description: IN means consumption, OUT means ingestion or production.
+      enum:
+        - IN
+        - OUT
+
+    TariffAccountingPeriod:
+      type: string
+      nullable: true
+      enum:
+        - QUARTER_HOURLY
+        - MONTHLY
+
+    TariffPriceComponent:
+      type: object
+      required:
+        - id
+        - name
+        - unit
+        - unitDescription
+        - type
+        - prices
+        - isDynamic
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        unit:
+          $ref: "#/components/schemas/TariffPriceComponentUnit"
+        unitDescription:
+          type: string
+        type:
+          $ref: "#/components/schemas/TariffPriceComponentType"
+        prices:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffPrice"
+        isDynamic:
+          type: boolean
+
+    TariffPrice:
+      type: object
+      required:
+        - id
+      properties:
+        id:
+          type: string
+        value:
+          type: number
+          format: double
+          nullable: true
+        startDate:
+          type: string
+          nullable: true
+        endDate:
+          type: string
+          nullable: true
+        isCurrent:
+          type: boolean
+          nullable: true
+
+    NewTariffPrice:
+      type: object
+      properties:
+        value:
+          type: number
+          format: double
+          nullable: true
+        start_date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          nullable: true
+        end_date:
+          type: string
+          format: date
+          example: "2026-01-31"
+          nullable: true
+
+    NewTariffPriceComponent:
+      type: object
+      required:
+        - name
+        - unit
+        - type
+        - prices
+      properties:
+        name:
+          type: string
+        unit:
+          $ref: "#/components/schemas/TariffPriceComponentUnit"
+        type:
+          $ref: "#/components/schemas/TariffPriceComponentType"
+        prices:
+          type: array
+          items:
+            $ref: "#/components/schemas/NewTariffPrice"
+
+    UpdateTariffPriceComponent:
+      type: object
+      properties:
+        name:
+          type: string
+        unit:
+          $ref: "#/components/schemas/TariffPriceComponentUnit"
+        type:
+          $ref: "#/components/schemas/TariffPriceComponentType"
+        prices:
+          type: array
+          items:
+            $ref: "#/components/schemas/NewTariffPrice"
+
+    TariffPriceComponentUnit:
+      type: string
+      enum:
+        - CENT_PER_KILO_WATT_HOUR
+        - EURO_PER_MONTH
+        - EURO_PER_YEAR
+        - KG_CO2_PER_KILO_WATT_HOUR
+        - EURO_PER_CUBIC_METER
+        - PERCENT
+
+    TariffPriceComponentType:
+      type: string
+      enum:
+        - STATIC_PRICE
+        - EPEX_SPOT_PRICE
+        - CO2_EMISSIONS
+        - MAX_PRICE
+        - MIN_PRICE
+        - RESIDUAL_PRICE
+        - SOLAR_PRICE
+        - GRID_COST
+        - TAXES
+        - NET_EPEX_SPOT_PRICE
+
+    TariffContract:
+      type: object
+      nullable: true
+      required:
+        - id
+        - spaceId
+        - tariffId
+        - isActive
+      properties:
+        id:
+          type: string
+        spaceId:
+          type: string
+        tariffId:
+          type: string
+        startDate:
+          type: string
+          nullable: true
+        earliestCancelDate:
+          type: string
+          nullable: true
+        endDate:
+          type: string
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+        spaceName:
+          type: string
+          nullable: true
+        spaceAddress:
+          type: string
+          nullable: true
+        isActive:
+          type: boolean
+
+    TariffContracts:
+      type: object
+      required:
+        - contracts
+        - totalNumPages
+      properties:
+        contracts:
+          type: array
+          items:
+            $ref: "#/components/schemas/TariffContract"
+        totalNumPages:
+          type: integer
+          format: int32
+
+    TariffContractId:
+      type: object
+      required:
+        - contractId
+      properties:
+        contractId:
+          type: string
+          description: Unique identifier of the contract
+
+    NewTariffContract:
+      type: object
+      required:
+        - spaceId
+      properties:
+        spaceId:
+          type: string
+          description: Unique identifier of the space
+        start_date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          nullable: true
+        earliest_cancel_date:
+          type: string
+          format: date
+          example: "2026-01-31"
+          nullable: true
+        end_date:
+          type: string
+          format: date
+          example: "2026-12-31"
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+
+    UpdateTariffContract:
+      type: object
+      required:
+        - spaceId
+      properties:
+        spaceId:
+          type: string
+          description: Unique identifier of the space
+        start_date:
+          type: string
+          format: date
+          example: "2026-01-15"
+          nullable: true
+        earliest_cancel_date:
+          type: string
+          format: date
+          example: "2026-01-31"
+          nullable: true
+        end_date:
+          type: string
+          format: date
+          example: "2026-12-31"
+          nullable: true
+        customerId:
+          type: string
+          nullable: true
+
+    TariffId:
+      type: object
+      required:
+        - tariffId
+      properties:
+        tariffId:
+          type: string
+          description: Unique identifier of the tariff
+
+    NewTariff:
+      type: object
+      required:
+        - name
+        - supplier
+        - medium
+        - isGreen
+        - direction
+      properties:
+        name:
+          type: string
+          description: Display name of the tariff
+        supplier:
+          type: string
+          description: Energy, gas, water, or heating supplier
+        medium:
+          $ref: "#/components/schemas/TariffMedium"
+        isGreen:
+          type: boolean
+          description: Whether the tariff is marked as green energy
+        internalName:
+          type: string
+          nullable: true
+          description: Internal name of the tariff, used for mapping tariffs to spaces via custom attributes
+        direction:
+          $ref: "#/components/schemas/TariffDirection"
+        accountingPeriod:
+          $ref: "#/components/schemas/TariffAccountingPeriod"
+        estimatedYearlyConsumption:
+          type: number
+          format: double
+          nullable: true
+          description: Estimated yearly consumption for landlord-to-partner tariffs
+
+    UpdateTariff:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Display name of the tariff
+        supplier:
+          type: string
+          description: Energy, gas, water, or heating supplier
+        isGreen:
+          type: boolean
+          description: Whether the tariff is marked as green energy
+        internalName:
+          type: string
+          nullable: true
+          description: Internal name of the tariff, used for mapping tariffs to spaces via custom attributes
+        accountingPeriod:
+          $ref: "#/components/schemas/TariffAccountingPeriod"
+        estimatedYearlyConsumption:
+          type: number
+          format: double
+          nullable: true
+          description: Estimated yearly consumption for landlord-to-partner tariffs
+
+    CurrentPartner:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+          description: Unique identifier of a partner
+        name:
+          type: string
+          description: Name of the partner
+    Partner:
+      type: object
+      required:
+        - id
+        - name
+        - subPartners
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the partner
+        name:
+          type: string
+          description: Name of the partner
+        subPartners:
+          type: array
+          description: List of sub-partners under this partner
+          items:
+            $ref: "#/components/schemas/Partner"
+
+    PartnerInfo:
+      type: object
+      required:
+        - id
+        - name
+        - legalName
+        - logoUrl
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the partner
+        name:
+          type: string
+          description: Name of the partner
+        legalName:
+          type: string
+          description: Legal name of the partner
+        logoUrl:
+          type: string
+          description: URL of the partner's logo
+
+    NewPartner:
+      type: object
+      required:
+        - id
+        - name
+      properties:
+        id:
+          type: string
+          description: Unique identifier of the partner
+        name:
+          type: string
+          description: Name of the partner
+    Credentials:
+      type: object
+      required:
+        - clientId
+        - clientSecret
+      properties:
+        clientId:
+          type: string
+          description: Client ID for authentication
+        clientSecret:
+          type: string
+          description: Client secret for authentication
+    CredentialsName:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: Name of the credentials
+    GetCredentials:
+      type: object
+      required:
+        - id
+        - name
+        - clientId
+        - ownerUserId
+        - ownerUsername
+      properties:
+        id:
+          type: string
+          description: Id of the credentials
+        name:
+          type: string
+          description: Name of the credentials
+        clientId:
+          type: string
+          description: Client ID for authentication
+        ownerUserId:
+          type: string
+          description: User ID of the owner of the credentials
+        ownerUsername:
+          type: string
+          description: Username of the owner of the credentials
+    PartnerSubdomain:
+      type: object
+      required:
+        - subdomain
+        - status
+        - details
+        - partnerId
+        - userPortalDomain
+        - adminPortalDomain
+      properties:
+        subdomain:
+          type: string
+          description: Subdomain of the partner
+        status:
+          type: string
+          description: Status of the partner subdomain
+        details:
+          type: string
+          description: Additional details about the partner subdomain status
+        partnerId:
+          type: string
+          description: Unique identifier of the partner associated with the subdomain
+        userPortalDomain:
+          type: string
+          description: Domain for the user portal associated with the partner subdomain
+        adminPortalDomain:
+          type: string
+          description: Domain for the admin portal associated with the partner subdomain
+    UpdatePartnerSubdomain:
+      type: object
+      required:
+        - subdomain
+      properties:
+        subdomain:
+          type: string
+          description: New subdomain for the partner
