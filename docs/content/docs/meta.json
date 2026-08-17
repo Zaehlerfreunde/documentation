@@ -1,0 +1,11 @@
+{
+  "title": "Dokumentation",
+  "pages": [
+    "index",
+    "user-guides",
+    "integrations",
+    "rpcapi",
+    "devices",
+    "core-functions"
+  ]
+}

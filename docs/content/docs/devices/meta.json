@@ -1,0 +1,5 @@
+{
+  "title": "Geräte",
+  "icon": "PlugZap",
+  "pages": ["supported-devices"]
+}

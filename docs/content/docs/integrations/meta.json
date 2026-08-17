@@ -1,0 +1,5 @@
+{
+  "title": "Integration Guides",
+  "icon": "Cable",
+  "pages": ["api", "app-store", "authorizations", "subdomain"]
+}

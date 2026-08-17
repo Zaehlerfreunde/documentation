@@ -1,0 +1,5 @@
+{
+  "title": "Nutzerguide",
+  "icon": "BookOpen",
+  "pages": ["private", "business", "admin", "device-connections"]
+}

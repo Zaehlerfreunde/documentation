@@ -1,0 +1,4 @@
+{
+  "title": "API Anbindung",
+  "pages": ["1-authorization", "2-master-data", "3-meter-data"]
+}

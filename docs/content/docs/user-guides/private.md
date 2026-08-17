@@ -1,0 +1,191 @@
+---
+title: "Privatkunde"
+---
+
+Hier findest du die Erklärung zur Nutzung des Privatkunden-Bereichs. 
+
+Vielen Dank für dein Vertrauen in unsere Lösung. Wir arbeiten kontinuierlich daran, das Produkt weiterzuentwickeln. Wenn du Feedback oder Fragen hast, erreichst du uns jederzeit per E-Mail oder über die Chat-Funktion unten rechts auf unserer Webseite: kontakt@zaehlerfreunde.com!
+
+Den Guide für Geschäftskunden findest du hier:
+
+[Anleitung für Zählerfreunde Geschäftskunden](./business.md) 
+
+
+## Anmeldung
+
+Je nachdem, ob du Privatkunde bist oder die Lösung über dein Stadtwerk beziehst, sieht der Anmeldeprozess etwas anders aus. Die Unterschiede sind jedoch nur in kleinen Details zu finden.
+
+Im ersten Schritt, wenn du auf unsere Webseite gelangst, empfehlen wir dir, alle Cookies zu akzeptieren, damit wir dir die beste Erfahrung auf unserer Plattform bieten können.
+
+![Cookie Akzeptanz](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.38.png)
+
+Klicke dann auf "Privatkunde" oder “Unternehmen” und registriere dich. Für die Registrierung kannst du auch deinen Google- oder Apple-Account benutzen. 
+
+![Bildschirmfoto 2024-06-28 um 13.46.49.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.46.49.png)
+
+![Untitled](/img/user-guides/common/Untitled.png)
+
+Sobald das erledigt ist, fragen wir dich nach deinem Namen und bitten um deine Zustimmung zu unseren AGB.
+
+![Untitled](/img/user-guides/common/Untitled%201.png)
+
+Wir schicken dir dann sofort eine E-Mail mit einem Bestätigungslink zu. Sobald du den Link in der E-Mail geklickt hast, kannst du auf unserer Plattform bestätigen, dass du deine E-Mail-Adresse verifiziert hast.
+
+![Bildschirmfoto 2024-06-28 um 13.48.10.png](/img/user-guides/common/Bildschirmfoto_2024-06-28_um_13.48.10.png)
+
+![Untitled](/img/user-guides/common/Untitled%202.png)
+
+## Neue Objekte erstellen und Geräte anlegen
+
+Nachdem die E-Mail bestätigt wurde, landest du auf deinem persönlichen Dashboard. Da noch kein Objekt und damit auch kein Gerät erstellt wurde, sieht es noch etwas leer aus:
+
+![Untitled](/img/user-guides/common/Untitled%203.png)
+
+Gehe links oben auf das Plus neben "Objekt" und lege ein neues Objekt an. Die Plattform führt dich eigenständig durch den Prozess. Du kannst hier auch mehrere Objekte anlegen und diese hierarchisch unterordnen. Ein Beispiel dafür ist die Visualisierung eines Mehrfamilienhauses, inklusive der aufgefächerten Verbrauchsdaten der einzelnen Wohnungen. Derartige Logiken können mithilfe der „Gruppierung“ visualisiert werden.
+
+![Untitled](/img/user-guides/common/Untitled%204.png)
+
+![Untitled](/img/user-guides/common/Untitled%205.png)
+
+Nachdem das Objekt angelegt wurde, können wir ein Gerät anlegen.
+
+## Geräte
+
+Der Reiter “Geräte” befindet sich auf der linken Seite, relativ weit unten. 
+
+![Untitled](/img/user-guides/common/Untitled%207.png)
+
+Hier hast du eine große Auswahl, welche Geräte du anbinden kannst. Eine Liste aller unterstützten Geräte findest du auf unserer Homepage.
+
+![2.png](/img/user-guides/common/2.png)
+
+Da Zähler den Strombedarf des gesamten Hauses messen können oder einzelne Bereiche abdecken können, müssen wir wissen, ob der Zähler, den du gerade anbindest, dein Hauptgerät ist oder nicht, um das korrekt mit deinem Tarif zu verrechnen.
+
+![Untitled](/img/user-guides/common/Untitled%208.png)
+
+Die Anbindung wird dir anschließend Schritt für Schritt erklärt. Sobald du ein Gerät erfolgreich verbunden hast, füllt sich dein Dashboard nach und nach mit Daten.
+
+Nachdem du das Hauptgerät hinzugefügt hast, kannst du weitere Geräte hinzufügen und Logiken erstellen. Sobald du mehr als 10 Geräte oder Sub-Objekte angelegt hast, werden diese zusammengezählt und hier angezeigt.
+
+Im nächsten Schritt kannst du (falls nicht schon geschehen) deine Tarifdetails hinterlegen, damit wir dir deine Kosten akkurat berechnen können. Diese Möglichkeit findest du entweder direkt über das Dashboard, oder im Menü unter “Verwaltung” > “Objekt” > “Tarife”.
+
+## Dashboard
+
+Oben im Dashboard werden alle angebundenen Geräte angezeigt – jeweils mit dem Zeitpunkt der letzten Datenübermittlung oder der aktuellen Echtzeitleistung. Im Diagramm stellt der obere Bereich deinen Verbrauch dar, der untere die Einspeisung deiner Solaranlage (sofern vorhanden). Standardmäßig wird eine Einspeisevergütung von 7 Cent/kWh angenommen; diesen Wert kannst du unter „Verwaltung“ > „Objekt“ > „Tarife“ jederzeit anpassen.
+
+Außerdem kannst du dir dort Tages-, Wochen-, Monats- und Jahresdaten anzeigen lassen – nicht nur für Verbrauch und Einspeisung in Watt, sondern auch für Kosten und Vergütung, CO₂-Emissionen, Marktpreise und die Zählerstände. Alle Daten lassen sich jederzeit über den CSV-Export herunterladen.
+
+<img alt="image" src="https://github.com/user-attachments/assets/9068843f-234e-4479-904f-972c8d03bcd0" />
+
+## Messwerte
+
+Die Messwerte kannst du natürlich nicht nur vom Hauptgerät anzeigen lassen, sondern von allen Geräten. Unten siehst du auch den Verbrauch im Vergleich zum Vormonat und die Kosten. Auch hier kannst du einzelne Geräte oder Messwerte anzeigen lassen oder das Hauptgerät. Zudem können verschiedene Geräte verglichen werden.
+
+<img alt="image" src="https://github.com/user-attachments/assets/e027dcaf-f0fe-47e6-b931-5f899aaecc4f" />
+
+## Empfehlungen
+
+Du kannst dir auch ein Ziel setzen, wie viel du verbrauchen möchtest. Damit du dieses Ziel erreichst oder sogar noch bessere Ziele erreichen kannst, werden dir Tipps zum Stromsparen angezeigt.
+
+![Untitled](/img/user-guides/private/Untitled%2011.png)
+
+## Tipps und Shop
+
+Basierend auf deinen Angaben und deinem Verbrauch bekommst du unter „Tipps“ individuell auf dich zugeschnittene Hinweise, aber auch allgemeine Stromspartipps.
+
+![Untitled](/img/user-guides/private/Untitled%2012.png)
+
+Direkt unter den Stromspartipps siehst du noch einen Shop. Hier sind Produkte gelistet, mit denen du deinen Verbrauch noch besser messen und visualisieren kannst, um die wahren Stromfresser in deinem Haushalt zu identifizieren.
+
+<img alt="image" src="https://github.com/user-attachments/assets/c6acfa23-9b1f-4f65-86db-edc9515ffc7e" />
+
+
+## Smarte Steuerung und Logiken
+
+Das Thema „Smarte Steuerung“ beschäftigt sich mit Energiemanagement und Logiken.
+Über diese Funktion kannst du Regeln aktivieren, um Geräte intelligent zu steuern oder Benachrichtigungen zu erhalten.
+
+Die Regeln helfen dir dabei, deinen Energieverbrauch zu optimieren – zum Beispiel durch automatisches Laden des E-Autos in günstigen Stunden oder durch Benachrichtigungen bei ungewöhnlichem Verbrauch.
+Um eine neue Regel zu aktivieren, musst du einfach auf den entsprechenden Knopf klicken. Es öffnet sich ein Fenster mit verschiedenen Kategorien, aus denen du die gewünschte Regel auswählen kannst.
+
+Wichtig: Du kannst nur Regeln aktivieren, die zuvor vom Admin freigeschaltet wurden. Wenn eine bestimmte Regel nicht sichtbar ist, wurde sie aktuell noch nicht für dich freigegeben.
+
+<img  alt="image" src="https://github.com/user-attachments/assets/dedfdc60-6e55-47c0-9eb3-5540260f7176" />
+
+In diesem Beispiel wird eine Regel aktiviert, die das Laden des E-Autos in den 6 günstigsten Stunden des Tages ermöglicht.
+So wird sichergestellt, dass der Ladevorgang bevorzugt in Zeiten mit niedrigen Strompreisen erfolgt und die Ladezeiten effizient genutzt werden.
+
+<img alt="image" src="https://github.com/user-attachments/assets/df2bb516-aaaa-4d0d-b6ee-fcf2e9f95b41" />
+
+Nachdem du die Automation erstellt hast, wird sie angezeigt. Du kannst sie bearbeiten, löschen oder neue Automationen hinzufügen.
+
+## Reporting
+
+Um das volle Potenzial der Daten auszuschöpfen, haben wir eine umfassende Reporting-Funktion entwickelt. Diese ermöglicht es dir, individuell festzulegen, welche Daten in welchem Intervall als visualisierte Berichte aufbereitet werden sollen.
+Im Menü auf der linken Seite findest du den Reiter "Reporting". Sobald du diesen öffnest, erhältst du eine Übersicht über alle angelegten Reportings sowie die bereits erhaltenen Berichte.
+
+![Bildschirmfoto 2024-09-03 um 09.05.07.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.07.png)
+
+Um einen neuen Report zu erstellen, klicke auf "Jetzt erstellen". In diesem Bereich kannst du dem Report einen Namen geben, die Metriken auswählen, die ausgewertet werden sollen (wie Verbrauch, Produktion, Kosten, Vergütung und CO2), und festlegen, in welchem Intervall der Bericht erstellt werden soll (täglich, wöchentlich, monatlich oder jährlich).
+
+![Bildschirmfoto 2024-09-03 um 09.05.34.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.34.png)
+
+Nachdem du ein Startdatum ausgewählt und die neue Reporting-Regel gespeichert hast, erhältst du eine Übersicht über den zu erstellenden Bericht sowie den Zeitpunkt, zu dem dieser generiert wird.
+
+![Bildschirmfoto 2024-09-03 um 09.05.54.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.05.54.png)
+
+![Bildschirmfoto 2024-09-03 um 09.06.02.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.06.02.png)
+
+Hier siehst du noch ein Beispiel, wie der Bericht aussehen könnte.
+
+![Bildschirmfoto 2024-09-03 um 09.08.56.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.08.56.png)
+
+![Bildschirmfoto 2024-09-03 um 09.09.05.png](/img/user-guides/common/Bildschirmfoto_2024-09-03_um_09.09.05.png)
+
+## Simulator
+
+Im Simulator kannst du verschiedene Varianten von Mini-Photovoltaikanlagen mit unterschiedlichen Montagemöglichkeiten durchrechnen.
+
+Die Simulation von größeren PV-Anlagen sowie Batteriespeichern befindet sich derzeit in Entwicklung und wird bald verfügbar sein.
+
+Hier siehst du, wie du beispielsweise ein Balkonkraftwerk simulieren kannst. Am Ende erhältst du konkrete Vorschläge zu den erwarteten Kosten und dem möglichen Nutzen für dich.
+
+![Untitled](/img/user-guides/common/ea3de318-c51d-4da3-a7ee-893dbefb5b95.png)
+
+![Untitled](/img/user-guides/common/Untitled%2014.png)
+
+![Untitled](/img/user-guides/common/Untitled%2015.png)
+
+![Untitled](/img/user-guides/common/Untitled%2016.png)
+
+![Untitled](/img/user-guides/common/Untitled%2017.png)
+
+## Verwaltung
+
+Unter dem Reiter „Verwaltung“ sind Informationen zu deinem Objekt gelistet. Hier siehst du allgemeine Infos sowie Informationen zu deinem Tarif. Zusätzlich kannst du hier alle verbundenen Geräte sehen und die Messdaten der Geräte im CVS-Format exportieren.
+
+![Untitled](/img/user-guides/common/Untitled%2019.png)
+
+![Untitled](/img/user-guides/private/Untitled%2022.png)
+
+In unserer Premium-Mitgliedschaft, kannst du unter “Nutzer” weitere Nutzer zum selben Objekt hinzufügen. Dies dient dazu, dass du zum Beispiel deine gesamte Familie einladen kannst den selben Haushalt einzusehen.
+
+Im Bereich „Dokumente“ findest du alle Unterlagen, die dein Anbieter für dich bereitgestellt hat – zum Beispiel Rechnungen, Verträge oder sonstige Dokumente.
+Diese werden zentral in deinem Konto gespeichert und können jederzeit eingesehen oder heruntergeladen werden.
+
+## KI Assistent
+
+Der KI Assistent beantwortet dir Fragen und kann sogar aktiv in dein HEMS eingreifen.
+Er kann dir dabei helfen:
+
+-   Aktionen direkt auszuführen
+-   Informationen zu Verbrauch und Co. zu erhalten
+-   Regeln im HEMS zu aktivieren
+
+<img alt="image" src="https://github.com/user-attachments/assets/e52d4a9e-a048-42ca-93b2-422ace050f23" />
+
+
+
+Wir wünschen dir viel Spaß mit unserer Plattform! Falls du Fragen hast oder etwas nicht so klappt, wie du es dir vorstellst, schreibe uns gerne jederzeit über den Chat oder support@zaehlerfreunde.com, und wir finden eine Lösung für dich.
+
+

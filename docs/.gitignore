@@ -1,12 +1,11 @@
 # Dependencies
 /node_modules
 
-# Production
-/build
-
-# Generated files
-.docusaurus
-.cache-loader
+# Next.js and generated output
+/.next
+/out
+/.source
+*.tsbuildinfo
 
 # Misc
 .DS_Store

@@ -5,7 +5,6 @@ on:
         branches:
             - main
         paths:
-            - "docs/static/api/openapi.yaml"
             - "docs/**"
             - ".github/workflows/deploy_documentation.yml"
 
@@ -26,26 +25,12 @@ jobs:
 
             - uses: actions/setup-node@v3
               with:
-                  node-version: 20
+                  node-version: 22
 
             - name: Install dependencies
               run: |
                   cd docs
                   npm ci
-
-            - name: Get all changed files
-              id: changed-files
-              uses: tj-actions/changed-files@v44
-              with:
-                files: docs/static/api/openapi.yaml
-
-            - name: Generate API docs if openapi.yaml changed
-              if: steps.changed-files.outputs.any_changed == 'true'
-              working-directory: ./docs
-              run: |
-                  echo "openapi.yaml has changed, regenerating API docs..."
-                  rm -rf docs/rpcapi
-                  npx docusaurus gen-api-docs all
 
             - name: Build documentation
               run: |
@@ -56,8 +41,7 @@ jobs:
               run: aws s3 rm s3://docs.zaehlerfreunde.tld --recursive
 
             - name: Upload new files
-              run: aws s3 cp docs/build s3://docs.zaehlerfreunde.tld --recursive
+              run: aws s3 cp docs/out s3://docs.zaehlerfreunde.tld --recursive
 
             - name: Invalidate distribution
               run: aws cloudfront create-invalidation --distribution-id E3M3YQNXRFL21A --paths "/*"
-
