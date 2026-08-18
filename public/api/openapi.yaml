@@ -242,6 +242,35 @@ paths:
         "200":
           description: OK
   /spaces/{spaceId}/users/{userId}:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Add user to space
+      description: This allows the user to view all device data associated with the space.
+      tags:
+        - Spaces
+      operationId: addUserToSpace
+      parameters:
+        - in: path
+          name: spaceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+        - in: path
+          name: userId
+          schema:
+            type: string
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AddUserToSpaceRequest"
+      responses:
+        "200":
+          description: OK
     delete:
       security:
         - bearerAuth: []
@@ -261,7 +290,6 @@ paths:
           name: userId
           schema:
             type: string
-            format: uuid
           required: true
       responses:
         "200":
@@ -273,7 +301,7 @@ paths:
       summary: Get users by space
       description: Returns all users that are mapped to the space
       tags:
-        - Users
+        - Spaces
       operationId: getUsersInSpace
       parameters:
         - in: path
@@ -1604,6 +1632,18 @@ components:
             The ID of the access role to assign to the invited user.
             Use the `/access-roles` endpoint to get a list of available access roles and their IDs.
             If not specified, the default access role will be assigned.
+
+    AddUserToSpaceRequest:
+      type: object
+      required:
+        - accessRoleId
+      properties:
+        accessRoleId:
+          type: string
+          description: |
+            The ID of the access role to assign to the user.
+            Use the `/access-roles` endpoint to get a list of available access roles and their IDs.
+
     SpaceInviteLink:
       type: object
       properties:
@@ -2995,6 +3035,9 @@ components:
         name:
           type: string
           description: Name of the partner
+        isDemoPartner:
+          type: boolean
+          description: Whether the new partner is a demo partner or not
     Credentials:
       type: object
       required:
