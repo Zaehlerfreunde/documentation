@@ -1,0 +1,94 @@
+
+> zaehlerfreunde-documentation@1.0.0 prebuild
+> npm run generate:api
+
+
+> zaehlerfreunde-documentation@1.0.0 generate:api
+> tsx scripts/generate-api.ts
+
+Generated: content/docs/rpcapi/create-space.mdx
+Generated: content/docs/rpcapi/create-api-token.mdx
+Generated: content/docs/rpcapi/get-access-roles.mdx
+Generated: content/docs/rpcapi/create-access-role.mdx
+Generated: content/docs/rpcapi/remove-user-from-space.mdx
+Generated: content/docs/rpcapi/get-users-in-space.mdx
+Generated: content/docs/rpcapi/update-access-role.mdx
+Generated: content/docs/rpcapi/delete-space.mdx
+Generated: content/docs/rpcapi/get-spaces.mdx
+Generated: content/docs/rpcapi/get-devices-in-space.mdx
+Generated: content/docs/rpcapi/store-readings.mdx
+Generated: content/docs/rpcapi/invite-user-to-space.mdx
+Generated: content/docs/rpcapi/add-device-to-space.mdx
+Generated: content/docs/rpcapi/delete-device.mdx
+Generated: content/docs/rpcapi/register-inexogy-device.mdx
+Generated: content/docs/rpcapi/get-readings-by-space.mdx
+Generated: content/docs/rpcapi/update-space.mdx
+Generated: content/docs/rpcapi/remove-all-users-from-space.mdx
+Generated: content/docs/rpcapi/delete-access-role.mdx
+Generated: content/docs/rpcapi/register-esa-device.mdx
+Generated: content/docs/rpcapi/register-non-smart-meter.mdx
+Generated: content/docs/rpcapi/get-readings-by-device.mdx
+Generated: content/docs/rpcapi/register-bluemetering-device.mdx
+Generated: content/docs/rpcapi/get-customers.mdx
+Generated: content/docs/rpcapi/update-device-details.mdx
+Generated: content/docs/rpcapi/store-energy-prices.mdx
+Generated: content/docs/rpcapi/register-external-device.mdx
+Generated: content/docs/rpcapi/add-update-customer.mdx
+Generated: content/docs/rpcapi/add-customer-contract.mdx
+Generated: content/docs/rpcapi/remove-device-from-space.mdx
+Generated: content/docs/rpcapi/add-tariff.mdx
+Generated: content/docs/rpcapi/get-tariff.mdx
+Generated: content/docs/rpcapi/get-customer-support-contact.mdx
+Generated: content/docs/rpcapi/update-tariff.mdx
+Generated: content/docs/rpcapi/upload-document.mdx
+Generated: content/docs/rpcapi/delete-tariff.mdx
+Generated: content/docs/rpcapi/delete-tariff-price-component.mdx
+Generated: content/docs/rpcapi/update-tariff-price-component.mdx
+Generated: content/docs/rpcapi/get-tariff-contracts.mdx
+Generated: content/docs/rpcapi/delete-tariff-contract.mdx
+Generated: content/docs/rpcapi/add-tariff-contract.mdx
+Generated: content/docs/rpcapi/get-credentials.mdx
+Generated: content/docs/rpcapi/delete-credentials.mdx
+Generated: content/docs/rpcapi/create-credentials.mdx
+Generated: content/docs/rpcapi/create-partner.mdx
+Generated: content/docs/rpcapi/get-current-partner.mdx
+Generated: content/docs/rpcapi/get-partners.mdx
+Generated: content/docs/rpcapi/update-tariff-contract.mdx
+Generated: content/docs/rpcapi/get-current-partner-subdomain.mdx
+Generated: content/docs/rpcapi/add-tariff-price-component.mdx
+Generated: content/docs/rpcapi/update-current-partner-subdomain.mdx
+Generated: content/docs/rpcapi/delete-current-partner.mdx
+Generated: content/docs/rpcapi/set-customer-contract-time-window.mdx
+
+> zaehlerfreunde-documentation@1.0.0 build
+> next build
+
+▲ Next.js 16.3.0 (Turbopack)
+[MDX] generated files in 0.9773750000000518ms
+✓ Running next.config.mjs took 198ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.5s
+  Running TypeScript ...
+  Finished TypeScript in 1480ms ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/78) ...
+  Generating static pages using 5 workers (19/78) 
+  Generating static pages using 5 workers (38/78) 
+  Generating static pages using 5 workers (58/78) 
+✓ Generating static pages using 5 workers (78/78) in 1045ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /_not-found
+├   /[[...slug]]
+│ ├ ● /
+│ ├ ● /integrations/authorizations
+│ ├ ● /integrations/subdomain
+│ └ ● [+72 more paths]
+└ ○ /api/search
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

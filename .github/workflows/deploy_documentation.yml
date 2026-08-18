@@ -5,8 +5,10 @@ on:
         branches:
             - main
         paths:
-            - "docs/**"
+            - "**"
             - ".github/workflows/deploy_documentation.yml"
+            - "!.git/**"
+            - "!.DS_Store"
 
 jobs:
     deploy:
@@ -28,20 +30,16 @@ jobs:
                   node-version: 22
 
             - name: Install dependencies
-              run: |
-                  cd docs
-                  npm ci
+              run: npm ci
 
             - name: Build documentation
-              run: |
-                  cd docs
-                  npm run build
+              run: npm run build
 
             - name: Delete all current files
               run: aws s3 rm s3://docs.zaehlerfreunde.tld --recursive
 
             - name: Upload new files
-              run: aws s3 cp docs/out s3://docs.zaehlerfreunde.tld --recursive
+              run: aws s3 cp out s3://docs.zaehlerfreunde.tld --recursive
 
             - name: Invalidate distribution
               run: aws cloudfront create-invalidation --distribution-id E3M3YQNXRFL21A --paths "/*"
