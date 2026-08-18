@@ -4,7 +4,7 @@ import { parse } from 'yaml';
 
 export const OPENAPI_DOCUMENT_ID = './public/api/openapi.yaml';
 
-const API_BASE_URL = 'https://external.prod.zaehlerfreunde.com';
+const API_BASE_URL = 'https://external.prod.zaehlerfreunde.com/partner';
 
 export const openapiInput: NonNullable<OpenAPIOptions['input']> = {
   [OPENAPI_DOCUMENT_ID]: async () => {
