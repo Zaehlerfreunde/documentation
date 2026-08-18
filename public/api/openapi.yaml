@@ -1493,6 +1493,7 @@ components:
 
   schemas:
     NewApiToken:
+      type: object
       required:
         - clientId
         - clientSecret
@@ -1505,11 +1506,13 @@ components:
           description: unique client secret
 
     ApiToken:
+      type: object
       properties:
         accessToken:
           type: string
 
     NewSpace:
+      type: object
       required:
         - name
         - addressLineOne
@@ -1561,6 +1564,7 @@ components:
           description: Specifies whether this space is part of the landlord to partner project of its parent space. Just relevant if it has a parent space.
 
     SpaceId:
+      type: object
       properties:
         spaceId:
           type: string
@@ -1585,6 +1589,7 @@ components:
               default: false
 
     NewSpaceInvite:
+      type: object
       required:
         - sendInviteEmail
         - userEmail
@@ -1600,6 +1605,7 @@ components:
             Use the `/access-roles` endpoint to get a list of available access roles and their IDs.
             If not specified, the default access role will be assigned.
     SpaceInviteLink:
+      type: object
       properties:
         inviteLink:
           type: string
@@ -1635,6 +1641,7 @@ components:
           format: uuid
 
     AccessRoles:
+      type: object
       required:
         - accessRoles
       properties:
@@ -1665,6 +1672,7 @@ components:
             $ref: "#/components/schemas/AccessPermissionId"
 
     Spaces:
+      type: object
       required:
         - spaces
         - totalNumPages
@@ -1678,6 +1686,7 @@ components:
           format: int32
 
     Space:
+      type: object
       required:
         - id
         - name
@@ -1734,11 +1743,13 @@ components:
           x-order: 14
 
     DeviceId:
+      type: object
       properties:
         deviceId:
           type: string
 
     DeviceReading:
+      type: object
       required:
         - deviceId
         - timeStamp
@@ -1780,6 +1791,7 @@ components:
             - IN
             - OUT
     NewDeviceReading:
+      type: object
       required:
         - readings
       properties:
@@ -1794,6 +1806,7 @@ components:
             $ref: "#/components/schemas/NewReading"
 
     NewReading:
+      type: object
       required:
         - obisCode
         - timestamp
@@ -1846,6 +1859,7 @@ components:
           description: The metering interval in seconds. This is the time interval between readings. If not provided, 900s (15mins) will be used.
 
     Devices:
+      type: object
       required:
         - devices
         - totalNumPages
@@ -1859,6 +1873,7 @@ components:
           format: int32
 
     Device:
+      type: object
       required:
         - id
         - name
@@ -2005,6 +2020,7 @@ components:
           x-order: 24
 
     Users:
+      type: object
       required:
         - users
         - totalNumPages
@@ -2020,6 +2036,7 @@ components:
           x-order: 2
 
     User:
+      type: object
       required:
         - id
         - name
@@ -2061,6 +2078,7 @@ components:
           x-order: 9
 
     Metadata:
+      type: object
       required:
         - label
         - value
@@ -2071,6 +2089,7 @@ components:
           type: string
 
     EnergyPrice:
+      type: object
       required:
         - validFrom
         - validTo
@@ -2311,6 +2330,7 @@ components:
             serialNumber:
               type: string
     Customers:
+      type: object
       required:
         - customers
         - totalNumPages
