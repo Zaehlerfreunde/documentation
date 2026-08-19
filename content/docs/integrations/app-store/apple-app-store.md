@@ -16,9 +16,9 @@ Für Unternehmen brauchst du das Apple Developer Program:
 👉 Voraussetzungen:
 
 - D-U-N-S Nummer (für Firmenidentifikation)
-- Rechtliche Vertretungsbefugnis (du musst befugt sein, im Namen der Firma zu handeln)
+- Rechtliche Vertretungsbefugnis (du musst befugt sein, im Namen der Firma zu handeln)a
 
-<img alt="image" width="600"  src="https://cdn.zaehlerfreunde.com/docs/apple-developer-enroll.gif" />
+![Apple Developer Enrollment](https://cdn.zaehlerfreunde.com/docs/apple-developer-enroll.gif)
 
 ### Zählerfreunde zu Account hinzufügen
 
@@ -31,4 +31,4 @@ Damit wir auch die App hochladen und veröffentlichen können, muss unser Accoun
 - Als Name können Sie einfach *Zählerfreunde Entwickler* eingeben und als E-Mail Adresse **apps@zaehlerfreunde.com**
 - Stellen Sie sicher, dass Admin als Rolle ausgewählt ist, und schicken Sie anschließend die Einladung ab.
 
-<img alt="image" width="600"  src="https://cdn.zaehlerfreunde.com/docs/invite-user-apple.gif" />
+![Apple User Invitation](https://cdn.zaehlerfreunde.com/docs/invite-user-apple.gif)

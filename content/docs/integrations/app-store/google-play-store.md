@@ -32,5 +32,5 @@ Damit wir im nächsten Schritt die App zu Ihrem Account hochladen und veröffent
 - Klicken Sie auf *Users and permissions* und dann auf *Invite new users*
 - Geben Sie **apps@zaehlerfreunde.com** als E-Mail Adresse ein und geben Sie dem Nutzer Admin Rechte (*Account permissions* -> *Admin*)
 
-<img alt="image" width="600"  src="https://cdn.zaehlerfreunde.com/docs/invite-user-google.gif" />
+![Google Play Console](https://cdn.zaehlerfreunde.com/docs/invite-user-google.gif)
 
