@@ -1,0 +1,103 @@
+---
+title: IoTree PhySec – Integration
+description: IoTree PhySec ist ein System zur drahtlosen Auslesung von Zählern (Strom, Gas, Wasser, Wärme). Die Zähler senden ihre Messwerte regelmäßig über das LoRaWAN-Funknetz an einen zentralen IoTree-Server. Von dort werden die Daten über das MQTT-Protokoll (eine Art Echtzeit-Nachrichtendienst) weiterübertragen und können so in unsere Anwendung eingebunden werden.
+---
+
+## Wie werden die Zählerdaten übertragen?
+
+IoTree stellt die Messdaten über einen sogenannten **MQTT-Broker** bereit. Das ist ein Server, bei dem sich unsere Anwendung anmeldet und dann fortlaufend neue Messwerte empfängt – ähnlich wie ein Newsletter-Abonnement.
+
+Für die Verbindung werden folgende Informationen benötigt, die von IoTree bereitgestellt werden:
+
+| Information      | Bedeutung                                                      |
+| ---------------- | -------------------------------------------------------------- |
+| **MQTT-Broker**  | Adresse des IoTree-Servers                                     |
+| **MQTT-Topic**   | Der „Kanal", über den die Daten des jeweiligen Geräts ankommen |
+| **Benutzername** | Für die Anmeldung am Broker                                    |
+| **Passwort**     | Für die Anmeldung am Broker                                    |
+
+Die Verbindung ist stets TLS-verschlüsselt (vergleichbar mit HTTPS bei Webseiten).
+
+---
+
+## Zwei Wege zur Einbindung
+
+Es gibt zwei Möglichkeiten, IoTree-Zähler in unsere Anwendung einzubinden:
+
+### 1. Integration (empfohlen bei vielen Zählern)
+
+Bei der **Integration** wird ein einziger MQTT-Topic abonniert, der die Daten **aller** Zähler eines Kunden enthält. Sobald ein neues Gerät bei IoTree erstellt wird und Daten sendet, wird es **automatisch** in unserer Anwendung angelegt – ohne weiteren manuellen Aufwand.
+
+<img width="600px" src="/img/user-guides/admin/iotree-integration.png" />
+
+**Ablauf:**
+
+1. Die Integration wird einmalig in der Anwendung eingerichtet (MQTT-Broker, Topic, Benutzername, Passwort).
+2. Unsere Anwendung verbindet sich dauerhaft mit dem IoTree-Broker und wartet auf eingehende Nachrichten.
+3. Trifft eine Nachricht für ein noch unbekanntes Gerät ein, wird das Gerät automatisch angelegt. Dabei werden Gerätename, Gerätetyp (z. B. Gaszähler), Medium (Gas, Strom, Wasser, Wärme) und die Zählernummer aus den Nachrichtendaten ermittelt.
+4. Folgenachrichten desselben Geräts werden direkt als Messwerte gespeichert.
+
+**Geeignet für:** Stadtwerke oder Betreiber mit einer großen Anzahl an Zählern.
+
+---
+
+### 2. Einzelnes Gerät hinzufügen
+
+Alternativ kann jeder Zähler einzeln in der Anwendung registriert werden. Dabei wird das MQTT-Topic direkt auf einen einzelnen Zähler zeigen.
+
+**Ablauf:**
+
+1. Das Gerät wird in der Anwendung manuell angelegt. Dabei werden MQTT-Broker, Topic, Benutzername und Passwort des jeweiligen Zählers angegeben.
+2. Unsere Anwendung verbindet sich mit dem Broker und empfängt die Messwerte dieses einen Geräts.
+3. Die eingehenden Messwerte werden direkt dem angelegten Gerät zugeordnet und gespeichert.
+
+**Geeignet für:** Einzelne Zähler oder Tests.
+
+---
+
+## Unterstützte Gerätetypen und Medien
+
+Unsere Anwendung erkennt den Gerätetyp und das Medium automatisch aus den eingehenden Daten. Folgende Kombinationen werden unterstützt:
+
+| Gerätetyp         | Medium | Erkennungsmerkmal in den Daten                               |
+| ----------------- | ------ | ------------------------------------------------------------ |
+| Gaszähler         | Gas    | `meterMedium = GAS` oder Feld `volume`                       |
+| Stromzähler       | Strom  | `meterMedium = ELECTRICITY` oder Feld `energyConsumption`    |
+| Wasserzähler      | Wasser | `meterMedium = WATER` oder Feld `volumeForwardInCubicMeters` |
+| Wärmemengenzähler | Wärme  | Feld `energyConsumptionInWh`                                 |
+
+---
+
+## Welche Messwerte werden gespeichert?
+
+Pro eingehender Nachricht wird **ein Messwert** gespeichert. Welches Feld als Messwert verwendet wird, hängt vom Gerätetyp ab:
+
+| Messfeld in den Daten        | Einheit      | Gespeicherte Einheit            |
+| ---------------------------- | ------------ | ------------------------------- |
+| `volume`                     | m³           | m³                              |
+| `volumeInCubicMetres`        | m³           | m³                              |
+| `volumeForwardInCubicMeters` | m³           | m³                              |
+| `energyConsumption`          | kWh oder MWh | kWh                             |
+| `energyConsumptionInWh`      | Wh           | kWh (automatisch umgerechnet)   |
+| `flowInCubicMetresPerHour`   | m³/h         | L/min (automatisch umgerechnet) |
+| `flowInCubicMetresPerMin`    | m³/min       | L/min (automatisch umgerechnet) |
+
+Die Liste der unterstützten Messfelder kann jederzeit erweitert werden. Wenn Ihr IoTree-Gerät ein Feld sendet, das noch nicht unterstützt wird, wenden Sie sich einfach an Ihren Ansprechpartner bei uns – wir kümmern uns schnell darum.
+
+---
+
+## Gerätename und Zählernummer
+
+- **Gerätename:** Der Name des Geräts wird aus dem Feld `sensor.alias` der IoTree-Nachricht übernommen (z. B. `"Gasmessung Leitzentrale"`).
+- **Zählernummer:** Die Zählernummer (Meter-ID) wird aus den Zusatzdaten des Sensors (`additionalProperties.meterId`) oder alternativ aus dem Nachrichtenfeld `meterID` ausgelesen und in den Gerätemetadaten gespeichert.
+
+---
+
+## Voraussetzungen
+
+Damit die Einbindung funktioniert, muss IoTree PhySec für Ihren Account freigeschaltet und von IoTree / PHYSEC bereitgestellt worden sein. Insbesondere werden folgende Zugangsdaten benötigt, die Sie von IoTree erhalten:
+
+- MQTT-Broker-Adresse
+- MQTT-Topic (für Integration: ein Wildcard-Topic für alle Ihre Geräte; für Einzelgeräte: das gerätespezifische Topic)
+- MQTT-Benutzername
+- MQTT-Passwort

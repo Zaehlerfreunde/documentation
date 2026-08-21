@@ -1,4 +1,4 @@
 {
-  "title": "Geräteanbindungen",
-  "pages": ["sg-ready"]
+  "title": "Anbindungen",
+  "pages": ["sg-ready", "iotree-integration"]
 }
