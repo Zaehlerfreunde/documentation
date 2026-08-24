@@ -3005,9 +3005,6 @@ components:
         startDate:
           type: string
           nullable: true
-        earliestCancelDate:
-          type: string
-          nullable: true
         endDate:
           type: string
           nullable: true
@@ -3059,11 +3056,6 @@ components:
           format: date
           example: "2026-01-15"
           nullable: true
-        earliest_cancel_date:
-          type: string
-          format: date
-          example: "2026-01-31"
-          nullable: true
         end_date:
           type: string
           format: date
@@ -3085,11 +3077,6 @@ components:
           type: string
           format: date
           example: "2026-01-15"
-          nullable: true
-        earliest_cancel_date:
-          type: string
-          format: date
-          example: "2026-01-31"
           nullable: true
         end_date:
           type: string
