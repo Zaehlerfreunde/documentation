@@ -1,4 +1,4 @@
 {
   "title": "Anbindungen",
-  "pages": ["sg-ready", "iotree-integration"]
+  "pages": ["sg-ready", "esa-device-registration", "iotree-integration"]
 }

@@ -492,6 +492,33 @@ paths:
       responses:
         "200":
           description: OK
+  /devices/{deviceId}/eda/request:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Re-send EDA request
+      description: |
+        Sends a new EDA data request for an existing EDA device to the network operator.
+        The users of the spaces the device is assigned to receive an email asking them to approve the request.
+      tags:
+        - Devices
+      operationId: resendEdaRequest
+      parameters:
+        - in: path
+          name: deviceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EdaRequest"
+      responses:
+        "200":
+          description: OK
   /devices/{deviceId}/readings:
     get:
       security:
@@ -826,6 +853,37 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/DeviceId"
+  /spaces/{spaceId}/devices/eda:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Create EDA device
+      description: |
+        Creates an EDA device (Austrian smart meter) and sends the initial EDA data request to the network operator.
+        The users of the space receive an email asking them to approve the request at their network operator.
+      tags:
+        - Devices
+      operationId: registerEdaDevice
+      parameters:
+        - in: path
+          name: spaceId
+          schema:
+            type: string
+            format: uuid
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewEdaDevice"
+      responses:
+        "200":
+          description: the registered device id and the network operator of the metering point
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RegisteredEdaDevice"
   /energy-prices:
     post:
       security:
@@ -946,6 +1004,57 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/AddCustomerContractResponse"
+
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get customer contracts
+      tags:
+        - Customers
+      operationId: getCustomerContracts
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+          required: true
+          description: The customer id can either be the external id or just the id of the customer.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CustomerContracts"
+
+  /customers/{customerId}/contracts/{contractId}:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get customer contract
+      tags:
+        - Customers
+      operationId: getCustomerContract
+      parameters:
+        - in: path
+          name: customerId
+          schema:
+            type: string
+          required: true
+          description: The customer id can either be the external id or just the id of the customer.
+        - in: path
+          name: contractId
+          schema:
+            type: string
+          required: true
+          description: The contract id can either be the external id or just the id of the contract.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CustomerContractDetails"
 
   /customers/{customerId}/contracts/{contractId}/time-window:
     put:
@@ -2369,6 +2478,67 @@ components:
               default: false
             serialNumber:
               type: string
+
+    NewEdaDevice:
+      allOf:
+        - $ref: "#/components/schemas/NewDevice"
+        - type: object
+          required:
+            - meteringPoint
+          properties:
+            meteringPoint:
+              type: string
+              minLength: 33
+              maxLength: 33
+              pattern: "^AT"
+              description: The Austrian metering point number (Zählpunktnummer), 33 characters starting with AT
+            producer:
+              type: boolean
+              default: false
+              description: Whether the meter is a production meter
+            startDate:
+              type: string
+              format: date
+              example: "2026-01-15"
+              description: If set, historical data is requested from this date on in addition to the ongoing data
+
+    RegisteredEdaDevice:
+      type: object
+      required:
+        - deviceId
+        - networkOperator
+      properties:
+        deviceId:
+          type: string
+        networkOperator:
+          $ref: "#/components/schemas/EdaNetworkOperator"
+
+    EdaNetworkOperator:
+      type: object
+      required:
+        - name
+        - website
+      properties:
+        name:
+          type: string
+          description: Name of the network operator the request was sent to
+        website:
+          type: string
+          description: Website of the network operator where the request has to be approved
+
+    EdaRequest:
+      type: object
+      properties:
+        producer:
+          type: boolean
+          default: false
+          description: Whether the meter is a production meter
+        startDate:
+          type: string
+          format: date
+          example: "2026-01-15"
+          description: If set, historical data is requested from this date on. Otherwise ongoing data is requested.
+
     Customers:
       type: object
       required:
@@ -2561,6 +2731,32 @@ components:
         contract_id:
           type: string
           description: The ID of the contract.
+
+    CustomerContracts:
+      type: object
+      required:
+        - contracts
+      properties:
+        contracts:
+          type: array
+          items:
+            $ref: "#/components/schemas/CustomerContractDetails"
+
+    CustomerContractDetails:
+      type: object
+      required:
+        - id
+        - space_id
+      properties:
+        id:
+          type: string
+          description: Our internal ID of the contract
+        external_id:
+          type: string
+          description: Unique identifier of the contract in your system (e.g. contract number)
+        space_id:
+          type: string
+          description: The ID of the space that belongs to the contract
 
     UpdateSpace:
       type: object
@@ -2809,9 +3005,6 @@ components:
         startDate:
           type: string
           nullable: true
-        earliestCancelDate:
-          type: string
-          nullable: true
         endDate:
           type: string
           nullable: true
@@ -2863,11 +3056,6 @@ components:
           format: date
           example: "2026-01-15"
           nullable: true
-        earliest_cancel_date:
-          type: string
-          format: date
-          example: "2026-01-31"
-          nullable: true
         end_date:
           type: string
           format: date
@@ -2889,11 +3077,6 @@ components:
           type: string
           format: date
           example: "2026-01-15"
-          nullable: true
-        earliest_cancel_date:
-          type: string
-          format: date
-          example: "2026-01-31"
           nullable: true
         end_date:
           type: string
