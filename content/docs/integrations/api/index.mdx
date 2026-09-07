@@ -2,8 +2,33 @@
 title: "API Anbindung"
 ---
 
-Die Zählerfreunde-API ermöglicht es Partnern, Benutzer-, Raum- und Geräteinformationen automatisch zu verwalten, um neue Benutzer aufzunehmen, bestehende zu verwalten und Zähler sowie andere Geräte hinzuzufügen oder zu entfernen.
+Über die Zählerfreunde-API binden Sie Ihre bestehenden Systeme (z. B. ERP oder Abrechnungssystem) direkt an unsere Plattform an. Damit können Sie Kunden automatisiert onboarden, deren Verträge, Objekte und Zähler anlegen und Messwerte übertragen – ganz ohne manuelle Pflege im Admin-Portal.
 
-Die offizielle Swagger-Dokumentation können Sie [hier](https://external.prod.zaehlerfreunde.com/partner/swagger/index.html) einsehen.
+Die folgenden Seiten führen Sie in der empfohlenen Reihenfolge durch eine Standard-Integration. Die Schritte lassen sich an Ihre bestehenden Prozesse und Tools anpassen.
 
-Die folgende Anleitung gibt einen Überblick über den Standardprozess beim Onboarding neuer Benutzer. Die Schritte können jedoch leicht angepasst werden, um sie an Ihre bestehenden Prozesse/Tools anzupassen. Die Schritte zum Onboarding eines neuen Benutzers sind die folgenden.
+## Anleitung
+
+<Cards>
+  <Card title="Authentifizierungstoken erwerben" href="/integrations/api/1-authorization">
+    Client Credentials im Admin-Portal erstellen und daraus ein Access Token generieren.
+  </Card>
+  <Card title="Stammdaten übertragen" href="/integrations/api/2-master-data">
+    Kunden und Verträge anlegen – inklusive Objekten, Zählern und Tarifverknüpfung.
+  </Card>
+  <Card title="Messdaten übertragen" href="/integrations/api/3-meter-data">
+    Zählerstände und Verbrauchswerte für die angelegten Zähler senden.
+  </Card>
+</Cards>
+
+## API-Referenz
+
+Die vollständige Referenz aller Endpunkte mit Schemas und Beispielanfragen finden Sie in der [API-Dokumentation](/rpcapi/create-api-token). Die in dieser Anleitung verwendeten Endpunkte:
+
+| Schritt | Endpunkt | Referenz |
+| --- | --- | --- |
+| Authentifizierung | `POST /auth/token` | [Create auth token](/rpcapi/create-api-token) |
+| Stammdaten | `POST /customers` | [Upsert customer](/rpcapi/add-update-customer) |
+| Stammdaten | `POST /customers/{customerId}/contracts` | [Create customer contract](/rpcapi/add-customer-contract) |
+| Messdaten | `POST /devices/readings` | [Store readings](/rpcapi/store-readings) |
+
+Alle Endpunkte liegen unter der Basis-URL `https://external.prod.zaehlerfreunde.com/partner`.
