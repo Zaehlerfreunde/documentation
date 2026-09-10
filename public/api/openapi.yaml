@@ -2400,7 +2400,6 @@ components:
             - bdewCode
             - customerName
             - declarationOfConsent
-            - sendInviteOnSuccessTo
           properties:
             melo:
               type: string
