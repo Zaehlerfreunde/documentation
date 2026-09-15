@@ -1,5 +1,7 @@
 {
   "title": "Geräte",
   "icon": "PlugZap",
-  "pages": external:["supported-devices"](https://app.zaehlerfreunde.de/public/device-providers)
+  "pages":[
+    "external:[Unterstützte Geräte](https://app.zaehlerfreunde.de/public/device-providers)"
+  ]
 }
