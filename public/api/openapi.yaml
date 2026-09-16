@@ -1939,6 +1939,8 @@ components:
           enum:
             - IN
             - OUT
+        channel:
+          type: string
     NewDeviceReading:
       type: object
       required:
