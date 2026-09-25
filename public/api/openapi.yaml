@@ -1779,6 +1779,8 @@ components:
         - EDIT_SPACE_DETAILS
         - RUN_SIMULATION
         - CONTROL_DEVICES
+        - EDIT_CUSTOMER_DETAILS
+        - CANCEL_TARIFF
 
     AccessRoleId:
       type: object
