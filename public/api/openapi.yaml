@@ -1996,6 +1996,7 @@ components:
         timestamp:
           type: integer
           format: int64
+          description: Measurement time as UNIX timestamp in seconds.
         value:
           type: number
           format: double
