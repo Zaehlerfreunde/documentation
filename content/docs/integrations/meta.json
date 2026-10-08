@@ -1,5 +1,5 @@
 {
   "title": "Integration Guides",
   "icon": "Cable",
-  "pages": ["api", "app-store", "authorizations", "subdomain"]
+  "pages": ["api", "app-store", "authorizations", "stripe", "subdomain"]
 }

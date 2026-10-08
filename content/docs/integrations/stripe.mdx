@@ -1,0 +1,116 @@
+---
+title: "Stripe-Konto verbinden und Abos verknüpfen"
+description: "Stripe für den Verkauf von Abonnements einrichten: API-Schlüssel, Webhook, Produkte und Preise konfigurieren."
+---
+
+Mit der Stripe-Integration können Sie Ihre in Zählerfreunde angelegten Abos über Ihr eigenes Stripe-Konto verkaufen. Dafür verbinden Sie zuerst das Stripe-Konto und ordnen anschließend jedem Abo einen wiederkehrenden Stripe-Preis zu.
+
+## Voraussetzungen
+
+Bevor Sie beginnen, benötigen Sie:
+
+- ein vollständig eingerichtetes Stripe-Konto,
+- Zugriff auf die API-Schlüssel und Webhooks dieses Kontos,
+- mindestens ein Abo im Zählerfreunde Admin-Portal und
+- die Berechtigung, Stripe in der Abo-Verwaltung zu konfigurieren.
+
+> Verwenden Sie für API-Schlüssel, Webhook, Produkte und Preise immer denselben Stripe-Modus. Objekte aus einer Stripe-Testumgebung können nicht mit einem Schlüssel aus dem Live-Modus verwendet werden. Für echte Zahlungen benötigen Sie den Live-Modus.
+
+## 1. Abo in Zählerfreunde vorbereiten
+
+1. Öffnen Sie im Zählerfreunde Admin-Portal **Verwaltung > Abo**.
+2. Legen Sie das Abo an, das Sie verkaufen möchten, oder öffnen Sie ein bestehendes Abo.
+3. Prüfen Sie insbesondere Name, Leistungsumfang und die angebotenen Abrechnungszeiträume.
+
+Die Preise werden später getrennt für **Monatlich** und **Jährlich** verknüpft. Wenn Sie beide Varianten anbieten möchten, benötigen Sie in Stripe zwei wiederkehrende Preise.
+
+## 2. API-Schlüssel in Stripe erstellen
+
+Zählerfreunde verwendet den API-Schlüssel ausschließlich serverseitig, um unter anderem Stripe-Checkout-Sitzungen zu erstellen und Abonnements zu verwalten. Sie können dafür einen **eingeschränkten Schlüssel** (`rk_…`) oder einen **geheimen Schlüssel** (`sk_…`) verwenden. Ein veröffentlichbarer Schlüssel mit dem Präfix `pk_` ist hierfür nicht geeignet.
+
+Stripe empfiehlt für neue Integrationen einen eingeschränkten Schlüssel, weil Sie dessen Berechtigungen auf die von der Integration benötigten Funktionen begrenzen können.
+
+1. Öffnen Sie im Stripe Dashboard die [API-Schlüssel](https://dashboard.stripe.com/apikeys).
+2. Wechseln Sie für den produktiven Betrieb in den **Live-Modus**.
+3. Erstellen Sie bevorzugt einen **eingeschränkten Schlüssel** und vergeben Sie einen eindeutigen Namen, zum Beispiel `Zählerfreunde Produktion`. Erteilen Sie ihm die Berechtigungen für die von Zählerfreunde verwendeten Checkout- und Abonnement-Funktionen. Alternativ können Sie einen **geheimen Schlüssel** erstellen.
+4. Kopieren Sie den neuen Live-Schlüssel mit dem Präfix `rk_live_` beziehungsweise `sk_live_` sofort. Stripe zeigt einen neu erstellten eingeschränkten oder geheimen Live-Schlüssel nur einmal vollständig an.
+
+Sowohl eingeschränkte als auch geheime Schlüssel müssen vertraulich behandelt werden. Speichern Sie den Schlüssel nicht in Tickets, E-Mails, Chats oder öffentlich zugänglichen Dateien. Falls er verloren geht oder offengelegt wurde, rotieren Sie ihn in Stripe und aktualisieren Sie anschließend die Verbindung in Zählerfreunde.
+
+Weitere Hinweise finden Sie in der [Stripe-Dokumentation zu API-Schlüsseln](https://docs.stripe.com/keys).
+
+## 3. Webhook in Stripe anlegen
+
+Der Webhook informiert Zählerfreunde über den Abschluss des Checkouts, erfolgreiche oder fehlgeschlagene Rechnungszahlungen sowie beendete Stripe-Abonnements.
+
+1. Öffnen Sie in Stripe **Workbench > Webhooks** oder direkt die [Webhook-Verwaltung](https://dashboard.stripe.com/webhooks).
+2. Wählen Sie **Ereignisziel erstellen** und anschließend **Ihr Konto**.
+3. Wählen Sie als Nutzdatenformat **Snapshot**.
+4. Abonnieren Sie diese Ereignisse:
+
+   - `checkout.session.completed`
+   - `invoice.paid`
+   - `invoice.payment_failed`
+   - `customer.subscription.deleted`
+
+5. Wählen Sie **Webhook-Endpunkt** als Ziel und tragen Sie diese URL ein:
+
+   ```text
+   https://external.prod.zaehlerfreunde.com/stripe/events
+   ```
+
+6. Erstellen Sie den Endpunkt. Öffnen Sie danach dessen Details, blenden Sie das **Signaturgeheimnis** ein und kopieren Sie den Wert mit dem Präfix `whsec_`.
+
+Das Webhook-Signaturgeheimnis ist nicht mit dem API-Schlüssel identisch. Zählerfreunde verwendet es, um zu prüfen, dass eingehende Ereignisse tatsächlich von Stripe stammen. Eine ausführliche Beschreibung bietet die [Stripe-Dokumentation zu Webhooks](https://docs.stripe.com/webhooks).
+
+## 4. Stripe-Konto mit Zählerfreunde verbinden
+
+1. Öffnen Sie im Zählerfreunde Admin-Portal **Verwaltung > Abo**.
+2. Wählen Sie **Stripe verwalten**.
+3. Öffnen Sie den Bereich **Konten** und wählen Sie **Konto verbinden**.
+4. Fügen Sie den eingeschränkten (`rk_live_…`) oder geheimen API-Schlüssel (`sk_live_…`) und das Webhook-Signaturgeheimnis (`whsec_…`) ein.
+5. Speichern Sie die Verbindung.
+
+Nach dem Speichern werden die beiden Geheimnisse nicht mehr im Klartext angezeigt. In der Kontenübersicht sehen Sie lediglich, dass sie konfiguriert sind.
+
+## 5. Produkt und wiederkehrende Preise in Stripe erstellen
+
+Ein Stripe-Produkt beschreibt das angebotene Abo. Ein Stripe-Preis legt Betrag, Währung und Abrechnungsintervall fest.
+
+1. Öffnen Sie den [Stripe-Produktkatalog](https://dashboard.stripe.com/products).
+2. Wählen Sie **Produkt hinzufügen** und verwenden Sie einen Namen, der sich eindeutig Ihrem Zählerfreunde-Abo zuordnen lässt.
+3. Legen Sie einen **wiederkehrenden** Preis an.
+4. Geben Sie Betrag und Währung an und wählen Sie als Abrechnungszeitraum **Monatlich** oder **Jährlich**.
+5. Speichern Sie das Produkt und den Preis.
+6. Kopieren Sie in den Produktdetails die Preis-ID mit dem Präfix `price_`.
+
+Wenn ein Abo monatlich und jährlich erhältlich sein soll, legen Sie für dasselbe Produkt je einen Preis pro Abrechnungszeitraum an. Stripe-Preise lassen sich nach ihrer Verwendung nur eingeschränkt ändern. Für einen neuen Betrag sollten Sie deshalb einen neuen Preis erstellen und den bisherigen Preis anschließend deaktivieren. Weitere Details finden Sie in der [Stripe-Dokumentation zu Produkten und Preisen](https://docs.stripe.com/products-prices/manage-prices).
+
+## 6. Stripe-Preis mit einem Abo verknüpfen
+
+1. Öffnen Sie in **Stripe verwalten** den Bereich **Preise**.
+2. Wählen Sie **Preis hinzufügen**.
+3. Wählen Sie das zuvor verbundene Stripe-Konto.
+4. Fügen Sie die Stripe-Preis-ID (`price_…`) ein.
+5. Wählen Sie das passende Zählerfreunde-Abo.
+6. Wählen Sie denselben Abrechnungszeitraum wie beim Stripe-Preis: **Monatlich** oder **Jährlich**.
+7. Speichern Sie die Zuordnung.
+
+Wiederholen Sie diese Schritte für jede Kombination aus Abo und Abrechnungszeitraum. Pro Abo kann jeweils nur ein Preis für **Monatlich** und ein Preis für **Jährlich** zugeordnet werden.
+
+## 7. Einrichtung prüfen
+
+Führen Sie nach der Einrichtung einen vollständigen Kauf mit einem Testkunden durch und kontrollieren Sie:
+
+- Der gewünschte Tarif und der richtige Abrechnungszeitraum werden im Stripe Checkout angezeigt.
+- Nach einem erfolgreichen Checkout ist das Abo im Kundenkonto aktiv.
+- In Stripe erscheint die neue Subscription und nach der Zahlung die zugehörige Rechnung.
+- In **Workbench > Webhooks** werden die Ereignisse mit einem erfolgreichen HTTP-Status zugestellt.
+
+Bei Fehlern prüfen Sie zuerst, ob API-Schlüssel, Webhook, Produkt und Preis aus demselben Stripe-Modus stammen und ob die hinterlegte ID tatsächlich mit `price_` beginnt.
+
+## Änderungen und Löschung
+
+- Das Löschen einer Preiszuordnung in Zählerfreunde löscht den Preis nicht in Stripe.
+- Das Entfernen eines Stripe-Kontos aus Zählerfreunde entfernt auch dessen Preiszuordnungen, nicht jedoch Produkte, Preise oder Abonnements in Stripe.
+- Wenn Sie den API-Schlüssel oder das Webhook-Signaturgeheimnis rotieren, müssen Sie die Stripe-Verbindung in Zählerfreunde mit den neuen Werten erneut einrichten.
