@@ -1943,6 +1943,15 @@ components:
             - OUT
         channel:
           type: string
+        origin:
+          type: string
+          description: The source measurement of the reading
+          enum:
+            - ORIGIN_UNSPECIFIED
+            - THROUGHPUT
+            - AMOUNT
+            - TOTAL
+            - NO_DATA
     NewDeviceReading:
       type: object
       required:
