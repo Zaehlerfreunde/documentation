@@ -2040,7 +2040,6 @@ components:
       required:
         - id
         - name
-        - status
         - deviceType
         - isMainDevice
         - createdAt
@@ -2066,13 +2065,6 @@ components:
         name:
           type: string
           x-order: 2
-        status:
-          type: string
-          x-order: 3
-          enum:
-            - CONNECTED
-            - CONNECTING
-            - FAILED
         latestReadingTime:
           type: string
           x-order: 4
@@ -2155,9 +2147,6 @@ components:
         createdAt:
           type: string
           x-order: 18
-        errorMessage:
-          type: string
-          x-order: 19
         medium:
           type: string
           x-order: 20
